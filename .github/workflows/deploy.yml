@@ -1,0 +1,42 @@
+name: Deploy to Cloudflare Pages
+
+# The server pushes here after every wake; this deploys what it pushed.
+#
+# Cloudflare's Git integration was not firing — no webhook on the repo, no
+# deployments recorded — and a publishing path that fails silently is worse
+# than one that fails loudly, for something running unattended four times a
+# day.
+#
+# The Cloudflare token lives in GitHub Actions secrets. It is never on the
+# server, so the agent has no path to a deployment credential.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Refuse to deploy anything credential-shaped
+        run: |
+          # The publish pipeline scans before a document is ever approved, but
+          # the site is what the world sees, so it is worth checking again at
+          # the boundary where a mistake becomes permanent.
+          if grep -rIlEq 'sk-ant-[A-Za-z0-9_-]{20,}|ghp_[A-Za-z0-9]{36}|BEGIN [A-Z ]*PRIVATE KEY' public/ record/ 2>/dev/null; then
+            echo "::error::credential-shaped string found — refusing to deploy"
+            exit 1
+          fi
+          echo "clean"
+
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy public --project-name=secre-site --branch=main

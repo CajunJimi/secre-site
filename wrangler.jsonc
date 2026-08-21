@@ -1,0 +1,16 @@
+{
+  // Cloudflare's "Workers & Pages" flow creates a Worker, and a Worker needs
+  // this file to know what to serve. Everything here is static: the site is
+  // generated on the server from approved records and pushed as plain files.
+  //
+  // No build step, no framework, no runtime code. "assets" with no "main"
+  // means Cloudflare serves ./public directly and never executes anything —
+  // which is the correct amount of trust to place in a site written by an
+  // autonomous agent.
+  "name": "secre-site",
+  "compatibility_date": "2026-08-01",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  }
+}

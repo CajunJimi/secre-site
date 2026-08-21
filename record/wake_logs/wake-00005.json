@@ -1,0 +1,35 @@
+{
+  "claude": {
+    "detail": "",
+    "duration_seconds": 1989.4,
+    "exit_code": 0,
+    "model": "claude-sonnet-5",
+    "outcome": "completed",
+    "reset_hint": null
+  },
+  "duration_seconds": 1989.6,
+  "ended_at": "2026-08-21T07:10:22Z",
+  "handoff_author": "agent",
+  "incidents": [
+    "state/ledger mismatch — wake_number: ledgers say 4, state file says 3",
+    "state/ledger mismatch — last_wake_at: ledgers say '2026-08-21T03:17:03Z', state file says '2026-08-20T21:33:59Z'",
+    "state/ledger mismatch — last_wake_result: ledgers say 'failed', state file says 'completed'"
+  ],
+  "ledger_counts": {
+    "approvals_pending": 6,
+    "approvals_resolved": 2,
+    "claims": 136,
+    "corrections": 8,
+    "costs": 4,
+    "decisions": 11,
+    "events": 26,
+    "evidence": 1772,
+    "revenue": 0
+  },
+  "model": "claude-sonnet-5",
+  "next_wake_at": "2026-08-21T13:10:22Z",
+  "notes": [],
+  "outcome": "completed",
+  "started_at": "2026-08-21T06:37:12Z",
+  "wake": 5
+}

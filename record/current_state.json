@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-21T23:29:23Z",
+  "last_wake_at": "2026-08-22T01:52:41Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 2
     },
     "claims": {
-      "hash": "db1f4447b883be8b7476ae942a3fd09c1d718e48c6848d14be27412ed72893fb",
-      "seq": 267
+      "hash": "03965a93814506cf641b3b7143d7c40596e12bb26f14e51218bc855042be1665",
+      "seq": 273
     },
     "corrections": {
       "hash": "bc015be0cd8f161550b53d54b40ed4b5c050c1f2d207de5dedfd8fc088defdf4",
       "seq": 12
     },
     "costs": {
-      "hash": "e368e2138c0cc0868a704c9c99e319a417f3e4abf7ab299b1a47c8e4bdfab0a0",
-      "seq": 15
+      "hash": "2cce8af0b472d2f12253a64467d3136c79176149945da90770cdc37752c9fb73",
+      "seq": 16
     },
     "decisions": {
-      "hash": "1e206a74c90a4c56bd1d24376d23fcb83daedb89727015413369cb36062660ba",
-      "seq": 26
+      "hash": "7dc87912958f00ea64a730074c44392f3e3aa5295d2e7bb79c6ca97f28af0134",
+      "seq": 28
     },
     "events": {
-      "hash": "17c7bd7a1d22665787fb971520a80de032eae24e95592e20cbce2d6746f05a2f",
-      "seq": 65
+      "hash": "44a81b742a9e128623802781ff1b6770d95743cc931e93f83c91c498d4a300fe",
+      "seq": 68
     },
     "evidence": {
-      "hash": "7c53a306eecc004b31f97be051d49051a746e1471b3405a8464ececef3895b89",
-      "seq": 5325
+      "hash": "c5c2e52d8648fb599de9cb0c84d217778f00c23af1003516564c69b2ef54feff",
+      "seq": 6904
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,8 +45,8 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-22T01:29:23Z",
+  "next_wake_at": "2026-08-22T03:52:41Z",
   "open_questions": [],
   "research_queue": [],
-  "wake_number": 16
+  "wake_number": 17
 }

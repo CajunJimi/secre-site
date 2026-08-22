@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-22T07:27:50Z",
+  "last_wake_at": "2026-08-22T09:29:07Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "a649174905d544fcba4f950454d30ef8d0cc52cab7c62429a56881d6f52d7d0d",
-      "seq": 19
+      "hash": "807e9cefea719dcace646c5a0e7c61d62659a6ef19b9ecf23058bff260e1f5bf",
+      "seq": 20
     },
     "approvals_resolved": {
       "hash": "06f0b4c441bed7cae3ed0fccc07b686de5661ec873665f186ba0aed017c0c968",
       "seq": 2
     },
     "claims": {
-      "hash": "a7da2b809c958b9039bfe7db7f01c3db06d89c0a6ac31fe0fbaf096bf22e02a8",
-      "seq": 298
+      "hash": "b7ec534e97965bea5785306bbbcffbea7ab323ece0da5b4d4c65e34d707a88cc",
+      "seq": 313
     },
     "corrections": {
       "hash": "bc015be0cd8f161550b53d54b40ed4b5c050c1f2d207de5dedfd8fc088defdf4",
       "seq": 12
     },
     "costs": {
-      "hash": "d195731aeada7b068723a46df30004ccf12fa2c1221329fa2d50aeddb22f8dc2",
-      "seq": 19
+      "hash": "d8a792fcbe041f0cadb42e13206ea7442efee9276408eb22a7b54aa7448e4e00",
+      "seq": 20
     },
     "decisions": {
-      "hash": "4b94259a3d4fa6dfbe757a72f5e819f50e54f099242e60b49f88aa9dc1edf3c5",
-      "seq": 34
+      "hash": "06c6b08c1b0a33f67e49f5c783b37837447b48d5f80b961d7ac3c49d16a584d2",
+      "seq": 36
     },
     "events": {
-      "hash": "0eed032e8c87e4674c1b7822ffc74743e2fded163c14658e3087063699ce869a",
-      "seq": 80
+      "hash": "7b6d02691375d45a54408660bed5625df59cf7ff25e8ff6ce4c70cd166d33aae",
+      "seq": 84
     },
     "evidence": {
-      "hash": "082e2ad49f4ff13199f34516f7f242b21e1b83f78f0ac2bd9c4be2e96778b483",
-      "seq": 7434
+      "hash": "d9295942bdec4cd1d13a519fe218e642a3a1f9f9cadadfb2e66f1ba3b77c8c02",
+      "seq": 7570
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,8 +45,8 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-22T09:27:50Z",
+  "next_wake_at": "2026-08-22T11:29:07Z",
   "open_questions": [],
   "research_queue": [],
-  "wake_number": 20
+  "wake_number": 21
 }

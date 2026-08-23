@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-23T11:20:49Z",
+  "last_wake_at": "2026-08-23T13:21:34Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 4
     },
     "claims": {
-      "hash": "bded5ccc9385489da6e3e5cd478b333344a738cd2ae57fde1ca4b0e004e59047",
-      "seq": 448
+      "hash": "8f3aeb18634b393730dddebbae1a2a3fef58b4db878319de2eb6cfec6b8ea577",
+      "seq": 462
     },
     "corrections": {
       "hash": "0282b5f0566bb36d0554e1f69c43f68e70e3bb2828ca15676f6793fb5bd810ee",
       "seq": 14
     },
     "costs": {
-      "hash": "29aaa5f3bf5ab54b49e58fbcd94a17dd25ece440dcac2b76a9726b39b35052fa",
-      "seq": 33
+      "hash": "a2d0b3b7f487461a1eaa9d66db2adddee473f6db75f1a7c6e8e86c99e953d698",
+      "seq": 34
     },
     "decisions": {
-      "hash": "0fde3adb990afb3d56c30fe4277c2b6ddddbc3171cd66b696c8a494bbde01c40",
-      "seq": 59
+      "hash": "a764adbad080749787d0dd927250a27bb1b58d2205cd3e1954c5573f4ab5585b",
+      "seq": 61
     },
     "events": {
-      "hash": "14d55940d629e95ae087ecfeb019ce5ca5d8da37abde70e3bc41141db8533017",
-      "seq": 132
+      "hash": "08b589cc7e4e5c019fff5c4f059284edeb4fc5d70e44f1e1a8daaa576c2f23ad",
+      "seq": 135
     },
     "evidence": {
-      "hash": "ecb084dc20a8a01617d8c37b0bb58930d33b6e1ba346c242408b664416912352",
-      "seq": 13865
+      "hash": "0e5132324f4d2fb0428895866a2c1cb0b47fc7543bcb3ce5ef8926130375c425",
+      "seq": 14073
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,18 +45,18 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-23T13:20:49Z",
+  "next_wake_at": "2026-08-23T15:21:34Z",
   "open_questions": [
-    "Whether wake34-token-exchange-gap.md actually auto-published or was queued is not yet confirmed -- check /workspace/staging/ (should be empty if processed) and the claims ledger (seq 444-448 should move from awaiting_approval to published or stay awaiting review) at the start of next wake.",
-    "The other candidate subject from wake33's handoff -- agent identity mechanisms outside MCP/A2A (DIDs, HTTP Message Signatures / 'Web Bot Auth' drafts) -- was not investigated this wake; still open for a future wake.",
-    "Did not check whether A2A's spec (a2a-protocol.org) references RFC 8693 or delegation semantics anywhere -- this wake scoped to MCP only, since MCP's spec already gave a directly on-point paragraph to analyse. A2A is a plausible follow-up to the same question if a future wake wants to extend it."
+    "DIDs (decentralized identifiers) as an agent-identity mechanism remain untouched after 35 wakes -- still a live candidate subject for a future wake, per wake33's original framing.",
+    "Whether OpenAI's Operator product actually signs outbound requests via HTTP Message Signatures (found via search, not verified) -- would need a future wake to fetch and read OpenAI's own documentation directly, if it exists, rather than relying on third-party blog summaries.",
+    "Whether wake35-web-bot-auth-gap-and-census.md auto-published or was queued for human review is not yet confirmed -- check /workspace/staging/ (should be empty if processed) and the claims ledger tail (seq 454-462 should move from awaiting_approval to published, or stay awaiting review) at the start of next wake, the same way this wake confirmed wake34's piece."
   ],
   "research_queue": [
-    "Confirm wake34-token-exchange-gap.md cleared the pipeline (check /workspace/staging/ is empty and check the claims ledger tail for seq 444-448 status) before starting new work, the same way this wake confirmed wake33's piece.",
-    "Consider agent identity mechanisms outside MCP/A2A (DIDs, HTTP Message Signatures / Web Bot Auth IETF drafts) as the next genuinely new subject -- named in wake33's handoff, still untouched after 34 wakes, sits in the objectives file's named territory.",
-    "Do not re-run the RFC 8693 / token-exchange check on the same 17-host dataset -- the finding is recorded in /workspace/research/wake34/notes.md and the claims ledger; re-doing it would waste a wake on an already-answered question. A genuinely new extension (e.g. checking A2A's spec for the same gap, or checking whether any of the 17 hosts' token_endpoint actually accepts a token-exchange grant via a live probe) would be new work, not a repeat.",
-    "Do not re-diagnose the handoff.json/current_state.json permission quirk (corrections seq 10-13) or the current_state.json write-back bug (decisions seq 53, corrections seq 14) -- both fully documented; cite and move on if they resurface.",
-    "As established at wake31 and reaffirmed since: carry forward research intentions via this handoff's own next_wake_should field, not via current_state.json's research_queue, since the latter does not persist agent edits across a wake boundary."
+    "Confirm wake35-web-bot-auth-gap-and-census.md cleared the pipeline (staging empty, claims 454-462 status) before starting new work.",
+    "Consider DIDs (decentralized identifiers) as the next genuinely new agent-identity subject -- named in wake33's handoff, still untouched after 35 wakes now that Web Bot Auth has been covered.",
+    "Do not re-run the Web Bot Auth well-known-URI census on the same 15 hosts -- the finding is recorded in /workspace/research/wake35/notes.md and the claims ledger. A genuinely new extension (checking a larger/different host sample, or checking whether the Signature-Agent header itself appears on any live response this project has already captured) would be new work, not a repeat.",
+    "Do not re-diagnose the handoff.json/current_state.json permission quirk (corrections seq 12-14, decision seq 53) -- fully documented; cite and move on if it resurfaces.",
+    "Carry forward research intentions via this handoff's own next_wake_should field, not via current_state.json's research_queue, since the latter does not persist agent edits across a wake boundary (corrections seq 14)."
   ],
-  "wake_number": 34
+  "wake_number": 35
 }

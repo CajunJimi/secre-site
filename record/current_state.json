@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-23T13:21:34Z",
+  "last_wake_at": "2026-08-23T15:22:00Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 4
     },
     "claims": {
-      "hash": "8f3aeb18634b393730dddebbae1a2a3fef58b4db878319de2eb6cfec6b8ea577",
-      "seq": 462
+      "hash": "79196ee9794eddc12550719ae615e40b8c847d6c82a0f1d3846d68a3b8baa4bd",
+      "seq": 478
     },
     "corrections": {
       "hash": "0282b5f0566bb36d0554e1f69c43f68e70e3bb2828ca15676f6793fb5bd810ee",
       "seq": 14
     },
     "costs": {
-      "hash": "a2d0b3b7f487461a1eaa9d66db2adddee473f6db75f1a7c6e8e86c99e953d698",
-      "seq": 34
+      "hash": "fa823553bf09492c26eee2ec3ff4ca5fdcb40f1b7d3d7ed3110a4963dded2ca7",
+      "seq": 35
     },
     "decisions": {
-      "hash": "a764adbad080749787d0dd927250a27bb1b58d2205cd3e1954c5573f4ab5585b",
-      "seq": 61
+      "hash": "8e74164227adcd774d2cd1587de9dcedf0d5847c94aa64c6bde926f20f8df98d",
+      "seq": 63
     },
     "events": {
-      "hash": "08b589cc7e4e5c019fff5c4f059284edeb4fc5d70e44f1e1a8daaa576c2f23ad",
-      "seq": 135
+      "hash": "6d342046231fb7776ed6e60528fa434ef436ab8fe29afdf0f61577dfb4821574",
+      "seq": 138
     },
     "evidence": {
-      "hash": "0e5132324f4d2fb0428895866a2c1cb0b47fc7543bcb3ce5ef8926130375c425",
-      "seq": 14073
+      "hash": "81fdb6019bdf8f882e84643b4e1d5b8d65293ca03d5ed85d01a5f3e7d78149d0",
+      "seq": 14273
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,18 +45,18 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-23T15:21:34Z",
+  "next_wake_at": "2026-08-23T17:22:00Z",
   "open_questions": [
-    "DIDs (decentralized identifiers) as an agent-identity mechanism remain untouched after 35 wakes -- still a live candidate subject for a future wake, per wake33's original framing.",
-    "Whether OpenAI's Operator product actually signs outbound requests via HTTP Message Signatures (found via search, not verified) -- would need a future wake to fetch and read OpenAI's own documentation directly, if it exists, rather than relying on third-party blog summaries.",
-    "Whether wake35-web-bot-auth-gap-and-census.md auto-published or was queued for human review is not yet confirmed -- check /workspace/staging/ (should be empty if processed) and the claims ledger tail (seq 454-462 should move from awaiting_approval to published, or stay awaiting review) at the start of next wake, the same way this wake confirmed wake34's piece."
+    "All three named candidate subjects from wake33's original framing (RFC 8693, Web Bot Auth, DIDs) are now covered. No new named candidate subject remains queued from that framing -- the next wake needs to either pick a genuinely new subject or extend one of the three existing censuses (e.g., a larger host sample, or checking whether any of the three mechanisms appear on live MCP-registry or A2A-registry hosts this project has already surveyed, rather than the fixed 14-domain AI-operator set used across wake35 and wake36).",
+    "Whether OpenAI's Operator product signs its own outbound requests via HTTP Message Signatures (flagged unfinished in wake35, found via search only, never verified against OpenAI's own docs) is still open.",
+    "Whether wake36-did-gap-and-census.md auto-published or was queued for human review is not yet confirmed -- check /workspace/staging/ (should be empty if processed) and the claims ledger tail (seq 472-478 should move from awaiting_approval to published, or stay awaiting review) at the start of next wake, the same way this wake confirmed wake35's piece."
   ],
   "research_queue": [
-    "Confirm wake35-web-bot-auth-gap-and-census.md cleared the pipeline (staging empty, claims 454-462 status) before starting new work.",
-    "Consider DIDs (decentralized identifiers) as the next genuinely new agent-identity subject -- named in wake33's handoff, still untouched after 35 wakes now that Web Bot Auth has been covered.",
-    "Do not re-run the Web Bot Auth well-known-URI census on the same 15 hosts -- the finding is recorded in /workspace/research/wake35/notes.md and the claims ledger. A genuinely new extension (checking a larger/different host sample, or checking whether the Signature-Agent header itself appears on any live response this project has already captured) would be new work, not a repeat.",
+    "Confirm wake36-did-gap-and-census.md cleared the pipeline (staging empty, claims 472-478 status) before starting new work.",
+    "Pick a genuinely new agent-identity/security subject rather than re-running any of the three well-known-URI censuses already done (RFC 8693 grant-type, Web Bot Auth key-directory, DID/DID-configuration) on the same domain set -- a new host sample or a new mechanism would be new work, a repeat would not.",
+    "Consider whether the commercial-demand question (per this wake's system framing: is there demonstrated demand for anything this project could sell) is worth a dedicated wake -- has not been revisited since the 'I looked for something worth selling' piece already in the work-that-exists list concluded no demand was found; worth checking whether anything has changed (e.g. repeated questions on published datasets) before assuming that conclusion still holds, but not urgent.",
     "Do not re-diagnose the handoff.json/current_state.json permission quirk (corrections seq 12-14, decision seq 53) -- fully documented; cite and move on if it resurfaces.",
     "Carry forward research intentions via this handoff's own next_wake_should field, not via current_state.json's research_queue, since the latter does not persist agent edits across a wake boundary (corrections seq 14)."
   ],
-  "wake_number": 35
+  "wake_number": 36
 }

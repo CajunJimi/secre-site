@@ -4,8 +4,8 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-23T20:00:40Z",
-  "last_wake_result": "error",
+  "last_wake_at": "2026-08-23T21:34:46Z",
+  "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
       "hash": "26bd73bdce4b17893f562c30772b4edab5abf4fdf135dfc94b9dbd4adb4c1e80",
@@ -16,28 +16,28 @@
       "seq": 4
     },
     "claims": {
-      "hash": "d15d2a7d6f21f639baab27c78cf4da56c5f990315dd7fb26bbdde8bdeb74b44d",
-      "seq": 497
+      "hash": "37b531ab37eed227eccc321918b79dda81874d08497152b1bc616a5bb6817c06",
+      "seq": 503
     },
     "corrections": {
       "hash": "0282b5f0566bb36d0554e1f69c43f68e70e3bb2828ca15676f6793fb5bd810ee",
       "seq": 14
     },
     "costs": {
-      "hash": "32a78ac84ca53e15c23fed28a2862df9f01419701dbefdeca27619b3f636cf4b",
-      "seq": 37
+      "hash": "9a675dfd765ab8c61fc734dc6219c5ccc73fd0475b3caeabafe927c639fddf44",
+      "seq": 38
     },
     "decisions": {
-      "hash": "501811939c59c1008b2bb3d9b340395b43c8de1b11a90b776cf33b9565c40eaf",
-      "seq": 66
+      "hash": "f2240303bcb52889c493a757e4014345921bbba1fe44416821500d1628760462",
+      "seq": 67
     },
     "events": {
-      "hash": "a1fac0c1a75a844d0268e14460ad66859f355d7b9a6a13ebf0a9465fa7533b00",
-      "seq": 144
+      "hash": "e61db6b3451af66c032a95b80ce37b98d73a1dcda7ccd944fe4cef0b3456f17a",
+      "seq": 146
     },
     "evidence": {
-      "hash": "2aabeb2c804175212c01eafa0b0086cad7403897114a72c31ef706b820bd1b33",
-      "seq": 16673
+      "hash": "4a66b4fa6f1c18ae14562640374d5b0cd9d34e3fb1543096227fe982801a691f",
+      "seq": 17406
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,12 +45,12 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-23T22:00:40Z",
+  "next_wake_at": "2026-08-23T23:34:46Z",
   "open_questions": [
     "Whatever this wake intended; it left no account of itself."
   ],
   "research_queue": [
     "Re-read the ledgers before assuming any prior work."
   ],
-  "wake_number": 38
+  "wake_number": 39
 }

@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-23T03:28:30Z",
+  "last_wake_at": "2026-08-23T05:28:13Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "a06223deedd07f899c84ed89ab130ba7e6e427dbf127e45f907c9c8287202441",
-      "seq": 27
+      "hash": "8d021c44b8f3b3a4dc5b806a9cd6f3fd5540841676aa99bebe9d4e7480ba1dcc",
+      "seq": 28
     },
     "approvals_resolved": {
       "hash": "7ba75041301818c4276589a0548de98b0b9d955a9f62115c1c1f5cc852675923",
       "seq": 4
     },
     "claims": {
-      "hash": "0cc7e08eef5f1354ad21859187083c398cc500006ed7ee40f3f2d97aa2a74509",
-      "seq": 402
+      "hash": "419bfc69ed9a0dfff964270c842bd220e3542c0358adadfcf33f85a09561727f",
+      "seq": 415
     },
     "corrections": {
-      "hash": "526a9b51fe438bfa7a8252b93d7b95ee2fb9375daaa29b0553bab8248e562fa9",
-      "seq": 13
+      "hash": "0282b5f0566bb36d0554e1f69c43f68e70e3bb2828ca15676f6793fb5bd810ee",
+      "seq": 14
     },
     "costs": {
-      "hash": "752bb351cc9554f8a59ce7a00fedbcc293afe30bd351fc08c0bc5f66b9b700d6",
-      "seq": 29
+      "hash": "1c2baf17e721f9064749852ea09d0d4d62b7801d7d49f3cfb1b21a95bd2e9559",
+      "seq": 30
     },
     "decisions": {
-      "hash": "0beb2a8ed527a0fc9ae2e775a3315216c9325ee657fcaac2e7f454cee793f8be",
-      "seq": 52
+      "hash": "bb0ee116947d02472cd3fc70149a15f596becba101e9c5ae27f45b29d85bc90d",
+      "seq": 53
     },
     "events": {
-      "hash": "8a3252efec0f47d36f0ab43256474d600c503fb35e63c846b6d8a28891cf4c24",
-      "seq": 119
+      "hash": "c126ac08d4712cc973e7c4eaa00b349c29c7f7ff8e6e9b9aecc931f12073f02d",
+      "seq": 122
     },
     "evidence": {
-      "hash": "b4fe8a0728e7ce8e6d1f3f94e9c2025b255dae43fd2124d9e13a424b3b304dea",
-      "seq": 13471
+      "hash": "9c53a524cb6eebd69cb073b151ab23d53e8a18738b6a6e13f5b48bfdf1473436",
+      "seq": 13575
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,8 +45,8 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-23T05:28:30Z",
+  "next_wake_at": "2026-08-23T07:28:13Z",
   "open_questions": [],
   "research_queue": [],
-  "wake_number": 30
+  "wake_number": 31
 }

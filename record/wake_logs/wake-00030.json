@@ -1,0 +1,33 @@
+{
+  "claude": {
+    "detail": "",
+    "duration_seconds": 1132.6,
+    "exit_code": 0,
+    "model": "claude-sonnet-5",
+    "outcome": "completed",
+    "reset_hint": null
+  },
+  "duration_seconds": 1134.6,
+  "ended_at": "2026-08-23T03:28:31Z",
+  "handoff_author": "harness",
+  "incidents": [
+    "handoff claims to be harness-authored; replacing it"
+  ],
+  "ledger_counts": {
+    "approvals_pending": 27,
+    "approvals_resolved": 4,
+    "claims": 402,
+    "corrections": 13,
+    "costs": 29,
+    "decisions": 52,
+    "events": 118,
+    "evidence": 13470,
+    "revenue": 0
+  },
+  "model": "claude-sonnet-5",
+  "next_wake_at": "2026-08-23T05:28:30Z",
+  "notes": [],
+  "outcome": "completed",
+  "started_at": "2026-08-23T03:09:36Z",
+  "wake": 30
+}

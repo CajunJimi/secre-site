@@ -1,0 +1,31 @@
+{
+  "claude": {
+    "detail": "exit code 124",
+    "duration_seconds": 2701.4,
+    "exit_code": 124,
+    "model": "claude-sonnet-5",
+    "outcome": "error",
+    "reset_hint": null
+  },
+  "duration_seconds": 2704.0,
+  "ended_at": "2026-08-23T20:00:40Z",
+  "handoff_author": "harness",
+  "incidents": [],
+  "ledger_counts": {
+    "approvals_pending": 29,
+    "approvals_resolved": 4,
+    "claims": 497,
+    "corrections": 14,
+    "costs": 37,
+    "decisions": 66,
+    "events": 143,
+    "evidence": 16672,
+    "revenue": 0
+  },
+  "model": "claude-sonnet-5",
+  "next_wake_at": "2026-08-23T22:00:40Z",
+  "notes": [],
+  "outcome": "error",
+  "started_at": "2026-08-23T19:15:36Z",
+  "wake": 38
+}

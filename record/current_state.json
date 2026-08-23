@@ -4,8 +4,8 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-23T17:36:45Z",
-  "last_wake_result": "completed",
+  "last_wake_at": "2026-08-23T20:00:40Z",
+  "last_wake_result": "error",
   "ledger_heads": {
     "approvals_pending": {
       "hash": "26bd73bdce4b17893f562c30772b4edab5abf4fdf135dfc94b9dbd4adb4c1e80",
@@ -16,28 +16,28 @@
       "seq": 4
     },
     "claims": {
-      "hash": "1304d49379a1ae78da19e9154b576a7dfbc3e38f77eafdc02d6e3004135a225c",
-      "seq": 491
+      "hash": "d15d2a7d6f21f639baab27c78cf4da56c5f990315dd7fb26bbdde8bdeb74b44d",
+      "seq": 497
     },
     "corrections": {
       "hash": "0282b5f0566bb36d0554e1f69c43f68e70e3bb2828ca15676f6793fb5bd810ee",
       "seq": 14
     },
     "costs": {
-      "hash": "14ea4c95ea9d2ba13cf5f6fe5e0a17a416e276b94577a96e6eadf177f4536d98",
-      "seq": 36
+      "hash": "32a78ac84ca53e15c23fed28a2862df9f01419701dbefdeca27619b3f636cf4b",
+      "seq": 37
     },
     "decisions": {
-      "hash": "2127d3382cd5a47fc2b36c155c3b360658fd755457e00946760fec71dd8beb9a",
-      "seq": 65
+      "hash": "501811939c59c1008b2bb3d9b340395b43c8de1b11a90b776cf33b9565c40eaf",
+      "seq": 66
     },
     "events": {
-      "hash": "041164178424ee8001c82b13363a72d33be27a99e28f99ec4d7551c479e678f0",
-      "seq": 141
+      "hash": "a1fac0c1a75a844d0268e14460ad66859f355d7b9a6a13ebf0a9465fa7533b00",
+      "seq": 144
     },
     "evidence": {
-      "hash": "57e62645fdaa720bfa160598f08054eec3447347debac5df318b2dd0934fac06",
-      "seq": 14927
+      "hash": "2aabeb2c804175212c01eafa0b0086cad7403897114a72c31ef706b820bd1b33",
+      "seq": 16673
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,19 +45,12 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-23T19:36:45Z",
+  "next_wake_at": "2026-08-23T22:00:40Z",
   "open_questions": [
-    "Whether OpenAI's Operator product signs its own outbound requests via HTTP Message Signatures (flagged unfinished in wake35 and wake36, found via search only, never verified against OpenAI's own docs) is still open.",
-    "The other two extension options from wake36's handoff -- a larger host sample for the Web Bot Auth key-directory census, and checking whether RFC 8693/Web Bot Auth/DID artifacts appear on the MCP-registry (n=530+) or A2A-registry (n=236+) hosts this project has already surveyed, rather than the fixed 14-domain AI-operator set -- remain available and were not attempted this wake; the RFC 8693 grant-type extension was chosen instead as lower-cost and more directly closing an already-stated limitation.",
-    "Whether wake37-token-exchange-census-at-n257.md auto-published or was queued for human review is not yet confirmed -- check /workspace/staging/ (should be empty if processed) and the claims ledger tail (seq 486-491 should move from awaiting_approval to published, or stay under review) at the start of next wake.",
-    "The commercial-demand question (wake33's no-demand conclusion) has not been revisited since wake33; still not urgent per wake36's assessment, but worth a periodic check for new signal."
+    "Whatever this wake intended; it left no account of itself."
   ],
   "research_queue": [
-    "Confirm wake37-token-exchange-census-at-n257.md cleared the pipeline (staging empty, claims 486-491 status) before starting new work.",
-    "Pick a genuinely new subject, OR continue the extension pattern established this wake: the Web Bot Auth key-directory census (wake35) could similarly be grown from the 14-domain AI-operator set to the MCP-registry or A2A-registry host lists already surveyed at much larger n -- this is the most directly analogous unfinished extension left over from wake36's handoff.",
-    "Do not re-diagnose the handoff.json/current_state.json permission quirk (corrections seq 12-14, decision seq 53) -- fully documented; cite and move on if it resurfaces.",
-    "When running a background fetch job in a future wake, launch it directly with Bash run_in_background:true (or load TaskOutput via ToolSearch first) rather than backgrounding with a bare `&` inside a foregrounded Bash call -- the latter works but loses the harness's task-tracking/notification handle, as happened early this wake before the job was re-wrapped for TaskOutput polling.",
-    "Carry forward research intentions via this handoff's own next_wake_should field, not via current_state.json's research_queue, since the latter does not persist agent edits across a wake boundary (corrections seq 14)."
+    "Re-read the ledgers before assuming any prior work."
   ],
-  "wake_number": 37
+  "wake_number": 38
 }

@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-24T05:17:38Z",
+  "last_wake_at": "2026-08-24T07:30:23Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "9151f21258e638aff2cf862e90a1f9aceeaaad9ff9da19d3d2e1092a4079ab83",
-      "seq": 32
+      "hash": "b3f65377bd2923941f81445fd382d4824f9306451116bf0135d6a8240d7cd12c",
+      "seq": 33
     },
     "approvals_resolved": {
-      "hash": "7ba75041301818c4276589a0548de98b0b9d955a9f62115c1c1f5cc852675923",
-      "seq": 4
+      "hash": "425a96b98104becd6cfd04fe6d25f1f78105671fbbec39f85e9eb31e593795eb",
+      "seq": 8
     },
     "claims": {
-      "hash": "f3b8c962a798fa13af5d9ccef371a0388960667ef9944992dfed7019f4716713",
-      "seq": 529
+      "hash": "029091e899c5418850a1f7bddb75c1c84a0ec4ad3e86c3575d0397d567f8a008",
+      "seq": 538
     },
     "corrections": {
-      "hash": "0282b5f0566bb36d0554e1f69c43f68e70e3bb2828ca15676f6793fb5bd810ee",
-      "seq": 14
+      "hash": "58d4c4d95742acdca27ac028929123bd9c889d43612142e043c85106e5aa3f51",
+      "seq": 15
     },
     "costs": {
-      "hash": "b51b10249cfb6673005ee7bb3acaf2d97f1abf1c90a5ef0237557a951fd18031",
-      "seq": 42
+      "hash": "156ea0d20bb9d34c4fd60946c6a8a01e032fa061996cec354c7e99f8c00b1e7d",
+      "seq": 43
     },
     "decisions": {
-      "hash": "0200b193e9ca8ff4b7b3c6d91cfe7dbb69f3561cdec0743c657ab221cd5d6fd2",
-      "seq": 72
+      "hash": "03faf3c0609a692f6abfb70807886af4ddddd2da05cda0936cb7e8cf0b8f1c7b",
+      "seq": 73
     },
     "events": {
-      "hash": "cacd0cc33483c57d9b685ad9a23ccdf8d558ce7987c93f5ef44c53278eba431a",
-      "seq": 159
+      "hash": "9f8baa0b7fa24952f45fb1635b6df47df9169dcd1ed6071aaf1d3d01ebebe02d",
+      "seq": 166
     },
     "evidence": {
-      "hash": "e42eeeec4b2df9272fad5d992be8eecf09c59e0dca99af434f27b9e80fd5093a",
-      "seq": 19006
+      "hash": "dead0cc6711767cf07844b063d8002073f28e0f6bc4d8a24963ee0e30661657b",
+      "seq": 19130
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,7 +45,7 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-24T07:17:38Z",
+  "next_wake_at": "2026-08-24T09:30:23Z",
   "open_questions": [
     "This wake did not check whether any production AP2 deployment actually runs this reference sample code, nor other language SDKs/samples (e.g. Android) for a third routing convention -- noted explicitly as a limitation in the staged document.",
     "The staged ap2-reference-code-discovery.md is expected to be gated for human review (names eco.com and ap2lab.com alongside a claim their published guidance doesn't match the reference implementation) -- same pattern as wake 42's item, flagged honestly rather than routed around.",
@@ -57,5 +57,5 @@
     "If picking a new subject: the operator's seeds list (objectives.json) still has 'how far can an agent get into a service that claims to support agents before hitting something only a human can pass' as an unexplored seed, and no prior wake_log filename in the archive index mentions it by name -- worth checking with fresh eyes.",
     "Do not re-litigate the handoff.json permission/format mechanics again -- corrections seq 10-14 plus this wake's own diagnosis fully cover it. The method is: rm -f /memory/handoff.json, then write fresh JSON matching Handoff.from_dict's schema in /workspace/harness/memory.py (decided/did/found/unfinished/next_wake_should must all be list[str])."
   ],
-  "wake_number": 43
+  "wake_number": 44
 }

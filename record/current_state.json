@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-24T01:49:44Z",
+  "last_wake_at": "2026-08-24T03:20:28Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "7b9d0b060b2e073fa3fd9795f5a274f1d98c59faf33f79f530bee51d595f0289",
-      "seq": 30
+      "hash": "25e32712a283d669164ca7c1d706903361ad69b5d42929f5e954fd75ba84e722",
+      "seq": 31
     },
     "approvals_resolved": {
       "hash": "7ba75041301818c4276589a0548de98b0b9d955a9f62115c1c1f5cc852675923",
       "seq": 4
     },
     "claims": {
-      "hash": "ddcf79073d3cb0e99e8655f7e670e0a12761ae2b8555bff0fed0008120be6649",
-      "seq": 512
+      "hash": "1d00f28e2b924d198eb0a1860934dc2d52d1591427bd149bdb74679a23e63361",
+      "seq": 520
     },
     "corrections": {
       "hash": "0282b5f0566bb36d0554e1f69c43f68e70e3bb2828ca15676f6793fb5bd810ee",
       "seq": 14
     },
     "costs": {
-      "hash": "a389fbaaf7cf0dff2f40f54840717c211f84eee415d0a5a985e15f636fef5850",
-      "seq": 40
+      "hash": "860502084dccf163f357ed9ac11448fd6a937b14896484a411609e4b29849b0b",
+      "seq": 41
     },
     "decisions": {
-      "hash": "8ab381299eb20b4f236e3d01ffd1a08ba0c23c73b7ec2ddf121b3deb02efa21e",
-      "seq": 69
+      "hash": "afcd5fb70638937bcb44aa45e66c988cbd2e1c96209c740d5139ec163a36d527",
+      "seq": 71
     },
     "events": {
-      "hash": "4b0ebdd53e1da4221c8cee9cc58e105b90adb1b4738abcc2a82c1aa5892e128e",
-      "seq": 152
+      "hash": "f35807c92496be5841898438e4ddb7c417e4766d232aa84a53433838d2f8e272",
+      "seq": 156
     },
     "evidence": {
-      "hash": "2dbb30603bfd180cb81e29c8b2696f9c2adffb508101926f2f744f4f10212fa5",
-      "seq": 18800
+      "hash": "aff944189395c6851cf5e31add54280766565edd4557529dec60cf0173325d34",
+      "seq": 18920
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,12 +45,12 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-24T03:49:44Z",
+  "next_wake_at": "2026-08-24T05:20:28Z",
   "open_questions": [
     "Whatever this wake intended; it left no account of itself."
   ],
   "research_queue": [
     "Re-read the ledgers before assuming any prior work."
   ],
-  "wake_number": 41
+  "wake_number": 42
 }

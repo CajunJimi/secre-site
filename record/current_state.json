@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-24T21:22:25Z",
+  "last_wake_at": "2026-08-24T23:22:55Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 8
     },
     "claims": {
-      "hash": "7b49b368ba0f304e04a3516558fb61a25c0f5f0affffceb51b781d53802825a4",
-      "seq": 617
+      "hash": "38918146d00718de2813fe404d9ca060124de076565df7da1d5e38f37d3f6763",
+      "seq": 626
     },
     "corrections": {
       "hash": "58d4c4d95742acdca27ac028929123bd9c889d43612142e043c85106e5aa3f51",
       "seq": 15
     },
     "costs": {
-      "hash": "14ae460656739437036dcd56c31ade1533ef8cca021ca27a1075af89fc60ad78",
-      "seq": 50
+      "hash": "305066b929eb7b96e3a0f978def75b67990d23901b198dd87db3638127c48661",
+      "seq": 51
     },
     "decisions": {
-      "hash": "9f150b5048730c8baa37aa1156a03a2bcfaa68175ded1a4852444151049ebde8",
-      "seq": 86
+      "hash": "d5840b95ebc20a1c9ebb5853175bcc61fdbfe8e13882d8820d3943aa0f511334",
+      "seq": 88
     },
     "events": {
-      "hash": "0ee4cbfce272249e512b8f9d900eb10bd4da15031a4d671bb4a40c103acf3227",
-      "seq": 187
+      "hash": "c46dd631b2167d7921fb0b71a70722a577263e35ee2af342582c3f6c32a08144",
+      "seq": 190
     },
     "evidence": {
-      "hash": "2064a9c7b50225ecd82ab08abc5934a7e6cc474cbfdcb52616272d493ed5bb7d",
-      "seq": 19853
+      "hash": "6702411cf8969ee395dec6008270b11b6b722ebbe72282a3dde04dd6f4094f9e",
+      "seq": 19945
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,23 +45,22 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-24T23:22:25Z",
+  "next_wake_at": "2026-08-25T01:22:55Z",
   "open_questions": [
-    "Whether AAIF's post or any AAIF documentation cites a technical source (agent card, conformance report) for the WeChat integration specifically -- not checked; only AAIF's blog post itself was examined.",
-    "Huawei's own developer.huawei.com Celia/HarmonyOS 'A2A Mode' documentation -- still not located; a site-restricted WebSearch returned no specific page.",
-    "Whether Huawei's own WeChat A2A rollout (as distinct from Honor's) completed before AAIF's August 17 post -- still unconfirmed either way.",
-    "Whether the newly staged piece (aaif-a2a-wechat-protocol-identity) auto-publishes or gates, and if it gates, under what category/signal -- this piece names AAIF, Tencent, and Google in a claim that directly questions a standards body's flagship adoption example, so it may trip named_org_negative_claim.",
-    "The still-gated wake-50 piece (aaif-adoption-claims-wechat-timing) remains in private review with no resolution visible yet.",
-    "OpenAI 'other product surface' and Kiro manifest schema diff, both queued since wake 49, remain open.",
-    "The 34-entry approvals_pending backlog remains unreviewed by this project across many wakes -- consistently read as the operator's queue."
+    "Whether the newly staged piece (kiro-manifest-required-fields) auto-publishes or gates is unconfirmed -- publication events appear to land at wake_end based on the ledger pattern from wakes 49-51, so this wake's own log won't show the result.",
+    "The wake-50 piece (aaif-adoption-claims-wechat-timing) remains in private review with no resolution after one full wake since it entered.",
+    "OpenAI's 'other product surface' question (whether some other OpenAI entry point implements the vendor-neutral Agent Plugins spec) remains open, queued since wake 49.",
+    "Huawei's own developer.huawei.com Celia/HarmonyOS 'A2A Mode' documentation, and whether Huawei's WeChat A2A rollout completed before AAIF's August 17 post, remain unlocated/unconfirmed -- two WebSearch attempts across wakes 50-51 found nothing specific.",
+    "Whether Kiro's plugin loader enforces its documented 'required fields' at runtime (vs. treating them as guidance) was not determined -- would need loader source code or an empirical test outside what the gateway can reach.",
+    "The 34-entry approvals_pending backlog remains unreviewed by this project across many wakes -- consistently read as the operator's queue, not a research task."
   ],
   "research_queue": [
     "Re-read ledgers and current_state.json fresh at wake start, as always -- do not trust this handoff's account without checking events.jsonl/approvals_pending directly.",
-    "Check whether aaif-a2a-wechat-protocol-identity.md auto-published or gated, and read the gate reason if it gated -- this is the more load-bearing check this wake, since the piece makes a more pointed claim than wake 50's.",
-    "Also check whether the wake-50 piece (aaif-adoption-claims-wechat-timing) has resolved in private review yet.",
-    "If continuing the AAIF/A2A thread: try to find AAIF's own technical citation (if any) for the WeChat integration, or search specifically for any Tencent/WeChat developer documentation describing the mechanism's wire format.",
-    "Otherwise, Huawei's own Celia/HarmonyOS A2A developer docs, the OpenAI 'other product surface' question, or the Kiro manifest schema diff are the next-best-scoped open items.",
+    "Check whether kiro-manifest-required-fields.md auto-published or gated (it names Kiro/AWS descriptively alongside a documentation-accuracy finding -- same shape as wake 46/47/49's Agent Plugins pieces, which all auto-published, so this is the most likely outcome but unconfirmed).",
+    "Also check whether the wake-50 piece (aaif-adoption-claims-wechat-timing) has resolved in private review yet -- it's been pending across two full wakes now.",
+    "If continuing the Agent Plugins client-layer thread: the OpenAI 'other product surface' question is the best-scoped remaining item -- check whether OpenAI has any beta/alternate entry point implementing the vendor-neutral spec, beyond the three developer-doc pages already checked at wake 49.",
+    "Otherwise, the AAIF/WeChat Huawei-developer-docs and rollout-timing questions remain open but have resisted two prior WebSearch attempts; a different search strategy (e.g. Chinese-language sources, Huawei's own newsroom rather than developer docs) may be needed rather than repeating the same query.",
     "The approvals_pending backlog remains the operator's, not a next-wake action item."
   ],
-  "wake_number": 51
+  "wake_number": 52
 }

@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-24T03:20:28Z",
+  "last_wake_at": "2026-08-24T05:17:38Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "25e32712a283d669164ca7c1d706903361ad69b5d42929f5e954fd75ba84e722",
-      "seq": 31
+      "hash": "9151f21258e638aff2cf862e90a1f9aceeaaad9ff9da19d3d2e1092a4079ab83",
+      "seq": 32
     },
     "approvals_resolved": {
       "hash": "7ba75041301818c4276589a0548de98b0b9d955a9f62115c1c1f5cc852675923",
       "seq": 4
     },
     "claims": {
-      "hash": "1d00f28e2b924d198eb0a1860934dc2d52d1591427bd149bdb74679a23e63361",
-      "seq": 520
+      "hash": "f3b8c962a798fa13af5d9ccef371a0388960667ef9944992dfed7019f4716713",
+      "seq": 529
     },
     "corrections": {
       "hash": "0282b5f0566bb36d0554e1f69c43f68e70e3bb2828ca15676f6793fb5bd810ee",
       "seq": 14
     },
     "costs": {
-      "hash": "860502084dccf163f357ed9ac11448fd6a937b14896484a411609e4b29849b0b",
-      "seq": 41
+      "hash": "b51b10249cfb6673005ee7bb3acaf2d97f1abf1c90a5ef0237557a951fd18031",
+      "seq": 42
     },
     "decisions": {
-      "hash": "afcd5fb70638937bcb44aa45e66c988cbd2e1c96209c740d5139ec163a36d527",
-      "seq": 71
+      "hash": "0200b193e9ca8ff4b7b3c6d91cfe7dbb69f3561cdec0743c657ab221cd5d6fd2",
+      "seq": 72
     },
     "events": {
-      "hash": "f35807c92496be5841898438e4ddb7c417e4766d232aa84a53433838d2f8e272",
-      "seq": 156
+      "hash": "cacd0cc33483c57d9b685ad9a23ccdf8d558ce7987c93f5ef44c53278eba431a",
+      "seq": 159
     },
     "evidence": {
-      "hash": "aff944189395c6851cf5e31add54280766565edd4557529dec60cf0173325d34",
-      "seq": 18920
+      "hash": "e42eeeec4b2df9272fad5d992be8eecf09c59e0dca99af434f27b9e80fd5093a",
+      "seq": 19006
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,12 +45,17 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-24T05:20:28Z",
+  "next_wake_at": "2026-08-24T07:17:38Z",
   "open_questions": [
-    "Whatever this wake intended; it left no account of itself."
+    "This wake did not check whether any production AP2 deployment actually runs this reference sample code, nor other language SDKs/samples (e.g. Android) for a third routing convention -- noted explicitly as a limitation in the staged document.",
+    "The staged ap2-reference-code-discovery.md is expected to be gated for human review (names eco.com and ap2lab.com alongside a claim their published guidance doesn't match the reference implementation) -- same pattern as wake 42's item, flagged honestly rather than routed around.",
+    "The large pre-existing backlog of 'awaiting the operator' items (visible in the work-that-already-exists list at wake start) was not reviewed or triaged this wake -- that queue is the operator's, not something for a future wake to try to unblock from inside the container."
   ],
   "research_queue": [
-    "Re-read the ledgers before assuming any prior work."
+    "Re-read the ledgers fresh at wake start, as always -- do not assume this handoff's account of ledger state (claims seq 527-529, decisions seq 72) is still current without checking.",
+    "Consider a genuinely new subject next, since AP2 has now had two consecutive wakes of attention (42 and 43) even though only wake 42's piece has been formally 'published' in the pending-approval sense -- the spirit of the rotation rule favours moving on.",
+    "If picking a new subject: the operator's seeds list (objectives.json) still has 'how far can an agent get into a service that claims to support agents before hitting something only a human can pass' as an unexplored seed, and no prior wake_log filename in the archive index mentions it by name -- worth checking with fresh eyes.",
+    "Do not re-litigate the handoff.json permission/format mechanics again -- corrections seq 10-14 plus this wake's own diagnosis fully cover it. The method is: rm -f /memory/handoff.json, then write fresh JSON matching Handoff.from_dict's schema in /workspace/harness/memory.py (decided/did/found/unfinished/next_wake_should must all be list[str])."
   ],
-  "wake_number": 42
+  "wake_number": 43
 }

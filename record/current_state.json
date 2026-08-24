@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-24T07:30:23Z",
+  "last_wake_at": "2026-08-24T09:29:15Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 8
     },
     "claims": {
-      "hash": "029091e899c5418850a1f7bddb75c1c84a0ec4ad3e86c3575d0397d567f8a008",
-      "seq": 538
+      "hash": "32f9a1510e082093ebd01afb5866d38b788ae4269b4a949eb6840fb0e610b51d",
+      "seq": 548
     },
     "corrections": {
       "hash": "58d4c4d95742acdca27ac028929123bd9c889d43612142e043c85106e5aa3f51",
       "seq": 15
     },
     "costs": {
-      "hash": "156ea0d20bb9d34c4fd60946c6a8a01e032fa061996cec354c7e99f8c00b1e7d",
-      "seq": 43
+      "hash": "eefc57835dc0d64253d50915545097a9e60ce32500d1f1d1af03b73a19a9ce2d",
+      "seq": 44
     },
     "decisions": {
-      "hash": "03faf3c0609a692f6abfb70807886af4ddddd2da05cda0936cb7e8cf0b8f1c7b",
-      "seq": 73
+      "hash": "c23d9eb4ae40ab69b70a6534b55fa359ddc41fb876668e1fb6e649641e2f5189",
+      "seq": 75
     },
     "events": {
-      "hash": "9f8baa0b7fa24952f45fb1635b6df47df9169dcd1ed6071aaf1d3d01ebebe02d",
-      "seq": 166
+      "hash": "5a442d1462f0f134aea3d74a3831ec5c2427de106aaf8fd6bfef114d3f1a1824",
+      "seq": 169
     },
     "evidence": {
-      "hash": "dead0cc6711767cf07844b063d8002073f28e0f6bc4d8a24963ee0e30661657b",
-      "seq": 19130
+      "hash": "a0d138c6b10a2dbd084cb68155dc6a356a49d63b482abe67de649cc4e03c30fc",
+      "seq": 19253
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,17 +45,16 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-24T09:30:23Z",
+  "next_wake_at": "2026-08-24T11:29:15Z",
   "open_questions": [
-    "This wake did not check whether any production AP2 deployment actually runs this reference sample code, nor other language SDKs/samples (e.g. Android) for a third routing convention -- noted explicitly as a limitation in the staged document.",
-    "The staged ap2-reference-code-discovery.md is expected to be gated for human review (names eco.com and ap2lab.com alongside a claim their published guidance doesn't match the reference implementation) -- same pattern as wake 42's item, flagged honestly rather than routed around.",
-    "The large pre-existing backlog of 'awaiting the operator' items (visible in the work-that-already-exists list at wake start) was not reviewed or triaged this wake -- that queue is the operator's, not something for a future wake to try to unblock from inside the container."
+    "Whether any production AP2 deployment actually implements either convention (root or RPC-scoped) remains unchecked -- this and wake 43's finding are both about reference/sample code, not live merchants.",
+    "The large pre-existing backlog of 'awaiting the operator' items (human review queue, 33 entries in approvals_pending) was not reviewed or triaged this wake -- that queue is the operator's to work through, not something a wake inside the container can unblock.",
+    "This wake's own staged piece (ap2-android-discovery-path.md) has not yet been confirmed published or gated as of writing -- check its outcome next wake before assuming either."
   ],
   "research_queue": [
-    "Re-read the ledgers fresh at wake start, as always -- do not assume this handoff's account of ledger state (claims seq 527-529, decisions seq 72) is still current without checking.",
-    "Consider a genuinely new subject next, since AP2 has now had two consecutive wakes of attention (42 and 43) even though only wake 42's piece has been formally 'published' in the pending-approval sense -- the spirit of the rotation rule favours moving on.",
-    "If picking a new subject: the operator's seeds list (objectives.json) still has 'how far can an agent get into a service that claims to support agents before hitting something only a human can pass' as an unexplored seed, and no prior wake_log filename in the archive index mentions it by name -- worth checking with fresh eyes.",
-    "Do not re-litigate the handoff.json permission/format mechanics again -- corrections seq 10-14 plus this wake's own diagnosis fully cover it. The method is: rm -f /memory/handoff.json, then write fresh JSON matching Handoff.from_dict's schema in /workspace/harness/memory.py (decided/did/found/unfinished/next_wake_should must all be list[str])."
+    "Re-read the ledgers fresh at wake start, as always -- do not trust this handoff's account of ledger state without checking current_state.json and the ledger tails directly.",
+    "Check whether ap2-android-discovery-path.md (staged this wake) auto-published or was gated, and note the outcome -- if gated, understand why given it names no third party negatively.",
+    "Consider a genuinely new subject for the next research thread: AP2, ACP and x402 have each now had recent dedicated attention: MCP/A2A discovery, RFC 8693, Web Bot Auth, DID, security.txt, llms.txt and the prompt-injection-language searches are all published at reasonable sample sizes already. A fresh angle worth scouting: has any NEW agent protocol or standard emerged in public discussion since this corpus was built (a WebSearch discovery pass, then verify via the gateway before claiming anything)."
   ],
-  "wake_number": 44
+  "wake_number": 45
 }

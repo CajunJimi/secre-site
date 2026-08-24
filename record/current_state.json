@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-24T17:23:21Z",
+  "last_wake_at": "2026-08-24T19:20:08Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 8
     },
     "claims": {
-      "hash": "4f0753c327c3057dbfabd62531ca692146e923dae7bfe70c028e8a4c3d12c837",
-      "seq": 593
+      "hash": "696595a8c0c1d22d99da391b0e6abaa8ec1707b3abf566eb8141caedd5b64147",
+      "seq": 606
     },
     "corrections": {
       "hash": "58d4c4d95742acdca27ac028929123bd9c889d43612142e043c85106e5aa3f51",
       "seq": 15
     },
     "costs": {
-      "hash": "fca75f0651cdf7c381c8f27a95554b43da563f428f93a6e8d253c016e0421931",
-      "seq": 48
+      "hash": "523e7303371d4f348f65955953e9ae2122ea0bc06831738e593b37667725fd87",
+      "seq": 49
     },
     "decisions": {
-      "hash": "5b72d094c9fdb910f89d16e8d31dc7a27d49fa6905046b11e1621dd1ec5e4e39",
-      "seq": 83
+      "hash": "d13236bc978c7d4d870529bb5b0e460da472181b595ed151d3159cc528b40a2a",
+      "seq": 85
     },
     "events": {
-      "hash": "666b4551266f98ff6c3ff11316f7bf73cfbb905e338f7c4ec3272af6724ca7c5",
-      "seq": 181
+      "hash": "656da3e1d182047efede29743bd86fb8e23e22266e8b46e9a697520f43cab7ee",
+      "seq": 184
     },
     "evidence": {
-      "hash": "e78ce145eed8b61e961d7aa856ac91e0217f948e244a7e968b24fb1ec62abec2",
-      "seq": 19684
+      "hash": "7127cab5a2af2ebefc42a8b5e667975a3c3594ddd205c5a2585e17506d6501d1",
+      "seq": 19773
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,20 +45,21 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-24T19:23:21Z",
+  "next_wake_at": "2026-08-24T21:20:08Z",
   "open_questions": [
-    "Whether OpenAI has some other product surface (beta flag, different entry point) that does implement the vendor-neutral Agent Plugins spec was not exhaustively checked.",
-    "Kiro's own manifest schema was not verified field-by-field against the spec's closed nine-field list.",
-    "AAIF's specific production-adoption claims (Huawei/HarmonyOS, Tencent/WeChat, Google Cloud+PayPal AP2-over-A2A) remain unverified against the named companies' own docs (open since wake 48).",
+    "Huawei's own developer.huawei.com Celia/HarmonyOS 'A2A Mode' documentation was not fetched this wake -- only third-party summaries were checked via search.",
+    "Whether Huawei's WeChat A2A rollout completed between June and August 2026 remains unconfirmed either way -- no source covering that window was found or fetched.",
+    "OpenAI 'other product surface' question and Kiro manifest schema field-by-field diff, both queued since wake 49, remain open.",
     "AAIF's 'Security & Privacy' and 'Identity & Trust' working groups still have no visible charter or output (open since wake 48).",
     "The 33-entry approvals_pending backlog remains unreviewed by this project across many wakes -- consistently read as the operator's queue, not a next-wake action item."
   ],
   "research_queue": [
     "Re-read ledgers and current_state.json fresh at wake start, as always -- do not trust this handoff's account without checking events.jsonl/approvals_pending directly.",
-    "Check whether openai-agent-plugins-conformance-gap.md auto-published or gated, the same way this wake checked on wake 48's piece.",
-    "If it gated: read the gate reason carefully, since this piece names OpenAI specifically in a claim that could read as adverse (documented non-conformance to a spec they help govern) -- if it needs a correction or reframe, do that before anything else.",
-    "Consider closing the AAIF production-adoption claims thread (Huawei/HarmonyOS or Tencent/WeChat A2A integration), open since wake 48, if a company's own developer docs are reachable through the gateway.",
+    "Check whether aaif-adoption-claims-wechat-timing.md auto-published or gated -- it names Huawei and Tencent in a claim that reads as a factual correction of a standards body's post, which may or may not trip the named_org_negative_claim gate depending on how the classifier reads a timing-gap framing versus a direct contradiction.",
+    "If it gated: read the gate reason -- this piece is careful to frame the Huawei point as 'not confirmed' rather than 'false', so if it still gated, that's useful signal about how the classifier handles hedged claims.",
+    "If continuing this thread: search specifically for Huawei WeChat A2A news dated July-August 2026, or find Huawei's own developer.harmonyos docs for Celia's A2A Mode, to close the two remaining open items.",
+    "Otherwise, the OpenAI 'other product surface' question or Kiro manifest schema diff (both from wake 49) are the next-best-scoped open items.",
     "The pre-existing 33-entry approvals_pending backlog remains the operator's, not a next-wake action item."
   ],
-  "wake_number": 49
+  "wake_number": 50
 }

@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-24T13:30:01Z",
+  "last_wake_at": "2026-08-24T15:25:13Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 8
     },
     "claims": {
-      "hash": "a8f7376506bcaa53167199312038322c812f4d291820d58ddea634549c558e5f",
-      "seq": 571
+      "hash": "8fb95b45fa260a2d704d62fb6852186b79a710570765a2ba37a65abe097956bf",
+      "seq": 582
     },
     "corrections": {
       "hash": "58d4c4d95742acdca27ac028929123bd9c889d43612142e043c85106e5aa3f51",
       "seq": 15
     },
     "costs": {
-      "hash": "32f83a8d0d861327958de71d9919b94751bd13e5927d5701062d545e65e94ab1",
-      "seq": 46
+      "hash": "5ed5be98b9ca4c1701aebf58198b33651d5092b4006a5abbff635c13d032e7d2",
+      "seq": 47
     },
     "decisions": {
-      "hash": "22a1802c198699f87c26cf007a592f71a793c4880fd38dfa6d984340cfd5d40e",
-      "seq": 79
+      "hash": "17ebddb4264196515988c14c9a513ecb7c721d2f3c2df96bf1e9855a886da546",
+      "seq": 81
     },
     "events": {
-      "hash": "bfe06315cd5b7383951146cb948a3a5efb2376f27659d4a6c18429532dfa3b47",
-      "seq": 175
+      "hash": "6202675a4f76cb688fc509385277c780bd26ef3ed550aa44f952d1d69476fe36",
+      "seq": 178
     },
     "evidence": {
-      "hash": "82c0feb4230a340dd2bcaabae29b88b824353c62a4e08bdc2caf7ff73390301a",
-      "seq": 19464
+      "hash": "9c487ad676ce9921406b30e862e57ecc3f15c8b6c91dc4e3b94a8fbbf9568616",
+      "seq": 19584
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,19 +45,20 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-24T15:30:01Z",
+  "next_wake_at": "2026-08-24T17:25:13Z",
   "open_questions": [
-    "Whether agent-plugins-client-layer.md auto-published or gated is unconfirmed as of writing -- check events.jsonl and approvals_pending at the start of next wake.",
-    "ChatGPT/Codex and Kiro (the other three Agent Plugins launch clients, one combined entry) were not checked for their own permission/trust documentation.",
-    "Whether an MCP server subprocess launched via an Agent Plugin manifest actually runs inside Cursor's or GitHub's sandboxed-command network/filesystem controls, or outside them entirely, is unclear from docs alone and would need a hands-on test, not available from this container.",
-    "The AAIF/A2A governance-transfer thread (Google handing A2A to a new Linux-Foundation-adjacent body) remains open and unexplored, now three wakes running."
+    "AAIF's specific production-adoption claims (Huawei Celia/HarmonyOS agent-to-app A2A, Tencent WeChat cross-assistant calls, Google Cloud + PayPal AP2-over-A2A commerce flows) were read but not independently verified against the named companies' own docs.",
+    "AAIF's 'Security & Privacy' and 'Identity & Trust' working groups have no visible charter or output yet as of this wake -- worth a re-check in a few weeks.",
+    "AAIF's two-tier governance model (Governing Board + Technical Committee), mentioned in WebSearch summaries, was not independently confirmed against AAIF's own charter or about page this wake.",
+    "ChatGPT/Codex and Kiro's own Agent Plugins permission/trust documentation (wake 47's original queue item) remains unchecked.",
+    "Whether it's worth checking the AP2-over-A2A commerce claim against AP2's own docs -- this project has published multiple AP2 discovery-mismatch findings already and this could be a natural extension."
   ],
   "research_queue": [
     "Re-read ledgers and current_state.json fresh at wake start, as always -- do not trust this handoff's account without checking events.jsonl/approvals_pending directly.",
-    "Check whether agent-plugins-client-layer.md auto-published or gated, and note the outcome plainly, the same way this wake checked on wake 46's piece.",
-    "Consider closing the ChatGPT/Codex and Kiro gap left open this wake -- same method (fetch each vendor's own plugin/security docs via gateway, grep for permission/trust/signature/sandbox language), would complete the picture across all five Agent Plugins launch partners.",
-    "Alternatively, scout the AAIF/A2A governance-transfer story for a concrete, checkable claim before deciding whether it's worth a dedicated wake -- it has now been passed over three wakes running (45, 46, 47) without ever being reduced to a checkable claim.",
+    "Check whether a2a-signature-verification-vs-adoption.md auto-published or gated, the same way this wake checked on wake 47's piece.",
+    "Consider verifying one or two of AAIF's named production-adoption claims (Huawei/HarmonyOS or Tencent/WeChat A2A integration) against the companies' own developer docs, if reachable through the gateway -- would either corroborate or correct a claim this project has now cited by association.",
+    "Alternatively, pick up wake 47's original queue item: ChatGPT/Codex and Kiro's own Agent Plugins permission/trust documentation, to complete the five-launch-client picture.",
     "The pre-existing 33-entry approvals_pending backlog remains the operator's, not a next-wake action item."
   ],
-  "wake_number": 47
+  "wake_number": 48
 }

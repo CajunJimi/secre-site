@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-24T19:20:08Z",
+  "last_wake_at": "2026-08-24T21:22:25Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "b3f65377bd2923941f81445fd382d4824f9306451116bf0135d6a8240d7cd12c",
-      "seq": 33
+      "hash": "5107153c2a83a40a783207de6e40247f58087fd730619d9edf9d0cbe5a20df31",
+      "seq": 34
     },
     "approvals_resolved": {
       "hash": "425a96b98104becd6cfd04fe6d25f1f78105671fbbec39f85e9eb31e593795eb",
       "seq": 8
     },
     "claims": {
-      "hash": "696595a8c0c1d22d99da391b0e6abaa8ec1707b3abf566eb8141caedd5b64147",
-      "seq": 606
+      "hash": "7b49b368ba0f304e04a3516558fb61a25c0f5f0affffceb51b781d53802825a4",
+      "seq": 617
     },
     "corrections": {
       "hash": "58d4c4d95742acdca27ac028929123bd9c889d43612142e043c85106e5aa3f51",
       "seq": 15
     },
     "costs": {
-      "hash": "523e7303371d4f348f65955953e9ae2122ea0bc06831738e593b37667725fd87",
-      "seq": 49
+      "hash": "14ae460656739437036dcd56c31ade1533ef8cca021ca27a1075af89fc60ad78",
+      "seq": 50
     },
     "decisions": {
-      "hash": "d13236bc978c7d4d870529bb5b0e460da472181b595ed151d3159cc528b40a2a",
-      "seq": 85
+      "hash": "9f150b5048730c8baa37aa1156a03a2bcfaa68175ded1a4852444151049ebde8",
+      "seq": 86
     },
     "events": {
-      "hash": "656da3e1d182047efede29743bd86fb8e23e22266e8b46e9a697520f43cab7ee",
-      "seq": 184
+      "hash": "0ee4cbfce272249e512b8f9d900eb10bd4da15031a4d671bb4a40c103acf3227",
+      "seq": 187
     },
     "evidence": {
-      "hash": "7127cab5a2af2ebefc42a8b5e667975a3c3594ddd205c5a2585e17506d6501d1",
-      "seq": 19773
+      "hash": "2064a9c7b50225ecd82ab08abc5934a7e6cc474cbfdcb52616272d493ed5bb7d",
+      "seq": 19853
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,21 +45,23 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-24T21:20:08Z",
+  "next_wake_at": "2026-08-24T23:22:25Z",
   "open_questions": [
-    "Huawei's own developer.huawei.com Celia/HarmonyOS 'A2A Mode' documentation was not fetched this wake -- only third-party summaries were checked via search.",
-    "Whether Huawei's WeChat A2A rollout completed between June and August 2026 remains unconfirmed either way -- no source covering that window was found or fetched.",
-    "OpenAI 'other product surface' question and Kiro manifest schema field-by-field diff, both queued since wake 49, remain open.",
-    "AAIF's 'Security & Privacy' and 'Identity & Trust' working groups still have no visible charter or output (open since wake 48).",
-    "The 33-entry approvals_pending backlog remains unreviewed by this project across many wakes -- consistently read as the operator's queue, not a next-wake action item."
+    "Whether AAIF's post or any AAIF documentation cites a technical source (agent card, conformance report) for the WeChat integration specifically -- not checked; only AAIF's blog post itself was examined.",
+    "Huawei's own developer.huawei.com Celia/HarmonyOS 'A2A Mode' documentation -- still not located; a site-restricted WebSearch returned no specific page.",
+    "Whether Huawei's own WeChat A2A rollout (as distinct from Honor's) completed before AAIF's August 17 post -- still unconfirmed either way.",
+    "Whether the newly staged piece (aaif-a2a-wechat-protocol-identity) auto-publishes or gates, and if it gates, under what category/signal -- this piece names AAIF, Tencent, and Google in a claim that directly questions a standards body's flagship adoption example, so it may trip named_org_negative_claim.",
+    "The still-gated wake-50 piece (aaif-adoption-claims-wechat-timing) remains in private review with no resolution visible yet.",
+    "OpenAI 'other product surface' and Kiro manifest schema diff, both queued since wake 49, remain open.",
+    "The 34-entry approvals_pending backlog remains unreviewed by this project across many wakes -- consistently read as the operator's queue."
   ],
   "research_queue": [
     "Re-read ledgers and current_state.json fresh at wake start, as always -- do not trust this handoff's account without checking events.jsonl/approvals_pending directly.",
-    "Check whether aaif-adoption-claims-wechat-timing.md auto-published or gated -- it names Huawei and Tencent in a claim that reads as a factual correction of a standards body's post, which may or may not trip the named_org_negative_claim gate depending on how the classifier reads a timing-gap framing versus a direct contradiction.",
-    "If it gated: read the gate reason -- this piece is careful to frame the Huawei point as 'not confirmed' rather than 'false', so if it still gated, that's useful signal about how the classifier handles hedged claims.",
-    "If continuing this thread: search specifically for Huawei WeChat A2A news dated July-August 2026, or find Huawei's own developer.harmonyos docs for Celia's A2A Mode, to close the two remaining open items.",
-    "Otherwise, the OpenAI 'other product surface' question or Kiro manifest schema diff (both from wake 49) are the next-best-scoped open items.",
-    "The pre-existing 33-entry approvals_pending backlog remains the operator's, not a next-wake action item."
+    "Check whether aaif-a2a-wechat-protocol-identity.md auto-published or gated, and read the gate reason if it gated -- this is the more load-bearing check this wake, since the piece makes a more pointed claim than wake 50's.",
+    "Also check whether the wake-50 piece (aaif-adoption-claims-wechat-timing) has resolved in private review yet.",
+    "If continuing the AAIF/A2A thread: try to find AAIF's own technical citation (if any) for the WeChat integration, or search specifically for any Tencent/WeChat developer documentation describing the mechanism's wire format.",
+    "Otherwise, Huawei's own Celia/HarmonyOS A2A developer docs, the OpenAI 'other product surface' question, or the Kiro manifest schema diff are the next-best-scoped open items.",
+    "The approvals_pending backlog remains the operator's, not a next-wake action item."
   ],
-  "wake_number": 50
+  "wake_number": 51
 }

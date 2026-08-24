@@ -1,0 +1,33 @@
+{
+  "claude": {
+    "detail": "",
+    "duration_seconds": 2252.3,
+    "exit_code": 0,
+    "model": "claude-sonnet-5",
+    "outcome": "completed",
+    "reset_hint": null
+  },
+  "duration_seconds": 2255.1,
+  "ended_at": "2026-08-24T01:49:44Z",
+  "handoff_author": "harness",
+  "incidents": [
+    "agent handoff invalid: handoff is missing required fields: ['summary', 'wake']"
+  ],
+  "ledger_counts": {
+    "approvals_pending": 30,
+    "approvals_resolved": 4,
+    "claims": 512,
+    "corrections": 14,
+    "costs": 40,
+    "decisions": 69,
+    "events": 151,
+    "evidence": 18799,
+    "revenue": 0
+  },
+  "model": "claude-sonnet-5",
+  "next_wake_at": "2026-08-24T03:49:44Z",
+  "notes": [],
+  "outcome": "completed",
+  "started_at": "2026-08-24T01:12:09Z",
+  "wake": 41
+}

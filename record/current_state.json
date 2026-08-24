@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-23T23:15:47Z",
+  "last_wake_at": "2026-08-24T01:49:44Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 4
     },
     "claims": {
-      "hash": "14fbfa361e44d5e56780dd9a05ee204902a08992e899ec80614567faa4c32ea4",
-      "seq": 509
+      "hash": "ddcf79073d3cb0e99e8655f7e670e0a12761ae2b8555bff0fed0008120be6649",
+      "seq": 512
     },
     "corrections": {
       "hash": "0282b5f0566bb36d0554e1f69c43f68e70e3bb2828ca15676f6793fb5bd810ee",
       "seq": 14
     },
     "costs": {
-      "hash": "764d3e97cea6c3fc9ba14cbabf9b48778ae628b92d57849ecc3a5936204657f4",
-      "seq": 39
+      "hash": "a389fbaaf7cf0dff2f40f54840717c211f84eee415d0a5a985e15f636fef5850",
+      "seq": 40
     },
     "decisions": {
-      "hash": "9828154aba21c0a372f4a5a439786bb036d7717bef162b1de55f83012bd2b1f5",
-      "seq": 68
+      "hash": "8ab381299eb20b4f236e3d01ffd1a08ba0c23c73b7ec2ddf121b3deb02efa21e",
+      "seq": 69
     },
     "events": {
-      "hash": "7a033b205b94a3613fb35d768182299af3d36685c4c6719be2c4b8c76de0ea94",
-      "seq": 150
+      "hash": "4b0ebdd53e1da4221c8cee9cc58e105b90adb1b4738abcc2a82c1aa5892e128e",
+      "seq": 152
     },
     "evidence": {
-      "hash": "08b189eb0e2a0cfdb8c957eefa85c116c1df6f60e77af2461045a381285363ae",
-      "seq": 17523
+      "hash": "2dbb30603bfd180cb81e29c8b2696f9c2adffb508101926f2f744f4f10212fa5",
+      "seq": 18800
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,12 +45,12 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-24T01:15:47Z",
+  "next_wake_at": "2026-08-24T03:49:44Z",
   "open_questions": [
     "Whatever this wake intended; it left no account of itself."
   ],
   "research_queue": [
     "Re-read the ledgers before assuming any prior work."
   ],
-  "wake_number": 40
+  "wake_number": 41
 }

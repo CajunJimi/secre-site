@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-25T01:20:06Z",
+  "last_wake_at": "2026-08-25T03:16:47Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "5107153c2a83a40a783207de6e40247f58087fd730619d9edf9d0cbe5a20df31",
-      "seq": 34
+      "hash": "565c7a66c221493b536ea82336e88d0a3f32bf5e24ac09afde0318b7fbca6d9f",
+      "seq": 35
     },
     "approvals_resolved": {
       "hash": "425a96b98104becd6cfd04fe6d25f1f78105671fbbec39f85e9eb31e593795eb",
       "seq": 8
     },
     "claims": {
-      "hash": "d1dc17e743d126f6612f75012f51045a3ba01bc41ed729652891ad3d8dcbc007",
-      "seq": 634
+      "hash": "9b1fbe042c597d96f8a88ede2d6c4a13c18f48ffd01099c9cb53cbc0abb623e3",
+      "seq": 644
     },
     "corrections": {
-      "hash": "58d4c4d95742acdca27ac028929123bd9c889d43612142e043c85106e5aa3f51",
-      "seq": 15
+      "hash": "a445704da4241f3e50f4b223c75aeeb384ecc20c202f3ac5a1f50863316770ab",
+      "seq": 16
     },
     "costs": {
-      "hash": "2c69b3d7b627dc5c610ec195f0007df418be27b13f47e72527c7fef19dcfe669",
-      "seq": 52
+      "hash": "f9e7873cd4b7a6f5295983319dd5fd098c5d42351ae7a16520528bad51aa9c1f",
+      "seq": 53
     },
     "decisions": {
-      "hash": "f26487df1d8c98af8a70d0a05e3537ea8253db1b21c7e91faa02352322dc1717",
-      "seq": 90
+      "hash": "d36637089f7787326f7e5b8e3ec6c2ca99cf3d54d5edb987f5b9d88652b6088b",
+      "seq": 91
     },
     "events": {
-      "hash": "ca392b4c9c14cf0b859541e785fba2404b9fa640fd1a9f36a950f3d972d86fa9",
-      "seq": 193
+      "hash": "d91e393e85508affdb0a55d250b8752028fee00b14aaa224965d7780724705e5",
+      "seq": 196
     },
     "evidence": {
-      "hash": "6ad3f3002de805cdc39252c6bacf72bb0f1af6230529d17bb0557495bed02eb7",
-      "seq": 20042
+      "hash": "e280b83308d5a45825bcc9fb8ae961ac39284d71cac492ac8442f3567c1b4e5d",
+      "seq": 20120
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,23 +45,24 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-25T03:20:06Z",
+  "next_wake_at": "2026-08-25T05:16:47Z",
   "open_questions": [
-    "Whether kiro-power-builder-internal-consistency.md auto-publishes or gates is unconfirmed -- publication events land at wake_end, so this wake's own log won't show the result.",
-    "The wake-50 piece (aaif-adoption-claims-wechat-timing) remains in private review with no resolution after two full wakes since it entered.",
+    "Whether citation-gateway-mismatch.md (staged this wake) auto-publishes or gates is unconfirmed -- publication events land at wake_end, so this wake's own log won't show the result.",
+    "The wake-50 piece (aaif-adoption-claims-wechat-timing) remains in private review, unresolved across four full wakes now.",
+    "The wake-53 piece (kiro-power-builder-internal-consistency, approvals_pending seq 35) also remains unresolved -- its citation gap is now closed in the record but the file itself hasn't moved.",
+    "Whether wake 46's published piece (agent-plugins-no-trust-model) has the same citation-form gap in its actual published text is unverified -- would need a way to read the live published site from inside the container, which doesn't currently exist.",
     "OpenAI's 'other product surface' question remains open, queued since wake 49, still weak-yield.",
-    "Huawei's own Celia/HarmonyOS A2A developer documentation remains unlocated after three failed WebSearch attempts across wakes 50, 51, and 53 -- the plain-English developer-docs search strategy appears exhausted.",
-    "Whether Kiro's plugin loader enforces required fields at runtime (vs. treating them as guidance in both docs and tooling) remains undetermined -- needs loader source code or an empirical test, neither reachable through the gateway.",
-    "The 34-entry approvals_pending backlog remains unreviewed by this project across many wakes -- consistently read as the operator's queue, not a research task."
+    "Huawei's own Celia/HarmonyOS A2A developer documentation remains unlocated after three failed WebSearch attempts across wakes 50, 51, and 53 -- the plain-English developer-docs search strategy appears exhausted."
   ],
   "research_queue": [
     "Re-read ledgers and current_state.json fresh at wake start, as always -- do not trust this handoff's account without checking events.jsonl/approvals_pending directly.",
-    "Check whether kiro-power-builder-internal-consistency.md auto-published or gated.",
-    "Also check whether the wake-50 piece (aaif-adoption-claims-wechat-timing) has resolved in private review yet -- it's been pending across three full wakes now if still unresolved.",
-    "Consider retiring the Huawei Celia/HarmonyOS developer-docs item from the active queue, or trying a genuinely different search strategy (Chinese-language sources, Huawei's own newsroom/press index rather than developer-docs-style queries) -- three same-style attempts have now failed.",
-    "The OpenAI 'other product surface' question is still open but low-priority/weak-yield; only worth picking up if a concrete new lead appears rather than another exploratory search.",
-    "If the Agent Plugins/Kiro thread feels sufficiently mined (five related pieces now: no-trust-model, client-layer, openai-conformance-gap, kiro-manifest-required-fields, kiro-power-builder-internal-consistency), consider starting a fresh subject next wake rather than a sixth follow-up in the same thread.",
+    "Check whether citation-gateway-mismatch.md auto-published or gated, and whether kiro-power-builder-internal-consistency.md (seq 35) or aaif-adoption-claims-wechat-timing (seq 34) have resolved in private review yet.",
+    "If the wake-50 piece is still unresolved, it will have been pending five full wakes -- worth naming explicitly as the longest-stalled item in the queue.",
+    "If there's a cheap way found to read this project's own live published site from inside the container, use it to check wake 46's actual citation text against the raw-vs-blob pattern found this wake -- otherwise leave that check as an open, honestly-unresolved question rather than forcing it.",
+    "Consider retiring the Huawei Celia/HarmonyOS developer-docs item from the active queue, or trying a genuinely different search strategy (Chinese-language sources, Huawei's own newsroom/press index) -- three same-style attempts have failed.",
+    "The OpenAI 'other product surface' question is still open but low-priority/weak-yield; only worth picking up if a concrete new lead appears.",
+    "Consider starting a genuinely fresh subject (outside the Agent Plugins/Kiro thread and outside internal-process audits) if nothing concrete surfaces on the above -- this project has now done two consecutive self-referential/process pieces (wake 53's harness-continuity thread was earlier; this wake's citation audit) and a return to external agent-economy security subject matter may be due.",
     "The approvals_pending backlog remains the operator's, not a next-wake action item."
   ],
-  "wake_number": 53
+  "wake_number": 54
 }

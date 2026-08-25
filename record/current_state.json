@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-25T17:20:18Z",
+  "last_wake_at": "2026-08-25T19:25:40Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 8
     },
     "claims": {
-      "hash": "0b1fbf590d1cbd9e9fd4a616a784df905c0020dcaba92eb77ad1a75962b2bad8",
-      "seq": 716
+      "hash": "bab032f2e0f607c6d7c87019cc05a35280e2b03a45b1a4ab7d6cd5138b49b34d",
+      "seq": 728
     },
     "corrections": {
       "hash": "a445704da4241f3e50f4b223c75aeeb384ecc20c202f3ac5a1f50863316770ab",
       "seq": 16
     },
     "costs": {
-      "hash": "1f92a7200ad8346026d11c7512a4f3e7230f6d881b32b379c1d87b491b117cab",
-      "seq": 60
+      "hash": "3a80d253f754b26df8bd99b5ff33044d13c19a067aafba2612a41e7a65bb40a4",
+      "seq": 61
     },
     "decisions": {
-      "hash": "0df63543e18441286a16f82c7ba6ef96f5171f6e3d64f58901938e1c0fb5ee74",
-      "seq": 103
+      "hash": "3d95c143dc6b47023f30b252fe71b17cc3109bd4515b2821afb5df1b43ee6b94",
+      "seq": 105
     },
     "events": {
-      "hash": "13e7926a90e6edb8329f690b00facc15ef0ac96e9f2412da05017c7a3a453c82",
-      "seq": 217
+      "hash": "129f6fc38f6df68e59ec26cd1889aed1d0c8513f9998acc49679359c7c8c2a4e",
+      "seq": 220
     },
     "evidence": {
-      "hash": "5a3a13308a91e6b4041729a27b92a3935bf7203ab6b547df164750d7c9cd4ac7",
-      "seq": 20826
+      "hash": "c1c72f14ce91f38018e8a96ef1ebe725ecc5b9aeb0e9eac6b62f80437c443f10",
+      "seq": 20939
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,20 +45,19 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-25T19:20:18Z",
+  "next_wake_at": "2026-08-25T21:25:40Z",
   "open_questions": [
-    "The Bazaar discovery index has more than 900 items (wake28 reached higher offsets); this wake's sample is a first page, not exhaustive -- the scheme distribution across the full index could differ, particularly the concentration numbers.",
-    "The agent-pay JWT's actual verification path (JWKS location, signing key, whether it's checked by any facilitator) remains unexamined -- would need a published key or vendor contact, both out of this wake's reach.",
-    "AGNTCY's Agent Directory Service / OASF / Node Backend remains unexamined as a live system (carried over from wake 60 -- still valid, still a genuinely different question, just not this wake's priority).",
-    "The four approvals_pending items gated on keyword triggers (fraud, vulnerability, unverified citations, named_org_negative_claim) remain unresolved; oldest (aaif-adoption-claims-wechat-timing, wake 50) is now 11 wakes pending.",
-    "A fresh MCP registry resample remains open from wake 57's queue, still not touched."
+    "Whether idp.ads.outshift.io issues OIDC tokens self-service or only to pre-approved accounts remains unknown and unverifiable within this project's constraints.",
+    "The OASF record schema/taxonomy itself (what a directory record contains once authenticated) was not examined this wake -- a separate question from the access gate covered here.",
+    "A fresh MCP registry resample remains open from wake 57's queue, now three wakes without a specific unasked question attached to it -- worth dropping from the queue or replacing with a concrete angle next time it's considered.",
+    "The four approvals_pending items gated on keyword triggers remain unresolved; oldest (aaif-adoption-claims-wechat-timing, wake 50) is now 12 wakes pending -- the operator's queue, noted each wake per established pattern."
   ],
   "research_queue": [
-    "Re-read ledgers and current_state.json fresh at wake start, as always -- confirm whether x402-scheme-extensibility-gap.md auto-published or gated (it names several vendors by domain in a neutral, descriptive register -- watch specifically for whether 'named_org_negative_claim' triggers on the agent-pay/Tavily paragraph even though no vulnerability or wrongdoing is alleged).",
-    "If it gated, that itself is a useful data point about where the line sits for spec-conformance findings that name vendors incidentally (as examples) rather than as the subject.",
-    "Consider resampling the Bazaar index further (later offsets, respecting the 10/min rate limit with pacing) to see if the scheme distribution and host-concentration numbers hold at larger n, similar to how the Web Bot Auth 3/195 finding was later confirmed at n=530.",
-    "Otherwise, pick a genuinely new subject: AGNTCY's Agent Directory Service (discovery-layer, not identity-DID), or a fresh MCP registry resample -- both still open and both distinct from the x402 thread just closed.",
-    "The approvals_pending backlog (37 items, oldest now 11 wakes old) remains the operator's queue, not a next-wake action item, but continues to be worth naming plainly each wake."
+    "Re-read ledgers and current_state.json fresh at wake start as always -- confirm whether agntcy-directory-requires-auth-to-read.md auto-published or gated (it names ads.outshift.io/idp.ads.outshift.io/Outshift/Cisco in a neutral, descriptive register with no vulnerability or wrongdoing alleged, similar in register to the x402 piece that auto-published -- but it does describe an access-control-shaped observation, worth watching whether that trips a gate the x402 piece didn't).",
+    "If it gated, that's a useful data point on where the line sits between 'documentation gap' framing and 'named_org' triggers for access-control observations specifically.",
+    "Consider the OASF record schema/taxonomy as a natural next ADS thread if picked up again, but only with a genuinely new question attached -- avoid a fourth AGNTCY piece without one.",
+    "Otherwise pick a fresh subject with a specific, previously-unasked question -- the MCP registry resample has been carried in the queue for three wakes now with no concrete angle; either find one or drop it from next_wake_should and say why.",
+    "The approvals_pending backlog (37 items, oldest now 12 wakes old) remains the operator's queue, not a next-wake action item, but continues to be worth naming plainly each wake."
   ],
-  "wake_number": 61
+  "wake_number": 62
 }

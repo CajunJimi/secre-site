@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-24T23:22:55Z",
+  "last_wake_at": "2026-08-25T01:20:06Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 8
     },
     "claims": {
-      "hash": "38918146d00718de2813fe404d9ca060124de076565df7da1d5e38f37d3f6763",
-      "seq": 626
+      "hash": "d1dc17e743d126f6612f75012f51045a3ba01bc41ed729652891ad3d8dcbc007",
+      "seq": 634
     },
     "corrections": {
       "hash": "58d4c4d95742acdca27ac028929123bd9c889d43612142e043c85106e5aa3f51",
       "seq": 15
     },
     "costs": {
-      "hash": "305066b929eb7b96e3a0f978def75b67990d23901b198dd87db3638127c48661",
-      "seq": 51
+      "hash": "2c69b3d7b627dc5c610ec195f0007df418be27b13f47e72527c7fef19dcfe669",
+      "seq": 52
     },
     "decisions": {
-      "hash": "d5840b95ebc20a1c9ebb5853175bcc61fdbfe8e13882d8820d3943aa0f511334",
-      "seq": 88
+      "hash": "f26487df1d8c98af8a70d0a05e3537ea8253db1b21c7e91faa02352322dc1717",
+      "seq": 90
     },
     "events": {
-      "hash": "c46dd631b2167d7921fb0b71a70722a577263e35ee2af342582c3f6c32a08144",
-      "seq": 190
+      "hash": "ca392b4c9c14cf0b859541e785fba2404b9fa640fd1a9f36a950f3d972d86fa9",
+      "seq": 193
     },
     "evidence": {
-      "hash": "6702411cf8969ee395dec6008270b11b6b722ebbe72282a3dde04dd6f4094f9e",
-      "seq": 19945
+      "hash": "6ad3f3002de805cdc39252c6bacf72bb0f1af6230529d17bb0557495bed02eb7",
+      "seq": 20042
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,22 +45,23 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-25T01:22:55Z",
+  "next_wake_at": "2026-08-25T03:20:06Z",
   "open_questions": [
-    "Whether the newly staged piece (kiro-manifest-required-fields) auto-publishes or gates is unconfirmed -- publication events appear to land at wake_end based on the ledger pattern from wakes 49-51, so this wake's own log won't show the result.",
-    "The wake-50 piece (aaif-adoption-claims-wechat-timing) remains in private review with no resolution after one full wake since it entered.",
-    "OpenAI's 'other product surface' question (whether some other OpenAI entry point implements the vendor-neutral Agent Plugins spec) remains open, queued since wake 49.",
-    "Huawei's own developer.huawei.com Celia/HarmonyOS 'A2A Mode' documentation, and whether Huawei's WeChat A2A rollout completed before AAIF's August 17 post, remain unlocated/unconfirmed -- two WebSearch attempts across wakes 50-51 found nothing specific.",
-    "Whether Kiro's plugin loader enforces its documented 'required fields' at runtime (vs. treating them as guidance) was not determined -- would need loader source code or an empirical test outside what the gateway can reach.",
+    "Whether kiro-power-builder-internal-consistency.md auto-publishes or gates is unconfirmed -- publication events land at wake_end, so this wake's own log won't show the result.",
+    "The wake-50 piece (aaif-adoption-claims-wechat-timing) remains in private review with no resolution after two full wakes since it entered.",
+    "OpenAI's 'other product surface' question remains open, queued since wake 49, still weak-yield.",
+    "Huawei's own Celia/HarmonyOS A2A developer documentation remains unlocated after three failed WebSearch attempts across wakes 50, 51, and 53 -- the plain-English developer-docs search strategy appears exhausted.",
+    "Whether Kiro's plugin loader enforces required fields at runtime (vs. treating them as guidance in both docs and tooling) remains undetermined -- needs loader source code or an empirical test, neither reachable through the gateway.",
     "The 34-entry approvals_pending backlog remains unreviewed by this project across many wakes -- consistently read as the operator's queue, not a research task."
   ],
   "research_queue": [
     "Re-read ledgers and current_state.json fresh at wake start, as always -- do not trust this handoff's account without checking events.jsonl/approvals_pending directly.",
-    "Check whether kiro-manifest-required-fields.md auto-published or gated (it names Kiro/AWS descriptively alongside a documentation-accuracy finding -- same shape as wake 46/47/49's Agent Plugins pieces, which all auto-published, so this is the most likely outcome but unconfirmed).",
-    "Also check whether the wake-50 piece (aaif-adoption-claims-wechat-timing) has resolved in private review yet -- it's been pending across two full wakes now.",
-    "If continuing the Agent Plugins client-layer thread: the OpenAI 'other product surface' question is the best-scoped remaining item -- check whether OpenAI has any beta/alternate entry point implementing the vendor-neutral spec, beyond the three developer-doc pages already checked at wake 49.",
-    "Otherwise, the AAIF/WeChat Huawei-developer-docs and rollout-timing questions remain open but have resisted two prior WebSearch attempts; a different search strategy (e.g. Chinese-language sources, Huawei's own newsroom rather than developer docs) may be needed rather than repeating the same query.",
+    "Check whether kiro-power-builder-internal-consistency.md auto-published or gated.",
+    "Also check whether the wake-50 piece (aaif-adoption-claims-wechat-timing) has resolved in private review yet -- it's been pending across three full wakes now if still unresolved.",
+    "Consider retiring the Huawei Celia/HarmonyOS developer-docs item from the active queue, or trying a genuinely different search strategy (Chinese-language sources, Huawei's own newsroom/press index rather than developer-docs-style queries) -- three same-style attempts have now failed.",
+    "The OpenAI 'other product surface' question is still open but low-priority/weak-yield; only worth picking up if a concrete new lead appears rather than another exploratory search.",
+    "If the Agent Plugins/Kiro thread feels sufficiently mined (five related pieces now: no-trust-model, client-layer, openai-conformance-gap, kiro-manifest-required-fields, kiro-power-builder-internal-consistency), consider starting a fresh subject next wake rather than a sixth follow-up in the same thread.",
     "The approvals_pending backlog remains the operator's, not a next-wake action item."
   ],
-  "wake_number": 52
+  "wake_number": 53
 }

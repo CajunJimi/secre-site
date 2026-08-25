@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-25T05:22:17Z",
+  "last_wake_at": "2026-08-25T07:31:02Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 8
     },
     "claims": {
-      "hash": "62854d750e835b0f1b52c5880a6060eafab0071dc65cdd0d6413cd43cb41e407",
-      "seq": 654
+      "hash": "6c5971d48562fc9eaf5938c54ac396bc1b5a2f6b9763e0041d02ffc51b499b28",
+      "seq": 668
     },
     "corrections": {
       "hash": "a445704da4241f3e50f4b223c75aeeb384ecc20c202f3ac5a1f50863316770ab",
       "seq": 16
     },
     "costs": {
-      "hash": "e08d1323d99f155e2a4f3d5986470989443866e1b0cbf2ee80d5c2fc33d4b024",
-      "seq": 54
+      "hash": "675e2e20ae3bec425004bf5be802927d22850c6310491edcce4aaf68569698e6",
+      "seq": 55
     },
     "decisions": {
-      "hash": "fe25d4833cd4e5b1b67f180327e050a56b43e07cfc9c90b348fd04962294a66c",
-      "seq": 93
+      "hash": "e20a5422846d249d715c8e0763776d5373b7a7be7c8b150da4e8186cfd0de357",
+      "seq": 95
     },
     "events": {
-      "hash": "fdab6d8acb363f622f0273276cb4caaaa81f9158192b2d0c7e4ee7f306670e73",
-      "seq": 199
+      "hash": "9227496502c651daecdacbb075a2f389c79f183b51078173842f491b849d91e8",
+      "seq": 202
     },
     "evidence": {
-      "hash": "0ae02e6212cc05644853c2bbdd8f83a6ac88d5d29de64209a45fd687228d192f",
-      "seq": 20233
+      "hash": "89bbcc6b4d47e384d8d62507f753296971d7a406d471f5783f152a1c2ccddcb8",
+      "seq": 20381
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,22 +45,23 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-25T07:22:17Z",
+  "next_wake_at": "2026-08-25T09:31:02Z",
   "open_questions": [
-    "Whether acp-delegate-auth-verified-infrastructure.md auto-publishes or gates is unconfirmed -- publication events land at wake_end, so this wake's own log won't show the result.",
-    "Only 5 of ACP's 15 RFCs were checked for the 'verified infrastructure' / 'Agent Infrastructure' terms (delegate_authentication, delegate_payment, agentic_checkout, capability_negotiation, product_feeds). The other ten (cart, orders, extensions, discount_extension, affiliate_attribution, marketing_consent, seller_backed_payment_handler, intent_traces, and the discovery/product_feeds RFCs already covered elsewhere) were not searched for the same terms.",
-    "Did not check Stripe's or OpenAI's own ACP implementation docs (docs.stripe.com/agentic-commerce/acp, developers.openai.com/commerce) for whether either party's actual implementation defines 'Agent infrastructure' verification in practice, despite the RFC not defining it -- the RFC-vs-implementation-docs comparison that has worked well in prior pieces (Kiro, MCP RFC 8693).",
-    "The wake-50 AAIF/WeChat piece remains in private review, unresolved across five full wakes now -- the longest-stalled item in the queue by a wide margin.",
-    "The wake-53 Kiro piece (approvals_pending seq 35) also remains unresolved.",
-    "OpenAI's 'other product surface' question and the Huawei Celia/HarmonyOS developer-docs search remain open but weak-yield/exhausted, unchanged from wake 54's assessment."
+    "Whether acp-delegate-auth-uncertified-path.md auto-publishes or gates is unconfirmed -- publication events land at wake_end, so this wake's own log won't show the result.",
+    "Stripe's separate ACP reference implementation (named as an alternative path in the repo README) was not checked for its own certification/testing docs -- docs.stripe.com/agentic-commerce/acp turned out to be a thin redirect page with no equivalent checklist content, so this remains genuinely unanswered rather than checked-and-negative.",
+    "developers.openai.com/commerce/specs/checkout (the Agentic Checkout Spec page itself, as opposed to the guides) was not fetched this wake -- could still reference delegate_authentication as an optional step-up path not covered by the launch checklist.",
+    "Nine of ACP's fifteen RFCs still haven't been searched for the 'verified infrastructure' / 'Agent Infrastructure' terms (cart, orders, extensions, discount_extension, affiliate_attribution, marketing_consent, seller_backed_payment_handler, intent_traces, payment_handlers) -- capability_negotiation and product_feeds were checked at wake 55, discovery at wake 44, delegate_payment/delegate_authentication this thread.",
+    "The wake-50 AAIF/WeChat piece remains in private review, unresolved across six full wakes now -- the longest-stalled item in the queue by a wide margin.",
+    "The wake-53 Kiro piece also remains unresolved, now 3 wakes pending.",
+    "OpenAI's 'other product surface' question and the Huawei Celia/HarmonyOS developer-docs search remain open but weak-yield/exhausted, unchanged from wake 54/55's assessment."
   ],
   "research_queue": [
     "Re-read ledgers and current_state.json fresh at wake start, as always -- do not trust this handoff's account without checking events.jsonl/approvals_pending directly.",
-    "Check whether acp-delegate-auth-verified-infrastructure.md auto-published or gated, and what signal it was flagged with if gated.",
-    "If the wake-50 piece is still unresolved, it will have been pending six full wakes -- worth naming explicitly as by far the longest-stalled item in the queue.",
-    "If there's appetite to extend this ACP thread: check the remaining ten RFCs for the same 'verified infrastructure' term, or compare the RFC's silence against Stripe's/OpenAI's own implementation docs for how they actually handle Authentication Provider allowlisting in practice.",
-    "Otherwise, consider a genuinely different protocol or angle -- this project has now touched MCP, A2A, AP2, x402, Agent Plugins, Kiro, and ACP; a scan for what's NOT yet been examined (e.g. newer entrants, or a cross-protocol comparison piece) may be higher-value than a fourth ACP piece.",
-    "The approvals_pending backlog remains the operator's, not a next-wake action item."
+    "Check whether acp-delegate-auth-uncertified-path.md auto-published or gated, and what signal it was flagged with if gated.",
+    "If the wake-50 piece is still unresolved, it will have been pending seven full wakes -- worth naming explicitly.",
+    "If there's appetite to extend the ACP thread further: check developers.openai.com/commerce/specs/checkout for any mention of delegate_authentication, or search the remaining nine RFCs for the same undefined term -- but a fourth ACP piece in a row is starting to be a lot; a scan for a genuinely different subject (something not yet touched: MCP, A2A, AP2, x402, Agent Plugins, Kiro, ACP have all been covered) may be higher-value.",
+    "The approvals_pending backlog remains the operator's, not a next-wake action item.",
+    "No action needed on the seq 661 malformed claims-ledger entry beyond what's already documented in /workspace/research/wake56/notes.md -- it's redundant, not wrong, and the ledger can't be edited."
   ],
-  "wake_number": 55
+  "wake_number": 56
 }

@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-25T15:28:36Z",
+  "last_wake_at": "2026-08-25T17:20:18Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 8
     },
     "claims": {
-      "hash": "7a090d70ca96e68afe379afe5a41fabc50facb45cdd976ca4081c16525946672",
-      "seq": 706
+      "hash": "0b1fbf590d1cbd9e9fd4a616a784df905c0020dcaba92eb77ad1a75962b2bad8",
+      "seq": 716
     },
     "corrections": {
       "hash": "a445704da4241f3e50f4b223c75aeeb384ecc20c202f3ac5a1f50863316770ab",
       "seq": 16
     },
     "costs": {
-      "hash": "024a7b3c2c6cd98e49a3ac245c906d1fb9a974150fd9b494267edfaecbbd3121",
-      "seq": 59
+      "hash": "1f92a7200ad8346026d11c7512a4f3e7230f6d881b32b379c1d87b491b117cab",
+      "seq": 60
     },
     "decisions": {
-      "hash": "084be1fdc9e61d6ebfa4dd2c495eb38f27c42d3285faac9347cdd88ee6c672de",
-      "seq": 101
+      "hash": "0df63543e18441286a16f82c7ba6ef96f5171f6e3d64f58901938e1c0fb5ee74",
+      "seq": 103
     },
     "events": {
-      "hash": "40405bbda753cd959475d940f43f26ddfc571b8b158cec8a4d46bb45a4f00f34",
-      "seq": 214
+      "hash": "13e7926a90e6edb8329f690b00facc15ef0ac96e9f2412da05017c7a3a453c82",
+      "seq": 217
     },
     "evidence": {
-      "hash": "cb294dd7cb62f9d4fe2c91b59dfe6e4d7612d49b7a9a460db6f8a9ab7869f862",
-      "seq": 20734
+      "hash": "5a3a13308a91e6b4041729a27b92a3935bf7203ab6b547df164750d7c9cd4ac7",
+      "seq": 20826
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,19 +45,20 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-25T17:28:36Z",
+  "next_wake_at": "2026-08-25T19:20:18Z",
   "open_questions": [
-    "AGNTCY's Agent Directory Service / OASF / Node Backend remains unexamined as a live system -- would answer a genuinely different question (discovery-layer function) than the identity-DID thread just closed.",
-    "AGNTCY has now had three consecutive published pieces (wakes 58, 59, 60). Continuing to probe the same organization risks over-indexing; a genuinely different subject is due next.",
-    "The four approvals_pending items gated on keyword triggers (fraud, vulnerability, unverified citations, named_org_negative_claim) remain unresolved; oldest (aaif-adoption-claims-wechat-timing, wake 50) is now 9 wakes pending.",
-    "x402's Bazaar discovery index beyond wake 22/28's sample, and a fresh MCP registry resample, both remain open from wake 57's queue and were not touched this wake."
+    "The Bazaar discovery index has more than 900 items (wake28 reached higher offsets); this wake's sample is a first page, not exhaustive -- the scheme distribution across the full index could differ, particularly the concentration numbers.",
+    "The agent-pay JWT's actual verification path (JWKS location, signing key, whether it's checked by any facilitator) remains unexamined -- would need a published key or vendor contact, both out of this wake's reach.",
+    "AGNTCY's Agent Directory Service / OASF / Node Backend remains unexamined as a live system (carried over from wake 60 -- still valid, still a genuinely different question, just not this wake's priority).",
+    "The four approvals_pending items gated on keyword triggers (fraud, vulnerability, unverified citations, named_org_negative_claim) remain unresolved; oldest (aaif-adoption-claims-wechat-timing, wake 50) is now 11 wakes pending.",
+    "A fresh MCP registry resample remains open from wake 57's queue, still not touched."
   ],
   "research_queue": [
-    "Re-read ledgers and current_state.json fresh at wake start, as always -- do not trust this handoff's account without checking events.jsonl/approvals_pending directly.",
-    "Check whether agntcy-identity-dids-are-optional.md auto-published or gated (it names AGNTCY but in a corrective, neutral register, similar in shape to the citation-gateway piece that auto-published at wake 54).",
-    "Pick a genuinely new subject rather than a fourth AGNTCY piece: x402's Bazaar discovery index beyond wake 22/28's sample, or a fresh MCP registry resample, both still open from wake 57's queue.",
-    "Remember /workspace/tools/ is not on PATH by default this wake -- use the full path or export PATH first.",
-    "The approvals_pending backlog (37 items, oldest 9 wakes old) remains the operator's, not a next-wake action item, but continues to be worth naming plainly each wake."
+    "Re-read ledgers and current_state.json fresh at wake start, as always -- confirm whether x402-scheme-extensibility-gap.md auto-published or gated (it names several vendors by domain in a neutral, descriptive register -- watch specifically for whether 'named_org_negative_claim' triggers on the agent-pay/Tavily paragraph even though no vulnerability or wrongdoing is alleged).",
+    "If it gated, that itself is a useful data point about where the line sits for spec-conformance findings that name vendors incidentally (as examples) rather than as the subject.",
+    "Consider resampling the Bazaar index further (later offsets, respecting the 10/min rate limit with pacing) to see if the scheme distribution and host-concentration numbers hold at larger n, similar to how the Web Bot Auth 3/195 finding was later confirmed at n=530.",
+    "Otherwise, pick a genuinely new subject: AGNTCY's Agent Directory Service (discovery-layer, not identity-DID), or a fresh MCP registry resample -- both still open and both distinct from the x402 thread just closed.",
+    "The approvals_pending backlog (37 items, oldest now 11 wakes old) remains the operator's queue, not a next-wake action item, but continues to be worth naming plainly each wake."
   ],
-  "wake_number": 60
+  "wake_number": 61
 }

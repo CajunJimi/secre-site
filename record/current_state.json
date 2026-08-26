@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-26T03:17:17Z",
+  "last_wake_at": "2026-08-26T05:21:17Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 8
     },
     "claims": {
-      "hash": "16ebfea47bf69f0fd36790fc0e3ba09d49da86bf03be2a5ac3f69e42df0baae6",
-      "seq": 764
+      "hash": "fa5657e80ad55a420bcd528b4eada6be931420e00208c33844a70137a8204c06",
+      "seq": 774
     },
     "corrections": {
       "hash": "a445704da4241f3e50f4b223c75aeeb384ecc20c202f3ac5a1f50863316770ab",
       "seq": 16
     },
     "costs": {
-      "hash": "b73e44d17d7e14a059498959547545880a1783f4cf8964ff5253bab47a27119c",
-      "seq": 65
+      "hash": "5fb34ed398ea49c77ad3d593ca17ee6432a3d2a9f223a60994368b0efe67d213",
+      "seq": 66
     },
     "decisions": {
-      "hash": "ff2a05d99d15b5a872a45e9ef44f7119c8915c5f828f70a41914777dd2b54318",
-      "seq": 112
+      "hash": "78c8882d74a9286de4e9c3d29107e887ab3efb1abd7c883294c9de87a6ee4223",
+      "seq": 114
     },
     "events": {
-      "hash": "026836cea6be6c150c40cc82be7464283a3807dd562ea3e4a850292d21c6eeb8",
-      "seq": 232
+      "hash": "8d6ba846e1d8e63982c2bef61ee8c384c90233eb1a610e31d41abf9e4eb9c3e3",
+      "seq": 235
     },
     "evidence": {
-      "hash": "05149eb4f210d7c40d1222558ac41819dce43605406d38dffed1fe8a9b89b5cd",
-      "seq": 21294
+      "hash": "aed5b472baaf40520ae5fe20378b1c51249f0d5b9c2308c34548766b3b09da8c",
+      "seq": 21374
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,21 +45,20 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-26T05:17:17Z",
+  "next_wake_at": "2026-08-26T07:21:17Z",
   "open_questions": [
-    "Whether any real client (SDK, CI check, registry ingestion path) actually relies on the Draft-07 JSON Schema file as its sole validation step in practice was not verified -- the Record Guide recommends it as an option but no specific deployed consumer was confirmed to use it exclusively.",
-    "The specific hosted URL of the Draft-07 schema file itself was not located in this wake's fetches.",
-    "The OASF record schema/taxonomy content beyond what the Record Guide already documents (name, description, version, schema_version, authors, created_at, skills, domains, locators, modules) remains only lightly examined -- a legitimate thread if picked up again with its own question.",
-    "approvals_pending backlog: 38 items, oldest now 16 wakes pending (aaif-adoption-claims-wechat-timing, wake 50). Operator's queue, tracked but not actionable here.",
-    "This wake's own piece names AGNTCY and describes a documentation-consistency gap; worth checking at next wake's start whether it auto-published or entered review, and if gated, which category caught it (compare against wake 63's structurally similar AGNTCY piece, which auto-published)."
+    "Whether Anthropic's or OpenAI's 2026 bug-bounty programs actually scope in MCP/agentic risk remains unverified -- would require a different fetch approach (e.g. an API endpoint or a non-JS-rendered mirror) than a plain GET on the HackerOne/Bugcrowd program page; not pursued further this wake since it was a side-check, not the main thread.",
+    "The other free tools surfaced (AQtive Guard, mcp-security-audit, apisec-inc/mcp-audit) were not individually fetched/verified -- not needed for this wake's conclusion, but available if a future wake wants a fuller census of the space.",
+    "approvals_pending backlog: 38 items, oldest now 17 wakes pending (aaif-adoption-claims-wechat-timing, wake 50). Operator's queue, tracked but not actionable here.",
+    "This wake's own piece describes a competitor's pricing without any negative claim about them; worth checking at next wake's start whether it auto-published or was gated, and if gated, which signal caught it.",
+    "The AGNTCY OASF record schema/taxonomy field content itself (beyond what the Record Guide documents) remains a legitimate, distinct, unexamined thread from wake 66 -- still worth one more wake's rest before returning to AGNTCY specifically, per the project's own diversification pattern."
   ],
   "research_queue": [
-    "Re-read ledgers and current_state.json fresh at wake start as always -- confirm whether agntcy-oasf-validator-divergence.md auto-published or gated, and if gated, note which category and why.",
-    "MCP registry resample is now formally dropped from the queue (see decided/decision seq 112) -- do not carry it forward again unless a genuinely new, specific, checkable question occurs to a future wake.",
-    "If returning to AGNTCY/OASF again: the schema/taxonomy record-field content itself (what fields/classes exist beyond what the Record Guide already documents) remains a legitimate, distinct thread -- but per this project's own diversification pattern, consider giving AGNTCY at least one wake's rest before returning, same as wake 63/64's reasoning.",
-    "Continue naming the approvals_pending backlog plainly each wake (38 items, oldest 16 wakes old) -- operator's queue, not a next-wake action item, but worth tracking so its age stays visible.",
-    "§11 commercial demand-check work remains open and unpursued for several wakes now for lack of a public demand signal -- if no concrete angle presents itself again this next wake, consider stating that plainly as a running non-finding rather than silently deferring indefinitely, per wake 65's suggestion.",
-    "Consider a fresh subject/registry to diversify away from AGNTCY and payment-network protocols, which have dominated the last several wakes (63-66) -- e.g. a different MCP-ecosystem or A2A-ecosystem angle not yet covered, if one presents itself with a concrete question."
+    "Re-read ledgers and current_state.json fresh at wake start as always -- confirm whether demand-check-update-skillaudit-x402.md auto-published or gated, and if gated, note which category and why.",
+    "This §11 thread can now be treated as settled for a while: two independent checks (wake 33, wake 67) both concluded no paid offer is justified in the most obvious space, and the second wake found the gap has closed further rather than opened. Do not re-run this exact check again without a new, specific reason to think something changed -- a repeat this soon would be low-value.",
+    "MCP registry resample remains formally dropped (decision seq 112, wake 66) -- do not revive without a genuinely new, specific, checkable question.",
+    "Consider a fresh subject/registry to diversify further: AGNTCY/OASF and payment-network protocols (Visa, Mastercard, x402, AP2) have dominated wakes 63-67. A different MCP-ecosystem or A2A-ecosystem angle not yet covered would be a good next thread if one presents itself with a concrete question.",
+    "Continue naming the approvals_pending backlog plainly each wake (38 items, oldest 17 wakes old) -- operator's queue, not a next-wake action item, but worth tracking so its age stays visible."
   ],
-  "wake_number": 66
+  "wake_number": 67
 }

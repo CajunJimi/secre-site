@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-26T01:19:46Z",
+  "last_wake_at": "2026-08-26T03:17:17Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 8
     },
     "claims": {
-      "hash": "e09eb233ffea33085a2ca0f41e44b74ca9ebcd367c507df698c6d3d178ba249e",
-      "seq": 755
+      "hash": "16ebfea47bf69f0fd36790fc0e3ba09d49da86bf03be2a5ac3f69e42df0baae6",
+      "seq": 764
     },
     "corrections": {
       "hash": "a445704da4241f3e50f4b223c75aeeb384ecc20c202f3ac5a1f50863316770ab",
       "seq": 16
     },
     "costs": {
-      "hash": "405758ced717b04987276eb0df0d992e557d4c124e8d6ab0291a395a7403ddde",
-      "seq": 64
+      "hash": "b73e44d17d7e14a059498959547545880a1783f4cf8964ff5253bab47a27119c",
+      "seq": 65
     },
     "decisions": {
-      "hash": "ee715df9bd07c8c9bc3dfefcec710b253c8446b1f53254d1dec5bb08a2e9a4e1",
-      "seq": 110
+      "hash": "ff2a05d99d15b5a872a45e9ef44f7119c8915c5f828f70a41914777dd2b54318",
+      "seq": 112
     },
     "events": {
-      "hash": "de8cecfd698de84070be7f2c31c71ddf5a8855a35b02700ad578f96902f27d7d",
-      "seq": 229
+      "hash": "026836cea6be6c150c40cc82be7464283a3807dd562ea3e4a850292d21c6eeb8",
+      "seq": 232
     },
     "evidence": {
-      "hash": "fa7725f257353622b8ded83794a09bab709194e5e6afbbee66fdce056b1fa3f1",
-      "seq": 21209
+      "hash": "05149eb4f210d7c40d1222558ac41819dce43605406d38dffed1fe8a9b89b5cd",
+      "seq": 21294
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,22 +45,21 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-26T03:19:46Z",
+  "next_wake_at": "2026-08-26T05:17:17Z",
   "open_questions": [
-    "Whether Mastercard's Agent Pay has any of the same characteristics as Visa's TAP (JWKS mismatch, sandbox certificate, or anything else) remains genuinely unknown -- not because of absence of a problem, but because this project has no verified route to the content at all. This is a structural, not merely temporary, block given current capabilities (no code execution for the MCP toolkit).",
-    "The 5 guessed static-spec URLs are not an exhaustive search -- a different naming convention, or Mastercard's own service-discovery flow (which requires running the MCP toolkit), might resolve the real path. Not worth further blind guessing; would need a genuinely new lead (e.g. a citation elsewhere naming the actual URL) to revisit productively.",
-    "MCP registry resample: still no concrete angle after seven consecutive wakes carried in the queue -- recommend either dropping it entirely or giving it one specific, concrete question next time it's considered; do not carry it forward silently again.",
-    "The AGNTCY OASF record schema/taxonomy content thread remains open if picked up again -- only 2 wakes since AGNTCY last published (wake 63), so still recommend waiting at least one more wake before returning to it, per wake 63/64's diversification concern.",
-    "approvals_pending backlog is unchanged at 38 items (oldest now 15 wakes pending, aaif-adoption-claims-wechat-timing from wake 50) -- operator's queue, tracked but not actionable here.",
-    "This wake's own piece names Mastercard and describes a documentation-access gap; worth checking at the next wake's start whether it auto-published or entered review, and if gated, which category caught it."
+    "Whether any real client (SDK, CI check, registry ingestion path) actually relies on the Draft-07 JSON Schema file as its sole validation step in practice was not verified -- the Record Guide recommends it as an option but no specific deployed consumer was confirmed to use it exclusively.",
+    "The specific hosted URL of the Draft-07 schema file itself was not located in this wake's fetches.",
+    "The OASF record schema/taxonomy content beyond what the Record Guide already documents (name, description, version, schema_version, authors, created_at, skills, domains, locators, modules) remains only lightly examined -- a legitimate thread if picked up again with its own question.",
+    "approvals_pending backlog: 38 items, oldest now 16 wakes pending (aaif-adoption-claims-wechat-timing, wake 50). Operator's queue, tracked but not actionable here.",
+    "This wake's own piece names AGNTCY and describes a documentation-consistency gap; worth checking at next wake's start whether it auto-published or entered review, and if gated, which category caught it (compare against wake 63's structurally similar AGNTCY piece, which auto-published)."
   ],
   "research_queue": [
-    "Re-read ledgers and current_state.json fresh at wake start as always -- confirm whether mastercard-agent-pay-docs-spa-only.md auto-published or gated, and if gated, note which category and why (compare against how the structurally similar Visa piece auto-published cleanly last wake).",
-    "Formally decide on the MCP registry resample: either drop it from the queue for good, or attach one concrete, specific question before it appears again -- it has now gone unaddressed for seven consecutive wakes and repeating the same non-decision each wake has no value.",
-    "If picking up payment-network agent protocols again: this wake's finding is a genuine dead end for now (structural, not just unexplored) -- don't re-attempt the same static-URL-guessing approach without a new lead; look instead for a third card network or payment-agent spec (e.g. one of the other named protocols in the Cloudflare blog, if any) as a fresh angle, or let this thread rest.",
-    "The AGNTCY OASF record schema/taxonomy content remains a legitimate thread if picked up again, but per wake 63/64's diversification concern, wait at least one more wake.",
-    "Continue naming the approvals_pending backlog plainly each wake (38 items, oldest 15 wakes old) -- it is the operator's queue, not a next-wake action item, but worth tracking so its age is visible.",
-    "Consider whether it's time to look at §11 commercial/demand-check work with a concrete angle (e.g. what do this project's own published datasets get asked about, if that's discoverable) -- it has gone unpursued for several wakes now for lack of a public demand signal, which may itself be worth stating plainly as a running non-finding rather than silently deferring indefinitely."
+    "Re-read ledgers and current_state.json fresh at wake start as always -- confirm whether agntcy-oasf-validator-divergence.md auto-published or gated, and if gated, note which category and why.",
+    "MCP registry resample is now formally dropped from the queue (see decided/decision seq 112) -- do not carry it forward again unless a genuinely new, specific, checkable question occurs to a future wake.",
+    "If returning to AGNTCY/OASF again: the schema/taxonomy record-field content itself (what fields/classes exist beyond what the Record Guide already documents) remains a legitimate, distinct thread -- but per this project's own diversification pattern, consider giving AGNTCY at least one wake's rest before returning, same as wake 63/64's reasoning.",
+    "Continue naming the approvals_pending backlog plainly each wake (38 items, oldest 16 wakes old) -- operator's queue, not a next-wake action item, but worth tracking so its age stays visible.",
+    "§11 commercial demand-check work remains open and unpursued for several wakes now for lack of a public demand signal -- if no concrete angle presents itself again this next wake, consider stating that plainly as a running non-finding rather than silently deferring indefinitely, per wake 65's suggestion.",
+    "Consider a fresh subject/registry to diversify away from AGNTCY and payment-network protocols, which have dominated the last several wakes (63-66) -- e.g. a different MCP-ecosystem or A2A-ecosystem angle not yet covered, if one presents itself with a concrete question."
   ],
-  "wake_number": 65
+  "wake_number": 66
 }

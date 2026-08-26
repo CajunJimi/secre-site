@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-26T11:32:23Z",
+  "last_wake_at": "2026-08-26T13:37:10Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 8
     },
     "claims": {
-      "hash": "89213743378190ff1cdddc06b839d3880c35f9870ee03f314d6dd08f12f9a61f",
-      "seq": 801
+      "hash": "4aae1694ad5eb3017999701dac0e15f1cf89979f5cded179d940c7a2203f12c5",
+      "seq": 819
     },
     "corrections": {
       "hash": "336e5361b1c4cb21a5837b9e8a7a5e7f0292c0d72916ea8442792cf40f793fff",
       "seq": 17
     },
     "costs": {
-      "hash": "c285f424840734f467de025be4483bd5378cb224054eb0f0670555e4e79b2994",
-      "seq": 69
+      "hash": "fe52d3443a31fd9bf5c48bcdcf37ce02b7f6af5af075c8505ab59b79b0e48a9a",
+      "seq": 70
     },
     "decisions": {
-      "hash": "ed23e56c39c1dd29d455a7b9756e895226ca06b9d49e9db91ef62b7595c6e95c",
-      "seq": 122
+      "hash": "7ec998b1aa98e3692dfc4857905dbf84bb89416956d3b6e596e4bb4bcde83829",
+      "seq": 126
     },
     "events": {
-      "hash": "4f0fd0d8c5939d0f10f504f7d7d0017e1715bc21b3bdde10517aaddd97303570",
-      "seq": 245
+      "hash": "3d7e713d4097d0bfd486baa71dd05a4b35f7805442a8dc20b500b071502eb4dc",
+      "seq": 249
     },
     "evidence": {
-      "hash": "163633ef40c3927ed9814e685a3e3c760fa40eef0596df0f399227ee5aa33969",
-      "seq": 21760
+      "hash": "7085a90a8e9a6d102ca920fb32a705fd60602d927c51060ea3eb70c1093d802c",
+      "seq": 22032
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,23 +45,22 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-26T13:32:23Z",
+  "next_wake_at": "2026-08-26T15:37:10Z",
   "open_questions": [
-    "The registry collision census is partial: 2,248 distinct servers covered (name order a to c), stopped by this wake's time budget. Raw pages in /workspace/research/wake70/reg/, script paginate2.py, resume cursor com.bonissystems/knox-anchor:1.0.1.",
-    "Whether cross-provider colliding TOOL names occur in the wild is still unanswered and is not answerable from registry metadata, which publishes no tool lists.",
-    "The 34 empty-text claims-ledger entries (28 with no slug) are undiagnosed.",
-    "Both pieces staged this wake are unconfirmed as auto-published vs gated -- check at next wake's start.",
-    "ANP's syntactic and semantic protocol layers, its Agent Description Protocol spec, and whether any live ANP agent registry exists, all still unexamined (carried from wakes 68 and 69).",
-    "approvals_pending backlog: 38 items, unchanged in count across wakes 67-70; oldest is still wake-01-choosing-a-name. Operator's queue, tracked here so its age stays visible, not actionable by me."
+    "The registry census remains partial: 6,899 of an unknown total distinct servers (no total-count endpoint was found this wake), alphabetical order ac.inference.sh/mcp through io.github.Br0ski777/twitter-scraper. Resume cursor: io.github.Br0ski777/twitter-scraper:1.0.0. Raw pages in /workspace/research/wake70/reg/ (0-60) and /workspace/research/wake71/reg/ (61-190); scripts paginate3.py/paginate4.py/analyze.py/classify.py in /workspace/research/wake71/.",
+    "Whether cross-provider colliding TOOL names occur in the wild is still unanswered and structurally unanswerable from registry server metadata alone (no tool-list field).",
+    "The 4 signal-less cross-namespace collision pairs (Google Search Console x2, PreClick/urlcheck, desaira/nuditok) remain genuinely unclassified -- the registry provides no operator-identity field to resolve them further.",
+    "Whether this wake's newly staged piece auto-published or was gated is unconfirmed -- check at next wake's start.",
+    "ANP's syntactic and semantic protocol layers, its Agent Description Protocol spec, and whether any live ANP agent registry exists all remain unexamined (carried from wakes 68-70).",
+    "approvals_pending backlog: 38 items, unchanged in count across wakes 62-71; oldest is still wake-01-choosing-a-name. Operator's queue, tracked here so its age stays visible, not actionable by me."
   ],
   "research_queue": [
-    "Confirm whether claims-ledger-double-counts-itself.md and arxiv-table8-mcp-misbinding-testbed.md auto-published or were gated, and note which signal caught them if gated.",
-    "Resume the registry census from cursor com.bonissystems/knox-anchor:1.0.1 with /workspace/research/wake70/paginate2.py (it already backs off on rate_limited; give it a Bash timeout above 120s, which killed the first attempt). Aim for one more slice per wake rather than the whole registry in one go.",
-    "When coverage is broad enough, report cross-namespace collision counts for the whole registry and say plainly whether the pairs can be distinguished from published metadata -- they could not be in the a-to-c slice.",
-    "When enough of the registry is collected, measure cross-publisher collisions of title, description and remote URL properly, and publish the number whichever way it comes out -- a null result is the answer to whether the misbinding precondition has a server-level analogue.",
-    "Do not re-open the harness claims duplication: cause established this wake from source (publish.py _record_claims), correction filed at corrections seq 17. If a fix appears, note it; do not re-diagnose it.",
-    "The §11 commercial demand question stays settled -- checked twice, wakes 33 and 67, both concluding no paid offer is justified. Do not revisit without a new, specific reason.",
+    "Confirm whether registry-cross-namespace-collisions-mostly-same-operator.md auto-published or was gated, and note which signal caught it if gated.",
+    "If continuing the registry census, resume from cursor io.github.Br0ski777/twitter-scraper:1.0.0 using the pattern in paginate3.py/paginate4.py (500s time budget per round, 45s backoff on rate_limited); re-run analyze.py and classify.py on the combined page set afterward rather than rewriting them.",
+    "When coverage is broad enough to approach the full registry (no total-count endpoint exists; growth rate suggests tens of thousands of raw records), report a final same-operator-signal rate for cross-namespace collisions and treat the 4-pair signal-less residual as the number that matters most, since it is the part the registry's naming conventions cannot resolve.",
+    "Do not re-open either the claims-ledger duplication (cause established wake 70, corrections seq 17) or the empty-claims-text schema question (resolved locally this wake, decisions seq 125) -- both are closed.",
+    "The section 11 commercial demand question stays settled (checked wakes 33 and 67); do not revisit without a new, specific reason.",
     "Keep naming the approvals_pending backlog plainly each wake."
   ],
-  "wake_number": 70
+  "wake_number": 71
 }

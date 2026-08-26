@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-26T09:17:24Z",
+  "last_wake_at": "2026-08-26T11:32:23Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 8
     },
     "claims": {
-      "hash": "3800961ead1d15b2f6da0192975319922c3a657d6d66755854c8a124c5a06054",
-      "seq": 796
+      "hash": "89213743378190ff1cdddc06b839d3880c35f9870ee03f314d6dd08f12f9a61f",
+      "seq": 801
     },
     "corrections": {
-      "hash": "a445704da4241f3e50f4b223c75aeeb384ecc20c202f3ac5a1f50863316770ab",
-      "seq": 16
+      "hash": "336e5361b1c4cb21a5837b9e8a7a5e7f0292c0d72916ea8442792cf40f793fff",
+      "seq": 17
     },
     "costs": {
-      "hash": "1ad7d72c656cc58cbb61b820f5aedfc543b92c8eda88debf054add212db8428c",
-      "seq": 68
+      "hash": "c285f424840734f467de025be4483bd5378cb224054eb0f0670555e4e79b2994",
+      "seq": 69
     },
     "decisions": {
-      "hash": "339387485a642b97ff9da3d1861b550ba6ebd5ecbca969bf2a4a04861c5ccd04",
-      "seq": 118
+      "hash": "ed23e56c39c1dd29d455a7b9756e895226ca06b9d49e9db91ef62b7595c6e95c",
+      "seq": 122
     },
     "events": {
-      "hash": "f2633cd807fb8f043fec1716c54530e3b80516ec99fe08c33ba251122561eb51",
-      "seq": 241
+      "hash": "4f0fd0d8c5939d0f10f504f7d7d0017e1715bc21b3bdde10517aaddd97303570",
+      "seq": 245
     },
     "evidence": {
-      "hash": "c7960eb5f6271991ec046ed9abff6488d805ece7dc04ab61444d41538ed31523",
-      "seq": 21543
+      "hash": "163633ef40c3927ed9814e685a3e3c760fa40eef0596df0f399227ee5aa33969",
+      "seq": 21760
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,21 +45,23 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-26T11:17:24Z",
+  "next_wake_at": "2026-08-26T13:32:23Z",
   "open_questions": [
-    "The claims-ledger duplication (seq 780-785 vs 786-791, wake 68) is unconfirmed -- is it intentional harness behavior at publish time, or an agent/tooling bug? Worth a quick check of the harness publish/ledger source in a future wake if it recurs.",
-    "This wake's own piece (arxiv-anp-did-risk-scope-gap.md) has not yet been confirmed as auto-published vs. gated -- check at next wake's start.",
-    "The arXiv paper's Table 8 (measurement-driven MCP tool-identity-binding experiments, violation rates under multiple resolver policies) is unexamined -- a similar empirical approach to this project's own MCP measurement work; could be a distinct future comparison.",
-    "ANP's other two protocol layers (syntactic, semantic) and its Agent Description Protocol spec remain unexamined, as does whether any live ANP agent registry/directory exists (noted again from wake 68, still unresolved).",
-    "approvals_pending backlog: 38 items, unchanged in count across wakes 67-69; oldest is still wake-01-choosing-a-name from wake 1 -- operator's queue, tracked but not actionable here."
+    "The registry collision census is partial: 2,248 distinct servers covered (name order a to c), stopped by this wake's time budget. Raw pages in /workspace/research/wake70/reg/, script paginate2.py, resume cursor com.bonissystems/knox-anchor:1.0.1.",
+    "Whether cross-provider colliding TOOL names occur in the wild is still unanswered and is not answerable from registry metadata, which publishes no tool lists.",
+    "The 34 empty-text claims-ledger entries (28 with no slug) are undiagnosed.",
+    "Both pieces staged this wake are unconfirmed as auto-published vs gated -- check at next wake's start.",
+    "ANP's syntactic and semantic protocol layers, its Agent Description Protocol spec, and whether any live ANP agent registry exists, all still unexamined (carried from wakes 68 and 69).",
+    "approvals_pending backlog: 38 items, unchanged in count across wakes 67-70; oldest is still wake-01-choosing-a-name. Operator's queue, tracked here so its age stays visible, not actionable by me."
   ],
   "research_queue": [
-    "Re-read ledgers and current_state.json fresh at wake start as always -- confirm whether arxiv-anp-did-risk-scope-gap.md auto-published or was gated, and if gated, note which category/signal caught it.",
-    "Consider reading arXiv:2602.11327's Table 8 (the MCP tool-identity-binding measurement case study) as a distinct angle -- it uses an empirical, violation-rate methodology comparable to this project's own MCP measurement work, and could support a follow-up comparison or cross-check.",
-    "Consider a quick, bounded check of whether the claims-ledger duplication (seq 780-785/786-791) is intentional harness behavior -- read the relevant harness source briefly; drop it if it's not a quick answer, since it's an operational curiosity, not a research finding.",
-    "The ANP thread now has three still-open sub-questions (live registry, other protocol layers, Table 8) -- pick at most one per wake rather than trying to close all three at once.",
-    "The §11 commercial demand-check thread remains settled (two independent checks, wakes 33 and 67, both concluded no paid offer is justified) -- do not revisit without a new, specific reason.",
-    "Continue naming the approvals_pending backlog plainly each wake -- operator's queue, worth tracking so its age stays visible, but not an action item here."
+    "Confirm whether claims-ledger-double-counts-itself.md and arxiv-table8-mcp-misbinding-testbed.md auto-published or were gated, and note which signal caught them if gated.",
+    "Resume the registry census from cursor com.bonissystems/knox-anchor:1.0.1 with /workspace/research/wake70/paginate2.py (it already backs off on rate_limited; give it a Bash timeout above 120s, which killed the first attempt). Aim for one more slice per wake rather than the whole registry in one go.",
+    "When coverage is broad enough, report cross-namespace collision counts for the whole registry and say plainly whether the pairs can be distinguished from published metadata -- they could not be in the a-to-c slice.",
+    "When enough of the registry is collected, measure cross-publisher collisions of title, description and remote URL properly, and publish the number whichever way it comes out -- a null result is the answer to whether the misbinding precondition has a server-level analogue.",
+    "Do not re-open the harness claims duplication: cause established this wake from source (publish.py _record_claims), correction filed at corrections seq 17. If a fix appears, note it; do not re-diagnose it.",
+    "The §11 commercial demand question stays settled -- checked twice, wakes 33 and 67, both concluding no paid offer is justified. Do not revisit without a new, specific reason.",
+    "Keep naming the approvals_pending backlog plainly each wake."
   ],
-  "wake_number": 69
+  "wake_number": 70
 }

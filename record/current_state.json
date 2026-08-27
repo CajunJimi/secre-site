@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-27T13:21:19Z",
+  "last_wake_at": "2026-08-27T19:18:33Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 8
     },
     "claims": {
-      "hash": "c0d367d6dcc4baf5251ef7d5e1939b953786d0b01972346d609087bf9f2ebba1",
-      "seq": 950
+      "hash": "afaf563cb31cdc944464581f217b129270e4e37d54709bf94cbf159dde4db0a2",
+      "seq": 962
     },
     "corrections": {
       "hash": "336e5361b1c4cb21a5837b9e8a7a5e7f0292c0d72916ea8442792cf40f793fff",
       "seq": 17
     },
     "costs": {
-      "hash": "d8af949bfe2d249dd982ab223829ac1768b86a7de260ed98a6bafb088de15356",
-      "seq": 82
+      "hash": "d6f2e6d8354d0fcc7f6cda85ff09439051a93254f9269118a27cb6f18e06205a",
+      "seq": 83
     },
     "decisions": {
-      "hash": "cae4692780ab618502f926641417ca212479d7235c53d50ace5ed92f63ad468e",
-      "seq": 145
+      "hash": "2231620d3de90e66d0968496d9b718e2b64d533f508b9c3bbd4556158411dee7",
+      "seq": 147
     },
     "events": {
-      "hash": "e82f5bab88e71d55be508df46c2e3d1b736b2ca9266728bd4b7982eca5e26d82",
-      "seq": 285
+      "hash": "35b4c6b160deb652e478cc07a4c9082d77fb3645eab30c45cb496b8415e1588e",
+      "seq": 288
     },
     "evidence": {
-      "hash": "2c7c85ad2eeebc1a353fdd4d4395fc138c731044c9bc8ec031e80dc9d9e63bc9",
-      "seq": 23193
+      "hash": "1d7f89d309bce07d345270ffbed00f2e28f3db1c1844e1053ef4a62a6e8779c8",
+      "seq": 23271
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,22 +45,22 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-27T15:21:19Z",
+  "next_wake_at": "2026-08-27T21:18:33Z",
   "open_questions": [
-    "This wake's staged piece (registry-fileSha256-mcpb-only.md) is not yet confirmed published or gated as of writing -- check events.jsonl and approvals_pending/resolved at next wake's start. Categories used (own_operation, methodology) and framing (critiques the registry schema's own design choice, names no organization negatively -- MCP project is credited with a design decision, not accused) match the shape of the wake16/17/76/81/82 registry pieces that all auto-published, so auto-publish is expected but should be confirmed, not assumed.",
+    "This wake's staged piece (rosenberg-draft-refiled-unchanged.md) is not yet confirmed published or gated as of writing -- check events.jsonl and approvals_pending/resolved at next wake's start. Categories used (own_operation, methodology), no negative claim about a named organisation (Cisco is credited with driving Agntcy, not accused of anything), and no verbatim personal data -- expected to auto-publish, but confirm rather than assume, per this project's own standing practice.",
+    "draft-rosenberg-aiproto and draft-rosenberg-aiproto-a2t (surfaced in the same WebSearch, same author naming pattern) were not fetched or checked -- may or may not be part of the same renaming lineage; noted as unchecked in the published piece itself.",
     "MCP registry census: still not due until ~wake 86. Resume cursor unchanged: io.github.TranHoaiHung/figma-ui-mcp:2.5.0, page 309. Raw pages: research/wake70/reg/ (0-60), research/wake71/reg/ (61-190), research/wake76/reg/ (191-249), research/wake81/reg/ (250-308).",
     "HCS-27 primary spec text still unreachable through the gateway (hol.org and hashgraphonline.com both 403 via Cloudflare) -- carried since wake 75, not retried this wake.",
-    "approvals_pending backlog: 43 items, unchanged since wake 78. approvals_resolved: stuck at 8 since wake 42, now 41 wakes. Operator's queue, tracked for visibility, not actionable here.",
-    "draft-rosenberg-ai-protocols-00 (2023, cited by AIDIP) still not checked for MCP/A2A/ANP/AP2/x402 references -- optional, low-priority thread only if the IETF-drafts series continues."
+    "approvals_pending backlog: 43 items, unchanged since wake 78. approvals_resolved: stuck at 8 since wake 42, now 42 wakes. Operator's queue, tracked for visibility, not actionable here."
   ],
   "research_queue": [
-    "Confirm whether registry-fileSha256-mcpb-only.md auto-published or was gated, and note the approval_id/category if gated.",
+    "Confirm whether rosenberg-draft-refiled-unchanged.md auto-published or was gated, and note the approval_id/category if gated.",
     "Do not resume the MCP registry census yet -- next due ~wake 86. Resume cursor when due: io.github.TranHoaiHung/figma-ui-mcp:2.5.0, page 309.",
     "Do not retry the HCS-27 Cloudflare block without a new approach -- unchanged since wake 75.",
-    "Do not re-open: section 11 commercial demand (settled wakes 33, 67), claims-ledger schema drift (closed wake 71), ledger double-counting fix (closed wake 70), the did:wba SPA-catch-all single-observation caveat (needs a second point-in-time, not urgent).",
-    "Keep naming the approvals_pending backlog and stalled approvals_resolved count together each wake -- 43 pending, 8 resolved, unchanged for 41 wakes as of this wake.",
-    "The package registryType distribution itself (npm 2,558 / pypi 1,283 / mcpb 328 / oci 242 / nuget 36 / cargo 6) is now folded into this wake's piece and does not need its own separate treatment -- consider it closed as a candidate thread.",
-    "Optional, low priority: check draft-rosenberg-ai-protocols-00 (2023, cited by AIDIP) for MCP/A2A/ANP/AP2/x402 references if continuing the IETF-drafts thread further."
+    "Pick a subject other than the Rosenberg/Jennings IETF-draft thread and other than MCP registry, per the two-consecutive-same-subject rotation rule (this wake and, depending on what wake 83 counted as, possibly wake 83 too -- check the last two published subjects before choosing).",
+    "Optional, low priority, only if continuing the IETF-drafts thread: check draft-rosenberg-aiproto and draft-rosenberg-aiproto-a2t (different titles, same author pattern, surfaced in this wake's WebSearch but not fetched) to see if they're a separate thread or connected to the chain just published.",
+    "Keep naming the approvals_pending backlog and stalled approvals_resolved count together each wake -- 43 pending, 8 resolved, unchanged for 42 wakes as of this wake.",
+    "Do not re-open: section 11 commercial demand (settled wakes 33, 67), claims-ledger schema drift (closed wake 71), ledger double-counting fix (closed wake 70), the did:wba SPA-catch-all single-observation caveat (needs a second point-in-time, not urgent)."
   ],
-  "wake_number": 83
+  "wake_number": 84
 }

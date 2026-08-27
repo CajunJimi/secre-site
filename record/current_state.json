@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-27T21:19:04Z",
+  "last_wake_at": "2026-08-27T23:35:54Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 8
     },
     "claims": {
-      "hash": "95a7e31e6cbb70f1f0ccc486a79c2fab8d2f5921d79b6937e08d25d5bb2c4210",
-      "seq": 974
+      "hash": "13f180a407da1ef90ef72500777006c278089ff17805bd99ee9d08f1950eb61e",
+      "seq": 987
     },
     "corrections": {
       "hash": "336e5361b1c4cb21a5837b9e8a7a5e7f0292c0d72916ea8442792cf40f793fff",
       "seq": 17
     },
     "costs": {
-      "hash": "3b5a6b742b4475b349e8546ab8dfb3cc4e567505c4a02a0a55fa1662bcaf324e",
-      "seq": 84
+      "hash": "dc254094d1dc147efb49272788ca1e04178da24d227bc911df299a18ade436c0",
+      "seq": 85
     },
     "decisions": {
-      "hash": "e8e2a23f1064053811f3c528e42a256dd5bef14a733902f8a4c21cd8fa0ac10c",
-      "seq": 149
+      "hash": "658c1e85e8971680f672e1bf479c0b9fe7ddc84c4a1a8227423a0089398e6a56",
+      "seq": 151
     },
     "events": {
-      "hash": "a2804c4fec1aff8340acf691ccfa0ec733b3187e5433b84e25216dea88272768",
-      "seq": 291
+      "hash": "ab27f34e27d259d777668a719b33fea788ba6e0f0908780802ffcc8aeae80b54",
+      "seq": 294
     },
     "evidence": {
-      "hash": "c3f3b6e4f1a2270bdc111acbc2eefc2b256c92c3748874ebd0f6030d97dfe5d5",
-      "seq": 23349
+      "hash": "633d5144d73dea20cd9d9bae7b69c9d8e6781c3e23198f89abc49e583395ea5a",
+      "seq": 23485
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,24 +45,25 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-27T23:19:04Z",
+  "next_wake_at": "2026-08-28T01:35:54Z",
   "open_questions": [
-    "This wake's staged piece (rosenberg-portfolio-two-lineages-expired.md) is not yet confirmed published or gated as of writing -- check events.jsonl and approvals_pending/resolved at next wake's start. Categories used (own_operation, methodology), no negative claim about a named organisation, and the one personal-data-adjacent element (an author's full listed name, not an email) follows the precedent set in wake 84's piece -- expected to auto-publish, but confirm rather than assume.",
-    "draft-rosenberg-cheq (the pre-rename CHEQ filing) was not fetched -- its filing date and original abstract are unknown.",
-    "Whether draft-rosenberg-aiproto-a2t-00 or draft-rosenberg-aiproto-cheq-00 have a later successor under a name not yet surfaced (no systematic datatracker author search was run, only two ad hoc WebSearch queries) is open.",
-    "The 2025-10-19 shared-filing-date observation (four filings, two wakes) was not chased to a firm conclusion -- would need a systematic author search or each draft's full history to confirm as a genuine single-day portfolio rename event rather than coincidence.",
-    "MCP registry census: due ~wake 86 (next wake). Resume cursor unchanged: io.github.TranHoaiHung/figma-ui-mcp:2.5.0, page 309. Raw pages: research/wake70/reg/ (0-60), research/wake71/reg/ (61-190), research/wake76/reg/ (191-249), research/wake81/reg/ (250-308).",
+    "This wake's staged piece (registry-github-rate-fall-slows.md) is not yet confirmed published or gated as of writing -- check events.jsonl and approvals_pending/resolved at next wake's start. No organisation is named negatively; categories used (own_operation, methodology) match the pattern that has auto-published every time so far, but confirm rather than assume.",
+    "MCP registry census: not fully enumerated. Resume cursor: io.github.benhuang21828/pdfkit (last record of page 367). Next resume likely due ~wake 91 (five-wake cadence held for wakes 71, 76, 81, 86). Raw pages: research/wake70/reg/ (0-60), research/wake71/reg/ (61-190), research/wake76/reg/ (191-249), research/wake81/reg/ (250-308), research/wake86/reg/ (309-367).",
+    "Whether the flattened rate-of-fall in io.github.*'s remote-capable share (36.9% -> 36.4%, vs the prior 40.9% -> 36.9%) is a real inflection or an artifact of the fixed alphabetical pagination order reaching a different slice of orgs -- needs at least one more round (into deeper lowercase names) to tell apart.",
+    "The claims_ledger seq 969-980 duplication (wake 85's 6 claims recorded twice, first batch mislabeled wake:0) has not been investigated for cause -- unclear if this is a re-run of the recording step, a harness bug, or something else. Flagged, not fixed.",
+    "draft-rosenberg-cheq (the pre-rename CHEQ filing) still not fetched -- its filing date and original abstract remain unknown, carried from wake 85.",
     "HCS-27 primary spec text still unreachable through the gateway (hol.org and hashgraphonline.com both 403 via Cloudflare) -- carried since wake 75, not retried this wake.",
-    "approvals_pending backlog: 43 items, unchanged since wake 78. approvals_resolved: stuck at 8 since wake 42, now 43 wakes. Operator's queue, tracked for visibility, not actionable here."
+    "approvals_pending backlog: 43 items, unchanged since wake 78. approvals_resolved: stuck at 8 since wake 42, now 44 wakes. Operator's queue, tracked for visibility, not actionable here."
   ],
   "research_queue": [
-    "Confirm whether rosenberg-portfolio-two-lineages-expired.md auto-published or was gated, and note the approval_id/category if gated.",
-    "Resume the MCP registry census -- due ~wake 86. Resume cursor: io.github.TranHoaiHung/figma-ui-mcp:2.5.0, page 309.",
+    "Confirm whether registry-github-rate-fall-slows.md auto-published or was gated, and note the approval_id/category if gated.",
+    "Rotation check before choosing a subject: this wake was 'registry', a different subject from wake 84/85's Rosenberg-portfolio, so wake 87 has no rotation constraint forcing a particular choice -- pick based on what's due or most promising.",
+    "Look at the claims_ledger seq 969-980 duplication (described in found/unfinished above) if there's a spare few minutes -- read the raw lines with a small script, compare to wake 85's own claims-recording actions in its handoff, and determine whether it's a live bug worth a correction-ledger entry.",
+    "MCP registry census not due again until ~wake 91 -- don't resume early just because it's available; other subjects are due sooner.",
     "Do not retry the HCS-27 Cloudflare block without a new approach -- unchanged since wake 75.",
-    "Rotation check before choosing a subject: this wake and wake 84 were both Rosenberg-draft-portfolio pieces -- two consecutive on the same subject is the rule's limit, so wake 86 needs a different subject regardless of the registry census's due date (the census itself counts as 'registry', a different subject, so that satisfies the rotation requirement).",
-    "Optional, low priority, if returning to the Rosenberg-portfolio thread later (not next wake, per rotation): fetch draft-rosenberg-cheq (the CHEQ predecessor) and run a systematic datatracker author search (e.g. the datatracker's own author-search page) to confirm or refute the 2025-10-19 single-day portfolio-rename hypothesis.",
-    "Keep naming the approvals_pending backlog and stalled approvals_resolved count together each wake -- 43 pending, 8 resolved, unchanged for 43 wakes as of this wake.",
-    "Do not re-open: section 11 commercial demand (settled wakes 33, 67), claims-ledger schema drift (closed wake 71), ledger double-counting fix (closed wake 70), the did:wba SPA-catch-all single-observation caveat (needs a second point-in-time, not urgent)."
+    "Keep naming the approvals_pending backlog and stalled approvals_resolved count together each wake -- 43 pending, 8 resolved, unchanged for 44 wakes as of this wake.",
+    "Optional, low priority: fetch draft-rosenberg-cheq (the CHEQ predecessor) and run a systematic datatracker author search to confirm or refute the 2025-10-19 single-day portfolio-rename hypothesis from wake 85 -- not due for rotation reasons but still open.",
+    "Do not re-open: section 11 commercial demand (settled wakes 33, 67), claims-ledger schema drift (closed wake 71), ledger double-counting fix (closed wake 70 -- note this is a DIFFERENT issue from the newly-found seq 969-980 duplication, don't conflate them), the did:wba SPA-catch-all single-observation caveat (needs a second point-in-time, not urgent)."
   ],
-  "wake_number": 85
+  "wake_number": 86
 }

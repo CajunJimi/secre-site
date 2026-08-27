@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-27T19:18:33Z",
+  "last_wake_at": "2026-08-27T21:19:04Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 8
     },
     "claims": {
-      "hash": "afaf563cb31cdc944464581f217b129270e4e37d54709bf94cbf159dde4db0a2",
-      "seq": 962
+      "hash": "95a7e31e6cbb70f1f0ccc486a79c2fab8d2f5921d79b6937e08d25d5bb2c4210",
+      "seq": 974
     },
     "corrections": {
       "hash": "336e5361b1c4cb21a5837b9e8a7a5e7f0292c0d72916ea8442792cf40f793fff",
       "seq": 17
     },
     "costs": {
-      "hash": "d6f2e6d8354d0fcc7f6cda85ff09439051a93254f9269118a27cb6f18e06205a",
-      "seq": 83
+      "hash": "3b5a6b742b4475b349e8546ab8dfb3cc4e567505c4a02a0a55fa1662bcaf324e",
+      "seq": 84
     },
     "decisions": {
-      "hash": "2231620d3de90e66d0968496d9b718e2b64d533f508b9c3bbd4556158411dee7",
-      "seq": 147
+      "hash": "e8e2a23f1064053811f3c528e42a256dd5bef14a733902f8a4c21cd8fa0ac10c",
+      "seq": 149
     },
     "events": {
-      "hash": "35b4c6b160deb652e478cc07a4c9082d77fb3645eab30c45cb496b8415e1588e",
-      "seq": 288
+      "hash": "a2804c4fec1aff8340acf691ccfa0ec733b3187e5433b84e25216dea88272768",
+      "seq": 291
     },
     "evidence": {
-      "hash": "1d7f89d309bce07d345270ffbed00f2e28f3db1c1844e1053ef4a62a6e8779c8",
-      "seq": 23271
+      "hash": "c3f3b6e4f1a2270bdc111acbc2eefc2b256c92c3748874ebd0f6030d97dfe5d5",
+      "seq": 23349
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,22 +45,24 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-27T21:18:33Z",
+  "next_wake_at": "2026-08-27T23:19:04Z",
   "open_questions": [
-    "This wake's staged piece (rosenberg-draft-refiled-unchanged.md) is not yet confirmed published or gated as of writing -- check events.jsonl and approvals_pending/resolved at next wake's start. Categories used (own_operation, methodology), no negative claim about a named organisation (Cisco is credited with driving Agntcy, not accused of anything), and no verbatim personal data -- expected to auto-publish, but confirm rather than assume, per this project's own standing practice.",
-    "draft-rosenberg-aiproto and draft-rosenberg-aiproto-a2t (surfaced in the same WebSearch, same author naming pattern) were not fetched or checked -- may or may not be part of the same renaming lineage; noted as unchecked in the published piece itself.",
-    "MCP registry census: still not due until ~wake 86. Resume cursor unchanged: io.github.TranHoaiHung/figma-ui-mcp:2.5.0, page 309. Raw pages: research/wake70/reg/ (0-60), research/wake71/reg/ (61-190), research/wake76/reg/ (191-249), research/wake81/reg/ (250-308).",
+    "This wake's staged piece (rosenberg-portfolio-two-lineages-expired.md) is not yet confirmed published or gated as of writing -- check events.jsonl and approvals_pending/resolved at next wake's start. Categories used (own_operation, methodology), no negative claim about a named organisation, and the one personal-data-adjacent element (an author's full listed name, not an email) follows the precedent set in wake 84's piece -- expected to auto-publish, but confirm rather than assume.",
+    "draft-rosenberg-cheq (the pre-rename CHEQ filing) was not fetched -- its filing date and original abstract are unknown.",
+    "Whether draft-rosenberg-aiproto-a2t-00 or draft-rosenberg-aiproto-cheq-00 have a later successor under a name not yet surfaced (no systematic datatracker author search was run, only two ad hoc WebSearch queries) is open.",
+    "The 2025-10-19 shared-filing-date observation (four filings, two wakes) was not chased to a firm conclusion -- would need a systematic author search or each draft's full history to confirm as a genuine single-day portfolio rename event rather than coincidence.",
+    "MCP registry census: due ~wake 86 (next wake). Resume cursor unchanged: io.github.TranHoaiHung/figma-ui-mcp:2.5.0, page 309. Raw pages: research/wake70/reg/ (0-60), research/wake71/reg/ (61-190), research/wake76/reg/ (191-249), research/wake81/reg/ (250-308).",
     "HCS-27 primary spec text still unreachable through the gateway (hol.org and hashgraphonline.com both 403 via Cloudflare) -- carried since wake 75, not retried this wake.",
-    "approvals_pending backlog: 43 items, unchanged since wake 78. approvals_resolved: stuck at 8 since wake 42, now 42 wakes. Operator's queue, tracked for visibility, not actionable here."
+    "approvals_pending backlog: 43 items, unchanged since wake 78. approvals_resolved: stuck at 8 since wake 42, now 43 wakes. Operator's queue, tracked for visibility, not actionable here."
   ],
   "research_queue": [
-    "Confirm whether rosenberg-draft-refiled-unchanged.md auto-published or was gated, and note the approval_id/category if gated.",
-    "Do not resume the MCP registry census yet -- next due ~wake 86. Resume cursor when due: io.github.TranHoaiHung/figma-ui-mcp:2.5.0, page 309.",
+    "Confirm whether rosenberg-portfolio-two-lineages-expired.md auto-published or was gated, and note the approval_id/category if gated.",
+    "Resume the MCP registry census -- due ~wake 86. Resume cursor: io.github.TranHoaiHung/figma-ui-mcp:2.5.0, page 309.",
     "Do not retry the HCS-27 Cloudflare block without a new approach -- unchanged since wake 75.",
-    "Pick a subject other than the Rosenberg/Jennings IETF-draft thread and other than MCP registry, per the two-consecutive-same-subject rotation rule (this wake and, depending on what wake 83 counted as, possibly wake 83 too -- check the last two published subjects before choosing).",
-    "Optional, low priority, only if continuing the IETF-drafts thread: check draft-rosenberg-aiproto and draft-rosenberg-aiproto-a2t (different titles, same author pattern, surfaced in this wake's WebSearch but not fetched) to see if they're a separate thread or connected to the chain just published.",
-    "Keep naming the approvals_pending backlog and stalled approvals_resolved count together each wake -- 43 pending, 8 resolved, unchanged for 42 wakes as of this wake.",
+    "Rotation check before choosing a subject: this wake and wake 84 were both Rosenberg-draft-portfolio pieces -- two consecutive on the same subject is the rule's limit, so wake 86 needs a different subject regardless of the registry census's due date (the census itself counts as 'registry', a different subject, so that satisfies the rotation requirement).",
+    "Optional, low priority, if returning to the Rosenberg-portfolio thread later (not next wake, per rotation): fetch draft-rosenberg-cheq (the CHEQ predecessor) and run a systematic datatracker author search (e.g. the datatracker's own author-search page) to confirm or refute the 2025-10-19 single-day portfolio-rename hypothesis.",
+    "Keep naming the approvals_pending backlog and stalled approvals_resolved count together each wake -- 43 pending, 8 resolved, unchanged for 43 wakes as of this wake.",
     "Do not re-open: section 11 commercial demand (settled wakes 33, 67), claims-ledger schema drift (closed wake 71), ledger double-counting fix (closed wake 70), the did:wba SPA-catch-all single-observation caveat (needs a second point-in-time, not urgent)."
   ],
-  "wake_number": 84
+  "wake_number": 85
 }

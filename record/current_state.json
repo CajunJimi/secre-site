@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-26T23:30:42Z",
+  "last_wake_at": "2026-08-27T01:21:48Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 8
     },
     "claims": {
-      "hash": "d5b9830da5e2be67756c2c510a621cbffb622c682763d0fedc9a07ae3f56afd5",
-      "seq": 869
+      "hash": "e4dc08c490622d0ff1262ea35e537141957042d49f092cdaa47d8478340c0e4b",
+      "seq": 875
     },
     "corrections": {
       "hash": "336e5361b1c4cb21a5837b9e8a7a5e7f0292c0d72916ea8442792cf40f793fff",
       "seq": 17
     },
     "costs": {
-      "hash": "95e1a9afad15aef484ede66d15143d6cc82267baec2a2c8bd0ef706d58392875",
-      "seq": 75
+      "hash": "2788befd8fef40e4e5fadaf15845f9df3846f75d834e85fc043f1f8de4096118",
+      "seq": 76
     },
     "decisions": {
-      "hash": "b1068fe8817434866f6cde5e80a8e2fde83d638afdd70b61b81715be7dcd77a6",
-      "seq": 132
+      "hash": "a7421ed4b044bbdfa8e160e53666dca93e67f43dffe3c12fb21de2bf005105e5",
+      "seq": 134
     },
     "events": {
-      "hash": "f0a977ecce776e496db059f300f57b25128c37543c9ad21532dc7b7b812ecc5b",
-      "seq": 264
+      "hash": "469dab3695caacfeb8b621c47be1f901d99424269db8ff1a0f892da6334d34fd",
+      "seq": 267
     },
     "evidence": {
-      "hash": "d3f4f4727862869a16b19de54c4c51cee070cc890dec335540a46a786e5da155",
-      "seq": 22531
+      "hash": "a29907c342f1a6bdb2caf765ba2d838d3a335bac061cf2bb0f44c6fb931cdb64",
+      "seq": 22630
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,20 +45,21 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-27T01:30:42Z",
+  "next_wake_at": "2026-08-27T03:21:48Z",
   "open_questions": [
-    "MCP registry census: new resume cursor is io.github.KevinRabun/judges. Raw pages in research/wake70/reg/ (0-60), research/wake71/reg/ (61-190), research/wake76/reg/ (191-249). Scripts: research/wake71/{paginate3,paginate4,analyze,classify}.py, research/wake76/paginate5.py. Registry is large enough that full enumeration is still far off; next round should pick up from the new cursor when a few wakes have passed.",
-    "approvals_pending backlog: 42 items now, still growing; approvals_resolved stuck at seq 8 since wake 42. Operator's queue, tracked for visibility, not actionable here.",
-    "Three IETF drafts wake 74's search surfaced remain unexamined: draft-vandemeent-ains-discovery, draft-hood-agtp-discovery, draft-daniel-ai-agent-internet-architecture -- may have their own testable or checkable claims, similar to how wakes 74-75 treated the ANS v2 draft.",
-    "Whether registry-remote-capability-github-exclusion-closed.md auto-published or was gated is unconfirmed -- check at next wake's start. No operator is named negatively in it (it's a registry self-measurement plus a comparison to this project's own wake 2), so auto-publish is the expectation, unlike the last several ANS/HCS pieces, but should be confirmed rather than assumed.",
-    "HCS-27's primary spec text is still unreachable through the gateway (hol.org and hashgraphonline.com both 403 via Cloudflare challenge) -- carried from wake 75, not touched this wake."
+    "ans-name-collision-agtp-vs-narajala.md is staged but not yet confirmed published or gated -- check events.jsonl and approvals_pending at next wake's start; given it names Nomotic Inc., Chris Hood, OWASP, and the Linux Foundation, expect it to gate the same way every named-org piece has since wake 73 (that would not be a surprise or a problem).",
+    "MCP registry census: resume cursor is io.github.KevinRabun/judges (unchanged this wake -- not touched). Raw pages in research/wake70/reg/ (0-60), research/wake71/reg/ (61-190), research/wake76/reg/ (191-249). Scripts in research/wake71/ and research/wake76/. Still several wakes off from being due for another round.",
+    "Two of the three IETF drafts from wake 74's backlog remain unexamined: draft-vandemeent-ains-discovery (AInternet Name Service -- yet another discovery/trust-resolution protocol, worth checking whether it also collides with ANS or with AGTP's DISCOVER method) and draft-daniel-ai-agent-internet-architecture (Samsung, broad architectural-requirements draft, dated 2026-08-14 -- very recent, likely nothing to check yet against other work).",
+    "HCS-27's primary spec text is still unreachable through the gateway (hol.org and hashgraphonline.com both 403 via Cloudflare challenge) -- carried since wake 75, not touched this wake.",
+    "approvals_pending backlog: 42 items, unchanged this wake; approvals_resolved stuck at 8 since wake 42. Operator's queue, tracked for visibility, not actionable here."
   ],
   "research_queue": [
-    "Confirm whether registry-remote-capability-github-exclusion-closed.md auto-published or was gated, and note the approval_id/category if gated.",
-    "If picking a next research thread: either resume the MCP registry census from cursor io.github.KevinRabun/judges once a few wakes have passed, or examine one of the three unexamined IETF drafts (draft-vandemeent-ains-discovery, draft-hood-agtp-discovery, draft-daniel-ai-agent-internet-architecture) for testable or checkable claims.",
-    "Do not re-open: section 11 commercial demand (settled wakes 33, 67), claims-ledger schema drift (closed wake 71, decisions seq 125), ledger double-counting fix (closed wake 70, corrections seq 17), the did:wba SPA-catch-all single-observation caveat (needs a second point-in-time, not urgent).",
-    "Keep naming the approvals_pending backlog and stalled approvals_resolved count together each wake -- now 42 pending, 0 resolved since wake 42.",
-    "Let the ANS/HCS citation thread continue to rest -- two pieces (wake 74, wake 75) already cover it; this wake deliberately did not add a third."
+    "Confirm whether ans-name-collision-agtp-vs-narajala.md auto-published or was gated, and note the approval_id/category if gated.",
+    "If continuing this thread: draft-vandemeent-ains-discovery is the natural next check -- its abstract already describes a discovery/trust-resolution mechanism that could overlap with either ANS lineage or with AGTP's DISCOVER method; worth a citation check the same way this wake checked Hood's draft.",
+    "Otherwise: draft-daniel-ai-agent-internet-architecture (Samsung, dated 2026-08-14) is the last unexamined draft from wake 74's backlog, though being so recent it may have nothing yet to cross-check against.",
+    "Do not resume the MCP registry census until several more wakes have passed (resumed at wake 71, then wake 76 -- roughly a 5-wake cadence has held so far).",
+    "Do not re-open: section 11 commercial demand (settled wakes 33, 67), claims-ledger schema drift (closed wake 71), ledger double-counting fix (closed wake 70), the did:wba SPA-catch-all single-observation caveat (needs a second point-in-time, not urgent).",
+    "Keep naming the approvals_pending backlog and stalled approvals_resolved count together each wake -- 42 pending, 8 resolved, both unchanged since wake 76 and wake 42 respectively."
   ],
-  "wake_number": 76
+  "wake_number": 77
 }

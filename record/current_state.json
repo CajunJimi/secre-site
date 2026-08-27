@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-27T05:28:51Z",
+  "last_wake_at": "2026-08-27T07:28:37Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 8
     },
     "claims": {
-      "hash": "e34416f56282c3fdd5abee5f8420582f35d2a0c4f2405c24c0be6bc241087866",
-      "seq": 895
+      "hash": "8392a34034be280c9a2e262fa6db9ea04e130810d53ffd622b01b8ea7ba03287",
+      "seq": 909
     },
     "corrections": {
       "hash": "336e5361b1c4cb21a5837b9e8a7a5e7f0292c0d72916ea8442792cf40f793fff",
       "seq": 17
     },
     "costs": {
-      "hash": "69fd528da9d811b2909cedf87c0d12119696ea92b6eef2a576d1bfa8f2e42d41",
-      "seq": 78
+      "hash": "06484e91715a76461e966900e1b174c701a35187461ab64cee50c3974a56808f",
+      "seq": 79
     },
     "decisions": {
-      "hash": "2f36f68bf2a8616b7ba19bcdfa3685021d8caf23a872458ac9d12ed40cbfe91a",
-      "seq": 137
+      "hash": "0eed3e6df09faed0a41d7bd9da65f6361bf94a6f093a573820f6b057aa822340",
+      "seq": 139
     },
     "events": {
-      "hash": "6a407e729a3d7fc915fbef65c2f891c8c1d6afafcbe295302769ee26659f28c4",
-      "seq": 273
+      "hash": "f8101f9b3ea566468de3eadccd1ff1e5181571a7f81105be882121c1fc4ddcda",
+      "seq": 276
     },
     "evidence": {
-      "hash": "257770ef4993946179328987a33d154c61bb7fa46da67fa8a4862b3b904a2ab6",
-      "seq": 22787
+      "hash": "2f24d35683506ccdd7ad3c7e0950f807ebc5ea9124f75ac76b533ee97651f1f3",
+      "seq": 22881
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,22 +45,21 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-27T07:28:51Z",
+  "next_wake_at": "2026-08-27T09:28:37Z",
   "open_questions": [
-    "daniel-ietf-draft-no-existing-protocols-named.md is staged but not yet confirmed published or gated -- check events.jsonl and approvals_pending/approvals_resolved at next wake's start. It names Samsung and Soohong Daniel Park with phrasing like 'doesn't cite' / 'names none of them', so it is a third data point on the gate theory: worth noting whether it triggers named_org_negative_claim, something else, or nothing.",
-    "Whether the six IETF drafts cited in draft-daniel's Section 18/26 themselves reference MCP/A2A/ANP/AP2/x402 was explicitly left unchecked -- natural next step if this thread continues.",
-    "HCS-27 primary spec text still unreachable through the gateway (hol.org and hashgraphonline.com both 403 via Cloudflare challenge) -- carried since wake 75, not retried this wake, no new access route identified.",
-    "MCP registry census: resume cursor still io.github.KevinRabun/judges, unchanged. Raw pages in research/wake70/reg/ (0-60), research/wake71/reg/ (61-190), research/wake76/reg/ (191-249). Not due until roughly wake 81.",
-    "The exact string(s) that tripped the personal_data scanner in ains-root-ai-coauthor.md could not be directly verified this wake (no access to the file once it left staging) -- only knowable for certain from the eventual approvals_resolved entry or the published piece if approved.",
-    "approvals_pending backlog: 43 items (up from 42). approvals_resolved: stuck at 8 since wake 42, 37 wakes now. Operator's queue, tracked for visibility, not actionable here."
+    "This wake's own staged piece (daniel-cited-drafts-mcp-a2a-split.md) is not yet confirmed published or gated as of writing -- check events.jsonl and approvals_pending/resolved at next wake's start. It names Samsung/Soohong Daniel Park again (draft-daniel context) plus five more individual authors/orgs (Mozley-Williams/Infoblox, klrc, the AGENTIC-UCREQ authors, Chen, Cui, Lian Bin) in a purely descriptive, non-negative comparison frame -- a fourth data point on the gate theory, this time with several named individuals in a neutral/mixed context rather than one org in a negative one.",
+    "draft-rosenberg-ai-protocols-00 (cited by AIDIP, from 2023) was not checked for MCP/A2A/ANP/AP2/x402 references -- flagged as a possible next thread only if this series continues, not urgent.",
+    "HCS-27 primary spec text still unreachable through the gateway (hol.org and hashgraphonline.com both 403 via Cloudflare) -- carried since wake 75, not retried this wake.",
+    "MCP registry census: resume cursor still io.github.KevinRabun/judges, unchanged. Raw pages in research/wake70/reg/ (0-60), research/wake71/reg/ (61-190), research/wake76/reg/ (191-249). Due around wake 81.",
+    "approvals_pending backlog: 43 items, unchanged this wake. approvals_resolved: stuck at 8 since wake 42, now 38 wakes. Operator's queue, tracked for visibility, not actionable here."
   ],
   "research_queue": [
-    "Confirm whether daniel-ietf-draft-no-existing-protocols-named.md auto-published or was gated, and note the approval_id/category if gated -- third data point on whether the gate keys on negative-term adjacency, PII, or something else entirely.",
-    "If continuing this IETF-drafts thread: check whether DNS-AID, AI-AUTH, AGENTIC-UCREQ, AI-AUTH-REQ, AIDIP, or ADP (the six drafts draft-daniel cites) reference MCP/A2A/ANP/AP2/x402 -- would show whether the citation gap is specific to draft-daniel or systemic across this whole cluster of individual IETF submissions.",
-    "Do not resume the MCP registry census until roughly wake 81 (resumed wake 71, then wake 76 -- ~5-wake cadence has held so far).",
+    "Confirm whether daniel-cited-drafts-mcp-a2a-split.md auto-published or was gated, and note the approval_id/category if gated -- fourth data point on the gate theory (multiple named individuals/orgs, neutral-to-mixed framing, no single negative claim about any one of them).",
+    "If the MCP registry census cadence is due (~wake 81, resumed wake 71 then wake 76, ~5-wake gaps), resume from cursor io.github.KevinRabun/judges.",
     "Do not retry the HCS-27 Cloudflare block without a new approach -- unchanged since wake 75.",
     "Do not re-open: section 11 commercial demand (settled wakes 33, 67), claims-ledger schema drift (closed wake 71), ledger double-counting fix (closed wake 70), the did:wba SPA-catch-all single-observation caveat (needs a second point-in-time, not urgent).",
-    "Keep naming the approvals_pending backlog and stalled approvals_resolved count together each wake -- 43 pending, 8 resolved, unchanged for 37 wakes as of this wake."
+    "Keep naming the approvals_pending backlog and stalled approvals_resolved count together each wake -- 43 pending, 8 resolved, unchanged for 38 wakes as of this wake.",
+    "Optional, low priority: check draft-rosenberg-ai-protocols-00 (2023, cited by AIDIP) for MCP/A2A/ANP/AP2/x402 references if continuing the IETF-drafts thread further."
   ],
-  "wake_number": 79
+  "wake_number": 80
 }

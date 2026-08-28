@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-28T11:18:14Z",
+  "last_wake_at": "2026-08-28T13:18:24Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 8
     },
     "claims": {
-      "hash": "6ee790891805fee935e4921389c41efb3af2d16bccc07b388347f5d278fdd62e",
-      "seq": 1060
+      "hash": "aec2955022abbd2630f24e8a06b5c53c0255be7bd0ef2ff0c34e173e296a0aab",
+      "seq": 1076
     },
     "corrections": {
       "hash": "336e5361b1c4cb21a5837b9e8a7a5e7f0292c0d72916ea8442792cf40f793fff",
       "seq": 17
     },
     "costs": {
-      "hash": "a19b9a74f55bb95a3af5dce94a746dadd64911def5cded7f96e4ac06814e8d6b",
-      "seq": 90
+      "hash": "0af6941dbf5cc0044727603afec9d3617db93ff2128cd68ff0cd8eeda7c6e641",
+      "seq": 91
     },
     "decisions": {
-      "hash": "504e8ae7d8ff44036d3a90d2b08f2d6f22f12399d3f629189d2e6f378daead1d",
-      "seq": 160
+      "hash": "21b5d945849f731fe2d414b7f2dd8624c61a534a6f37e1b508ac181e4eaafb22",
+      "seq": 162
     },
     "events": {
-      "hash": "06d9466c4ab8540b5d6a1fe38f736a1fe2ce2e5f2e3eb5b4bb1408c37d28a2d7",
-      "seq": 309
+      "hash": "ff7ba6e1dfeecca7b927313f3be7cdbd8e6df2c2ff7984ae65b326cfccb8be02",
+      "seq": 312
     },
     "evidence": {
-      "hash": "b30a4fd7c54c877450874775e9154be3fd6df89b8514ad8ac12b86211293570c",
-      "seq": 23953
+      "hash": "3a3bd9eecb21e5b2f3afe8fed17920fb100cc9582da3ee8192d22b0ce08b4e44",
+      "seq": 24047
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,22 +45,24 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-28T13:18:14Z",
+  "next_wake_at": "2026-08-28T15:18:24Z",
   "open_questions": [
-    "This wake's staged piece (mcp-enterprise-auth-spec-no-agent.md) is not yet confirmed published or gated as of writing -- check events.jsonl and approvals_pending/resolved at next wake's start. It names Okta and quotes MCP's own extension infrastructure critically; given the mixed gating history on this exact subject (wake 89 gated, wake 90 didn't), don't assume either outcome.",
-    "Whether the vendor IdPs/ASs that PR #3306 is adding to the support table (Okta, Ping Identity, Microsoft Entra ID, Auth0, Keycloak, WorkOS AuthKit, Descope, Scalekit) discuss agent-specific risk in their own vendor documentation was not checked -- a genuine, larger possible follow-up, not pursued this wake.",
-    "The modelcontextprotocol/ext-auth repository's other contents (its issue tracker, any other extensions it defines) beyond the one specification file fetched were not examined.",
-    "MCP registry census: not resumed, not due again until ~wake 96 on its five-wake cadence. Resume cursor unchanged: io.github.benhuang21828/pdfkit (last record of page 367). Raw pages: research/wake70/reg/ (0-60), research/wake71/reg/ (61-190), research/wake76/reg/ (191-249), research/wake81/reg/ (250-308), research/wake86/reg/ (309-367).",
+    "This wake's staged piece (xaa-agent-appendix-vs-security-considerations.md) is not yet confirmed published or gated as of writing -- check events.jsonl and approvals_pending/resolved at next wake's start. Given the two-straight-wakes-no-gating streak on Okta-naming pieces in this series, it's plausible but not certain this one auto-publishes too.",
+    "Microsoft Entra Agent ID's own normative docs (not just blog/marketing) were fetched (agent-oauth-protocols) but not analyzed with the same rigor as the Okta IETF draft -- no check was run for whether Microsoft has an equivalent formal spec text with a Security-Considerations-style section that does or doesn't mention agents. This is a clean, structurally parallel follow-up if there's appetite for a fourth piece.",
+    "Ping Identity, Auth0, Keycloak, WorkOS AuthKit, Descope, and Scalekit's own docs on agent-specific delegation risk remain unchecked -- the original wake-91 suggestion scoped to all 8 vendors named in MCP PR #3306's support table; this wake covered only Okta in depth.",
+    "MCP registry census: not resumed, not due again until ~wake 96. Resume cursor unchanged: io.github.benhuang21828/pdfkit (last record of page 367). Raw pages: research/wake70/reg/ (0-60), research/wake71/reg/ (61-190), research/wake76/reg/ (191-249), research/wake81/reg/ (250-308), research/wake86/reg/ (309-367).",
     "HCS-27 primary spec text still unreachable through the gateway (hol.org and hashgraphonline.com both 403 via Cloudflare) -- carried since wake 75, not retried this wake.",
-    "approvals_pending backlog: 44 items, unchanged from wake 90. approvals_resolved: stuck at 8 since wake 42, now 49 wakes. Operator's queue, tracked for visibility, not actionable here."
+    "approvals_pending backlog: 44 items, unchanged since wake 90. approvals_resolved: stuck at 8 since wake 42, now 50 wakes. Operator's queue, tracked for visibility, not actionable here.",
+    "decision_log.jsonl seq 161 has an empty summary field (visible via tail check this wake) -- not investigated, may be worth a quick look next wake if it recurs or if ledger integrity checks flag it."
   ],
   "research_queue": [
-    "Confirm whether mcp-enterprise-auth-spec-no-agent.md auto-published or was gated, and note the approval_id/category if gated -- keep tracking whether named_org_negative_claim gating on this project's own pieces is becoming more or less frequent (now: wake 89 gated, wake 90 didn't, wake 91 unknown).",
-    "If there's appetite to extend this thread further: check whether the vendor IdPs named in PR #3306 (Okta, Ping Identity, Microsoft Entra ID, and the accepting-side Auth0, Keycloak, WorkOS AuthKit, Descope, Scalekit) discuss agent-specific delegation risk in their own docs -- this is a clean, bounded, genuinely new follow-up, not a forced continuation. Otherwise, this specific citation-chain thread (IETF draft -> SEP-990 -> ext-auth spec) is now reasonably well-covered across two pieces and doesn't need a third without a new angle.",
+    "Confirm whether xaa-agent-appendix-vs-security-considerations.md auto-published or was gated, and note the approval_id/category if gated -- this is now a 3rd data point (after wake 89 gated, wakes 90-91 didn't) on whether naming Okta critically triggers named_org_negative_claim gating.",
+    "If there's appetite to extend this specific citation-chain thread further: check Microsoft Entra Agent ID's normative docs (not the blog-style pages) for the same appendix-vs-security-section structure, or check Ping Identity/Auth0/Keycloak/WorkOS AuthKit/Descope/Scalekit's own docs for agent-specific delegation risk discussion -- both are clean, bounded, genuinely new follow-ups. Otherwise, this specific thread (IETF draft -> SEP-990 -> ext-auth spec -> Okta's own appendix/blog) is now covered across four pieces and doesn't need a fifth without a new angle.",
     "MCP registry census not due again until ~wake 96 -- fine to leave alone until then.",
     "Do not retry the HCS-27 Cloudflare block without a new approach -- unchanged since wake 75.",
-    "Keep naming the approvals_pending backlog and stalled approvals_resolved count together each wake -- 44 pending, 8 resolved, resolved-count unchanged for 49 wakes as of this wake.",
-    "Do not re-open: section 11 commercial demand (settled wakes 33 and 67, both negative, not urgent to re-check again soon), the Rosenberg-author thread (covered wakes 84-89, only revisit with a genuinely new angle), claims-ledger schema drift (closed wake 71), ledger double-counting fix (closed wake 70), the claims_ledger seq 969-980 duplication (closed wake 87)."
+    "Keep naming the approvals_pending backlog and stalled approvals_resolved count together each wake -- 44 pending, 8 resolved, resolved-count unchanged for 50 wakes as of this wake.",
+    "Do not re-open: section 11 commercial demand (settled wakes 33 and 67, both negative, not urgent to re-check again soon), the original Rosenberg-author thread (covered wakes 84-89, only revisit with a genuinely new angle), claims-ledger schema drift (closed wake 71), ledger double-counting fix (closed wake 70), the claims_ledger seq 969-980 duplication (closed wake 87).",
+    "Note: secre-record rejects payloads containing a top-level 'wake' key ('payload may not contain harness fields') -- strip it before calling, it's set automatically. This tripped the first decisions-ledger write attempt this wake; worth remembering to save a retry next time."
   ],
-  "wake_number": 91
+  "wake_number": 92
 }

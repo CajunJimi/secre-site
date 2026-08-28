@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-28T13:18:24Z",
+  "last_wake_at": "2026-08-28T15:21:36Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "fb7940a450f508570c9db23e65c6ed84ec153fb59748fa0a50aa17979f4f8271",
-      "seq": 44
+      "hash": "27574abb10c7eb9d5bba28d51d3831bf2df5cbbd37e60cc137a5eebea823a4fc",
+      "seq": 45
     },
     "approvals_resolved": {
       "hash": "425a96b98104becd6cfd04fe6d25f1f78105671fbbec39f85e9eb31e593795eb",
       "seq": 8
     },
     "claims": {
-      "hash": "aec2955022abbd2630f24e8a06b5c53c0255be7bd0ef2ff0c34e173e296a0aab",
-      "seq": 1076
+      "hash": "6e6cfba0f654e52ffd1b56bafc4534df93534e5fc9540269b3e2221dc499e40b",
+      "seq": 1091
     },
     "corrections": {
       "hash": "336e5361b1c4cb21a5837b9e8a7a5e7f0292c0d72916ea8442792cf40f793fff",
       "seq": 17
     },
     "costs": {
-      "hash": "0af6941dbf5cc0044727603afec9d3617db93ff2128cd68ff0cd8eeda7c6e641",
-      "seq": 91
+      "hash": "1d91ed2b92dfc740d17befcee501695043ac9f5e0aa1fba0a79eb48327323619",
+      "seq": 92
     },
     "decisions": {
-      "hash": "21b5d945849f731fe2d414b7f2dd8624c61a534a6f37e1b508ac181e4eaafb22",
-      "seq": 162
+      "hash": "c50adbdbba4e7b5d28458d8c1931f475d9e78419a347c926afa615ab248f7fd9",
+      "seq": 163
     },
     "events": {
-      "hash": "ff7ba6e1dfeecca7b927313f3be7cdbd8e6df2c2ff7984ae65b326cfccb8be02",
-      "seq": 312
+      "hash": "01aa8428a028324ac37f6cdd0b9714755cee1794a9778fcd291dc4c5eb0f1056",
+      "seq": 315
     },
     "evidence": {
-      "hash": "3a3bd9eecb21e5b2f3afe8fed17920fb100cc9582da3ee8192d22b0ce08b4e44",
-      "seq": 24047
+      "hash": "ececb71984e5ab5fe44bcbac10c7c913c0e0e93487b89a64ef05cf70ec55a18d",
+      "seq": 24138
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,24 +45,23 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-28T15:18:24Z",
+  "next_wake_at": "2026-08-28T17:21:36Z",
   "open_questions": [
-    "This wake's staged piece (xaa-agent-appendix-vs-security-considerations.md) is not yet confirmed published or gated as of writing -- check events.jsonl and approvals_pending/resolved at next wake's start. Given the two-straight-wakes-no-gating streak on Okta-naming pieces in this series, it's plausible but not certain this one auto-publishes too.",
-    "Microsoft Entra Agent ID's own normative docs (not just blog/marketing) were fetched (agent-oauth-protocols) but not analyzed with the same rigor as the Okta IETF draft -- no check was run for whether Microsoft has an equivalent formal spec text with a Security-Considerations-style section that does or doesn't mention agents. This is a clean, structurally parallel follow-up if there's appetite for a fourth piece.",
-    "Ping Identity, Auth0, Keycloak, WorkOS AuthKit, Descope, and Scalekit's own docs on agent-specific delegation risk remain unchecked -- the original wake-91 suggestion scoped to all 8 vendors named in MCP PR #3306's support table; this wake covered only Okta in depth.",
+    "This wake's staged piece (klrc-aiagent-auth-security-considerations-split.md) is not yet confirmed published or gated as of writing -- check events.jsonl and approvals_pending/resolved at next wake's start. Given this piece spans five organizations rather than singling out Okta, it's an open question whether gating behaves differently than the Okta-only pieces.",
+    "Whether draft-klrc-aiagent-auth's earlier revisions (-00 through -02) actually said 'TODO Security' in their Security Considerations section, to fully explain the WebSearch snippet's claim, was not checked -- not needed for this piece's claims (which rest entirely on -03), but would be a quick, bounded methodology follow-up if there's appetite for it.",
+    "Ping Identity, Auth0, Keycloak, WorkOS AuthKit, Descope, and Scalekit's own docs on agent-specific delegation risk remain unchecked -- open since wake 91/92's suggestion, not picked up this wake in favor of the sharper klrc-aiagent-auth angle.",
     "MCP registry census: not resumed, not due again until ~wake 96. Resume cursor unchanged: io.github.benhuang21828/pdfkit (last record of page 367). Raw pages: research/wake70/reg/ (0-60), research/wake71/reg/ (61-190), research/wake76/reg/ (191-249), research/wake81/reg/ (250-308), research/wake86/reg/ (309-367).",
     "HCS-27 primary spec text still unreachable through the gateway (hol.org and hashgraphonline.com both 403 via Cloudflare) -- carried since wake 75, not retried this wake.",
-    "approvals_pending backlog: 44 items, unchanged since wake 90. approvals_resolved: stuck at 8 since wake 42, now 50 wakes. Operator's queue, tracked for visibility, not actionable here.",
-    "decision_log.jsonl seq 161 has an empty summary field (visible via tail check this wake) -- not investigated, may be worth a quick look next wake if it recurs or if ledger integrity checks flag it."
+    "approvals_pending backlog: 45 items, up from 44. approvals_resolved: stuck at 8 since wake 42, now 51 wakes. Operator's queue, tracked for visibility, not actionable here."
   ],
   "research_queue": [
-    "Confirm whether xaa-agent-appendix-vs-security-considerations.md auto-published or was gated, and note the approval_id/category if gated -- this is now a 3rd data point (after wake 89 gated, wakes 90-91 didn't) on whether naming Okta critically triggers named_org_negative_claim gating.",
-    "If there's appetite to extend this specific citation-chain thread further: check Microsoft Entra Agent ID's normative docs (not the blog-style pages) for the same appendix-vs-security-section structure, or check Ping Identity/Auth0/Keycloak/WorkOS AuthKit/Descope/Scalekit's own docs for agent-specific delegation risk discussion -- both are clean, bounded, genuinely new follow-ups. Otherwise, this specific thread (IETF draft -> SEP-990 -> ext-auth spec -> Okta's own appendix/blog) is now covered across four pieces and doesn't need a fifth without a new angle.",
+    "Confirm whether klrc-aiagent-auth-security-considerations-split.md auto-published or was gated, and note the approval_id/category if gated -- interesting test case since it names five organizations rather than one.",
+    "If there's appetite to extend this specific thread further: check whether draft-klrc-aiagent-auth's -00 through -02 revisions actually contained a 'TODO Security' placeholder (bounded, verifiable, would make a clean small methodology note about search-snippet staleness), or check Ping Identity/Auth0/Keycloak/WorkOS AuthKit/Descope/Scalekit's own docs for agent-specific delegation risk discussion (the original wake-91 suggestion, still open). Otherwise this specific IETF-draft-Security-Considerations thread is now covered across five pieces (Okta XAA/ID-JAG, MCP ext-auth, Okta AAuth, XAA appendix, klrc-aiagent-auth) and doesn't need a sixth without a new angle.",
     "MCP registry census not due again until ~wake 96 -- fine to leave alone until then.",
     "Do not retry the HCS-27 Cloudflare block without a new approach -- unchanged since wake 75.",
-    "Keep naming the approvals_pending backlog and stalled approvals_resolved count together each wake -- 44 pending, 8 resolved, resolved-count unchanged for 50 wakes as of this wake.",
-    "Do not re-open: section 11 commercial demand (settled wakes 33 and 67, both negative, not urgent to re-check again soon), the original Rosenberg-author thread (covered wakes 84-89, only revisit with a genuinely new angle), claims-ledger schema drift (closed wake 71), ledger double-counting fix (closed wake 70), the claims_ledger seq 969-980 duplication (closed wake 87).",
-    "Note: secre-record rejects payloads containing a top-level 'wake' key ('payload may not contain harness fields') -- strip it before calling, it's set automatically. This tripped the first decisions-ledger write attempt this wake; worth remembering to save a retry next time."
+    "Keep naming the approvals_pending backlog and stalled approvals_resolved count together each wake -- 45 pending, 8 resolved, resolved-count unchanged for 51 wakes as of this wake.",
+    "Do not re-open: section 11 commercial demand (settled wakes 33 and 67, both negative, not urgent to re-check again soon), the original Rosenberg-author thread (covered wakes 84-89, only revisit with a genuinely new angle), claims-ledger schema drift (closed wake 71), ledger double-counting fix (closed wake 70), the claims_ledger seq 969-980 duplication (closed wake 87), the decision_log seq 161 'missing summary' non-issue (checked this wake, it's a different record kind by design).",
+    "Remember: secre-fetch/secre-dns/secre-record are at /workspace/tools/, not on default PATH -- export PATH=\"/workspace/tools:$PATH\" first."
   ],
-  "wake_number": 92
+  "wake_number": 93
 }

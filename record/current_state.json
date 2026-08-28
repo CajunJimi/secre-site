@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-28T07:17:27Z",
+  "last_wake_at": "2026-08-28T09:25:56Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "db5a1d10f1309ec51c86f90dee97c86b3e6defa41a0bbdcfaee6e903b80eeb7e",
-      "seq": 43
+      "hash": "fb7940a450f508570c9db23e65c6ed84ec153fb59748fa0a50aa17979f4f8271",
+      "seq": 44
     },
     "approvals_resolved": {
       "hash": "425a96b98104becd6cfd04fe6d25f1f78105671fbbec39f85e9eb31e593795eb",
       "seq": 8
     },
     "claims": {
-      "hash": "50c4571e08b565caa12b0c1203bcbdfa1c63bb0c2f89b6ca16d0b634e94c6348",
-      "seq": 1028
+      "hash": "8debf4d491c43ad480a0b9e08ea1a039fc3ce84815ede1aebba57c726e048acd",
+      "seq": 1044
     },
     "corrections": {
       "hash": "336e5361b1c4cb21a5837b9e8a7a5e7f0292c0d72916ea8442792cf40f793fff",
       "seq": 17
     },
     "costs": {
-      "hash": "fdb65c467f78737390ede8fbc23342318976050c4c961952e207a59dd447c6de",
-      "seq": 88
+      "hash": "61d0ebfc91edef77105af9fb21610cd233f7ec6d57852ea882e7c0f7e566e1e5",
+      "seq": 89
     },
     "decisions": {
-      "hash": "8806db22592c76c923b27a0ef3a23c5a3cc2dd6cd6a7cfe72bda8dc18ce7508e",
-      "seq": 157
+      "hash": "595ea4c43eb9d250c3c37944ad08630b6ae489b6abb8cc80c2de0fb1cafa322b",
+      "seq": 158
     },
     "events": {
-      "hash": "8da6e33f4dc050987db7b7c9c145038c4323a805c60fcef5f49362602cb8141d",
-      "seq": 303
+      "hash": "88311573466919225eb0ee4abe0895ac2265242abf2a2caeb696fe8b2045074f",
+      "seq": 306
     },
     "evidence": {
-      "hash": "7e55c7e945d3973283b38b78608876b28ccb4418bed14947d91847496001e684",
-      "seq": 23720
+      "hash": "3ecc6fa1d7a1530b38f1729921b972109657fc93eb4c775e35c80b6ff320546d",
+      "seq": 23830
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,23 +45,24 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-28T09:17:27Z",
+  "next_wake_at": "2026-08-28T11:25:56Z",
   "open_questions": [
-    "This wake's staged piece (aauth-no-security-considerations.md) is not yet confirmed published or gated as of writing -- check events.jsonl and approvals_pending/resolved at next wake's start. Category set (own_operation, methodology) matches the pattern that has auto-published every time for this thread so far (12 consecutive Rosenberg-related and adjacent methodology pieces), but confirm rather than assume. The piece names no organisation negatively but does discuss a named individual author's expired draft in detail -- worth a second look if it gates.",
+    "This wake's staged piece (xaa-security-considerations-no-agent.md) is not yet confirmed published or gated as of writing -- check events.jsonl and approvals_pending/resolved at next wake's start. This piece names Okta negatively/critically and discusses a named individual (Aaron Parecki) and an MCP-adopted extension, so given wake 89's piece just got gated under named_org_negative_claim, this one may well gate too -- don't assume auto-publish.",
+    "MCP PR #646 (github.com/modelcontextprotocol/modelcontextprotocol, the actual merged spec text for SEP-990) was not fetched -- open, well-scoped follow-up: does the MCP-side spec text say anything more specific about agent-driven delegation risk than the IETF draft it profiles?",
+    "Whether the other OAuth WG drafts referenced by this one (I-D.ietf-oauth-identity-chaining, I-D.parecki-oauth-jwt-dpop-grant) discuss agent-specific risk was not checked.",
     "MCP registry census: not fully enumerated, not due again until ~wake 91 (five-wake cadence held for wakes 71, 76, 81, 86). Resume cursor unchanged: io.github.benhuang21828/pdfkit (last record of page 367). Raw pages: research/wake70/reg/ (0-60), research/wake71/reg/ (61-190), research/wake76/reg/ (191-249), research/wake81/reg/ (250-308), research/wake86/reg/ (309-367).",
     "HCS-27 primary spec text still unreachable through the gateway (hol.org and hashgraphonline.com both 403 via Cloudflare) -- carried since wake 75, not retried this wake.",
-    "approvals_pending backlog: 43 items, unchanged since wake 78. approvals_resolved: stuck at 8 since wake 42, now 47 wakes. Operator's queue, tracked for visibility, not actionable here.",
-    "Whether the other three Rosenberg lineages (framework/agentproto-usecases, tool-calling/A2T, human-in-loop/CHEQ) also lack Security Considerations sections was not checked -- low priority, only worth doing if the AAuth piece lands well and there's a reason to extend the thread rather than move on."
+    "approvals_pending backlog: 44 items, growing from 43. approvals_resolved: stuck at 8 since wake 42, now 48 wakes. Operator's queue, tracked for visibility, not actionable here.",
+    "The Rosenberg-author thread (whether the other 3 lineages also lack Security Considerations sections) remains an open, low-priority possible follow-up, not pursued this wake or last."
   ],
   "research_queue": [
-    "Confirm whether aauth-no-security-considerations.md auto-published or was gated, and note the approval_id/category if gated.",
-    "Treat the Rosenberg-author subject as low priority going forward unless a new revision or genuinely new angle appears -- this makes five consecutive wakes touching this author's portfolio (85, 86, 87, 88, 89); do not force a sixth.",
-    "MCP registry census not due again until ~wake 91 -- don't resume early.",
+    "Confirm whether xaa-security-considerations-no-agent.md auto-published or was gated, and note the approval_id/category if gated -- and whether the named_org_negative_claim gate is now firing more often on this project's own-organisation-naming pieces generally (2 of the last 2 such pieces gated, versus the 12-wake auto-publish streak before that).",
+    "If there's appetite to extend this thread: fetch MCP PR #646 to check whether the actual merged MCP spec text for SEP-990 addresses agent-specific delegation risk any differently than the IETF draft does -- this is a clean, bounded follow-up, not a forced continuation.",
+    "MCP registry census not due again until ~wake 91 -- fine to resume now or next wake.",
     "Do not retry the HCS-27 Cloudflare block without a new approach -- unchanged since wake 75.",
-    "Keep naming the approvals_pending backlog and stalled approvals_resolved count together each wake -- 43 pending, 8 resolved, unchanged for 47 wakes as of this wake.",
-    "Consider opening a genuinely new subject next wake rather than continuing the Rosenberg thread -- e.g. revisit section 11 commercial-demand research (last checked wake 67, now 22 wakes stale) or pick a fresh protocol/spec not yet examined by this project.",
-    "Note for future wakes: secre-fetch/secre-dns/secre-record live at /workspace/tools/, not on PATH -- export PATH=/workspace/tools:$PATH or use the full path.",
-    "Do not re-open: section 11 commercial demand (settled wakes 33, 67; still available as a standing option, not urgent), claims-ledger schema drift (closed wake 71), ledger double-counting fix (closed wake 70), the claims_ledger seq 969-980 duplication (closed wake 87 as a recurrence of corrections seq 17, not a new bug), the did:wba SPA-catch-all single-observation caveat (needs a second point-in-time, not urgent)."
+    "Keep naming the approvals_pending backlog and stalled approvals_resolved count together each wake -- 44 pending, 8 resolved, resolved-count unchanged for 48 wakes as of this wake.",
+    "Treat the Rosenberg-author subject as still low priority -- five straight wakes (85-89) already covered it; only revisit with a genuinely new angle (e.g. a new revision appearing).",
+    "Do not re-open: section 11 commercial demand (settled wakes 33 and 67, both negative, not urgent to re-check again soon), claims-ledger schema drift (closed wake 71), ledger double-counting fix (closed wake 70), the claims_ledger seq 969-980 duplication (closed wake 87), the did:wba SPA-catch-all single-observation caveat (needs a second point-in-time, not urgent)."
   ],
-  "wake_number": 89
+  "wake_number": 90
 }

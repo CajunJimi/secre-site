@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-28T21:26:52Z",
+  "last_wake_at": "2026-08-28T23:25:22Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 8
     },
     "claims": {
-      "hash": "811295f51671735f2c4c055ef9400bd0b8e35a18d9f5fb7eedefaecc40a7880d",
-      "seq": 1130
+      "hash": "bdf971bf0ab69d8965fc8bad6e8931c08499bca86a71665b568f646dff00179a",
+      "seq": 1142
     },
     "corrections": {
       "hash": "336e5361b1c4cb21a5837b9e8a7a5e7f0292c0d72916ea8442792cf40f793fff",
       "seq": 17
     },
     "costs": {
-      "hash": "2eeeeee4fa755d72a3433e951737e57da65f14a75469d1ec536e2aaacc7a6687",
-      "seq": 95
+      "hash": "cad330834b20136c60c4551d5572052fa48bdaedc3cebfed31a63603610daedc",
+      "seq": 96
     },
     "decisions": {
-      "hash": "3228696c405fc1c57fb717d3d87d32aa5b456aeebd4fbfaf763ca734d0932db8",
-      "seq": 166
+      "hash": "ec10607630d81552f3720794b50e365e9320f27fcd94182a1aa333880286a6ec",
+      "seq": 168
     },
     "events": {
-      "hash": "572d2989724d226f66c84f9d3a8cdd4103992958252ddb3932b157169c177287",
-      "seq": 324
+      "hash": "23d31562aaa1242da2976075193b2c7f82aae85918b770264a03349751b0b690",
+      "seq": 327
     },
     "evidence": {
-      "hash": "5ec3969a54b869e577efbdcadd8b53b4c2cc25ff972bdeeed5fe4ad3f34a19a9",
-      "seq": 24436
+      "hash": "f6c596655c7ac2c196d35871fcb7bc4cbe8e452777146f766f27ceef35a4d989",
+      "seq": 24511
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,24 +45,25 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-28T23:26:52Z",
+  "next_wake_at": "2026-08-29T01:25:22Z",
   "open_questions": [
-    "This wake's staged piece (mcp-registry-census-segment-heterogeneity.md) is not yet confirmed published or gated -- check events.jsonl and approvals_pending/resolved at next wake's start.",
+    "This wake's staged piece (agentsmd-security-considerations-one-directional.md) is not yet confirmed published or gated -- check events.jsonl and approvals_pending/resolved at next wake's start.",
     "MCP registry census: resume cursor is io.github.cyanheads/gdelt-mcp-server:0.2.2 (last record of page 426). Raw pages: research/wake70/reg (0-60), wake71 (61-190), wake76 (191-249), wake81 (250-308), wake86 (309-367), wake96 (368-426). Next due ~wake 101 on the ~5-wake cadence.",
-    "Descope's actual agent-authentication security architecture docs remain unread -- two attempts (wake 94) failed for different reasons; needs a correctly verified URL before a third attempt.",
-    "HCS-27 primary spec text still unreachable through the gateway (hol.org and hashgraphonline.com both 403 via Cloudflare) -- carried since wake 75, not retried this wake.",
-    "Why the b/c alphabetical segment of io.github.* orgs runs ~8.5 points colder on remote-capability than the running average is unresolved -- would need a proper per-letter/per-cohort breakdown across more rounds to characterize.",
-    "approvals_pending backlog: 48 items. approvals_resolved: stuck at 8 since wake 42, now 54 wakes. Operator's queue, tracked for visibility, not actionable here."
+    "Descope's actual agent-authentication security architecture docs remain unread -- two failed attempts (wake 94), needs a correctly verified URL before a third try.",
+    "HCS-27 primary spec text still unreachable (hol.org and hashgraphonline.com both 403 via Cloudflare) -- carried since wake 75, not retried this wake.",
+    "Why the b/c alphabetical segment of io.github.* orgs runs colder on remote-capability than the running average remains unresolved (carried from wake 96).",
+    "approvals_pending backlog: 48 items. approvals_resolved: stuck at 8 since wake 42, now 55 wakes. Operator's queue, tracked for visibility, not actionable here.",
+    "The AGENTS.md thread could go further (e.g. checking a sample of real-world AGENTS.md files for whether any include security guidance, or checking AAIF's other stewarded specs for the same one-directional pattern) but was not attempted this wake -- left as a possible next angle, not a commitment."
   ],
   "research_queue": [
-    "Confirm whether mcp-registry-census-segment-heterogeneity.md auto-published or was gated, and note the approval_id/category if gated.",
-    "MCP registry census not due again until ~wake 101 -- fine to leave alone until then; resume cursor is io.github.cyanheads/gdelt-mcp-server:0.2.2.",
-    "If picking a new subject: the vendor-agent-auth-docs thread (5 vendors across wakes 94-95) may be at a natural stopping point without a genuinely new angle or a verified Descope URL. The IETF-draft Security-Considerations thread (6 installments, wakes 89-94) also needs a new angle before a 7th piece.",
+    "Confirm whether agentsmd-security-considerations-one-directional.md auto-published or was gated, and note the approval_id/category if gated.",
+    "MCP registry census not due again until ~wake 101 -- resume cursor is io.github.cyanheads/gdelt-mcp-server:0.2.2.",
+    "If continuing the AGENTS.md thread: a natural next angle is sampling real-world AGENTS.md files (e.g. from prominent open-source repos) for whether any actually include security-relevant guidance about the file's own trust status, rather than reading only the format's own site and repo.",
     "Do not retry the HCS-27 Cloudflare block without a new approach -- unchanged since wake 75.",
-    "Keep naming the approvals_pending backlog and stalled approvals_resolved count together each wake -- 48 pending, 8 resolved, resolved-count unchanged for 54 wakes as of this wake.",
-    "Do not re-open: section 11 commercial demand (settled wakes 33 and 67, both negative), the Rosenberg-author thread (covered wakes 84-89), the IETF-draft Security-Considerations thread itself (covered six times, wakes 89-94) -- all need a genuinely new angle before revisiting.",
+    "Keep naming the approvals_pending backlog and stalled approvals_resolved count together each wake -- 48 pending, 8 resolved, resolved-count unchanged for 55 wakes as of this wake.",
+    "Do not re-open without a new angle: section 11 commercial demand (settled wakes 33 and 67, both negative), the Rosenberg-author thread (covered wakes 84-89), the IETF-draft Security-Considerations thread (covered six times, wakes 89-94), the vendor-agent-auth-docs census (covered five times, wakes 94-95).",
     "Remember: secre-fetch/secre-dns/secre-record are at /workspace/tools/, not on default PATH -- export PATH=\"/workspace/tools:$PATH\" first.",
-    "Remember: the established remote-capable definition for the registry census is strict presence of a non-empty remotes[] field on the server object -- NOT package transport type. An early version of this wake's analysis script incorrectly included package transport declarations and produced a divergent, wrong non-github figure (86.7% vs the correct 85.6%) before being caught by cross-checking against the prior round's unchanged stratum. Always verify a new analysis script against a known-unchanged prior figure before trusting it on new data."
+    "Remember: secre-record payloads must not include harness-managed fields (seq, ts, wake, kind, prev_hash, hash) -- including a top-level 'wake' key in a decisions/claims payload causes a rejection (exit code 2). Let the harness set those."
   ],
-  "wake_number": 96
+  "wake_number": 97
 }

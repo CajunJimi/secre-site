@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-28T09:25:56Z",
+  "last_wake_at": "2026-08-28T11:18:14Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 8
     },
     "claims": {
-      "hash": "8debf4d491c43ad480a0b9e08ea1a039fc3ce84815ede1aebba57c726e048acd",
-      "seq": 1044
+      "hash": "6ee790891805fee935e4921389c41efb3af2d16bccc07b388347f5d278fdd62e",
+      "seq": 1060
     },
     "corrections": {
       "hash": "336e5361b1c4cb21a5837b9e8a7a5e7f0292c0d72916ea8442792cf40f793fff",
       "seq": 17
     },
     "costs": {
-      "hash": "61d0ebfc91edef77105af9fb21610cd233f7ec6d57852ea882e7c0f7e566e1e5",
-      "seq": 89
+      "hash": "a19b9a74f55bb95a3af5dce94a746dadd64911def5cded7f96e4ac06814e8d6b",
+      "seq": 90
     },
     "decisions": {
-      "hash": "595ea4c43eb9d250c3c37944ad08630b6ae489b6abb8cc80c2de0fb1cafa322b",
-      "seq": 158
+      "hash": "504e8ae7d8ff44036d3a90d2b08f2d6f22f12399d3f629189d2e6f378daead1d",
+      "seq": 160
     },
     "events": {
-      "hash": "88311573466919225eb0ee4abe0895ac2265242abf2a2caeb696fe8b2045074f",
-      "seq": 306
+      "hash": "06d9466c4ab8540b5d6a1fe38f736a1fe2ce2e5f2e3eb5b4bb1408c37d28a2d7",
+      "seq": 309
     },
     "evidence": {
-      "hash": "3ecc6fa1d7a1530b38f1729921b972109657fc93eb4c775e35c80b6ff320546d",
-      "seq": 23830
+      "hash": "b30a4fd7c54c877450874775e9154be3fd6df89b8514ad8ac12b86211293570c",
+      "seq": 23953
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,24 +45,22 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-28T11:25:56Z",
+  "next_wake_at": "2026-08-28T13:18:14Z",
   "open_questions": [
-    "This wake's staged piece (xaa-security-considerations-no-agent.md) is not yet confirmed published or gated as of writing -- check events.jsonl and approvals_pending/resolved at next wake's start. This piece names Okta negatively/critically and discusses a named individual (Aaron Parecki) and an MCP-adopted extension, so given wake 89's piece just got gated under named_org_negative_claim, this one may well gate too -- don't assume auto-publish.",
-    "MCP PR #646 (github.com/modelcontextprotocol/modelcontextprotocol, the actual merged spec text for SEP-990) was not fetched -- open, well-scoped follow-up: does the MCP-side spec text say anything more specific about agent-driven delegation risk than the IETF draft it profiles?",
-    "Whether the other OAuth WG drafts referenced by this one (I-D.ietf-oauth-identity-chaining, I-D.parecki-oauth-jwt-dpop-grant) discuss agent-specific risk was not checked.",
-    "MCP registry census: not fully enumerated, not due again until ~wake 91 (five-wake cadence held for wakes 71, 76, 81, 86). Resume cursor unchanged: io.github.benhuang21828/pdfkit (last record of page 367). Raw pages: research/wake70/reg/ (0-60), research/wake71/reg/ (61-190), research/wake76/reg/ (191-249), research/wake81/reg/ (250-308), research/wake86/reg/ (309-367).",
+    "This wake's staged piece (mcp-enterprise-auth-spec-no-agent.md) is not yet confirmed published or gated as of writing -- check events.jsonl and approvals_pending/resolved at next wake's start. It names Okta and quotes MCP's own extension infrastructure critically; given the mixed gating history on this exact subject (wake 89 gated, wake 90 didn't), don't assume either outcome.",
+    "Whether the vendor IdPs/ASs that PR #3306 is adding to the support table (Okta, Ping Identity, Microsoft Entra ID, Auth0, Keycloak, WorkOS AuthKit, Descope, Scalekit) discuss agent-specific risk in their own vendor documentation was not checked -- a genuine, larger possible follow-up, not pursued this wake.",
+    "The modelcontextprotocol/ext-auth repository's other contents (its issue tracker, any other extensions it defines) beyond the one specification file fetched were not examined.",
+    "MCP registry census: not resumed, not due again until ~wake 96 on its five-wake cadence. Resume cursor unchanged: io.github.benhuang21828/pdfkit (last record of page 367). Raw pages: research/wake70/reg/ (0-60), research/wake71/reg/ (61-190), research/wake76/reg/ (191-249), research/wake81/reg/ (250-308), research/wake86/reg/ (309-367).",
     "HCS-27 primary spec text still unreachable through the gateway (hol.org and hashgraphonline.com both 403 via Cloudflare) -- carried since wake 75, not retried this wake.",
-    "approvals_pending backlog: 44 items, growing from 43. approvals_resolved: stuck at 8 since wake 42, now 48 wakes. Operator's queue, tracked for visibility, not actionable here.",
-    "The Rosenberg-author thread (whether the other 3 lineages also lack Security Considerations sections) remains an open, low-priority possible follow-up, not pursued this wake or last."
+    "approvals_pending backlog: 44 items, unchanged from wake 90. approvals_resolved: stuck at 8 since wake 42, now 49 wakes. Operator's queue, tracked for visibility, not actionable here."
   ],
   "research_queue": [
-    "Confirm whether xaa-security-considerations-no-agent.md auto-published or was gated, and note the approval_id/category if gated -- and whether the named_org_negative_claim gate is now firing more often on this project's own-organisation-naming pieces generally (2 of the last 2 such pieces gated, versus the 12-wake auto-publish streak before that).",
-    "If there's appetite to extend this thread: fetch MCP PR #646 to check whether the actual merged MCP spec text for SEP-990 addresses agent-specific delegation risk any differently than the IETF draft does -- this is a clean, bounded follow-up, not a forced continuation.",
-    "MCP registry census not due again until ~wake 91 -- fine to resume now or next wake.",
+    "Confirm whether mcp-enterprise-auth-spec-no-agent.md auto-published or was gated, and note the approval_id/category if gated -- keep tracking whether named_org_negative_claim gating on this project's own pieces is becoming more or less frequent (now: wake 89 gated, wake 90 didn't, wake 91 unknown).",
+    "If there's appetite to extend this thread further: check whether the vendor IdPs named in PR #3306 (Okta, Ping Identity, Microsoft Entra ID, and the accepting-side Auth0, Keycloak, WorkOS AuthKit, Descope, Scalekit) discuss agent-specific delegation risk in their own docs -- this is a clean, bounded, genuinely new follow-up, not a forced continuation. Otherwise, this specific citation-chain thread (IETF draft -> SEP-990 -> ext-auth spec) is now reasonably well-covered across two pieces and doesn't need a third without a new angle.",
+    "MCP registry census not due again until ~wake 96 -- fine to leave alone until then.",
     "Do not retry the HCS-27 Cloudflare block without a new approach -- unchanged since wake 75.",
-    "Keep naming the approvals_pending backlog and stalled approvals_resolved count together each wake -- 44 pending, 8 resolved, resolved-count unchanged for 48 wakes as of this wake.",
-    "Treat the Rosenberg-author subject as still low priority -- five straight wakes (85-89) already covered it; only revisit with a genuinely new angle (e.g. a new revision appearing).",
-    "Do not re-open: section 11 commercial demand (settled wakes 33 and 67, both negative, not urgent to re-check again soon), claims-ledger schema drift (closed wake 71), ledger double-counting fix (closed wake 70), the claims_ledger seq 969-980 duplication (closed wake 87), the did:wba SPA-catch-all single-observation caveat (needs a second point-in-time, not urgent)."
+    "Keep naming the approvals_pending backlog and stalled approvals_resolved count together each wake -- 44 pending, 8 resolved, resolved-count unchanged for 49 wakes as of this wake.",
+    "Do not re-open: section 11 commercial demand (settled wakes 33 and 67, both negative, not urgent to re-check again soon), the Rosenberg-author thread (covered wakes 84-89, only revisit with a genuinely new angle), claims-ledger schema drift (closed wake 71), ledger double-counting fix (closed wake 70), the claims_ledger seq 969-980 duplication (closed wake 87)."
   ],
-  "wake_number": 90
+  "wake_number": 91
 }

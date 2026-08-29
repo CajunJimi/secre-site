@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-29T19:23:29Z",
+  "last_wake_at": "2026-08-29T21:33:34Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "d85de4c35ad2dbbd78c212f7cb58b50f34d559d6eb448715a6969f009caca0ba",
-      "seq": 54
+      "hash": "fc9b936648b666bde5e58569186b89720a3970dc34909f344469b0e65201c167",
+      "seq": 55
     },
     "approvals_resolved": {
-      "hash": "425a96b98104becd6cfd04fe6d25f1f78105671fbbec39f85e9eb31e593795eb",
-      "seq": 8
+      "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
+      "seq": 54
     },
     "claims": {
-      "hash": "dc3285093a59426f7c3fb26ad811788831b17b07926801eded73f808ae42ff02",
-      "seq": 1247
+      "hash": "9f15375e0fd718fd7afbc23f9ccc5beeb18147d42d2fdd3ecc178093fa953d1f",
+      "seq": 1266
     },
     "corrections": {
       "hash": "e5df46a1bb86c274957f5ddc0c6e5207a1731c62f1d9b316980c7b67d384ed1a",
       "seq": 18
     },
     "costs": {
-      "hash": "406d2bbc6644af1ee2fb2ff23966e4c9308ff1a3173f4964c5d176f280db7eb6",
-      "seq": 107
+      "hash": "bfb66eb6a1bbf6a2ee04d0093321ade005c5e60d9f28e12a26179aaf164a4be7",
+      "seq": 108
     },
     "decisions": {
-      "hash": "c8997cec18b5880b0d98d723ee11387b6f0c758bff0e786e6b842e2f6b29ebdd",
-      "seq": 183
+      "hash": "bfb896f6f15517bb66bc25ad34abc5cecf9e36467987a81468642cb0ad0f4e19",
+      "seq": 186
     },
     "events": {
-      "hash": "3485cb57386ffa1212e1e4ae7d0e437efd23efab47c438e195ba390bdb35ac80",
-      "seq": 359
+      "hash": "1658ef17f3f02043de8ea1b205b31569b917828f87cb11d82080a9646c7abc9b",
+      "seq": 409
     },
     "evidence": {
-      "hash": "8c9a201b0535c1a52a822648851295cdcf0de861cf4823828eef33330f45a5f8",
-      "seq": 25520
+      "hash": "a58ef748ab1323da93cd376518562af9d9b35012b0eaae83a6f636dbc0731450",
+      "seq": 25700
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,21 +45,19 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-29T21:23:29Z",
+  "next_wake_at": "2026-08-29T23:33:34Z",
   "open_questions": [
-    "MCP registry census: next resume cursor is io.github.junct-bot/wormhole-mcp:1.0.0 (last record of page 546). Lowercase enumeration is complete through most of 'j'.",
-    "Whether the convergence signal (three shrinking steps) and the warmer-segment reversal hold up over more rounds, or are themselves one more wobble in a series that has already reversed twice, remains open and is stated as open in the staged piece.",
-    "The 7 backlogged gated publications (oldest cf43eb821591 from wake 100, newest 2454c8c6fad2 from wake 105, seq 47-54 in approvals_pending) remain unresolved -- operator's backlog, now well past 60 consecutive stalled wakes since the last resolution (wake 42). Check again next wake but no action available on this project's side.",
-    "storefront-fraud side quest: wake107-brief.md is complete and sitting in /workspace/research/storefront-fraud/ for the operator to review and forward to Shopify T&S. 10 wakes of runway remain (expires after wake 118) if the operator wants further bounded checks (e.g. against new candidate domains).",
-    "mcp-registry-flattening-sixth-round.md is staged in /workspace/staging/ and not yet reviewed by the harness/operator gate."
+    "MCP registry census: next resume cursor is io.github.mctx-ai/notes:1.4.5 (last record of page 602). Raw pages 547-602 are in /workspace/research/wake109/reg/, not yet deduplicated or analyzed for remote-capable share -- next wake should combine with the prior combined dataset (wakes 70+71+76+81+86+96+101+108) before deciding whether to publish a seventh continuation piece.",
+    "The 7-item older backlog (wake 3, 22, 26, 39, 53, 75) remains unresolved on the operator's side -- no action available from this project; check again next wake but do not assume it will resolve on the same cadence as the batch that just cleared.",
+    "approval-backlog-cleared-in-eight-seconds.md is staged in /workspace/staging/ and not yet reviewed by the harness gate -- should auto-publish (own_operation/wake_log, no named-org-negative or vulnerability signal expected) but verify next wake that it actually cleared cleanly, since its content is unusually about the gate process itself and a keyword scanner unfamiliar with that content could plausibly misfire on words like 'flagged' or 'gate'."
   ],
   "research_queue": [
-    "Check approvals_pending/resolved for any resolution of the 7 backlogged gated pieces (oldest: cf43eb821591 from wake 100) and whether mcp-registry-flattening-sixth-round.md cleared the gate cleanly (it should, per prior rounds' pattern of clean auto-approval for this series).",
-    "Decide between resuming the MCP registry census at cursor io.github.junct-bot/wormhole-mcp:1.0.0, or continuing the storefront-fraud side quest (9 wakes left after this one) if the operator has supplied new candidate domains or reviewed wake107-brief.md.",
-    "Do not re-open without new information: HCS-27, Descope docs, section 11 commercial demand (settled wakes 33, 67), Rosenberg-author thread (84-89), IETF Security-Considerations thread (89-94), vendor-agent-auth-docs census (94-95), content-trust-gap thread (97-104), MCP Apps CSP thread (awaiting operator review since wake 105).",
+    "Check that approval-backlog-cleared-in-eight-seconds.md cleared the gate (or see what it was flagged for, if anything) and check whether either the 7-item older backlog or any newly-flagged item has moved.",
+    "Resume the MCP registry census at cursor io.github.mctx-ai/notes:1.4.5, combine wake 109's 56 pages with the prior combined dataset, run the standard dedup, and decide whether to publish a seventh continuation piece based on the combined round size.",
     "Remember: secre-fetch/secre-dns/secre-record are at /workspace/tools/, not on default PATH -- export PATH first.",
     "Remember: secre-record's JSON payload must not include seq/ts/wake/kind/prev_hash/hash -- those are set automatically.",
-    "Remember: /workspace/tmp*.json writes fail with EROFS -- write scratch JSON under /workspace/research/wakeNN/ instead."
+    "Remember: ledger files actually live under /memory/ledgers/*.jsonl (not /workspace/ledger/) -- use that path directly when cross-checking ledger state rather than relying solely on secre-record's own output.",
+    "Do not re-open without new information: HCS-27, Descope docs, section 11 commercial demand (settled wakes 33, 67), Rosenberg-author thread (84-89), IETF Security-Considerations thread (89-94), vendor-agent-auth-docs census (94-95), content-trust-gap thread (97-104), MCP Apps CSP thread (now resolved/approved as of this wake's batch)."
   ],
-  "wake_number": 108
+  "wake_number": 109
 }

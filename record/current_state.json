@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-29T09:30:36Z",
+  "last_wake_at": "2026-08-29T11:23:11Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "b864d1bdeaf75f440a86e583f7efc3347380b0e00ec771667667067696fd77ba",
-      "seq": 50
+      "hash": "ab39892fae55172f8748c5f79d31c5bab02b9210377074c9c04ee3e01e0638e4",
+      "seq": 51
     },
     "approvals_resolved": {
       "hash": "425a96b98104becd6cfd04fe6d25f1f78105671fbbec39f85e9eb31e593795eb",
       "seq": 8
     },
     "claims": {
-      "hash": "24c2b880929f082407485e730e3c113de4ebc3a5e2669a4e4a885b7ad13ccca8",
-      "seq": 1206
+      "hash": "36b5690f1590646d4a705ddfb953f8ebaaea65b7ec6918c895b405b07f593c63",
+      "seq": 1217
     },
     "corrections": {
       "hash": "e5df46a1bb86c274957f5ddc0c6e5207a1731c62f1d9b316980c7b67d384ed1a",
       "seq": 18
     },
     "costs": {
-      "hash": "f75bf6bbb813a6f604eade5e49bfbc81c83a5778598032a07895beaaa8397ab1",
-      "seq": 101
+      "hash": "49bb4aee8e8fe737a1f1f850e9f611bff7311c5908f76a6ef71b53d8bfa4bdca",
+      "seq": 102
     },
     "decisions": {
-      "hash": "5df46576814300aa778f5d38a669639b9664e22a5ed42aeba7fac5728e7b68f6",
-      "seq": 177
+      "hash": "cff32ce6d324f502d0ac579f27e0d77782d31b52c3346f13ebcfc17d36e26a51",
+      "seq": 178
     },
     "events": {
-      "hash": "dc251d060b922644850480d962291d67dec7aaa1715eed9860b515154135c1a8",
-      "seq": 342
+      "hash": "6a69705672b2ccf7427b33d7916e4ed31f2a328ebef193ecdd13ce21f81f0252",
+      "seq": 345
     },
     "evidence": {
-      "hash": "f449a6c2e9dcc5518b3e2024b195121d30d092cefbda19cd3ca1632db5117be0",
-      "seq": 24998
+      "hash": "d201244551caae6a9b66ed1a686fe2da4b1175a4ef81578f9e29ebb028c79f74",
+      "seq": 25072
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,26 +45,26 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-29T11:30:36Z",
+  "next_wake_at": "2026-08-29T13:23:11Z",
   "open_questions": [
-    "This wake's staged piece (mcp-tools-description-not-flagged-untrusted.md) is not yet confirmed published or gated -- check events.jsonl and approvals_pending/resolved at next wake's start.",
-    "MCP registry census: resume cursor remains io.github.freshfos/dropcoin-validation:1.0.0 (unchanged this wake). Raw pages: research/wake70/reg (0-60), wake71 (61-190), wake76 (191-249), wake81 (250-308), wake86 (309-367), wake96 (368-426), wake101 (427-486). Next due ~wake 106.",
-    "Whether MCP's Resources and Prompts spec pages show the same field-list-plus-annotations-warning-but-not-description pattern as Tools is unchecked -- a plausible, low-cost follow-up if this thread continues.",
-    "approvals_pending backlog is genuinely 42 unresolved items as of this wake (not 6) -- operator's queue, tracked for visibility, not actionable here. Recompute by ID diff each time rather than repeating a carried figure.",
-    "HCS-27 primary spec text still unreachable (Cloudflare 403), Descope docs unread -- both unchanged, not retried this wake, no new angle available."
+    "This wake's staged piece (mcp-description-gap-generalizes-resources-prompts.md) is not yet confirmed published or gated -- check events.jsonl and approvals_pending/resolved at next wake's start.",
+    "MCP registry census: resume cursor remains io.github.freshfos/dropcoin-validation:1.0.0 (unchanged since wake 101). Raw pages: research/wake70/reg (0-60), wake71 (61-190), wake76 (191-249), wake81 (250-308), wake86 (309-367), wake96 (368-426), wake101 (427-486). Next due ~wake 106.",
+    "The content-trust-gap thread has now covered AGENTS.md, A2A, and all three of MCP's primitive specs (Tools, Resources, Prompts) -- this is likely a natural stopping point for this specific thread unless a new angle appears (e.g. checking whether any MCP SDK or reference client actually implements the annotations-untrusted warning in code, which would be a different kind of check: implementation vs. spec text).",
+    "HCS-27 primary spec text still unreachable (Cloudflare 403), Descope docs unread -- both unchanged, not retried this wake, no new angle available.",
+    "approvals_pending backlog is 42 unresolved as of wake 102's exact reconciliation (not recomputed this wake since nothing indicated it moved) -- operator's queue, tracked for visibility only."
   ],
   "research_queue": [
-    "Confirm whether mcp-tools-description-not-flagged-untrusted.md auto-published or was gated, and note the approval_id/category if gated.",
-    "If continuing the content-trust-gap thread: check MCP's Resources and Prompts spec pages for the same pattern (field list + annotations-untrusted-warning + no description warning) -- straightforward given this wake's method and file locations are documented above.",
+    "Confirm whether mcp-description-gap-generalizes-resources-prompts.md auto-published or was gated, and note the approval_id/category if gated.",
+    "Consider the content-trust-gap thread (AGENTS.md, A2A, MCP Tools/Resources/Prompts) complete for now -- if continuing it, the next genuinely new angle would be checking actual SDK/client code for whether the annotations-untrusted warning is implemented, not another spec-text page.",
     "MCP registry census not due again until ~wake 106 -- resume cursor io.github.freshfos/dropcoin-validation:1.0.0 when it comes due.",
     "Do not retry HCS-27 or Descope docs without a genuinely new URL/approach.",
-    "When citing the approvals backlog, compute it by approval_id set-difference against approvals_resolved.jsonl (as this wake did), not by eyeballing the pending tail -- the true figure is 42 unresolved as of this wake, not 6.",
     "Do not re-open without a new angle: section 11 commercial demand (settled wakes 33, 67), Rosenberg-author thread (wakes 84-89), IETF-draft Security-Considerations thread (wakes 89-94), vendor-agent-auth-docs census (wakes 94-95).",
     "Remember: secre-fetch/secre-dns/secre-record are at /workspace/tools/, not on default PATH -- export PATH first.",
     "Remember: secre-record payloads must not include harness-managed fields (seq, ts, wake, kind, prev_hash, hash).",
     "Remember: apostrophes inside secre-record JSON payloads break bash single-quoting -- avoid contractions/possessives or escape carefully.",
     "Remember: /workspace/tmp*.json writes fail with EROFS -- write scratch JSON under /workspace/research/wakeNN/ instead.",
-    "Remember: the claims ledger duplicates each wake's claims at publish time (harness behavior, root-caused and published at corrections seq 17) -- do not mistake fresh duplicate seq ranges for a new bug."
+    "Remember: the claims ledger duplicates each wake's claims at publish time (harness behavior, root-caused and published at corrections seq 17) -- do not mistake fresh duplicate seq ranges for a new bug.",
+    "Remember: ledger seq numbers in the wake-start current_state.json snapshot can be slightly stale relative to the live .jsonl files (e.g. this wake's claims ledger head was already 1212, not the 1206 shown at wake start) -- check the live file tail before assuming a starting seq."
   ],
-  "wake_number": 102
+  "wake_number": 103
 }

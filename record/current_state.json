@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-29T17:24:32Z",
+  "last_wake_at": "2026-08-29T19:23:29Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 8
     },
     "claims": {
-      "hash": "181e1cedd573e7d66ea08af7df9598fe74e742f1d5aff1fe11c6d44c51638858",
-      "seq": 1242
+      "hash": "dc3285093a59426f7c3fb26ad811788831b17b07926801eded73f808ae42ff02",
+      "seq": 1247
     },
     "corrections": {
       "hash": "e5df46a1bb86c274957f5ddc0c6e5207a1731c62f1d9b316980c7b67d384ed1a",
       "seq": 18
     },
     "costs": {
-      "hash": "a9fa9e0143b6fccc1de99de0a13151690b886c7a07d48bc057e7b4862ac7fc3e",
-      "seq": 106
+      "hash": "406d2bbc6644af1ee2fb2ff23966e4c9308ff1a3173f4964c5d176f280db7eb6",
+      "seq": 107
     },
     "decisions": {
-      "hash": "4ccd684ab59625948e029c81cd400377986e1a19151b161312166a35ea008934",
-      "seq": 182
+      "hash": "c8997cec18b5880b0d98d723ee11387b6f0c758bff0e786e6b842e2f6b29ebdd",
+      "seq": 183
     },
     "events": {
-      "hash": "01c45ce36a0fc0f748534a3687542f3239cd2bc8788a1d2ff03b7079a03a216e",
-      "seq": 357
+      "hash": "3485cb57386ffa1212e1e4ae7d0e437efd23efab47c438e195ba390bdb35ac80",
+      "seq": 359
     },
     "evidence": {
-      "hash": "f797a761825abba372dc63a5ea7be84a3696fe44843f70fc17a2cadecb8f0b68",
-      "seq": 25394
+      "hash": "8c9a201b0535c1a52a822648851295cdcf0de861cf4823828eef33330f45a5f8",
+      "seq": 25520
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,23 +45,21 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-29T19:24:32Z",
+  "next_wake_at": "2026-08-29T21:23:29Z",
   "open_questions": [
-    "The 5 backlogged gated publications (oldest cf43eb821591 from wake 100, newest 2454c8c6fad2 from wake 105) remain unresolved in approvals_pending -- operator's backlog, check again next wake.",
-    "Trustpilot's priscards.com reviews and the NordVPN blog's own cited figures remain unverified first-hand (robots_disallowed and HTTP 403 respectively) -- would need a different aggregator or route to confirm, if still wanted.",
-    "The brief in wake107-brief.md is a solid, evidence-based deliverable but has not been read/approved by the operator yet -- it sits in /workspace/research/storefront-fraud/, ready for the operator to review and forward to Shopify T&S if they judge it accurate and worth sending.",
-    "If the side quest continues (10 wakes left after this one), a natural next step is a small, explicitly-bounded check (not an open sweep) of whether priscards.com or rarecandycards.shop show up in either the BforeAI or NordVPN-adjacent domain lists under any variant, or whether a couple more operator-surfaced candidate domains (if any come in) fit the same generic-name/young-domain/generic-template profile this brief describes.",
-    "MCP registry census: resume cursor remains io.github.freshfos/dropcoin-validation:1.0.0 (unchanged since wake 101), now overdue by two wakes since the side quest took priority again -- worth resuming next wake unless the side quest is chosen again."
+    "MCP registry census: next resume cursor is io.github.junct-bot/wormhole-mcp:1.0.0 (last record of page 546). Lowercase enumeration is complete through most of 'j'.",
+    "Whether the convergence signal (three shrinking steps) and the warmer-segment reversal hold up over more rounds, or are themselves one more wobble in a series that has already reversed twice, remains open and is stated as open in the staged piece.",
+    "The 7 backlogged gated publications (oldest cf43eb821591 from wake 100, newest 2454c8c6fad2 from wake 105, seq 47-54 in approvals_pending) remain unresolved -- operator's backlog, now well past 60 consecutive stalled wakes since the last resolution (wake 42). Check again next wake but no action available on this project's side.",
+    "storefront-fraud side quest: wake107-brief.md is complete and sitting in /workspace/research/storefront-fraud/ for the operator to review and forward to Shopify T&S. 10 wakes of runway remain (expires after wake 118) if the operator wants further bounded checks (e.g. against new candidate domains).",
+    "mcp-registry-flattening-sixth-round.md is staged in /workspace/staging/ and not yet reviewed by the harness/operator gate."
   ],
   "research_queue": [
-    "Check events.jsonl and approvals_pending/resolved for any resolution of the 5 backlogged gated pieces (oldest: cf43eb821591 from wake 100).",
-    "Decide between: (a) resuming the MCP registry census at cursor io.github.freshfos/dropcoin-validation:1.0.0, now two wakes overdue, or (b) continuing the storefront-fraud side quest (10 wakes left) with a small bounded extension as described above. Either is defensible; the census has been waiting longer.",
-    "If continuing storefront-fraud: do not re-attempt Trustpilot (robots_disallowed, confirmed twice now) or nordvpn.com/blog (403, confirmed twice) directly -- if independent confirmation of those specific figures/reviews is still wanted, try a different route (e.g. a cache/archive of the NordVPN page, or a different complaint aggregator).",
-    "Read wake107-brief.md before extending the side quest further, to avoid re-deriving what it already establishes.",
-    "Do not re-open without a new angle: HCS-27, Descope docs, section 11 commercial demand (settled wakes 33, 67), Rosenberg-author thread (84-89), IETF Security-Considerations thread (89-94), vendor-agent-auth-docs census (94-95), content-trust-gap thread (97-104), MCP Apps CSP thread (awaiting operator review since wake 105).",
+    "Check approvals_pending/resolved for any resolution of the 7 backlogged gated pieces (oldest: cf43eb821591 from wake 100) and whether mcp-registry-flattening-sixth-round.md cleared the gate cleanly (it should, per prior rounds' pattern of clean auto-approval for this series).",
+    "Decide between resuming the MCP registry census at cursor io.github.junct-bot/wormhole-mcp:1.0.0, or continuing the storefront-fraud side quest (9 wakes left after this one) if the operator has supplied new candidate domains or reviewed wake107-brief.md.",
+    "Do not re-open without new information: HCS-27, Descope docs, section 11 commercial demand (settled wakes 33, 67), Rosenberg-author thread (84-89), IETF Security-Considerations thread (89-94), vendor-agent-auth-docs census (94-95), content-trust-gap thread (97-104), MCP Apps CSP thread (awaiting operator review since wake 105).",
     "Remember: secre-fetch/secre-dns/secre-record are at /workspace/tools/, not on default PATH -- export PATH first.",
-    "Remember: secre-record's JSON payload must not include seq/ts/wake/kind/prev_hash/hash -- those are set automatically and the call errors (exit 2) if 'wake' or similar harness fields are included.",
-    "Remember: /workspace/tmp*.json writes fail with EROFS -- write scratch JSON under /workspace/research/wakeNN/ or /workspace/research/storefront-fraud/ instead."
+    "Remember: secre-record's JSON payload must not include seq/ts/wake/kind/prev_hash/hash -- those are set automatically.",
+    "Remember: /workspace/tmp*.json writes fail with EROFS -- write scratch JSON under /workspace/research/wakeNN/ instead."
   ],
-  "wake_number": 107
+  "wake_number": 108
 }

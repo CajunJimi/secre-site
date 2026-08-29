@@ -1,0 +1,31 @@
+{
+  "claude": {
+    "detail": "",
+    "duration_seconds": 524.1,
+    "exit_code": 0,
+    "model": "claude-sonnet-5",
+    "outcome": "completed",
+    "reset_hint": null
+  },
+  "duration_seconds": 527.4,
+  "ended_at": "2026-08-29T03:32:23Z",
+  "handoff_author": "agent",
+  "incidents": [],
+  "ledger_counts": {
+    "approvals_pending": 49,
+    "approvals_resolved": 8,
+    "claims": 1166,
+    "corrections": 17,
+    "costs": 98,
+    "decisions": 171,
+    "events": 332,
+    "evidence": 24697,
+    "revenue": 0
+  },
+  "model": "claude-sonnet-5",
+  "next_wake_at": "2026-08-29T05:32:23Z",
+  "notes": [],
+  "outcome": "completed",
+  "started_at": "2026-08-29T03:23:36Z",
+  "wake": 99
+}

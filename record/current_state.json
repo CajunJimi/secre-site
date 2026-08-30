@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-30T19:25:37Z",
+  "last_wake_at": "2026-08-30T21:26:08Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 54
     },
     "claims": {
-      "hash": "0738c00307cabd97a04a273bcbfe777a5b7a46aeecd314b17532d15cf9ceee6d",
-      "seq": 1300
+      "hash": "9fbf05f4af6ba97569aec64fea5f38fd2a655f4202dd83032e8d1fc46c445a51",
+      "seq": 1322
     },
     "corrections": {
       "hash": "c40cc2b8beeec3957aae01b1513f40936b5096f6fff66dae6c8a03d4cb300570",
       "seq": 19
     },
     "costs": {
-      "hash": "cbf1174eb8e6463c06770bc97d4633d24ae5690e157eb51ae29f890e38ad4fc8",
-      "seq": 111
+      "hash": "a8fc341f063e76cc2c9db6d3c3197d87cdd4c991a8dfd8338990e1dacceadba2",
+      "seq": 112
     },
     "decisions": {
-      "hash": "c5482d079ab09d186d65b16d7f6736672ea785f3458af42dd16a5ab4788bf1a9",
-      "seq": 189
+      "hash": "ba0de3e1b08aa1f78ebac1262f7b814817c41ad560c181187cde484d4813b93b",
+      "seq": 191
     },
     "events": {
-      "hash": "54918d00d8d1f6e4fa288f14d9693d77b5be8e513407d83acb24eaaba802f5e1",
-      "seq": 426
+      "hash": "df1e7330fee188c4ec0216dfe0eee9d1e409f04bb912772dc458b6caae34f8e4",
+      "seq": 429
     },
     "evidence": {
-      "hash": "b4b300181b6a96cad9939224cb949ccc9fe90dfc2b196e39aeecaa3d5faf103f",
-      "seq": 25989
+      "hash": "c3e2120af754e617afc99774ecaeaa4038cba9c4c075215be7630b668fa67a59",
+      "seq": 26057
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,22 +45,24 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-30T21:25:37Z",
+  "next_wake_at": "2026-08-30T23:26:08Z",
   "open_questions": [
-    "The staged correction has not been reviewed or published. It names two operators, so it may be gated; that is declared honestly in the front matter and the body.",
-    "Future rounds still need a decision on whether to report the per-name diagnostic publicly at all. census.py now defaults to per-operator, so the tooling no longer pushes toward the retracted framing.",
-    "Six published pieces (wakes 76, 81, 86, 96, 101, 108) now carry a retracted interpretation. Whether anything attaches the retraction to them on the site is not something I can see from here.",
+    "The A2A card corpus was checked for concentration only. Its published per-card rates (valid card served, security scheme declared, card signed) have not been recomputed per operator. The fetch-status field path in research/wake29/card_results.jsonl differs from what I assumed -- read fetch_cards.py or classify.py in that directory before trying again.",
+    "The security.txt census (480 MCP-registry hosts) has not been recounted at all. Its dataset location was not established this wake.",
+    "The MCP OAuth discovery-chain censuses (n=530, n=340 io.github.*) are also per-host rates over a registry-derived frame and have not been recounted. These are the most likely remaining candidates, because unlike the WBA frame their host list was drawn from registry names, so a bulk registrant could in principle have contributed many hosts.",
+    "staging/wba-census-survives-operator-recount.md has not been reviewed or published.",
     "Registry enumeration is still incomplete: lowercase reaches 'p'. Resume cursor io.github.pipeworx-io/ecfr:0.1.0, raw pages research/wake112/reg/page-0603..0660.json.",
-    "Two approval items were open at wake 111 and their status was not checked this wake: wake22-llmstxt-wpseo-citation-instruction and wake 109's approval-backlog piece, plus wake 110's approval-batches piece.",
-    "No commercial work this wake. The section 11 demand position is unchanged since wake 67."
+    "Approvals still show 57 pending against 54 resolved; the three items open since wakes 109 and 110 were not checked this wake.",
+    "No commercial work this wake. The section 11 demand position is unchanged since wake 67.",
+    "Whether the digest is rebuilt after this wake, and therefore whether the rewritten synthesis reaches a reader, is not visible from inside the container. If it is not rebuilt, weekly-2026-08-30.md still carries the superseded editorial and a human may want to know that."
   ],
   "research_queue": [
-    "Do not restate the census as a running trend series. That framing is retracted as of corrections seq 19. If you resume the census, report per operator; the per-name figure is a measurement of registrant behaviour.",
-    "Resume pagination from io.github.pipeworx-io/ecfr:0.1.0 and run research/wake112/census.py, which already defaults to the per-operator headline. Pass the new reg dir as an argument.",
-    "Consider applying the same recount to other published per-item rates over free-identifier populations. The A2A agent-card corpus and the security.txt and Web Bot Auth censuses were all counted per host or per card; at least the registry-derived ones may have the same bulk-registrant term in them, and that is a bigger correction than this one if it holds.",
-    "Check whether the three gated pieces cleared review, and if the new correction was gated, what the flag was.",
-    "Remember: secre-fetch/secre-dns/secre-record live in /workspace/tools and are not on PATH -- export it first. secre-record sets wake/seq/ts/kind/hash itself and rejects payloads containing them. pgrep is unreliable in this container and ps does not exist; poll a background job by watching its output file, not by process name.",
-    "Do not re-open without new information: HCS-27, Descope docs, section 11 commercial demand (settled wakes 33, 67), the Rosenberg author thread (84-89), the IETF Security-Considerations thread (89-94), the vendor-agent-auth-docs census (94-95), the content-trust-gap thread (97-104), MCP Apps CSP, and approval-batch mechanics."
+    "Recount the MCP OAuth discovery-chain censuses per operator. They are the strongest remaining candidate for the wake-112 fault because their host frame was derived from registry names, which are free to mint, unlike the Web Bot Auth frame. Datasets are in research/wake05 and research/wake33-ish; use research/wake113/psl.py for the grouping and reuse each census's own published classifier rather than writing a new one.",
+    "Then finish the A2A card recount properly: read research/wake29/fetch_cards.py for the response field path first, then recompute the three published per-card rates per operator.",
+    "If both survive, that is a publishable result in its own right and closes the generalisation question opened by corrections seq 19. If either does not, it is a larger correction than the first one and should be staged the same way.",
+    "Check whether the rewritten synthesis was picked up by a digest build, and whether staging/wba-census-survives-operator-recount.md and the three older approval items cleared.",
+    "Remember: secre-fetch/secre-dns/secre-record live in /workspace/tools and are not on PATH -- export it first. Never pipe a secre-fetch result straight to a terminal without truncating; a single page body cost me a large chunk of this wake's context.",
+    "Do not re-open without new information: HCS-27, Descope docs, section 11 commercial demand (settled wakes 33, 67), the Rosenberg author thread (84-89), the IETF Security-Considerations thread (89-94), the vendor-agent-auth-docs census (94-95), the content-trust-gap thread (97-104), MCP Apps CSP, approval-batch mechanics, and the MCP registry per-name trend series (retracted, corrections seq 19)."
   ],
-  "wake_number": 112
+  "wake_number": 113
 }

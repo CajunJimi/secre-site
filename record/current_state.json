@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-31T17:26:07Z",
+  "last_wake_at": "2026-08-31T19:18:41Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "b0ed2c8cc9b78d5c106e40e2410ed9d94d7af3040b7e926e75524cb4b81c5467",
-      "seq": 61
+      "hash": "5f8d69d4f278b412b1900f21a16806ddf582df7ef51e2cf98b7beb653edc51c9",
+      "seq": 62
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "52835f019513cd4294f8caff1d58aa56710584b257a5ee67f2f8bd1c03945e63",
-      "seq": 1392
+      "hash": "253987e5ab9e5457750f24741afa5617188217fedde1581d4507fb34a5fea765",
+      "seq": 1397
     },
     "corrections": {
       "hash": "c40cc2b8beeec3957aae01b1513f40936b5096f6fff66dae6c8a03d4cb300570",
       "seq": 19
     },
     "costs": {
-      "hash": "aad17c1c655a97bb1c858a098d77c7c80dd636d86e2ccafedd6e9a86aadd69de",
-      "seq": 122
+      "hash": "fdd69a53c871d98ecdc7369dfd427d4fa02dc9ec2c7d1d3d083764560899be6e",
+      "seq": 123
     },
     "decisions": {
-      "hash": "ca969dc95fa94079e8ebdbf78209b6c59e95fb38a52d38d1396e20cd5e1430e6",
-      "seq": 208
+      "hash": "76e556475aa5154eda61f02f43520c4c6a72434d827432538443d8a6dd5788c8",
+      "seq": 209
     },
     "events": {
-      "hash": "e942a1afc354916edc2f89a86b794beeebdc9459f5e4c459dacaadc17288732d",
-      "seq": 458
+      "hash": "e15218cb49fd3c2c3168c33f3185094df9fbbb24d89dc27f798cae8becd6dbd7",
+      "seq": 461
     },
     "evidence": {
-      "hash": "984fdf7b21052bd5f0af75cf4bcccb3dc826b18875fc8741738fc789105b2ac0",
-      "seq": 27050
+      "hash": "63f36bc808ad27b435a63fbaae7b94070d7921f675d94fef9475353f34d5b988",
+      "seq": 27135
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,22 +45,22 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-31T19:26:07Z",
+  "next_wake_at": "2026-08-31T21:18:41Z",
   "open_questions": [
-    "SPEC-ENTITY-CARD.md's Appendix A (JSON Schema claims: additionalProperties false, required fields) and section 9.4's deriveConformanceLevel algorithm were read in the spec but not cross-checked against src/card/schema.ts and src/card/verify.ts, both already fetched this wake to research/wake123/ -- a natural next step if this specific document gets a second pass.",
-    "Whether any KYA-OS maintainer has raised or resolved the section-11.2 ordering question, the Apache-2.0-vs-MIT licensing question (wake121), or the pagination-consistency question (wake122) elsewhere (a GitHub issue or PR) was not searched.",
-    "wake119-123's pieces: all still awaiting operator resolution, nothing further to do on them from inside the container.",
+    "SPEC-ENTITY-CARD.md has now had §8.2-8.4, §9 (all subsections), §10 (delegation/accountability structure), §11.1 and §11.2, and Appendix A cross-checked against the implementation across wakes 123-124. Not yet cross-checked: §6 (CIMD on-ramp), §7 (Card object full field-by-field beyond what's already covered), §12's remaining subsections beyond 12.6-12.8 skimmed this wake, and Appendices B/D beyond the D.1 error-code table (checked wake123). A third pass on this document has diminishing returns unless something specific stands out on a skim.",
+    "Whether any KYA-OS maintainer has raised or resolved any of the five findings from this thread (this one, or wakes 119-122's) on GitHub was not searched, in any wake.",
+    "wake119-124's pieces: all still awaiting operator resolution, nothing further to do on them from inside the container.",
     "CIMD adoption recheck (wake118): still not due for several weeks.",
     "MCP registry pagination: still paused at wake117's cursor (io.github.shaqmughal/seekstone:0.6.2), untouched again this wake.",
     "psl.py PAAS-set gaps, weekly digest staleness: unchanged, still low priority."
   ],
   "research_queue": [
-    "Check whether /workspace/staging/wake123-kya-os-entity-card-verify-order.md published or was queued for review -- given the named_org_negative_claim classifier flag, it will very likely route to the operator review queue same as wake119-122. Confirm actual outcome before starting new work.",
-    "If continuing the KYA-OS Entity Card thread: research/wake123/ already has src/card/verify.ts and src/card/schema.ts fetched -- cross-check Appendix A's JSON Schema claims (additionalProperties: false, required: ['id','entityType','name']) and section 9.4's deriveConformanceLevel algorithm against them before fetching anything new.",
-    "Do not repeat the section-11.2-verification-order comparison again without new information -- this wake's piece is the complete treatment of that specific claim.",
-    "Do not re-open without new information: HCS-27, Descope docs, section 11 commercial demand (settled wakes 33, 67), the Rosenberg author thread (84-89), the IETF Security-Considerations thread (89-94), the vendor-agent-auth-docs census (94-95), the content-trust-gap thread (97-104), MCP Apps CSP, approval-batch mechanics, the MCP registry per-name trend series (retracted, corrections seq 19), the five-census operator-recount generalisation (closed five-for-five per wake116), and now the MCP state-handle-hijacking / KYA-OS conformance-levels / KYA-OS extension-graduation-license / KYA-OS audit-read-pagination-race / KYA-OS entity-card-verify-order pieces (all five complete as of this wake).",
+    "Check whether staging/wake124-kya-os-accountability-freshness-level.md published or queued for review, and whether any of wake119-123's five queued pieces were resolved -- confirm actual outcome before starting new work.",
+    "If the KYA-OS thread has run its course (five findings, all named_org_negative_claim, all likely batched together for operator review): consider opening a new topic next wake rather than a sixth pass at this same repo, unless a specific unread section from the 'unfinished' list above looks promising on a quick skim.",
+    "Do not repeat the section 9.2/accountability-freshness comparison again without new information -- this wake's piece is the complete treatment of that specific claim.",
+    "Do not re-open without new information: HCS-27, Descope docs, section 11 commercial demand (settled wakes 33, 67), the Rosenberg author thread (84-89), the IETF Security-Considerations thread (89-94), the vendor-agent-auth-docs census (94-95), the content-trust-gap thread (97-104), MCP Apps CSP, approval-batch mechanics, the MCP registry per-name trend series (retracted, corrections seq 19), the five-census operator-recount generalisation (closed five-for-five per wake116), and the five completed KYA-OS pieces (state-handle-hijacking, conformance-levels, extension-graduation-license, audit-read-pagination-race, entity-card-verify-order, and now accountability-freshness-level).",
     "CIMD adoption recheck: only worth doing in several weeks against wake118's 3/20 field-aware, 1/20 true baseline, and only worth publishing if the number has moved.",
-    "Remember: secre-fetch/secre-dns/secre-record live in /workspace/tools and are not on PATH -- export it first. harness.publish.Publication.load(Path(...)) needs a Path not a str; harness.secrets_scan.scan(p.full_text); harness.classify.classify(p.full_text, declared=p.declared_categories, has_personal_data=<bool>) takes a string not a Publication; harness.citations.validate(p.full_text, Ledger(<absolute path string>), exempt_hosts=['secre-site.pages.dev']) -- Ledger needs an absolute path (Path(...).resolve()) AND the evidence ledger's actual filename is evidence_ledger.jsonl, NOT evidence.jsonl (this cost time again this wake -- the wrong filename silently gives a Ledger with zero records and everything shows unverified, same failure mode as wake122's relative-path bug but a different cause). secre-record payload must NOT include a top-level 'kind' key (nor 'wake') -- the harness sets seq/ts/wake/kind/prev_hash/hash itself; passing 'kind' explicitly errors with 'payload may not contain harness fields'. Passing secre-record payload via a heredoc file and $(cat file) avoids bash apostrophe-escaping breakage that a large inline single-quoted JSON string will hit."
+    "Tooling reminders (repeated because they keep costing time): export PATH to include /workspace/tools first. harness.publish.Publication.load(Path(...)) needs a Path not a str. harness.secrets_scan.scan(p.full_text). harness.classify.classify(p.full_text, declared=p.declared_categories, has_personal_data=<bool>) takes a string, not a Publication. harness.citations.validate(p.full_text, Ledger(<absolute path>), exempt_hosts=['secre-site.pages.dev']) -- Ledger needs Path(...).resolve(), and the evidence ledger file is /memory/ledgers/evidence_ledger.jsonl (NOT research/ or a relative path). harness/classify.py's looks_like_org() only fires on two-consecutive-capitalised-words, a corporate-suffix form, or a hostname -- single-word or hyphenated-acronym org names (like KYA-OS) won't trigger named_org_negative_claim automatically; declare it yourself when relevant. secre-record payload must NOT include top-level 'kind' or 'wake' keys. Passing secre-record payload via a heredoc file and $(cat file) avoids bash quoting breakage on large JSON strings."
   ],
-  "wake_number": 123
+  "wake_number": 124
 }

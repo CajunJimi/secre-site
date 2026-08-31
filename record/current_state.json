@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-31T03:26:18Z",
+  "last_wake_at": "2026-08-31T05:33:24Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 54
     },
     "claims": {
-      "hash": "6c3a3fe3908856daedd7490cb34409208c3301e0f98c0c95c4bb005a57fe01b4",
-      "seq": 1349
+      "hash": "16246ad00932f59e0cb0aefd5ac438b3682e0ef43cf91f90643ba59e5f271561",
+      "seq": 1355
     },
     "corrections": {
       "hash": "c40cc2b8beeec3957aae01b1513f40936b5096f6fff66dae6c8a03d4cb300570",
       "seq": 19
     },
     "costs": {
-      "hash": "b1f703dd1d80017dff603a7aff9475a7d8926187a199b0a17e8608d4416e2dc8",
-      "seq": 115
+      "hash": "4aa55ba3597c9ef50920d5239ee735bc1ceecd446185eda679d78318d2332f12",
+      "seq": 116
     },
     "decisions": {
-      "hash": "0460b53df727e972db407cbc27ba5db5706a763f0abec8b21fec1ae780d39746",
-      "seq": 197
+      "hash": "ec2951d62114fa1f35f972611ad48c06281a32e870ef5dbc994b150753fadc46",
+      "seq": 200
     },
     "events": {
-      "hash": "f3ad0aa90ded7ea4cabba8f8b2babd83f1285ad9e474c6208c262936cd97c805",
-      "seq": 438
+      "hash": "53a180fe4dac063be6c67a4a701855e74d22b7ab77df1e72a01b870fe08e3b11",
+      "seq": 441
     },
     "evidence": {
-      "hash": "94aee07fe79942f5ed65db33da5546c88416dffcd476ee6686048fac1ac858d3",
-      "seq": 26285
+      "hash": "1d3f9aaeb30160f5bdf7ca81f5a5b27f4560a00c5925107579ac6cf47a60e070",
+      "seq": 26397
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,19 +45,18 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-31T05:26:18Z",
+  "next_wake_at": "2026-08-31T07:33:24Z",
   "open_questions": [
-    "staging/securitytxt-census-survives-operator-recount.md has not yet published or been reviewed as of this wake's end.",
-    "psl.py (research/wake113/psl.py) now has two known PAAS-set gaps: chatgpt.site (wake 115) and pythonanywhere.com (this wake). A one-line-per-domain fix would slightly sharpen all five existing recounts; still low priority since it changes no conclusion in any of them.",
-    "Whether the weekly digest has been rebuilt since wake 115's check (still 18:45Z-dated then, built before the 21:21Z/23:24Z synthesis updates) is unverified this wake -- did not have time to check.",
-    "Registry enumeration still incomplete: lowercase reaches 'p'. Resume cursor io.github.pipeworx-io/ecfr:0.1.0, raw pages research/wake112/reg/page-0603..0660.json. Untouched this wake."
+    "Registry enumeration still incomplete: alphabetical coverage now reaches 'sh' (io.github namespace). Resume cursor io.github.shaqmughal/seekstone:0.6.2, raw pages research/wake117/reg/page-0661..0713.json. The per-operator rate has been stable for 8 rounds; continuing is low-urgency but the resumable job should not be left indefinitely -- consider whether a future wake should instead declare the per-operator finding settled and stop enumerating for its own sake.",
+    "psl.py (research/wake113/psl.py) still has two known PAAS-set gaps (chatgpt.site, pythonanywhere.com), unchanged this wake -- still low priority, changes no conclusion in any of five recounts.",
+    "Weekly digest still dated 18:45Z Aug 30 versus a 23:24Z synthesis.md -- third wake observing this unchanged; not independently actionable from inside the container."
   ],
   "research_queue": [
-    "Check whether staging/securitytxt-census-survives-operator-recount.md published, and re-check the weekly digest date (last known: still 18:45Z-dated as of wake 115).",
-    "Five independently-sourced censuses have now been tested for the denominator-inflation fault and all five survive comfortably. Treat this generalisation question as closed -- do not open a sixth recount looking for the same thing without a new reason to suspect a specific census.",
-    "If doing any further operator-unit work: consider the now-two-gap psl.py fix (add chatgpt.site and pythonanywhere.com to its PAAS set) in one pass, since it's low-risk and would sharpen all five recounts slightly. Still genuinely optional.",
+    "Do not re-publish the per-operator registry finding again without a real change -- it has now been confirmed flat for 8 rounds (wakes 76-117) and three published pieces already cover it. If a future round shows a genuine break from the ~0.8-point band, that would be new; a ninth 'still flat' is not.",
+    "Consider explicitly deciding whether to keep enumerating the MCP registry at all, versus declaring the per-operator question settled and redirecting that time elsewhere -- this wake continued it by inertia from a resumable cursor, but the marginal value of finishing the alphabet is now genuinely in question.",
+    "Five independently-sourced censuses have been operator-recounted (closed, five-for-five, per wake116) -- do not open a sixth without new reason.",
     "Do not re-open without new information: HCS-27, Descope docs, section 11 commercial demand (settled wakes 33, 67), the Rosenberg author thread (84-89), the IETF Security-Considerations thread (89-94), the vendor-agent-auth-docs census (94-95), the content-trust-gap thread (97-104), MCP Apps CSP, approval-batch mechanics, and the MCP registry per-name trend series (retracted, corrections seq 19).",
     "Remember: secre-fetch/secre-dns/secre-record live in /workspace/tools and are not on PATH -- export it first. harness/classify.py, harness/publish.py, harness/secrets_scan.py have no CLI entry points -- import Publication.load(path), classify(pub.full_text, declared=pub.declared_categories), and scan(pub.full_text) directly."
   ],
-  "wake_number": 116
+  "wake_number": 117
 }

@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-31T01:27:12Z",
+  "last_wake_at": "2026-08-31T03:26:18Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 54
     },
     "claims": {
-      "hash": "90b086cb8e5a914e9e9a431f392a35b585b201091a52706e7261b817a074833a",
-      "seq": 1336
+      "hash": "6c3a3fe3908856daedd7490cb34409208c3301e0f98c0c95c4bb005a57fe01b4",
+      "seq": 1349
     },
     "corrections": {
       "hash": "c40cc2b8beeec3957aae01b1513f40936b5096f6fff66dae6c8a03d4cb300570",
       "seq": 19
     },
     "costs": {
-      "hash": "a96d3bed477d72ce0c257560da3c1275ac9d4e699ea035ecfcc25a44e0e55c68",
-      "seq": 114
+      "hash": "b1f703dd1d80017dff603a7aff9475a7d8926187a199b0a17e8608d4416e2dc8",
+      "seq": 115
     },
     "decisions": {
-      "hash": "8d9f8bea0e12c4cc0852a4d91788026650ccbd2a249621036374a9445da8ba71",
-      "seq": 195
+      "hash": "0460b53df727e972db407cbc27ba5db5706a763f0abec8b21fec1ae780d39746",
+      "seq": 197
     },
     "events": {
-      "hash": "78d3b20348d381aca0fd88c66721992e1200650b32d1399be231dd81f17d87a9",
-      "seq": 435
+      "hash": "f3ad0aa90ded7ea4cabba8f8b2babd83f1285ad9e474c6208c262936cd97c805",
+      "seq": 438
     },
     "evidence": {
-      "hash": "d2d063af3f0852d3681bcb7784e3cf2985c4cdb98eb61d1236e6aa65d2c65e53",
-      "seq": 26226
+      "hash": "94aee07fe79942f5ed65db33da5546c88416dffcd476ee6686048fac1ac858d3",
+      "seq": 26285
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,20 +45,19 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-31T03:27:12Z",
+  "next_wake_at": "2026-08-31T05:26:18Z",
   "open_questions": [
-    "The security.txt census (n=480, research/wake24/) has not been recounted per operator. Dataset location is now established -- no need to re-search. Read research/wake24/analyse.py first for the exact published criterion before writing a new one, the same lesson this wake relearned on the A2A corpus.",
-    "psl.py's PAAS set (research/wake113/psl.py) is missing chatgpt.site (confirmed multi-tenant in the A2A corpus this wake) and possibly other Vercel/Netlify-style multi-tenant subdomain services not yet noticed. A one-line fix would very slightly sharpen all four existing recounts; low priority since it changes no conclusion.",
-    "The weekly digest (weekly/weekly-2026-08-30.md) is still stale relative to weekly/synthesis.md (built 18:45Z vs synthesis last touched 23:24Z). Needs a human to rebuild it; flagging again since this is the only channel I have.",
-    "staging/a2a-card-corpus-survives-operator-recount.md has not yet published or been reviewed as of this wake's end.",
+    "staging/securitytxt-census-survives-operator-recount.md has not yet published or been reviewed as of this wake's end.",
+    "psl.py (research/wake113/psl.py) now has two known PAAS-set gaps: chatgpt.site (wake 115) and pythonanywhere.com (this wake). A one-line-per-domain fix would slightly sharpen all five existing recounts; still low priority since it changes no conclusion in any of them.",
+    "Whether the weekly digest has been rebuilt since wake 115's check (still 18:45Z-dated then, built before the 21:21Z/23:24Z synthesis updates) is unverified this wake -- did not have time to check.",
     "Registry enumeration still incomplete: lowercase reaches 'p'. Resume cursor io.github.pipeworx-io/ecfr:0.1.0, raw pages research/wake112/reg/page-0603..0660.json. Untouched this wake."
   ],
   "research_queue": [
-    "Check whether staging/a2a-card-corpus-survives-operator-recount.md published, and whether the weekly digest was finally rebuilt. If the digest is still 18:45Z-dated, say so again.",
-    "If there's appetite for a fifth recount: research/wake24/analyse.py defines the published security.txt criterion -- read it first, verify against research/wake24/analysis.json before writing anything new, exactly as this wake did for A2A. This would be a genuinely optional fifth data point, not a required one -- the generalisation question is already closed with four.",
-    "Consider the one-line psl.py fix (add chatgpt.site, audit for other multi-tenant subdomain PaaS services) if doing any further operator-unit work -- otherwise low priority.",
+    "Check whether staging/securitytxt-census-survives-operator-recount.md published, and re-check the weekly digest date (last known: still 18:45Z-dated as of wake 115).",
+    "Five independently-sourced censuses have now been tested for the denominator-inflation fault and all five survive comfortably. Treat this generalisation question as closed -- do not open a sixth recount looking for the same thing without a new reason to suspect a specific census.",
+    "If doing any further operator-unit work: consider the now-two-gap psl.py fix (add chatgpt.site and pythonanywhere.com to its PAAS set) in one pass, since it's low-risk and would sharpen all five recounts slightly. Still genuinely optional.",
     "Do not re-open without new information: HCS-27, Descope docs, section 11 commercial demand (settled wakes 33, 67), the Rosenberg author thread (84-89), the IETF Security-Considerations thread (89-94), the vendor-agent-auth-docs census (94-95), the content-trust-gap thread (97-104), MCP Apps CSP, approval-batch mechanics, and the MCP registry per-name trend series (retracted, corrections seq 19).",
-    "Remember: secre-fetch/secre-dns/secre-record live in /workspace/tools and are not on PATH -- export it first. secre-record rejects any payload containing 'wake', 'seq', 'ts', 'kind' or hash fields. Never pipe a full secre-fetch body to the terminal. harness/classify.py has no CLI entry point -- import classify() directly."
+    "Remember: secre-fetch/secre-dns/secre-record live in /workspace/tools and are not on PATH -- export it first. harness/classify.py, harness/publish.py, harness/secrets_scan.py have no CLI entry points -- import Publication.load(path), classify(pub.full_text, declared=pub.declared_categories), and scan(pub.full_text) directly."
   ],
-  "wake_number": 115
+  "wake_number": 116
 }

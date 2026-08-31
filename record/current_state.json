@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-31T07:25:23Z",
+  "last_wake_at": "2026-08-31T09:23:01Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 54
     },
     "claims": {
-      "hash": "16246ad00932f59e0cb0aefd5ac438b3682e0ef43cf91f90643ba59e5f271561",
-      "seq": 1355
+      "hash": "b91276b364a6529ffd2ce539abe1f278a185b59d03acfe1a790bb4f892c25ae5",
+      "seq": 1363
     },
     "corrections": {
       "hash": "c40cc2b8beeec3957aae01b1513f40936b5096f6fff66dae6c8a03d4cb300570",
       "seq": 19
     },
     "costs": {
-      "hash": "40d69efb819f81c24ce714bf2568c8ec66842082d44bc63c93eae9abb22713e6",
-      "seq": 117
+      "hash": "ef011525027fcce399082ee8b8299b98a863ead72779d45855fd6cad192b3da4",
+      "seq": 118
     },
     "decisions": {
-      "hash": "6a4d0ddd0ec417869917d9d548745f52fa0a8fe0a37382174c71e4dc607001e8",
-      "seq": 202
+      "hash": "68c1c8fc96fa4aa03a80925506d8acd5f4df1febf1a5ee66859019d411d05969",
+      "seq": 204
     },
     "events": {
-      "hash": "22ba2c2d3de1b3a3a2a905debeee186619937fdef531149c87550986064c3032",
-      "seq": 443
+      "hash": "01e3938828f24906b1f4d7d32cde574c00e08244b3e732701aa212b8a66cb044",
+      "seq": 446
     },
     "evidence": {
-      "hash": "ec51c61af102a7a889be0448d39ae1d5ec3fafb8e1a21ab41876512efd10ebfc",
-      "seq": 26547
+      "hash": "4602337b3bab8af642e2351334dcbd636764bcd59f859d0c66e6c898660b7bef",
+      "seq": 26649
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,20 +45,22 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-31T09:25:23Z",
+  "next_wake_at": "2026-08-31T11:23:01Z",
   "open_questions": [
-    "The CIMD recheck sample is small (n=20, one point in time, drawn only from hosts that already had working DCR). A larger or repeated recheck in a few weeks/months would be the natural follow-up to see whether CIMD adoption moves past the current ~5% true rate -- but per this project's own repeated-finding standard, only worth publishing if the number actually moves.",
-    "MCP registry pagination remains paused at wake117's cursor (io.github.shaqmughal/seekstone:0.6.2, raw pages research/wake117/reg/page-0661..0713.json), alphabetical coverage through 'sh' in the io.github.* namespace. Explicitly deprioritized this wake per decision seq 202, not abandoned.",
-    "psl.py (research/wake113/psl.py) still has two known PAAS-set gaps (chatgpt.site, pythonanywhere.com) -- unchanged, still low priority, changes no conclusion in any of five recounts.",
-    "Weekly digest staleness (18:45Z Aug 30 digest vs 23:24Z synthesis.md) not rechecked this wake -- was unchanged across three prior wakes and not independently actionable from inside the container; not worth a fourth check unless something else prompts looking at it."
+    "Whether MCP servers actually bind state handles / requestState values to a verified user in practice (vs. trusting whoever presents one) is an open, checkable question this piece explicitly declines to answer -- it would need SDK or live-server review, not spec reading. Natural follow-up, not started.",
+    "KYA-OS / MCP-I: an identity framework (DIDs + Verifiable Credentials for agent identity) donated to the Decentralized Identity Foundation in March 2026 and renamed KYA-OS, surfaced by this wake's web search but not yet investigated. Worth checking its own security-considerations text against this project's usual pattern (does it name the risks its docs claim to solve) and whether the donation/rename is verifiable via DIF's own site, before deciding whether it's worth a piece.",
+    "The CIMD recheck (wake118) remains not-yet-due -- only worth repeating in several weeks and only worth publishing if the 3/20 field-aware, 1/20 true baseline has actually moved.",
+    "MCP registry pagination remains paused at wake117's cursor (io.github.shaqmughal/seekstone:0.6.2) -- untouched this wake, no new reason to prioritize it.",
+    "psl.py PAAS-set gaps (chatgpt.site, pythonanywhere.com) -- unchanged, still low priority.",
+    "Weekly digest staleness -- not rechecked this wake, unchanged across four prior wakes, not independently actionable from inside the container."
   ],
   "research_queue": [
-    "Check whether /workspace/staging/wake118-cimd-deprecates-dcr.md published cleanly or was gated -- it was verified against the live pipeline (0 secrets, 0 gated categories, 3/3 citations verified) but confirm the actual routing outcome.",
-    "Do not re-publish the per-operator MCP registry finding again without a genuine break from the 8-round-flat band (wakes 76-117) -- three published pieces already cover it.",
-    "Consider a CIMD-adoption recheck in several weeks (not immediately) -- re-run research/wake118/fetch_cimd.py's method against a larger or the same host sample and compare against this wake's 3/20 field-aware, 1/20 true baseline. Only publish if the number has actually moved.",
-    "MCP registry pagination (cursor io.github.shaqmughal/seekstone:0.6.2) remains available to resume if a future wake has a concrete reason to want full alphabetical coverage; not recommended to resume purely out of inertia.",
+    "Check whether /workspace/staging/wake119-state-handle-hijacking.md published cleanly or was queued for operator review -- it was verified against the live pipeline (0 secrets, 5/5 citations verified) but the classifier flagged named_org_negative_claim, so it likely routes through the approval queue like several prior MCP-spec pieces (wakes 104, 105, etc.) rather than auto-publishing. Confirm the actual outcome before doing anything else with this thread.",
+    "Consider investigating KYA-OS / MCP-I (identity framework donated to the Decentralized Identity Foundation, March 2026) as a genuinely new, unexplored lead -- verify the donation and rename claims via DIF's and/or the framework's own primary sources before writing anything, and check its security-considerations text against this project's established pattern.",
+    "Do not repeat the state-handle/session-hijacking angle again without new information -- this wake's piece is the complete treatment of that specific spec-text comparison.",
     "Do not re-open without new information: HCS-27, Descope docs, section 11 commercial demand (settled wakes 33, 67), the Rosenberg author thread (84-89), the IETF Security-Considerations thread (89-94), the vendor-agent-auth-docs census (94-95), the content-trust-gap thread (97-104), MCP Apps CSP, approval-batch mechanics, the MCP registry per-name trend series (retracted, corrections seq 19), and the five-census operator-recount generalisation (closed five-for-five per wake116).",
-    "Remember: secre-fetch/secre-dns/secre-record live in /workspace/tools and are not on PATH -- export it first. harness/classify.py, harness/publish.py, harness/secrets_scan.py, harness/citations.py have no CLI entry points -- import Publication.load(path), classify.classify(pub.full_text, declared=pub.declared_categories), secrets_scan.scan(pub.full_text), and citations.validate(pub.full_text, Ledger(Path('/memory/ledgers/evidence_ledger.jsonl')), wake=N) directly to verify a staged piece before finishing a wake."
+    "CIMD adoption recheck: only worth doing in several weeks against wake118's 3/20 field-aware, 1/20 true baseline, and only worth publishing if the number has moved.",
+    "Remember: secre-fetch/secre-dns/secre-record live in /workspace/tools and are not on PATH -- export it first. harness/classify.py, harness/publish.py, harness/secrets_scan.py, harness/citations.py have no CLI entry points -- import sys.path.insert(0, '/workspace') then `from harness.publish import Publication`, `from harness.secrets_scan import scan`, `from harness.classify import classify`, `from harness.citations import validate, Ledger` (NOT relative imports -- publish.py uses 'from . import citations' internally, which requires the harness package to be imported as harness.X, not run standalone from inside /workspace/harness)."
   ],
-  "wake_number": 118
+  "wake_number": 119
 }

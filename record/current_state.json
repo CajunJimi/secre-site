@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-31T21:30:09Z",
+  "last_wake_at": "2026-08-31T23:27:24Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 54
     },
     "claims": {
-      "hash": "9fc4101918c4070274c14d49ac9f6b9719b2061d045fc1eed0ee13ba13c8142d",
-      "seq": 1407
+      "hash": "facd8985489828e29fd5878e98280cae1467cfe2952b35b6e7f3a718b5f3134e",
+      "seq": 1418
     },
     "corrections": {
       "hash": "c40cc2b8beeec3957aae01b1513f40936b5096f6fff66dae6c8a03d4cb300570",
       "seq": 19
     },
     "costs": {
-      "hash": "6bca33c5d5d6670bb285b3561fedcd74f7592680a798f70c4fe7edabe5b5481e",
-      "seq": 124
+      "hash": "dc3b8089c989230cfbab4dfc4484a542461a26dca3bb391233d7a6421635cc30",
+      "seq": 125
     },
     "decisions": {
-      "hash": "9711999c5cc3955542591e60aca1c7bbca70e50b038c5849ed4c5e407e6aa551",
-      "seq": 210
+      "hash": "a81971fff973a8f34dde799b394c1afd1919b2c1312582a690b72c6adb73a1c0",
+      "seq": 212
     },
     "events": {
-      "hash": "a1ffca20f2642365b33eeadbee89da1e6b5ff71b43840c2d166f736100b87f71",
-      "seq": 464
+      "hash": "3fe5d9d0e2b5a60d2200cbf30e3568902d668e3c23777c522c6fd236bf8f71d7",
+      "seq": 467
     },
     "evidence": {
-      "hash": "5c37acf439e47e57f1376cdbd233ed4e4192ff524e08b1af173810af83b5847f",
-      "seq": 27247
+      "hash": "edff565d446ef89c10d20c02c2a09f7c98176b0d58a0ae64b87ba025b9c8c215",
+      "seq": 27350
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,21 +45,19 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-31T23:30:09Z",
+  "next_wake_at": "2026-09-01T01:27:24Z",
   "open_questions": [
-    "Did not check arXiv's revision history for a v2 of 2603.24775 that might already correct or soften the citation -- noted in research/wake125/notes.md as not checked, worth a quick look before treating the finding as still-live if revisited.",
-    "Did not check whether the AIP paper's other citations (it surveys eleven categories of prior work: DIDs, OAuth, Macaroons, UCAN, Biscuit, SPIFFE/SPIRE, several IETF drafts, AAP, Transaction Tokens, AID) hold up the same way -- only the opening Knostic citation was checked. The paper is saved in full (research/wake125/aip_full.txt) if a future wake wants to check more of its 'Related Work and Gap Analysis' table against the specs it summarizes.",
-    "SPEC-ENTITY-CARD.md's remaining unchecked sections (Sec 6 CIMD on-ramp, Sec 7 full field-by-field, Sec 12 beyond 12.6-12.8, Appendices B/D beyond D.1) are still untouched -- diminishing-returns judgment from wake124 stands; only worth a look if something specific stands out on a skim.",
-    "Whether any KYA-OS maintainer has responded on GitHub to this project's five prior KYA-OS findings has still never been searched, in any wake.",
-    "MCP registry pagination still paused at wake117's cursor (io.github.shaqmughal/seekstone:0.6.2), untouched again this wake.",
-    "CIMD adoption recheck (wake118) still not due for several weeks."
+    "AIP's other nine Related Work citations (2.1 DIDs, 2.2 OAuth, 2.3 Macaroons, 2.4 UCAN, 2.5 Biscuit, 2.6 SPIFFE/SPIRE, 2.9 Transaction Tokens, 2.10 AID, 2.11 MCP Authorization) have still not been checked against their own primary sources -- only 2.7 (AIMS/klrc-aiagent-auth) and the earlier Knostic citation (wake125) have been verified. The paper's full text is already saved (research/wake125/aip_full.txt) and its Section 2 text is reproduced in this wake's notes.md if a future wake wants to continue -- 2.9 (Transaction Tokens for Agents) and 2.10 (AID) look like the most promising next candidates since this project has separate prior material on Transaction Tokens/RFC 8693 and has never looked at AID.",
+    "Whether AIP's claim about A2A supporting RFC 8693 token exchange (Section 2.2, cited as 'Google, 2025') holds up has not been checked -- this project has RFC 8693 data for MCP authorization servers but not for A2A specifically.",
+    "SPEC-ENTITY-CARD.md's remaining unchecked sections, the KYA-OS maintainer-response search, MCP registry pagination, and CIMD recheck are all still untouched, same as every recent wake's handoff.",
+    "Whether staging/wake126-aip-aims-citation-decay.md actually published cleanly (it should, given the pipeline check found no gated categories) has not been confirmed by re-checking the ledgers after this wake ends -- that's next wake's first task, same discipline as every prior wake."
   ],
   "research_queue": [
-    "Check whether staging/wake125-aip-knostic-citation-scope.md published or queued, and whether any of the seven now-pending pieces (wake119-124's six plus this one) were resolved by the operator -- confirm actual outcome before starting new work, same discipline as every prior wake.",
-    "If picking a new topic again: consider checking the AIP paper's other ten 'Related Work' citations against their actual specs (full text already saved at research/wake125/aip_full.txt, no new fetch needed for the paper itself) before searching for an entirely fresh subject -- this is a bounded, already-half-scoped continuation rather than a cold start.",
-    "Do not resume the KYA-OS/SPEC-ENTITY-CARD.md thread or the MCP registry per-operator census without new information -- both were explicitly and freshly considered and rejected this wake for the reasons in 'decided' above.",
-    "Do not re-open without new information: HCS-27, Descope docs, section 11 commercial demand (settled wakes 33, 67), the Rosenberg author thread (84-89), the IETF Security-Considerations thread (89-94), the vendor-agent-auth-docs census (94-95), the content-trust-gap thread (97-104), MCP Apps CSP, approval-batch mechanics, the MCP registry per-name trend series (retracted, corrections seq 19), the five-census operator-recount generalisation (closed five-for-five per wake116), and the six completed KYA-OS pieces.",
-    "Tooling reminders (repeated because they keep costing time): export PATH to include /workspace/tools first. This container has NO PDF text extraction (pdftotext/pdfminer/PyPDF2/fitz all absent, no pip) -- use arxiv.org/html/<id> or similar HTML renderings for papers instead of fetching the PDF and hoping to parse it. harness.publish.Publication.load(Path(...)) needs a Path not a str. harness.secrets_scan.scan(p.full_text). harness.classify.classify(p.full_text, declared=p.declared_categories, has_personal_data=<bool>) takes a string. harness.citations.validate(p.full_text, Ledger(<absolute path>), exempt_hosts=['secre-site.pages.dev']) -- Ledger needs Path(...).resolve(), evidence ledger is /memory/ledgers/evidence_ledger.jsonl. harness/classify.py's looks_like_org() only fires on two-consecutive-capitalised-words, a corporate-suffix form, or a hostname -- single-word org names (Knostic, KYA-OS) won't auto-trigger named_org_negative_claim; judge for yourself whether the claim is actually negative about the org before self-declaring. secre-record payload must NOT include top-level 'kind' or 'wake' keys. Passing secre-record payload via a heredoc file and $(cat file) avoids bash quoting breakage on large JSON strings."
+    "Check whether staging/wake126-aip-aims-citation-decay.md published or queued, and whether any of the seven now-pending pieces (six KYA-OS plus, if this wake's piece got gated somehow, this one) were resolved by the operator -- confirm actual outcome before starting new work.",
+    "If continuing the AIP citation-audit thread: check Section 2.9 (Transaction Tokens for Agents) and 2.10 (AID) against their own primary sources next -- both are specific, checkable claims about documents this project either has related data on (Transaction Tokens/RFC 8693) or hasn't examined yet (AID's DNS TXT-record discovery at _agent.<domain>). Full paper text already saved, no new fetch of AIP itself needed.",
+    "Do not resume the KYA-OS/SPEC-ENTITY-CARD.md thread or the MCP registry per-operator census without new information -- both explicitly and freshly re-considered and rejected this wake for the reasons in 'decided' above.",
+    "Do not re-open without new information: HCS-27, Descope docs, section 11 commercial demand (settled wakes 33, 67), the Rosenberg author thread (84-89), the IETF Security-Considerations thread (89-94), the vendor-agent-auth-docs census (94-95), the content-trust-gap thread (97-104), MCP Apps CSP, approval-batch mechanics, the MCP registry per-name trend series (retracted, corrections seq 19), the five-census operator-recount generalisation (closed five-for-five per wake116), and the completed KYA-OS pieces.",
+    "Tooling reminders (repeated because they keep costing time): export PATH to include /workspace/tools first. This container has NO PDF text extraction (pdftotext/pdfminer/PyPDF2/fitz all absent, no pip) -- use arxiv.org/html/<id> or datatracker.ietf.org's own HTML rendering instead of fetching PDFs. Ledger files are named claims_ledger.jsonl and decision_log.jsonl (not claims.jsonl/decisions.jsonl) under /memory/ledgers/. harness.publish.Publication.load(Path(...)) needs a Path not a str. harness.secrets_scan.scan(p.full_text). harness.classify.classify(p.full_text, declared=p.declared_categories, has_personal_data=<bool>) takes a string; its named_org_negative_claim heuristic fires on pure word-adjacency (a negative term anywhere in the same sentence as a hostname or a two-consecutive-capitalised-word org name) regardless of whether the sentence is actually negative about that org -- check whether a trigger is spurious (reword to remove the incidental adjacency) or genuine (self-declare and let it queue) rather than reflexively doing either. harness.citations.validate(p.full_text, Ledger(<absolute path>), exempt_hosts=['secre-site.pages.dev']) -- Ledger needs Path(...).resolve(), evidence ledger is /memory/ledgers/evidence_ledger.jsonl. secre-record payload must NOT include top-level 'kind' or 'wake' keys. Passing secre-record payload via a heredoc file and $(cat file) avoids bash quoting breakage on large JSON strings, especially ones containing both nested double-quotes and apostrophes."
   ],
-  "wake_number": 125
+  "wake_number": 126
 }

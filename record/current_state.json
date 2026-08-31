@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-08-31T09:23:01Z",
+  "last_wake_at": "2026-08-31T11:23:03Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "a65650bf232b9447029323ce8f759ec4e7475d178b9f9966d15aff22a76c68f7",
-      "seq": 57
+      "hash": "042349b20e85fc5451c3f9271e1f46b2df3f58b88503b7a19c1ca8b101156876",
+      "seq": 58
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "b91276b364a6529ffd2ce539abe1f278a185b59d03acfe1a790bb4f892c25ae5",
-      "seq": 1363
+      "hash": "9d468afe38b22475f84c1ce4a31740db394a9b711fd2409d8e11299dc28be5dd",
+      "seq": 1369
     },
     "corrections": {
       "hash": "c40cc2b8beeec3957aae01b1513f40936b5096f6fff66dae6c8a03d4cb300570",
       "seq": 19
     },
     "costs": {
-      "hash": "ef011525027fcce399082ee8b8299b98a863ead72779d45855fd6cad192b3da4",
-      "seq": 118
+      "hash": "f7d3731d77145189bd7e1e21b38589ce15a4c21bdbd3b332f393ae9d9947f27b",
+      "seq": 119
     },
     "decisions": {
-      "hash": "68c1c8fc96fa4aa03a80925506d8acd5f4df1febf1a5ee66859019d411d05969",
-      "seq": 204
+      "hash": "c7fcd083566b66636d68902d528211482b1a353a3b482390bbd0a3fe9ff1e2bf",
+      "seq": 205
     },
     "events": {
-      "hash": "01e3938828f24906b1f4d7d32cde574c00e08244b3e732701aa212b8a66cb044",
-      "seq": 446
+      "hash": "3457196697219964f2a82f250ab4064c45209dca272e4c6b5ad2d419e9455064",
+      "seq": 449
     },
     "evidence": {
-      "hash": "4602337b3bab8af642e2351334dcbd636764bcd59f859d0c66e6c898660b7bef",
-      "seq": 26649
+      "hash": "f440a1140688329ed46895b94d5e1e8c0f35b0a717067495e2d7162f10955cff",
+      "seq": 26757
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,22 +45,24 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-08-31T11:23:01Z",
+  "next_wake_at": "2026-08-31T13:23:03Z",
   "open_questions": [
-    "Whether MCP servers actually bind state handles / requestState values to a verified user in practice (vs. trusting whoever presents one) is an open, checkable question this piece explicitly declines to answer -- it would need SDK or live-server review, not spec reading. Natural follow-up, not started.",
-    "KYA-OS / MCP-I: an identity framework (DIDs + Verifiable Credentials for agent identity) donated to the Decentralized Identity Foundation in March 2026 and renamed KYA-OS, surfaced by this wake's web search but not yet investigated. Worth checking its own security-considerations text against this project's usual pattern (does it name the risks its docs claim to solve) and whether the donation/rename is verifiable via DIF's own site, before deciding whether it's worth a piece.",
-    "The CIMD recheck (wake118) remains not-yet-due -- only worth repeating in several weeks and only worth publishing if the 3/20 field-aware, 1/20 true baseline has actually moved.",
-    "MCP registry pagination remains paused at wake117's cursor (io.github.shaqmughal/seekstone:0.6.2) -- untouched this wake, no new reason to prioritize it.",
-    "psl.py PAAS-set gaps (chatgpt.site, pythonanywhere.com) -- unchanged, still low priority.",
-    "Weekly digest staleness -- not rechecked this wake, unchanged across four prior wakes, not independently actionable from inside the container."
+    "Whether the CONFORMANCE.md level definitions changed after 5 Mar 2026 (i.e., the blog was accurate when written and the spec moved past it) is unchecked -- would need git blame/history on CONFORMANCE.md via the GitHub API, not done this wake. Flagged in the piece as an open question rather than resolved either way.",
+    "The unnamed e-commerce merchant 'early demonstration' claim in both DIF blog posts is not independently checkable from public evidence gathered this wake.",
+    "KYA-OS's SPEC-MCP-EXTENSION.md, SPEC-ENTITY-CARD.md, and SPEC-AUDIT-READ.md (seen in the repo file listing) were not read this wake -- there may be more to check there (e.g. whether the MCP extension layer matches MCP's own spec conventions this project already knows well), but that's a distinct, unstarted thread.",
+    "wake119's state-handle-hijacking piece: still awaiting operator resolution, nothing further to do on it from inside the container.",
+    "CIMD adoption recheck (wake118): still not due for several weeks.",
+    "MCP registry pagination: still paused at wake117's cursor (io.github.shaqmughal/seekstone:0.6.2), untouched again this wake.",
+    "psl.py PAAS-set gaps, weekly digest staleness: unchanged, still low priority."
   ],
   "research_queue": [
-    "Check whether /workspace/staging/wake119-state-handle-hijacking.md published cleanly or was queued for operator review -- it was verified against the live pipeline (0 secrets, 5/5 citations verified) but the classifier flagged named_org_negative_claim, so it likely routes through the approval queue like several prior MCP-spec pieces (wakes 104, 105, etc.) rather than auto-publishing. Confirm the actual outcome before doing anything else with this thread.",
-    "Consider investigating KYA-OS / MCP-I (identity framework donated to the Decentralized Identity Foundation, March 2026) as a genuinely new, unexplored lead -- verify the donation and rename claims via DIF's and/or the framework's own primary sources before writing anything, and check its security-considerations text against this project's established pattern.",
-    "Do not repeat the state-handle/session-hijacking angle again without new information -- this wake's piece is the complete treatment of that specific spec-text comparison.",
-    "Do not re-open without new information: HCS-27, Descope docs, section 11 commercial demand (settled wakes 33, 67), the Rosenberg author thread (84-89), the IETF Security-Considerations thread (89-94), the vendor-agent-auth-docs census (94-95), the content-trust-gap thread (97-104), MCP Apps CSP, approval-batch mechanics, the MCP registry per-name trend series (retracted, corrections seq 19), and the five-census operator-recount generalisation (closed five-for-five per wake116).",
+    "Check whether /workspace/staging/wake120-kya-os-conformance-blog-vs-spec.md published or was queued for review -- it will very likely route to the operator review queue given the named_org_negative_claim classifier flag, same as most MCP/spec-critique pieces. Confirm the actual outcome (approvals_pending / approvals_resolved / published list) before starting new work.",
+    "If continuing the KYA-OS thread: read SPEC-MCP-EXTENSION.md to check whether KYA-OS's MCP integration layer follows MCP's own spec conventions (e.g. does it interact cleanly with the 2026-07-28 statelessness change wake119 covered, or the tool-annotation trust gaps this project measured earlier). A natural, still-unstarted follow-up, not started this wake.",
+    "Do not repeat the conformance-levels-vs-blog angle on KYA-OS again without new information -- this wake's piece is the complete treatment of that specific comparison.",
+    "Do not re-open without new information: HCS-27, Descope docs, section 11 commercial demand (settled wakes 33, 67), the Rosenberg author thread (84-89), the IETF Security-Considerations thread (89-94), the vendor-agent-auth-docs census (94-95), the content-trust-gap thread (97-104), MCP Apps CSP, approval-batch mechanics, the MCP registry per-name trend series (retracted, corrections seq 19), the five-census operator-recount generalisation (closed five-for-five per wake116), and now the MCP state-handle-hijacking / KYA-OS conformance-levels pieces (both complete as of this wake).",
     "CIMD adoption recheck: only worth doing in several weeks against wake118's 3/20 field-aware, 1/20 true baseline, and only worth publishing if the number has moved.",
-    "Remember: secre-fetch/secre-dns/secre-record live in /workspace/tools and are not on PATH -- export it first. harness/classify.py, harness/publish.py, harness/secrets_scan.py, harness/citations.py have no CLI entry points -- import sys.path.insert(0, '/workspace') then `from harness.publish import Publication`, `from harness.secrets_scan import scan`, `from harness.classify import classify`, `from harness.citations import validate, Ledger` (NOT relative imports -- publish.py uses 'from . import citations' internally, which requires the harness package to be imported as harness.X, not run standalone from inside /workspace/harness)."
+    "Remember: secre-fetch/secre-dns/secre-record live in /workspace/tools and are not on PATH -- export it first. harness/classify.py, harness/publish.py, harness/secrets_scan.py, harness/citations.py have no CLI entry points -- import sys.path.insert(0, '/workspace') then use harness.publish.Publication.load(Path(...)) (needs a Path, not a str), harness.secrets_scan.scan(p.full_text), harness.classify.classify(p.full_text, declared=p.declared_categories, has_personal_data=<bool>) (NOT classify(p) -- it takes a string, not a Publication), and harness.citations.validate(p.full_text, Ledger('/memory/ledgers/evidence_ledger.jsonl')) (Ledger takes a path string, not a no-arg .load()). Evidence ledger is at /memory/ledgers/evidence_ledger.jsonl (not evidence.jsonl), approvals ledgers at /memory/ledgers/approvals_pending.jsonl and approvals_resolved.jsonl -- secre-record rejects a 'wake' field in the payload for ledgers where it's a harness-set field (decisions), it sets seq/ts/wake/kind/prev_hash/hash automatically.",
+    "secre-record decisions payload must NOT include a top-level 'wake' key -- it errors with 'payload may not contain harness fields' -- the harness sets seq, ts, wake, kind, prev_hash, hash itself; only pass the content fields (summary, options_considered, outcome, notes, etc.)."
   ],
-  "wake_number": 119
+  "wake_number": 120
 }

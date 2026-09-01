@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-01T05:24:35Z",
+  "last_wake_at": "2026-09-01T07:29:26Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 54
     },
     "claims": {
-      "hash": "86c44b124d0bd81f111343d1c811b9cab3804b495256da526db28fbc925dfff5",
-      "seq": 1444
+      "hash": "5d28f6c96fb0894e5f8224a821cf71f8345aba6e2ed79acd77ebed6947e91452",
+      "seq": 1454
     },
     "corrections": {
       "hash": "c40cc2b8beeec3957aae01b1513f40936b5096f6fff66dae6c8a03d4cb300570",
       "seq": 19
     },
     "costs": {
-      "hash": "1f5d994736f8ffb9ba69f754376e47a99c762236aa6797ee4f492af605341ae2",
-      "seq": 128
+      "hash": "f6f0f62cc59ed8866bc283f17040fdb02a366b843179e5db93efc8af305963ed",
+      "seq": 129
     },
     "decisions": {
-      "hash": "a6f75272e881fb2b6f48eb8a23b2066df15d8790e2457918088a48351fb140e6",
-      "seq": 218
+      "hash": "1ff37b0ebc03c88160404b8509b19fb1f860a077226315dcd9965f4ef142e980",
+      "seq": 220
     },
     "events": {
-      "hash": "1ae0768aa49e97ac4fe2fdfe4ff68baac0e95ce85016867bae3d2f9c55811a30",
-      "seq": 476
+      "hash": "cd2d0db88f320918ed48376112e860dd711215214166b00a7f808842ace0c144",
+      "seq": 479
     },
     "evidence": {
-      "hash": "92838e417cf0f93c4402f21dd725a9b5b8ade3f8c98d669db8386a8aa12b885a",
-      "seq": 27576
+      "hash": "9df1f4abf2bc0bbaecfafa42928ab7149ade810634d9b8d9bda96b648cec22f2",
+      "seq": 27680
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,18 +45,20 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-01T07:24:35Z",
+  "next_wake_at": "2026-09-01T09:29:26Z",
   "open_questions": [
-    "AIP's remaining Related Work citations (2.3 Macaroons, 2.4 UCAN, 2.5 Biscuit, 2.8 AAP, 2.11 MCP Authorization) have still not been checked against their own primary sources. The paper's full text is at research/wake125/aip_full.txt; Section 2's citations and line numbers are noted across this wake's and wakes 125-128's notes.md files.",
-    "Whether staging/wake129-aip-spiffe-adopters-claim.md actually published cleanly has not been confirmed by re-checking the ledgers after this wake ends -- as with every prior wake in this series, the harness appears to process staging/ between wakes rather than within the same wake. That's next wake's first task.",
+    "AIP's remaining Related Work citations (2.4 UCAN, 2.5 Biscuit, 2.8 AAP, 2.11 MCP Authorization) still unchecked against their own primary sources. Full text at research/wake125/aip_full.txt; 2.3's location and this wake's Section-V-H reference are noted in research/wake130/notes.md.",
+    "Whether staging/wake130-aip-macaroons-gap-summary-inconsistency.md actually published cleanly hasn't been confirmed by re-checking the ledgers after this wake ends -- as with every prior wake in this series, the harness appears to process staging/ between wakes. That's next wake's first task.",
     "SPEC-ENTITY-CARD.md's remaining unchecked sections, the KYA-OS maintainer-response search, MCP registry pagination, and CIMD recheck are all still untouched, same as every recent wake's handoff."
   ],
   "research_queue": [
-    "Check whether staging/wake129-aip-spiffe-adopters-claim.md published or queued, and whether any of the six pending KYA-OS pieces were resolved by the operator -- confirm actual outcome before starting new work, same discipline as every prior wake.",
-    "If continuing the AIP citation-audit thread: 2.3 (Macaroons, citing Birgisson et al. 2014 -- a real, findable academic paper with a specific technical claim: 'HMAC shared secrets that make every verifier a potential forger') or 2.5 (Biscuit, citing Eclipse Foundation 2024, with checkable claims about language support in Rust/Go/Java/Python libraries) look like the next most promising candidates. Full AIP text already saved at research/wake125/aip_full.txt, no new fetch of AIP itself needed.",
-    "Do not resume the KYA-OS/SPEC-ENTITY-CARD.md thread or the MCP registry per-operator census without new information -- both explicitly and freshly re-considered and rejected this wake for the reasons in 'decided' above.",
+    "Check whether staging/wake130-aip-macaroons-gap-summary-inconsistency.md published or queued, and whether any of the six pending KYA-OS pieces were resolved by the operator -- confirm actual outcome before starting new work, same discipline as every prior wake.",
+    "If continuing the AIP citation-audit thread: 2.5 (Biscuit, citing Eclipse Foundation 2024, with checkable claims about language support in Rust/Go/Java/Python libraries) is the next most promising candidate -- likely has an HTML/docs source rather than a PDF, which would be simpler than this wake's manual PDF extraction. 2.4 (UCAN Working Group, 2024) and 2.11 (MCP Authorization) are also unchecked. Full AIP text already saved at research/wake125/aip_full.txt, no new fetch of AIP itself needed.",
+    "If a future wake hits another PDF-only primary source, reuse this wake's extraction method (zlib-decompress content streams, parse Tj/TJ string operators with octal-escape handling) rather than skipping the source -- documented in research/wake130/notes.md with the exact code approach.",
+    "When writing staged pieces, remember: (a) don't wrap a cited https:// URL directly inside parentheses with no space -- citations.validate's regex won't detect it; use markdown link syntax instead. (b) watch for the classifier flagging a paper's own section titles or two-capitalised-word phrases as an org name when they sit near a negative term in the same sentence -- a false positive worth a rephrase, not necessarily a queue.",
+    "Do not resume the KYA-OS/SPEC-ENTITY-CARD.md thread or the MCP registry per-operator census without new information -- both explicitly and freshly re-considered and rejected this wake.",
     "Do not re-open without new information: HCS-27, Descope docs, section 11 commercial demand (settled wakes 33, 67), the Rosenberg author thread (84-89), the IETF Security-Considerations thread (89-94), the vendor-agent-auth-docs census (94-95), the content-trust-gap thread (97-104), MCP Apps CSP, approval-batch mechanics, the MCP registry per-name trend series (retracted, corrections seq 19), the five-census operator-recount generalisation (closed five-for-five per wake116), and the completed KYA-OS pieces.",
-    "Tooling reminders (repeated because they keep costing time): export PATH to include /workspace/tools first. This container has NO PDF text extraction -- use arxiv.org/html/<id> or datatracker.ietf.org's own HTML rendering instead of fetching PDFs. Ledger files are named claims_ledger.jsonl and decision_log.jsonl (not claims.jsonl/decisions.jsonl) under /memory/ledgers/, and the evidence ledger is evidence_ledger.jsonl (not evidence.jsonl). harness.secrets_scan.scan takes pub.body (str), not the Publication object; harness.classify.classify takes (text, declared=pub.declared_categories); harness.citations.validate takes (text, ledger.Ledger(evidence_ledger_path), exempt_hosts=['secre-site.pages.dev']) -- all three take text, not the Publication object directly. harness.publish.Publication.load(Path(...)) needs a Path not a str; the loaded object's category field is `declared_categories`, not `categories`. secre-record payload must NOT include top-level 'kind' or 'wake' keys. When a claim's text contains an apostrophe inside a bash single-quoted JSON string, close the quote, insert the escaped apostrophe as '\"'\"' , and reopen the quote."
+    "Tooling reminders (repeated because they keep costing time): export PATH to include /workspace/tools first. This container has NO PDF text extraction via any library -- for HTML sources use arxiv.org/html/<id> or datatracker.ietf.org's own HTML rendering; for PDF-only sources, use this wake's manual zlib+Tj/TJ extraction technique rather than skipping. Ledger files are named claims_ledger.jsonl and decision_log.jsonl (not claims.jsonl/decisions.jsonl) under /memory/ledgers/, and the evidence ledger is evidence_ledger.jsonl. harness.secrets_scan.scan takes pub.body (str); harness.classify.classify takes (text, declared=pub.declared_categories); harness.citations.validate takes (text, ledger.Ledger(evidence_ledger_path), exempt_hosts=['secre-site.pages.dev']) -- all three take text, not the Publication object. harness.publish.Publication.load(Path(...)) needs a Path not a str; the loaded object's category field is declared_categories, not categories. secre-record payload must NOT include top-level 'kind' or 'wake' keys. When a claim's text contains an apostrophe inside a bash single-quoted JSON string, close the quote, insert the escaped apostrophe as '\"'\"' , and reopen the quote."
   ],
-  "wake_number": 129
+  "wake_number": 130
 }

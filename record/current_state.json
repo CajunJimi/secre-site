@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-01T21:28:55Z",
+  "last_wake_at": "2026-09-01T23:19:33Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 54
     },
     "claims": {
-      "hash": "1ff70a69e696744d97bbc2724fb6a15afd481fd7f70dd2eb4f7d51f89adf409f",
-      "seq": 1560
+      "hash": "c5162f5ccc122e614d27cdcf6275262ee79724f092dbd7c527609ab7890d5470",
+      "seq": 1571
     },
     "corrections": {
       "hash": "eeca857113283b131d62529f05f596ca20a38915dd55e87495d3e6185c05e394",
       "seq": 20
     },
     "costs": {
-      "hash": "61c1454c7eaf94e501ed11cc739644cefd0cab357a7c0241aea0b7ab9832ba84",
-      "seq": 136
+      "hash": "5635dd09308d16a49d3557166412cd87be05d000ea425d32a6a92075686c9178",
+      "seq": 137
     },
     "decisions": {
-      "hash": "25f0d316f30f1176c17b6611e034fc5528c84aedae9e8b4494178ff3c20ed8a5",
-      "seq": 232
+      "hash": "8e23c76d7b45caf9424a73b962f41197772d33b6c1c902bf1df17840059cc016",
+      "seq": 234
     },
     "events": {
-      "hash": "e2258ae716537437d0083bb33ade3c30f728b6c5a8a078011767913552546e65",
-      "seq": 500
+      "hash": "eca86b8d245c2f2923f5119fea65a1df5bade75d1b39c0afdd404c0140c71995",
+      "seq": 503
     },
     "evidence": {
-      "hash": "802cfff51f10e84e57aee51731807434769900203bd86c0ebb47395a48eba4cd",
-      "seq": 28294
+      "hash": "84f81aa533cec941c79da271a12f0548116ff360e39d8b46b8e4e0428034af8a",
+      "seq": 28381
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,19 +45,21 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-01T23:28:55Z",
+  "next_wake_at": "2026-09-02T01:19:33Z",
   "open_questions": [
-    "Whether staging/wake137-aip-rfc8693-actor-claim.md auto-publishes (pipeline check came back clean, no gated categories detected) or queues needs confirming next wake -- verify against approvals_pending/decision_log rather than assume.",
+    "Whether staging/wake138-aip-web5-ux-claim.md queues for operator review (expected, given the named_org_negative_claim classifier flag) or is auto-published needs confirming next wake against approvals_pending/decision_log -- the file was still sitting in staging/ unmoved at the end of this wake, consistent with the harness processing staging asynchronously between wakes rather than immediately.",
     "The operator review queue (58-65, 8 items, approvals_resolved still seq 54 since wake125) remains unresolved.",
-    "AIP's Related Work section is now very close to fully audited: only 2.1 (DIDs, low-yield generic claims) and 2.13 (Relationship to Biscuit, no external citation to check) remain genuinely untouched, and both look like low-value next steps rather than promising leads. Next wake should treat the AIP citation-audit series as effectively exhausted unless a specific checkable claim in 2.1 or 2.13 turns up, and consider moving to a different subject."
+    "Section 2.11 (MCP Authorization/OAuth 2.1) of AIP has been read in this series but not confirmed as explicitly fact-checked against a citation the way 2.1-2.10, 2.12, 2.13 have been -- worth a quick check next wake before declaring the AIP Related Work audit series fully closed.",
+    "Once 2.11 is confirmed (or found to need checking), the AIP citation-audit series (wakes 125-138) is essentially done -- a closing synthesis piece summarizing which sections held up vs. which didn't across the whole series could be a worthwhile next step, distinct from finding one more individual error."
   ],
   "research_queue": [
-    "Standard first move: check staging/ (should be empty again) and confirm staging/wake137-aip-rfc8693-actor-claim.md landed where the pipeline check predicted (auto-published, no gated categories) -- if it instead queued, that's worth investigating.",
-    "Check whether any of the eight pending operator-review items (58-65) were resolved.",
-    "Before starting a new AIP piece, note the series is nearly exhausted: 2.1 (DIDs) and 2.13 (Relationship to Biscuit) are the only remaining untouched sections, and neither looks promising (2.1 is generic/qualified claims, 2.13 is an internal forward-reference with no external source to check). If neither yields a concrete checkable claim on inspection, treat the series as closed and pick a different subject -- a short closing note summarizing the full 12-13 wake series (which sections held up vs. which didn't) could itself be a worthwhile synthesis piece.",
-    "Do not resume the KYA-OS/SPEC-ENTITY-CARD.md thread, the MCP registry per-operator census, or section-11 commercial demand without new information -- all freshly re-considered and rejected again this wake.",
+    "Standard first move: check staging/ (should be empty again) and confirm staging/wake138-aip-web5-ux-claim.md landed where predicted -- given the named_org_negative_claim flag, expect it queued to approvals_pending (seq 66) rather than auto-published; if it instead auto-published, that's worth understanding why.",
+    "Check whether any of the now-9 pending operator-review items (58-66, assuming wake138 queued) were resolved.",
+    "Do a quick, final check of AIP Section 2.11 (MCP Authorization/OAuth 2.1) for a concrete checkable claim -- if found, check it; if not, or once done, declare the AIP Related Work citation-audit series (wakes 125-138) closed and write a short closing synthesis noting which of the 13 subsections held up vs. which didn't, rather than starting another individual-error piece on the same paper.",
+    "After that, pick a genuinely different subject -- the AIP series has now run 14 wakes (125-138) and is close to diminishing returns regardless of the 2.11 outcome.",
+    "Do not resume the KYA-OS/SPEC-ENTITY-CARD.md thread, the MCP registry per-operator census, or section-11 commercial demand without new information -- all repeatedly reconsidered and rejected in recent wakes.",
     "Do not re-open without new information: HCS-27, Descope docs, the Rosenberg author thread, the IETF Security-Considerations thread, the vendor-agent-auth-docs census, the content-trust-gap thread, MCP Apps CSP, approval-batch mechanics, the MCP registry per-name trend series (retracted), the five-census operator-recount generalisation (closed), and the completed KYA-OS pieces.",
-    "Tooling reminders (repeated because they keep costing time): export PATH=/workspace/tools:$PATH before secre-record. secre-record payload must NOT include top-level 'kind', 'wake', or 'prev_hash' keys (harness sets seq/ts/wake/kind/prev_hash/hash automatically). Ledger files are decision_log.jsonl, claims_ledger.jsonl, evidence_ledger.jsonl under /memory/ledgers/. harness.publish.Publication.load needs a Path not a str; loaded object's category field is declared_categories. harness.secrets_scan.scan/classify.classify/citations.validate all take text (pub.body), not the Publication object; citations.validate also needs a harness.ledger.Ledger built from evidence_ledger.jsonl. citations.validate's URL regex excludes bare URLs immediately preceded by '(' or '<' or '\"' (no space) as well as backtick-wrapped ones -- always cite as a proper markdown [text](url) link, never a bare URL inside parentheses with no space, and never backtick-wrapped. This exact class of bug has now surfaced three times (wake135, wake136, wake137)."
+    "Tooling reminders (repeated because they keep costing time): export PATH=/workspace/tools:$PATH before secre-record. secre-record payload must NOT include top-level 'kind', 'wake', or 'prev_hash' keys. Ledger files are decision_log.jsonl, claims_ledger.jsonl, evidence_ledger.jsonl under /memory/ledgers/. harness.publish.Publication.load needs a Path not a str; loaded object's category field is declared_categories. harness.secrets_scan.scan/classify.classify/citations.validate all take text (pub.body), not the Publication object; citations.validate also needs a harness.ledger.Ledger built from evidence_ledger.jsonl. citations.validate's URL regex excludes bare URLs immediately preceded by '(' or '<' or '\"' (no space) as well as backtick-wrapped ones -- always cite as a proper markdown [text](url) link, checked with a direct pipeline run BEFORE staging, not after. This exact class of bug has now surfaced four times (wake135, wake136, wake137, and caught pre-stage in wake138)."
   ],
-  "wake_number": 137
+  "wake_number": 138
 }

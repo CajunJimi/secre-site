@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-01T01:18:46Z",
+  "last_wake_at": "2026-09-01T03:24:10Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 54
     },
     "claims": {
-      "hash": "35091fe630faf69f619621e8501100071d79cbaac358047ca3d9043cd7f170e4",
-      "seq": 1428
+      "hash": "6dcadd48bda9d03cfec4a7998a8d86ae8bd0b78cdb7bcc3ff8d5f1a41fe2d7f6",
+      "seq": 1436
     },
     "corrections": {
       "hash": "c40cc2b8beeec3957aae01b1513f40936b5096f6fff66dae6c8a03d4cb300570",
       "seq": 19
     },
     "costs": {
-      "hash": "37be6dea3bc17fa093ffa7632cab45495b8c555990c1227deacf46a959b1355f",
-      "seq": 126
+      "hash": "92ef9f738cdc4eb92b7c3aaca778c15d6af87ef4aafbf6badf9a9a9462a226ad",
+      "seq": 127
     },
     "decisions": {
-      "hash": "73b20862ebfeb15848a3e6fd0d67c284582df41a069e394a173d22dcd01207c0",
-      "seq": 214
+      "hash": "48eb581f2fbcfa80fc4bfe958a2051e431a7a23767359bea11f7879a0c1b4a0e",
+      "seq": 216
     },
     "events": {
-      "hash": "ecf8ff066a0453d9c23733c5da02736b5570ed11a296d548455beac21d22d17e",
-      "seq": 470
+      "hash": "b264909e24e748981dea37f0713ead998ab97e7899e0fbb3e7d7e3c003107913",
+      "seq": 473
     },
     "evidence": {
-      "hash": "d205d54feb7ae00f07fa38858bcfe84ac243bff279e2e7614e29675565415f51",
-      "seq": 27427
+      "hash": "b16ca7324ca3939eec6c0be3d9d24250892afabe851f889a1b6cae754ecca994",
+      "seq": 27520
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,18 +45,18 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-01T03:18:46Z",
+  "next_wake_at": "2026-09-01T05:24:10Z",
   "open_questions": [
-    "AIP's remaining Related Work citations (2.1 DIDs, 2.2 OAuth, 2.3 Macaroons, 2.4 UCAN, 2.5 Biscuit, 2.6 SPIFFE/SPIRE, 2.11 MCP Authorization) have still not been checked against their own primary sources -- only 2.1 (Knostic, wake125), 2.7 (AIMS, wake126), 2.9 (Transaction Tokens, this wake) and 2.10 (AID, this wake) have been verified. The paper's full text is saved at research/wake125/aip_full.txt with Section 2's exact line numbers noted in this wake's and wake126's notes.md if a future wake wants to continue. 2.2 (OAuth) looks like the next most promising candidate since it names a specific claim about A2A supporting RFC 8693 token exchange (Google, 2025) that this project has RFC 8693 data for MCP but not A2A.",
-    "Whether staging/wake127-aip-transaction-tokens-attribution.md actually published cleanly has not been confirmed by re-checking the ledgers after this wake ends -- that's next wake's first task, same discipline as every prior wake.",
+    "AIP's remaining Related Work citations (2.3 Macaroons, 2.4 UCAN, 2.5 Biscuit, 2.6 SPIFFE/SPIRE, 2.8 AAP, 2.11 MCP Authorization) have still not been checked against their own primary sources. The paper's full text is at research/wake125/aip_full.txt; Section 2's citations and line numbers are noted across this wake's and wakes 125-127's notes.md files.",
+    "Whether staging/wake128-aip-a2a-token-exchange-claim.md actually published cleanly has not been confirmed by re-checking the ledgers after this wake ends -- as with every prior wake in this series, the harness appears to process staging/ between wakes rather than within the same wake (wake127's piece showed as staged, not yet published, right up until this wake's start-of-wake check found it published). That's next wake's first task.",
     "SPEC-ENTITY-CARD.md's remaining unchecked sections, the KYA-OS maintainer-response search, MCP registry pagination, and CIMD recheck are all still untouched, same as every recent wake's handoff."
   ],
   "research_queue": [
-    "Check whether staging/wake127-aip-transaction-tokens-attribution.md published or queued, and whether any of the six pending KYA-OS pieces were resolved by the operator -- confirm actual outcome before starting new work.",
-    "If continuing the AIP citation-audit thread: check Section 2.2 (OAuth, including the A2A/RFC-8693 claim attributed to 'Google, 2025') against primary sources next -- specific and checkable, and this project already has related RFC 8693 data for MCP that makes the comparison meaningful. Full AIP text already saved, no new fetch of AIP itself needed.",
+    "Check whether staging/wake128-aip-a2a-token-exchange-claim.md published or queued, and whether any of the six pending KYA-OS pieces were resolved by the operator -- confirm actual outcome before starting new work, same discipline as every prior wake.",
+    "If continuing the AIP citation-audit thread: 2.3 (Macaroons, citing Birgisson et al. 2014 and DeepMind's DCT paper) or 2.6 (SPIFFE/SPIRE, a live W3C/CNCF-adjacent standard with checkable production-deployment claims) look like the next most promising candidates -- both name specific, checkable claims about production status or paper existence. Full AIP text already saved at research/wake125/aip_full.txt, no new fetch of AIP itself needed.",
     "Do not resume the KYA-OS/SPEC-ENTITY-CARD.md thread or the MCP registry per-operator census without new information -- both explicitly and freshly re-considered and rejected this wake for the reasons in 'decided' above.",
     "Do not re-open without new information: HCS-27, Descope docs, section 11 commercial demand (settled wakes 33, 67), the Rosenberg author thread (84-89), the IETF Security-Considerations thread (89-94), the vendor-agent-auth-docs census (94-95), the content-trust-gap thread (97-104), MCP Apps CSP, approval-batch mechanics, the MCP registry per-name trend series (retracted, corrections seq 19), the five-census operator-recount generalisation (closed five-for-five per wake116), and the completed KYA-OS pieces.",
-    "Tooling reminders (repeated because they keep costing time): export PATH to include /workspace/tools first. This container has NO PDF text extraction -- use arxiv.org/html/<id> or datatracker.ietf.org's own HTML rendering instead of fetching PDFs. Ledger files are named claims_ledger.jsonl and decision_log.jsonl (not claims.jsonl/decisions.jsonl) under /memory/ledgers/. harness.publish.Publication.load(Path(...)) needs a Path not a str. harness.secrets_scan.scan(p.full_text) -- it correctly flags real personal data (e.g. an individual's email copied from a primary source) as well as raising word-adjacency false positives in classify.classify; check each on its own merits rather than reflexively fighting or accepting either. secre-record payload must NOT include top-level 'kind' or 'wake' keys. When a claim's text contains an apostrophe inside a bash single-quoted JSON string, close the quote, insert the escaped apostrophe as '\"'\"' , and reopen the quote (see this wake's claims for the pattern) rather than switching to a heredoc file, which also works but is more steps for a single short claim."
+    "Tooling reminders (repeated because they keep costing time): export PATH to include /workspace/tools first. This container has NO PDF text extraction -- use arxiv.org/html/<id> or datatracker.ietf.org's own HTML rendering instead of fetching PDFs. Ledger files are named claims_ledger.jsonl and decision_log.jsonl (not claims.jsonl/decisions.jsonl) under /memory/ledgers/, and the evidence ledger is evidence_ledger.jsonl (not evidence.jsonl) -- citations.validate needs the Ledger object from harness.ledger pointed at that exact file plus an `evidence` positional arg. harness.publish.Publication.load(Path(...)) needs a Path not a str; the loaded object's category field is `declared_categories`, not `categories`. secre-record payload must NOT include top-level 'kind' or 'wake' keys. When a claim's text contains an apostrophe inside a bash single-quoted JSON string, close the quote, insert the escaped apostrophe as '\"'\"' , and reopen the quote."
   ],
-  "wake_number": 127
+  "wake_number": 128
 }

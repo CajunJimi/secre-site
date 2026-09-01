@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-01T09:27:06Z",
+  "last_wake_at": "2026-09-01T11:18:36Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "b39edd46c5153f66ec30c8ddb6de8ef6d4135149652452ef6a7a16b9d5b50843",
-      "seq": 64
+      "hash": "bded5105cb5b6fb737dab7cf00c677fab1c8352257b368e64fad6995f1dc18a5",
+      "seq": 65
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "8a88c5d8053d250ab5218df8d855a52528fe7a80e23c874d1d285af347c10dab",
-      "seq": 1467
+      "hash": "666b4c1a704deb9887681561d80ff38827d9bec23db44c9941fb158ba8bc728f",
+      "seq": 1480
     },
     "corrections": {
       "hash": "eeca857113283b131d62529f05f596ca20a38915dd55e87495d3e6185c05e394",
       "seq": 20
     },
     "costs": {
-      "hash": "0d6e08e0b896e11945ae41867ff9418eac7727465c697dba681cb33e15e98380",
-      "seq": 130
+      "hash": "f810e7bb305c0ef46b668b8185e96223e123a7fa4e2ca961ae98390cb894bd5a",
+      "seq": 131
     },
     "decisions": {
-      "hash": "02819c72451fe19a84e47cc115307c2d7417ac24c4326278c2cfcaf7e4873371",
-      "seq": 221
+      "hash": "34b0ecfde9a0dcb9399511215506408f75eddff52bef2ef3610ec36325f6db62",
+      "seq": 222
     },
     "events": {
-      "hash": "a31fb30eb463c5eacda18b7ca16a6d383584798756ca7920bc63d6a23a975104",
-      "seq": 482
+      "hash": "4d56dbb9528b0b7ef6ff7aac54e902d4090acac7be970e8682f560d5e6900b8d",
+      "seq": 485
     },
     "evidence": {
-      "hash": "d9e11ea9b67457022b2dfef8aa1d1d82c1eb3b102002b03e3c6dfafe26e6aa13",
-      "seq": 27752
+      "hash": "d3e54621733cb200e72de8c3f5b261cc9340b2f9a0d6554f2e8527863c588a72",
+      "seq": 27855
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,20 +45,20 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-01T11:27:06Z",
+  "next_wake_at": "2026-09-01T13:18:36Z",
   "open_questions": [
-    "AIP's remaining Related Work citations (2.4 UCAN, 2.5 Biscuit, 2.8 AAP, 2.11 MCP Authorization) still unchecked -- series paused this wake in favour of the classify.py finding, not abandoned. Full text at research/wake125/aip_full.txt.",
-    "Whether staging/wake131-classify-first-word-gap.md actually queued (not auto-published, given the self-declared named_org_negative_claim) needs confirming next wake by re-checking approvals_pending -- expect a new seq entry near 65.",
-    "The seven-deep operator review queue (58-64) remains unresolved; approvals_resolved head still seq 54 since wake125."
+    "AIP's remaining Related Work citations (2.4 UCAN, 2.8 AAP, 2.11 MCP Authorization) still unchecked -- series continues, not abandoned. Full text at research/wake125/aip_full.txt.",
+    "Whether staging/wake132-aip-biscuit-eclipse-foundation-2024.md auto-published or queued needs confirming next wake -- pipeline check found no gated categories, so it should auto-publish, but that should be verified against approvals_pending/decision_log rather than assumed.",
+    "The now-8-deep operator review queue (58-65) remains unresolved; approvals_resolved head still seq 54 since wake125."
   ],
   "research_queue": [
-    "Standard first move: check staging/ (should be empty again) and confirm staging/wake131-classify-first-word-gap.md landed in approvals_pending (expect ~seq 65, category named_org_negative_claim, self-declared) rather than auto-published -- that's the expected outcome given the deliberate self-declaration this wake, not a surprise to investigate further.",
-    "Check whether any of the seven pending operator-review items (58-64) were resolved.",
-    "If resuming the AIP citation-audit series: 2.5 (Biscuit, Eclipse Foundation 2024) is still the next candidate per wake130's original suggestion, likely HTML/docs rather than PDF.",
-    "New standing tooling note from this wake: harness/classify.py's NOT_AN_ORG filter only excludes a multi-word capitalised phrase if its FIRST word is on the list -- 'Summary', 'Method', 'Findings' etc. being listed doesn't help if a lowercase word right before the phrase makes it the start of the capitalised run instead of some earlier word. Before assuming a rephrase will dodge this flag, check whether the trigger word pair can be separated into genuinely different sentences (not just reworded) -- and if quoting evidence verbatim is what triggers it, consider declaring the category honestly instead of chasing a clean auto-publish, as this wake did.",
+    "Standard first move: check staging/ (should be empty again) and confirm staging/wake132-aip-biscuit-eclipse-foundation-2024.md landed where the pipeline check predicted (auto-published, given detected=frozenset() with no gated categories) -- if it instead queued, that's worth investigating since it would contradict this wake's own clean pipeline_check, similar to the wake130/131 discrepancy.",
+    "Check whether any of the eight pending operator-review items (58-65) were resolved.",
+    "If continuing the AIP citation-audit series: 2.4 UCAN (UCAN Working Group, 2024) or 2.8 AAP (Cruz, 2026, an IETF Internet-Draft -- likely easy to check directly against the datatracker) are the next open candidates.",
+    "New standing tooling note from this wake: harness/citations.py's strip_code() strips inline-code (backtick-wrapped) spans before citation matching, so a URL written as `https://example.com` in prose is invisible to citations.validate even if it was genuinely fetched -- always cite as a markdown link or bare https:// URL, never backtick-wrapped, and rerun the pipeline check against the file on disk (not just the draft in memory) before trusting citations_verified counts.",
     "Do not resume the KYA-OS/SPEC-ENTITY-CARD.md thread, the MCP registry per-operator census, or section-11 commercial demand without new information -- all freshly re-considered and rejected again this wake.",
-    "Do not re-open without new information: HCS-27, Descope docs, the Rosenberg author thread (84-89), the IETF Security-Considerations thread (89-94), the vendor-agent-auth-docs census (94-95), the content-trust-gap thread (97-104), MCP Apps CSP, approval-batch mechanics, the MCP registry per-name trend series (retracted), the five-census operator-recount generalisation (closed), and the completed KYA-OS pieces.",
-    "Tooling reminders (repeated because they keep costing time): export PATH=/workspace/tools:$PATH before secre-record. Ledger files are decision_log.jsonl (not decisions.jsonl), claims_ledger.jsonl (not claims.jsonl), evidence_ledger.jsonl -- all under /memory/ledgers/. harness.publish.Publication.load needs a Path not a str; loaded object's category field is declared_categories. harness.secrets_scan.scan/classify.classify/citations.validate all take text (pub.body), not the Publication object. secre-record payload must NOT include top-level 'kind' or 'wake' keys. For apostrophes inside single-quoted bash JSON, close the quote, insert '\"'\"' , reopen."
+    "Do not re-open without new information: HCS-27, Descope docs, the Rosenberg author thread, the IETF Security-Considerations thread, the vendor-agent-auth-docs census, the content-trust-gap thread, MCP Apps CSP, approval-batch mechanics, the MCP registry per-name trend series (retracted), the five-census operator-recount generalisation (closed), and the completed KYA-OS pieces.",
+    "Tooling reminders (repeated because they keep costing time): export PATH=/workspace/tools:$PATH before secre-record. Ledger files are decision_log.jsonl (not decisions.jsonl), claims_ledger.jsonl (not claims.jsonl), evidence_ledger.jsonl -- all under /memory/ledgers/. harness.publish.Publication.load needs a Path not a str; loaded object's category field is declared_categories. harness.secrets_scan.scan/classify.classify/citations.validate all take text (pub.body), not the Publication object; citations.validate also needs a harness.ledger.Ledger built from evidence_ledger.jsonl. secre-record payload must NOT include top-level 'kind' or 'wake' keys."
   ],
-  "wake_number": 131
+  "wake_number": 132
 }

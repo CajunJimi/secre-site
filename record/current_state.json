@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-01T07:29:26Z",
+  "last_wake_at": "2026-09-01T09:27:06Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "37f43a302902fb43ea0e2019597af1e81ff50891df0455c38f5812bcd09e7cab",
-      "seq": 63
+      "hash": "b39edd46c5153f66ec30c8ddb6de8ef6d4135149652452ef6a7a16b9d5b50843",
+      "seq": 64
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "5d28f6c96fb0894e5f8224a821cf71f8345aba6e2ed79acd77ebed6947e91452",
-      "seq": 1454
+      "hash": "8a88c5d8053d250ab5218df8d855a52528fe7a80e23c874d1d285af347c10dab",
+      "seq": 1467
     },
     "corrections": {
-      "hash": "c40cc2b8beeec3957aae01b1513f40936b5096f6fff66dae6c8a03d4cb300570",
-      "seq": 19
+      "hash": "eeca857113283b131d62529f05f596ca20a38915dd55e87495d3e6185c05e394",
+      "seq": 20
     },
     "costs": {
-      "hash": "f6f0f62cc59ed8866bc283f17040fdb02a366b843179e5db93efc8af305963ed",
-      "seq": 129
+      "hash": "0d6e08e0b896e11945ae41867ff9418eac7727465c697dba681cb33e15e98380",
+      "seq": 130
     },
     "decisions": {
-      "hash": "1ff37b0ebc03c88160404b8509b19fb1f860a077226315dcd9965f4ef142e980",
-      "seq": 220
+      "hash": "02819c72451fe19a84e47cc115307c2d7417ac24c4326278c2cfcaf7e4873371",
+      "seq": 221
     },
     "events": {
-      "hash": "cd2d0db88f320918ed48376112e860dd711215214166b00a7f808842ace0c144",
-      "seq": 479
+      "hash": "a31fb30eb463c5eacda18b7ca16a6d383584798756ca7920bc63d6a23a975104",
+      "seq": 482
     },
     "evidence": {
-      "hash": "9df1f4abf2bc0bbaecfafa42928ab7149ade810634d9b8d9bda96b648cec22f2",
-      "seq": 27680
+      "hash": "d9e11ea9b67457022b2dfef8aa1d1d82c1eb3b102002b03e3c6dfafe26e6aa13",
+      "seq": 27752
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,20 +45,20 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-01T09:29:26Z",
+  "next_wake_at": "2026-09-01T11:27:06Z",
   "open_questions": [
-    "AIP's remaining Related Work citations (2.4 UCAN, 2.5 Biscuit, 2.8 AAP, 2.11 MCP Authorization) still unchecked against their own primary sources. Full text at research/wake125/aip_full.txt; 2.3's location and this wake's Section-V-H reference are noted in research/wake130/notes.md.",
-    "Whether staging/wake130-aip-macaroons-gap-summary-inconsistency.md actually published cleanly hasn't been confirmed by re-checking the ledgers after this wake ends -- as with every prior wake in this series, the harness appears to process staging/ between wakes. That's next wake's first task.",
-    "SPEC-ENTITY-CARD.md's remaining unchecked sections, the KYA-OS maintainer-response search, MCP registry pagination, and CIMD recheck are all still untouched, same as every recent wake's handoff."
+    "AIP's remaining Related Work citations (2.4 UCAN, 2.5 Biscuit, 2.8 AAP, 2.11 MCP Authorization) still unchecked -- series paused this wake in favour of the classify.py finding, not abandoned. Full text at research/wake125/aip_full.txt.",
+    "Whether staging/wake131-classify-first-word-gap.md actually queued (not auto-published, given the self-declared named_org_negative_claim) needs confirming next wake by re-checking approvals_pending -- expect a new seq entry near 65.",
+    "The seven-deep operator review queue (58-64) remains unresolved; approvals_resolved head still seq 54 since wake125."
   ],
   "research_queue": [
-    "Check whether staging/wake130-aip-macaroons-gap-summary-inconsistency.md published or queued, and whether any of the six pending KYA-OS pieces were resolved by the operator -- confirm actual outcome before starting new work, same discipline as every prior wake.",
-    "If continuing the AIP citation-audit thread: 2.5 (Biscuit, citing Eclipse Foundation 2024, with checkable claims about language support in Rust/Go/Java/Python libraries) is the next most promising candidate -- likely has an HTML/docs source rather than a PDF, which would be simpler than this wake's manual PDF extraction. 2.4 (UCAN Working Group, 2024) and 2.11 (MCP Authorization) are also unchecked. Full AIP text already saved at research/wake125/aip_full.txt, no new fetch of AIP itself needed.",
-    "If a future wake hits another PDF-only primary source, reuse this wake's extraction method (zlib-decompress content streams, parse Tj/TJ string operators with octal-escape handling) rather than skipping the source -- documented in research/wake130/notes.md with the exact code approach.",
-    "When writing staged pieces, remember: (a) don't wrap a cited https:// URL directly inside parentheses with no space -- citations.validate's regex won't detect it; use markdown link syntax instead. (b) watch for the classifier flagging a paper's own section titles or two-capitalised-word phrases as an org name when they sit near a negative term in the same sentence -- a false positive worth a rephrase, not necessarily a queue.",
-    "Do not resume the KYA-OS/SPEC-ENTITY-CARD.md thread or the MCP registry per-operator census without new information -- both explicitly and freshly re-considered and rejected this wake.",
-    "Do not re-open without new information: HCS-27, Descope docs, section 11 commercial demand (settled wakes 33, 67), the Rosenberg author thread (84-89), the IETF Security-Considerations thread (89-94), the vendor-agent-auth-docs census (94-95), the content-trust-gap thread (97-104), MCP Apps CSP, approval-batch mechanics, the MCP registry per-name trend series (retracted, corrections seq 19), the five-census operator-recount generalisation (closed five-for-five per wake116), and the completed KYA-OS pieces.",
-    "Tooling reminders (repeated because they keep costing time): export PATH to include /workspace/tools first. This container has NO PDF text extraction via any library -- for HTML sources use arxiv.org/html/<id> or datatracker.ietf.org's own HTML rendering; for PDF-only sources, use this wake's manual zlib+Tj/TJ extraction technique rather than skipping. Ledger files are named claims_ledger.jsonl and decision_log.jsonl (not claims.jsonl/decisions.jsonl) under /memory/ledgers/, and the evidence ledger is evidence_ledger.jsonl. harness.secrets_scan.scan takes pub.body (str); harness.classify.classify takes (text, declared=pub.declared_categories); harness.citations.validate takes (text, ledger.Ledger(evidence_ledger_path), exempt_hosts=['secre-site.pages.dev']) -- all three take text, not the Publication object. harness.publish.Publication.load(Path(...)) needs a Path not a str; the loaded object's category field is declared_categories, not categories. secre-record payload must NOT include top-level 'kind' or 'wake' keys. When a claim's text contains an apostrophe inside a bash single-quoted JSON string, close the quote, insert the escaped apostrophe as '\"'\"' , and reopen the quote."
+    "Standard first move: check staging/ (should be empty again) and confirm staging/wake131-classify-first-word-gap.md landed in approvals_pending (expect ~seq 65, category named_org_negative_claim, self-declared) rather than auto-published -- that's the expected outcome given the deliberate self-declaration this wake, not a surprise to investigate further.",
+    "Check whether any of the seven pending operator-review items (58-64) were resolved.",
+    "If resuming the AIP citation-audit series: 2.5 (Biscuit, Eclipse Foundation 2024) is still the next candidate per wake130's original suggestion, likely HTML/docs rather than PDF.",
+    "New standing tooling note from this wake: harness/classify.py's NOT_AN_ORG filter only excludes a multi-word capitalised phrase if its FIRST word is on the list -- 'Summary', 'Method', 'Findings' etc. being listed doesn't help if a lowercase word right before the phrase makes it the start of the capitalised run instead of some earlier word. Before assuming a rephrase will dodge this flag, check whether the trigger word pair can be separated into genuinely different sentences (not just reworded) -- and if quoting evidence verbatim is what triggers it, consider declaring the category honestly instead of chasing a clean auto-publish, as this wake did.",
+    "Do not resume the KYA-OS/SPEC-ENTITY-CARD.md thread, the MCP registry per-operator census, or section-11 commercial demand without new information -- all freshly re-considered and rejected again this wake.",
+    "Do not re-open without new information: HCS-27, Descope docs, the Rosenberg author thread (84-89), the IETF Security-Considerations thread (89-94), the vendor-agent-auth-docs census (94-95), the content-trust-gap thread (97-104), MCP Apps CSP, approval-batch mechanics, the MCP registry per-name trend series (retracted), the five-census operator-recount generalisation (closed), and the completed KYA-OS pieces.",
+    "Tooling reminders (repeated because they keep costing time): export PATH=/workspace/tools:$PATH before secre-record. Ledger files are decision_log.jsonl (not decisions.jsonl), claims_ledger.jsonl (not claims.jsonl), evidence_ledger.jsonl -- all under /memory/ledgers/. harness.publish.Publication.load needs a Path not a str; loaded object's category field is declared_categories. harness.secrets_scan.scan/classify.classify/citations.validate all take text (pub.body), not the Publication object. secre-record payload must NOT include top-level 'kind' or 'wake' keys. For apostrophes inside single-quoted bash JSON, close the quote, insert '\"'\"' , reopen."
   ],
-  "wake_number": 130
+  "wake_number": 131
 }

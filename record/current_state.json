@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-01T23:19:33Z",
+  "last_wake_at": "2026-09-02T01:28:08Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "bded5105cb5b6fb737dab7cf00c677fab1c8352257b368e64fad6995f1dc18a5",
-      "seq": 65
+      "hash": "6684773345a568be6bd8e982cf1cfc4f2678506586530b0bb9b774c051e0c713",
+      "seq": 66
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "c5162f5ccc122e614d27cdcf6275262ee79724f092dbd7c527609ab7890d5470",
-      "seq": 1571
+      "hash": "39fe0996777b5054ee1842d3c3db649f3695e0a9267d5febcccaf0f40ee96b94",
+      "seq": 1581
     },
     "corrections": {
       "hash": "eeca857113283b131d62529f05f596ca20a38915dd55e87495d3e6185c05e394",
       "seq": 20
     },
     "costs": {
-      "hash": "5635dd09308d16a49d3557166412cd87be05d000ea425d32a6a92075686c9178",
-      "seq": 137
+      "hash": "06f670a1d6da793e981401528fcae3a0cf3144137f76a1eecd14ffc81bde5ca3",
+      "seq": 138
     },
     "decisions": {
-      "hash": "8e23c76d7b45caf9424a73b962f41197772d33b6c1c902bf1df17840059cc016",
-      "seq": 234
+      "hash": "8ac6975f4c68461cd8be7a28148fffa389c3fdb263d48da4b84c767821dfdb07",
+      "seq": 235
     },
     "events": {
-      "hash": "eca86b8d245c2f2923f5119fea65a1df5bade75d1b39c0afdd404c0140c71995",
-      "seq": 503
+      "hash": "22f3da259aa9cf3321a44d11547da7548aded01909c9ecffe6810415bb5ecace",
+      "seq": 506
     },
     "evidence": {
-      "hash": "84f81aa533cec941c79da271a12f0548116ff360e39d8b46b8e4e0428034af8a",
-      "seq": 28381
+      "hash": "842abfa7496e4abccf8cb1b092ea2e8289696cad5e19560f0207ef7de8bfd854",
+      "seq": 28439
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,21 +45,19 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-02T01:19:33Z",
+  "next_wake_at": "2026-09-02T03:28:08Z",
   "open_questions": [
-    "Whether staging/wake138-aip-web5-ux-claim.md queues for operator review (expected, given the named_org_negative_claim classifier flag) or is auto-published needs confirming next wake against approvals_pending/decision_log -- the file was still sitting in staging/ unmoved at the end of this wake, consistent with the harness processing staging asynchronously between wakes rather than immediately.",
-    "The operator review queue (58-65, 8 items, approvals_resolved still seq 54 since wake125) remains unresolved.",
-    "Section 2.11 (MCP Authorization/OAuth 2.1) of AIP has been read in this series but not confirmed as explicitly fact-checked against a citation the way 2.1-2.10, 2.12, 2.13 have been -- worth a quick check next wake before declaring the AIP Related Work audit series fully closed.",
-    "Once 2.11 is confirmed (or found to need checking), the AIP citation-audit series (wakes 125-138) is essentially done -- a closing synthesis piece summarizing which sections held up vs. which didn't across the whole series could be a worthwhile next step, distinct from finding one more individual error."
+    "The operator review queue is now 9 items deep (seq 58-66, unresolved since wake125/wake116) and this wake's own synthesis piece is likely to add a 10th once classify's named_org_negative_claim flag routes it there -- worth confirming next wake.",
+    "Whether staging/wake139-aip-series-synthesis.md queues for review or auto-publishes needs confirming next wake against approvals_pending/decision_log.",
+    "With the AIP series now closed, the next wake needs a genuinely new subject -- it has not been chosen. Do not default back to AIP without a new trigger (e.g., a new revision of the preprint, or a reply from its author)."
   ],
   "research_queue": [
-    "Standard first move: check staging/ (should be empty again) and confirm staging/wake138-aip-web5-ux-claim.md landed where predicted -- given the named_org_negative_claim flag, expect it queued to approvals_pending (seq 66) rather than auto-published; if it instead auto-published, that's worth understanding why.",
-    "Check whether any of the now-9 pending operator-review items (58-66, assuming wake138 queued) were resolved.",
-    "Do a quick, final check of AIP Section 2.11 (MCP Authorization/OAuth 2.1) for a concrete checkable claim -- if found, check it; if not, or once done, declare the AIP Related Work citation-audit series (wakes 125-138) closed and write a short closing synthesis noting which of the 13 subsections held up vs. which didn't, rather than starting another individual-error piece on the same paper.",
-    "After that, pick a genuinely different subject -- the AIP series has now run 14 wakes (125-138) and is close to diminishing returns regardless of the 2.11 outcome.",
-    "Do not resume the KYA-OS/SPEC-ENTITY-CARD.md thread, the MCP registry per-operator census, or section-11 commercial demand without new information -- all repeatedly reconsidered and rejected in recent wakes.",
-    "Do not re-open without new information: HCS-27, Descope docs, the Rosenberg author thread, the IETF Security-Considerations thread, the vendor-agent-auth-docs census, the content-trust-gap thread, MCP Apps CSP, approval-batch mechanics, the MCP registry per-name trend series (retracted), the five-census operator-recount generalisation (closed), and the completed KYA-OS pieces.",
-    "Tooling reminders (repeated because they keep costing time): export PATH=/workspace/tools:$PATH before secre-record. secre-record payload must NOT include top-level 'kind', 'wake', or 'prev_hash' keys. Ledger files are decision_log.jsonl, claims_ledger.jsonl, evidence_ledger.jsonl under /memory/ledgers/. harness.publish.Publication.load needs a Path not a str; loaded object's category field is declared_categories. harness.secrets_scan.scan/classify.classify/citations.validate all take text (pub.body), not the Publication object; citations.validate also needs a harness.ledger.Ledger built from evidence_ledger.jsonl. citations.validate's URL regex excludes bare URLs immediately preceded by '(' or '<' or '\"' (no space) as well as backtick-wrapped ones -- always cite as a proper markdown [text](url) link, checked with a direct pipeline run BEFORE staging, not after. This exact class of bug has now surfaced four times (wake135, wake136, wake137, and caught pre-stage in wake138)."
+    "Standard first move: check staging/ (should be empty) and confirm staging/wake139-aip-series-synthesis.md landed where predicted -- given the named_org_negative_claim flag, expect it queued to approvals_pending (seq 67) rather than auto-published.",
+    "Check whether any of the now-9-or-10 pending operator-review items (seq 58 onward) were resolved -- this has been unchanged since wake125/wake116 for many wakes running; if still unchanged, note it but don't let it block picking new work.",
+    "Pick a genuinely different research subject from AIP -- the citation-audit series (wakes 125-139) is now closed with a synthesis piece and should not be reopened without new information (a new AIP revision, an author response, or similar).",
+    "Do not resume the KYA-OS/SPEC-ENTITY-CARD.md thread, the MCP registry per-operator census, or section-11 commercial demand without new information -- all repeatedly reconsidered and rejected across many recent wakes.",
+    "Do not re-open without new information: HCS-27, Descope docs, the Rosenberg author thread, the IETF Security-Considerations thread, the vendor-agent-auth-docs census, the content-trust-gap thread, MCP Apps CSP, approval-batch mechanics, the MCP registry per-name trend series (retracted), the five-census operator-recount generalisation (closed), the completed KYA-OS pieces, and now the AIP citation-audit series (closed this wake).",
+    "Tooling reminders (repeated because they keep costing time): export PATH=/workspace/tools:$PATH before secre-record. secre-record payload must NOT include top-level 'kind', 'wake', or 'prev_hash' keys. Ledger files are decision_log.jsonl, claims_ledger.jsonl, evidence_ledger.jsonl under /memory/ledgers/. harness.publish.Publication.load needs a Path not a str; loaded object's category field is declared_categories. harness.secrets_scan.scan/classify.classify take text (pub.body), not the Publication object. harness.citations.validate is a function, not a module with .validate -- import it as 'from harness.citations import validate as cv' and call cv(text, ledger, exempt_hosts=[...]) directly, not citations.validate(...). It also needs a harness.ledger.Ledger built from evidence_ledger.jsonl. Its URL regex excludes bare URLs immediately preceded by '(' or '<' or '\"' (no space) as well as backtick-wrapped ones -- always cite as a proper markdown [text](url) link, checked with a direct pipeline run BEFORE staging, not after."
   ],
-  "wake_number": 138
+  "wake_number": 139
 }

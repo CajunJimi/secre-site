@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-02T03:27:49Z",
+  "last_wake_at": "2026-09-02T05:23:55Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "e99e415442b4174878bc94b8479bad1b91b5fa33fd32c9b0844a5caf007abf47",
-      "seq": 67
+      "hash": "321590b16cbb12790657ecc46a3feb2db27f50fa66df03774d3e60c44f4c5b1f",
+      "seq": 68
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "d30920c4994a60ae0e0687229b4722e9016075f581864b17d257befb13c9539f",
-      "seq": 1590
+      "hash": "3bf7a79e3a5f03a2746a58829c8e3967ae2a8576b8a0309a61c9779bf0954f25",
+      "seq": 1599
     },
     "corrections": {
       "hash": "eeca857113283b131d62529f05f596ca20a38915dd55e87495d3e6185c05e394",
       "seq": 20
     },
     "costs": {
-      "hash": "35457b84af9bad97ff3855d62e92e5dbdb8dbdb2c644aed44a21b70d0eba93dd",
-      "seq": 139
+      "hash": "b841ffa0ddf3299a4c2dbc945fc450b80d1a5b72a5d70d205a4cb92dae91b067",
+      "seq": 140
     },
     "decisions": {
-      "hash": "8cb752ec4aa2bc5bd3e13c1cc3d5b4749446ca144588ec3cf3835e7091688b16",
-      "seq": 236
+      "hash": "4454334028b5cef77211dbdd9ad60f7e5ede2b4e1ddcaec31a549e80099bbd56",
+      "seq": 237
     },
     "events": {
-      "hash": "f23240247640217597a4c0ece8a6ae5b2e610c1eab9056abcbdf7f9ca5f1914a",
-      "seq": 509
+      "hash": "1b922816c39252c68e7caa806b1f22a2cce645caa8e9ffc47bc8f74e592cf299",
+      "seq": 512
     },
     "evidence": {
-      "hash": "ccbfc7ccc6b4443735a053a7919d0933d34f3088709368ae1ddf187d651f26f3",
-      "seq": 28528
+      "hash": "3808a870eb50614f3c22a9b779204f6327df08b8776a50c3bd4871845f9bad05",
+      "seq": 28577
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,18 +45,19 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-02T05:27:49Z",
+  "next_wake_at": "2026-09-02T07:23:55Z",
   "open_questions": [
-    "The operator review queue is now 10 items deep (seq 58-67), unresolved since wake125/wake116 for many wakes running -- this wake's own new piece will likely add an 11th once classify's named_org_negative_claim flag routes it there. Worth confirming next wake whether staging/wake140-entra-agent-id-blocked-permissions-gap.md queued as expected.",
-    "Compass Security's privilege-equivalence classification for the six permissions (that they carry genuinely equivalent impact to their blocked siblings) was not independently re-derived from Microsoft's Graph permissions reference this wake -- if a future wake wants to strengthen this finding, reading the individual permission definitions in Microsoft's Graph permissions reference and confirming what each one actually grants would let a future piece make that claim directly rather than by attribution.",
-    "Whether Microsoft has any changelog, GitHub PR, or advisory tracking the Compass-reported gap (the Compass post links a PR for an unrelated documentation gap -- the missing Security Reader role -- but not for the blocked-permissions gap) is unknown; a search for one wasn't done this wake."
+    "The operator review queue is now 11 items deep (seq 58-68), unresolved since wake125/wake116 for many wakes running -- this wake's own new piece will likely add a 12th once classify's named_org_negative_claim flag routes it there.",
+    "Whether Application.ReadUpdate.All actually permits addPassword/addKey (and thus the app-impersonation escalation path) is unresolved -- would require fetching Microsoft's Graph API reference pages for those two specific operations and reading their stated permission requirements, not done this wake.",
+    "Whether Microsoft has updated its blocked-permissions table since the 2026-09-02 fetch (either wake's) is unchecked."
   ],
   "research_queue": [
-    "Standard first move: check staging/ (should be empty) and confirm staging/wake140-entra-agent-id-blocked-permissions-gap.md landed in approvals_pending as expected (likely seq 68), given the named_org_negative_claim classify flag.",
-    "Check whether any of the now-10-or-11 pending operator-review items (seq 58 onward, unresolved since wake125/wake116) were resolved -- if still unchanged after this many wakes, keep noting it but don't let it block picking new work.",
-    "Consider whether to extend the Entra Agent ID thread: e.g., checking Microsoft's Graph permissions reference directly to independently verify what the six flagged permissions actually grant (rather than relying on Compass's classification), or checking whether Microsoft has updated the blocked-permissions table since this wake's fetch (2026-09-02) -- only worth doing if there's a concrete new angle, not as a default reopen.",
+    "Standard first move: check staging/ (should be empty) and confirm staging/wake141-entra-agent-id-permission-equivalence-check.md landed in approvals_pending as expected (likely seq 69), given the named_org_negative_claim classify flag.",
+    "Check whether any of the now-11-or-12 pending operator-review items (seq 58 onward, unresolved since wake125/wake116) were resolved -- if still unchanged after this many wakes, keep noting it but don't let it block picking new work.",
+    "If continuing the Entra Agent ID thread has a concrete new angle: fetch Microsoft's Graph API reference pages for the addPassword and addKey application operations and check their stated required-permission lists, to resolve the one open question this wake left (whether Application.ReadUpdate.All actually enables the app-impersonation path). Only worth doing if genuinely new, not as a default reopen.",
+    "Otherwise pick a genuinely new subject via WebSearch, as wake140 did, rather than defaulting back to AIP or any of the long-closed threads.",
     "Do not resume without new information: AIP citation-audit series (closed wake139), KYA-OS/SPEC-ENTITY-CARD thread, MCP registry per-operator census, section-11 commercial demand, HCS-27, Descope docs, the Rosenberg author thread, the IETF Security-Considerations thread, the vendor-agent-auth-docs census, the content-trust-gap thread, MCP Apps CSP, approval-batch mechanics, the MCP registry per-name trend series (retracted), the five-census operator-recount generalisation (closed).",
-    "Tooling reminders: export PATH=/workspace/tools:$PATH before secre-record. secre-record payload must NOT include top-level 'kind', 'wake', or 'prev_hash' keys. Ledger files are decision_log.jsonl, claims_ledger.jsonl, evidence_ledger.jsonl under /memory/ledgers/ -- evidence_ledger is auto-populated by secre-fetch itself (each fetch appends a proxy_tunnel record), no manual evidence recording needed. harness.publish.Publication.load needs a Path not a str; loaded object's category field is declared_categories. harness.secrets_scan.scan/classify.classify take text (pub.body), not the Publication object. harness.citations.validate is a function -- import as 'from harness.citations import validate as cv' and call cv(text, ledger, exempt_hosts=[...]). Its Ledger is constructed as harness.ledger.Ledger(path) directly (a plain constructor) -- there is no Ledger.load classmethod, that call fails with AttributeError. Always run this pipeline check before staging, not after."
+    "Tooling reminders: export PATH=/workspace/tools:$PATH before secre-record. secre-record payload must NOT include top-level 'kind', 'wake', or 'prev_hash' keys. Ledger files are decision_log.jsonl, claims_ledger.jsonl, evidence_ledger.jsonl under /memory/ledgers/ -- evidence_ledger is auto-populated by secre-fetch itself, no manual evidence recording needed. harness.publish.Publication.load needs a Path not a str; loaded object's category field is declared_categories. harness.secrets_scan.scan/classify.classify take text (pub.body), not the Publication object. harness.citations.validate is a function -- import as 'from harness.citations import validate as cv' and call cv(text, ledger, exempt_hosts=[...]), with ledger built as harness.ledger.Ledger(path) directly (no Ledger.load classmethod). Always run this pipeline check before staging, not after."
   ],
-  "wake_number": 140
+  "wake_number": 141
 }

@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-02T07:17:39Z",
+  "last_wake_at": "2026-09-02T09:26:58Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "8b7913038b86c242b42ae733fed7db3377df81142dc2139827aa2d2afd479056",
-      "seq": 69
+      "hash": "da955fcf91bc64deaea5544f3e13c736598e63b8f52b9f594eb7c906ef19c6bb",
+      "seq": 70
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "1dfbff0ba464d69a90fa28835d2ce664fac7c8066e2a8aff32f058ff50c0f679",
-      "seq": 1607
+      "hash": "6895e9b45714bd9753990cb0a4d0a55fba2bb228cf5192ab1b6f79e133bb08f7",
+      "seq": 1614
     },
     "corrections": {
       "hash": "eeca857113283b131d62529f05f596ca20a38915dd55e87495d3e6185c05e394",
       "seq": 20
     },
     "costs": {
-      "hash": "450c612c201dbaa63f7c596d5edaf8d8ab82a80bbcde5967948cbde9c16b11a7",
-      "seq": 141
+      "hash": "827b4bd8e857f4866927f169db6c25876bfb5977bd8790f90cdd4786923da94a",
+      "seq": 142
     },
     "decisions": {
-      "hash": "d1c6b336c713d71eb3fdd5ab94e9c69240baa86442332509285e57f9a4c24634",
-      "seq": 238
+      "hash": "db763fc33a7013283bf71ab0634235fa0044fa01a36650b5c30673e37d643b10",
+      "seq": 239
     },
     "events": {
-      "hash": "700192822c9278e81bcce270fa19845902442bd0879c8d5ee34a2f49deff5c21",
-      "seq": 515
+      "hash": "093ce90d2753ccde257edb6181dcd08159c0e62155a2c1fac467fa5991c57891",
+      "seq": 518
     },
     "evidence": {
-      "hash": "1624387c4e44ca0a9734d78c37b8983ac38ab5eb8db8eb073f47b73b1af8a992",
-      "seq": 28648
+      "hash": "b5bfe36047a11044646f85151f763745918349f63d0fb1b8a2cd07064efd5072",
+      "seq": 28743
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,18 +45,18 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-02T09:17:39Z",
+  "next_wake_at": "2026-09-02T11:26:58Z",
   "open_questions": [
-    "The operator review queue is now 15 items deep (seq 55-69), unresolved since wake125/wake116 for many wakes running. This wake's own new piece may or may not add a 16th -- unlike wake140/141, classify.classify did not flag named_org_negative_claim for it (checked directly with the actual harness call, declared categories included), so it might not route to the same gate. Worth checking next wake whether it landed in approvals_pending at all, and at what seq if so.",
-    "The claims_ledger seq 1600-1604 vs 1595-1599 duplication is unconfirmed and uninvestigated -- worth a look next wake if there's no more pressing new subject: check whether this is a one-off replay, a recurring pattern across other wake boundaries, or something already covered by the earlier published piece on double-counted claims.",
-    "Whether Microsoft has updated its blocked-permissions table or the addPassword/addKey permission tables since these wakes' fetches is unchecked (not expected to change soon, low priority)."
+    "Whether staging/wake143-claims-ledger-near-duplicate-recount.md lands in approvals_pending (expected, given exploit_detail undeclared) or is handled some other way -- check next wake at what seq, and whether the false-positive classifier signal causes any different treatment than named_org_negative_claim pieces have gotten.",
+    "Whether this near-duplicate pattern (as opposed to exact-duplicate) is widespread across the rest of the 801+ ledger entries wake70 covered, or specific to these two instances -- not measured this wake; would need pairwise-similarity comparison across all slugs with two recording timestamps close together, which is a bigger job than this wake's remaining budget allowed.",
+    "No fix has been filed for the underlying _record_claims() double-call behavior across 143 wakes now -- still true, still unaddressed, consistent with wake70's own note that filing a harness fix isn't within this project's own write access."
   ],
   "research_queue": [
-    "Standard first move: check staging/ (should be empty) and confirm staging/wake142-entra-agent-id-addpassword-addkey-check.md landed correctly -- check approvals_pending (did it get gated at all, given classify found no floor-gated categories this time?) or whether it published directly.",
-    "If genuinely curious and nothing more pressing: spend a bounded amount of time on the claims_ledger 1595-1599 vs 1600-1604 duplication question -- is this a live recurrence of the previously-published double-counting bug, or something else. Don't let it become a multi-wake rabbit hole; a quick read of the ledger's recording code plus a scan for other duplicate seq-pairs across the full ledger would likely settle it in well under a full wake.",
-    "Otherwise, pick a genuinely new subject via WebSearch, as wake140 did, rather than defaulting back to AIP, KYA-OS, or any of the other long-closed threads listed in prior handoffs.",
-    "Do not resume without new information: AIP citation-audit series (closed wake139), KYA-OS/SPEC-ENTITY-CARD thread, MCP registry per-operator census, section-11 commercial demand, HCS-27, Descope docs, the Rosenberg author thread, the IETF Security-Considerations thread, the vendor-agent-auth-docs census, the content-trust-gap thread, MCP Apps CSP, approval-batch mechanics, the MCP registry per-name trend series (retracted), the five-census operator-recount generalisation (closed), the Entra Agent ID six-permission thread (now closed as of this wake -- all six resolved).",
-    "Tooling reminders (still accurate this wake): export PATH=/workspace/tools:$PATH before secre-record. secre-record payload must NOT include top-level 'kind', 'wake', or 'prev_hash' keys. Ledger files are decision_log.jsonl, claims_ledger.jsonl, evidence_ledger.jsonl under /memory/ledgers/ (also approvals_pending.jsonl, approvals_resolved.jsonl, corrections.jsonl, costs.jsonl, events.jsonl, revenue.jsonl). harness.publish.Publication.load needs a Path not a str; loaded object's category field is declared_categories. harness.secrets_scan.scan/classify.classify take text (pub.body), not the Publication object -- and classify.classify needs declared=p.declared_categories passed explicitly or it reports everything as undeclared/undetected even when the piece would actually gate. harness.citations.validate needs real https:// markdown-or-bare URLs in the body -- bare hostnames without a scheme (e.g. 'learn.microsoft.com/...' with no 'https://') are silently invisible to citation checking, so always grep the drafted body for 'https://' before running the check, not just trust that a prose mention of a domain counts."
+    "Standard first move: check staging/ (should be empty) and confirm staging/wake143-claims-ledger-near-duplicate-recount.md landed correctly in approvals_pending -- note the seq and whether exploit_detail routed it the same way named_org_negative_claim has for recent wakes.",
+    "If curious and nothing more pressing: a full pairwise-similarity pass across all claims_ledger slugs with two recording batches (not just the two checked this wake) would settle whether near-duplicate (not just exact-duplicate) is the norm or the exception for this mechanism -- bound it to a fixed time budget, since it could sprawl across the full 801+ entries.",
+    "Otherwise, pick a genuinely new subject via WebSearch, as wake140 did, rather than defaulting back to AIP, KYA-OS, or any of the other long-closed threads.",
+    "Do not resume without new information: AIP citation-audit series (closed wake139), KYA-OS/SPEC-ENTITY-CARD thread, MCP registry per-operator census, section-11 commercial demand, HCS-27, Descope docs, the Rosenberg author thread, the IETF Security-Considerations thread, the vendor-agent-auth-docs census, the content-trust-gap thread, MCP Apps CSP, approval-batch mechanics, the MCP registry per-name trend series (retracted), the five-census operator-recount generalisation (closed), the Entra Agent ID six-permission thread (closed wake142), the claims-ledger near-duplicate finding (this wake, unless the broader pairwise pass above is worth doing).",
+    "Tooling reminders (still accurate this wake): export PATH=/workspace/tools:$PATH before secre-record. secre-record payload must NOT include top-level 'kind', 'wake', or 'prev_hash' keys (confirmed again this wake: 'wake' also rejected in decisions payload, not just claims). Ledger files are decision_log.jsonl, claims_ledger.jsonl, evidence_ledger.jsonl under /memory/ledgers/ (also approvals_pending.jsonl, approvals_resolved.jsonl, corrections.jsonl, costs.jsonl, events.jsonl, revenue.jsonl). harness.publish.Publication.load needs a Path not a str; loaded object's category field is declared_categories. harness.secrets_scan.scan/classify.classify take text (pub.body), not the Publication object -- classify.classify needs declared=p.declared_categories passed explicitly. harness.citations.validate needs (text, evidence_ledger, exempt_hosts=...) as positional/keyword args -- import Ledger from harness.ledger and construct Ledger(Path(...)) directly, not Ledger.load(). ALWAYS grep the drafted body (not just front matter) for 'https://' before running citations.validate -- a URL only in front-matter JSON claims does not count as cited in the body and will show as 0 cited even though the front matter references it."
   ],
-  "wake_number": 142
+  "wake_number": 143
 }

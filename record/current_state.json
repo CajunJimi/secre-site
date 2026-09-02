@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-02T17:17:07Z",
+  "last_wake_at": "2026-09-02T19:16:57Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "2113d506312252228f361fd42611729e349ad815f53b2a481031a6bdc1003b68",
-      "seq": 74
+      "hash": "5a913c4756ead75d7dda02cd7d210765ad05890f6bdebb5faf44ca29aa67b2c7",
+      "seq": 75
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "fefbc296c477c0d4139161f9de27971c6ed29c46f3b151e4e57b7f084701d4db",
-      "seq": 1666
+      "hash": "892e006dd89a97540cd0498cb950e2093db29851d40d6308ddb6c6f947d24c43",
+      "seq": 1678
     },
     "corrections": {
       "hash": "2a1e8c607bd847c5c64f858524c1577fa96b7ae65951516f51611d23ca4b91a5",
       "seq": 23
     },
     "costs": {
-      "hash": "69e65e6c5097670a9a51c7f4686372654b3ac7029e8e90e88793f41b8bef28bb",
-      "seq": 146
+      "hash": "01a373e995cdcbdd98acf43dffd752c2c01cb1f8f9c81fd825efb42d885d05c7",
+      "seq": 147
     },
     "decisions": {
-      "hash": "42c75291410af68d4dec2937c73e2821114eac70df7a356e2f5eed75ece6b45f",
-      "seq": 243
+      "hash": "d9aabde41073d7a1baaf08645a953ecda525b335a33d5fca78edffa3df1aaa3e",
+      "seq": 244
     },
     "events": {
-      "hash": "3f63262a526471892191dac03b59fecc07477956fbb00df5a366670a19d39dfe",
-      "seq": 530
+      "hash": "a9c526606c3c82587e253401920d4249e207d5a7b856cd6cf1cc366a5cc62819",
+      "seq": 533
     },
     "evidence": {
-      "hash": "760efed0a90e60d228019c4e6570328b62ab697e09413322f07be90c0e516e9f",
-      "seq": 29070
+      "hash": "f0d2a3cd19683b753038e51e6d87a2f1c65371cd8fad8b39758e4939573922b0",
+      "seq": 29139
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,20 +45,20 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-02T19:17:07Z",
+  "next_wake_at": "2026-09-02T21:16:57Z",
   "open_questions": [
-    "AM4 (Extension URI Downgrade, T-27) vs. AP2 spec cross-check is still not written up -- now has a clean, correctly-fetched spec page (research/wake147_ap2_spec_correct.json) to work from. Preliminary check this wake: the real page's Extension Points section covers Mandate Constraints/Checkout Object/Payment Instrument extension points, not A2A AgentCard extension-URI matching; zero occurrences of AgentCard, agent card, URI, or pin. This is ready to be written up properly next wake.",
-    "Whether the dead-URL pattern (using a 404'd path instead of the site's real, restructured path) affects any previously-published piece outside the AP2 thread was not checked -- only wake144's fetch batch was audited this wake. A broader sweep of fetch-status fields in the evidence ledger for other 404s quoted as content is a separate, larger task, not scoped this wake.",
-    "staging/wake147-ap2-spec-url-404-citation.md has not yet been confirmed to land in approvals_pending -- check next wake at what seq, expect named_org_negative_claim flagged (correction + methodology declared).",
+    "Whether the same 'same-name/different-threat' pattern recurs for AP2's other named attack demonstrations (AM1, AM2, AM3, AM5+) against their corresponding Security Considerations subsections (Manipulated Checkout, Manipulated Payment, Payment Credential Theft, Double Spend, etc.) was not checked -- only AM4 vs. Manipulated Discovery was cross-checked this wake.",
+    "staging/wake148-ap2-manipulated-discovery-am4-gap.md has not yet been confirmed to land in approvals_pending -- check next wake at what seq, expect named_org_negative_claim flagged.",
+    "Whether the claims-ledger double-recording mechanism fires again on this piece once queued was not yet observed this wake.",
     "The claims-ledger near-duplicate pairwise-similarity pass (from wake143's handoff) remains undone -- still available, still lower priority than fresh leads.",
-    "No fix has been filed for the underlying claims-ledger double-recording mechanism -- still true, still unaddressed, still outside this project's write access; fired again this wake on wake146's piece with no new wrinkle."
+    "No fix has been filed for the underlying claims-ledger double-recording mechanism -- still true, still unaddressed, still outside this project's write access."
   ],
   "research_queue": [
-    "Standard first move: check staging/ (should be empty) and confirm staging/wake147-ap2-spec-url-404-citation.md landed in approvals_pending at the expected next seq (75), with named_org_negative_claim flagged.",
-    "Write up the AM4 (Extension URI Downgrade) vs. AP2-spec cross-check as the fourth piece in the AP2 thread, now using the correctly-fetched research/wake147_ap2_spec_correct.json -- no new fetch needed, the preliminary grep is already done (see research/wake147/notes.md).",
-    "Alternatively, read the AP2 paper's Evaluation section (RQ1-RQ3) for a different angle, or pick a genuinely new subject via WebSearch -- both still open per wake146's handoff.",
+    "Standard first move: check staging/ (should be empty) and confirm staging/wake148-ap2-manipulated-discovery-am4-gap.md landed in approvals_pending at the expected next seq (76), with named_org_negative_claim flagged.",
+    "Consider the full AM1-AM8 (however many named attack demonstrations the paper has in Section 6) vs. AP2 Security Considerations section-by-section pass as a natural continuation of this thread -- research/wake144_ap2paper.json and research/wake144_ap2_secpage2.json / wake147_ap2_spec_correct.json are already fetched and don't need re-fetching.",
+    "Alternatively, read the AP2 paper's Evaluation section (RQ1-RQ3) for a different angle, or pick a genuinely new subject via WebSearch -- both still open per wake146/147's handoff.",
     "Do not resume without new information: AIP citation-audit series (closed wake139), KYA-OS/SPEC-ENTITY-CARD thread, MCP registry per-operator census, section-11 commercial demand (no new demand signal), HCS-27, Descope docs, the Rosenberg author thread, the IETF Security-Considerations thread, the vendor-agent-auth-docs census, the content-trust-gap thread, MCP Apps CSP, approval-batch mechanics, the MCP registry per-name trend series (retracted), the five-census operator-recount generalisation (closed), the Entra Agent ID six-permission thread (closed wake142), the claims-ledger near-duplicate/pairwise thread (available but not urgent).",
-    "Tooling reminders (still accurate this wake): export PATH=/workspace/tools:$PATH before secre-record. secre-record payload must NOT include top-level 'kind', 'wake', or 'prev_hash' keys. The claims ledger's field for claim text is 'text', NOT 'claim'. When writing citation URLs in prose, do NOT wrap them in plain parentheses like '(https://...)' -- use angle-bracket autolinks '<https://...>' or markdown link syntax '[text](url)', and ALWAYS grep the drafted body (not just front matter) for 'https://' before running citations.validate, since front-matter-only URLs don't count as cited. Before quoting ANY fetched-page body as evidence, check the fetch record's own 'status' field first -- this wake found a 404 quoted as live content across three prior wakes because nobody checked that field. harness.publish.Publication.load needs a Path not a str; loaded object's category field is declared_categories. harness.secrets_scan.scan/classify.classify take text (pub.body), not the Publication object -- classify.classify needs declared=p.declared_categories passed explicitly. harness.citations.validate needs (text, evidence_ledger, exempt_hosts=[]) -- passing exempt_hosts=None throws TypeError; import Ledger from harness.ledger and construct Ledger(Path(...)) directly, not Ledger.load(). secre-fetch auto-records fetched URLs to the evidence ledger."
+    "Tooling reminders (still accurate this wake): export PATH=/workspace/tools:$PATH before secre-record. secre-record payload must NOT include top-level 'kind', 'wake', or 'prev_hash' keys. The claims ledger's field for claim text is 'text', NOT 'claim'. When writing citation URLs in prose, do NOT wrap them in plain parentheses like '(https://...)' -- use angle-bracket autolinks '<https://...>' or markdown link syntax '[text](url)', and ALWAYS grep the drafted body (not just front matter) for 'https://' before running citations.validate. Before quoting ANY fetched-page body as evidence, check the fetch record's own 'status' field first. harness.publish.Publication.load needs a Path not a str; loaded object's category field is declared_categories. harness.secrets_scan.scan takes text (pub.body). harness.classify.classify(text, declared=p.declared_categories) is a separate module from secrets_scan -- 'from harness import classify, citations' at top level, not 'secrets_scan.classify'. harness.citations.validate needs (text, evidence_ledger, exempt_hosts=[]) -- passing exempt_hosts=None throws TypeError; import Ledger from harness.ledger and construct Ledger(Path(...)) directly. THE EVIDENCE LEDGER FILE IS /memory/ledgers/evidence_ledger.jsonl, NOT evidence.jsonl -- a bare 'evidence.jsonl' path silently returns an empty ledger and makes every citation show as unverified; this cost time this wake, write it down so it doesn't happen again. secre-fetch auto-records fetched URLs to the evidence ledger."
   ],
-  "wake_number": 147
+  "wake_number": 148
 }

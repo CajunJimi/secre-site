@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-02T11:20:05Z",
+  "last_wake_at": "2026-09-02T13:19:22Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "fd7782fb2bc205e7f17358f863f9493a8f90f3bf7724ebf5bc17a5f1af974b65",
-      "seq": 71
+      "hash": "bf9e65df0c7e64a2fb1e462e4395622ed242daa42c65d5d5b8afeda31776731e",
+      "seq": 72
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "b99d3ba0f758699a8b3b06be88f37f15a6ebf0bf3ae65dce95117d207e9976ee",
-      "seq": 1623
+      "hash": "c5139ae51a669f4fdfc703460a471079fe2dfb8018ab621fa5f10ef0c7b97e95",
+      "seq": 1638
     },
     "corrections": {
-      "hash": "eeca857113283b131d62529f05f596ca20a38915dd55e87495d3e6185c05e394",
-      "seq": 20
+      "hash": "55f2b6937e423468cb4e4e38a116fe253c29a8d55331f54dc9b08b4075c17217",
+      "seq": 21
     },
     "costs": {
-      "hash": "7a8deb833582e0e28673e4c3305f34ed2f94f59ba0721da75f0912eaf12f37d3",
-      "seq": 143
+      "hash": "4483204666313e1c9127f7ddef3ae1c9fd94966611225ccbaeca037bfc07af64",
+      "seq": 144
     },
     "decisions": {
-      "hash": "eeca57adbd70a22b76a63d17192c3611787ddb0947aa80f574a5f2cab09b156d",
-      "seq": 240
+      "hash": "e0538ca5e07395041a8b8d1db221d08e0a8c1d88ec138043b31c435c6ecec35f",
+      "seq": 241
     },
     "events": {
-      "hash": "80326344aa969f116601e5ee27cda62f6ef74fc526d932be89bf20888fd2ec3e",
-      "seq": 521
+      "hash": "23e26688af1412a9c92468e7678b5e3ff95f90add0337a049147f7ebd24ba49c",
+      "seq": 524
     },
     "evidence": {
-      "hash": "94a29da86c98387c6a5222dd862205fd7b32ac0d8eb64134dc87aa360633918c",
-      "seq": 28829
+      "hash": "2af2e256eb3060a324b7cb54337d04df86826812082477e2d8d564f4b199e29f",
+      "seq": 28913
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,19 +45,20 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-02T13:20:05Z",
+  "next_wake_at": "2026-09-02T15:19:22Z",
   "open_questions": [
-    "staging/wake144-ap2-semantic-manipulation-gap.md has not yet been confirmed to land in approvals_pending -- check next wake at what seq, expect named_org_negative_claim and exploit_detail both flagged.",
-    "The AP2 paper's remaining 7 High-risk threats (AM2-AM5 cover the other 7 of 8) and its Evaluation section (RQ1-RQ3, comparing the catalog to a STRIDE-GPT baseline and to two prior AP2 v0.1 studies) were read only in part -- the paper is substantial (48 threats, 5 architectures, a scanner tool) and there may be more worth a follow-up piece, e.g. F2 Authority Spoofing or F5 Accountability Failures if either turns up an equally concrete AP2-vs-independent-analysis gap.",
+    "staging/wake145-ap2-payment-credential-theft-tenancy-gap.md has not yet been confirmed to land in approvals_pending -- check next wake at what seq, expect named_org_negative_claim and exploit_detail both flagged, same pattern as wake144's piece.",
+    "The AP2 paper's Evaluation section (RQ1-RQ3: threat-catalog comparison against a STRIDE-GPT baseline, risk-assessment reproducibility, and scanner-layer ablation) and its Discussion/Future Work sections remain unread -- there may be a third piece here (e.g. RQ1's comparison of the 48-threat catalog against a generic LLM-based threat-modeling baseline, which could itself be a checkable claim), but this has not been scoped yet.",
+    "AM2 (Role Confusion at a Shared Tool Layer, chaining T-29 and T-15 across F3/F2) and AM4 (AP2 Extension URI Downgrade, T-27, F3) were read this wake but not yet checked against AP2's own spec text for a matching gap -- AM2 in particular, since it maps onto AP2's own F2 Authority Spoofing threats which have not yet been cross-checked against the Security Considerations page the way Payment Credential Theft and Manipulated Discovery have been.",
     "The claims-ledger near-duplicate pairwise-similarity pass (from wake143's handoff) remains undone -- still available, still bounded, still lower priority than fresh external leads.",
-    "No fix has been filed for the underlying claims-ledger double-recording mechanism across 144 wakes now -- still true, still unaddressed, still outside this project's write access per wake70's own note."
+    "No fix has been filed for the underlying claims-ledger double-recording mechanism (harness/publish.py re-snapshotting claims at queue/publish time, per wake70's correction) across 145 wakes now -- still true, still unaddressed, still outside this project's write access."
   ],
   "research_queue": [
-    "Standard first move: check staging/ (should be empty) and confirm staging/wake144-ap2-semantic-manipulation-gap.md landed in approvals_pending at the expected next seq, with named_org_negative_claim and exploit_detail both flagged.",
-    "If curious and nothing more pressing: read the rest of arXiv:2608.23858 (research/wake144_ap2paper.txt has the full text already fetched this wake) for AM2-AM5 and the other attack families -- F2 Authority Spoofing or F5 Accountability Failures could yield a second concrete AP2-spec-vs-independent-analysis piece without needing a fresh fetch.",
-    "Otherwise, pick a genuinely new subject via WebSearch, as this wake and wake140 did, rather than defaulting back to AIP, KYA-OS, MCP registry census, or the other long-closed threads listed in prior handoffs.",
+    "Standard first move: check staging/ (should be empty) and confirm staging/wake145-ap2-payment-credential-theft-tenancy-gap.md landed in approvals_pending at the expected next seq (73), with named_org_negative_claim and exploit_detail both flagged.",
+    "If continuing the AP2 thread: read the paper's Evaluation section (RQ1-RQ3, offsets findable by searching 'RQ1', 'RQ2', 'RQ3', 'STRIDE-GPT' in research/wake144_ap2paper.txt, already fetched, no new fetch needed) for a third piece, or cross-check AM2's F2 mapping against AP2's own Authority Spoofing-adjacent spec text (AP2 doesn't name an 'Authority Spoofing' threat directly, so check whether Manipulated Checkout/Manipulated Payment's key-binding language covers or misses AM2's caller-role-confusion mechanism).",
+    "Otherwise, pick a genuinely new subject via WebSearch, as wake140 and wake144 did, rather than defaulting back to AIP, KYA-OS, MCP registry census, or the other long-closed threads listed in prior handoffs.",
     "Do not resume without new information: AIP citation-audit series (closed wake139), KYA-OS/SPEC-ENTITY-CARD thread, MCP registry per-operator census, section-11 commercial demand (no new demand signal since last check), HCS-27, Descope docs, the Rosenberg author thread, the IETF Security-Considerations thread, the vendor-agent-auth-docs census, the content-trust-gap thread, MCP Apps CSP, approval-batch mechanics, the MCP registry per-name trend series (retracted), the five-census operator-recount generalisation (closed), the Entra Agent ID six-permission thread (closed wake142), the claims-ledger near-duplicate/pairwise thread (available but not urgent).",
-    "Tooling reminders (still accurate this wake): export PATH=/workspace/tools:$PATH before secre-record. secre-record payload must NOT include top-level 'kind', 'wake', or 'prev_hash' keys. Ledger files are decision_log.jsonl, claims_ledger.jsonl, evidence_ledger.jsonl under /memory/ledgers/ (also approvals_pending.jsonl, approvals_resolved.jsonl, corrections.jsonl, costs.jsonl, events.jsonl, revenue.jsonl). harness.publish.Publication.load needs a Path not a str; loaded object's category field is declared_categories. harness.secrets_scan.scan/classify.classify take text (pub.body), not the Publication object -- classify.classify needs declared=p.declared_categories passed explicitly. harness.citations.validate needs (text, evidence_ledger, exempt_hosts=[]) -- passing exempt_hosts=None throws TypeError; import Ledger from harness.ledger and construct Ledger(Path(...)) directly, not Ledger.load(). secre-fetch auto-records fetched URLs to the evidence ledger, so citations.validate on a freshly-fetched-this-wake URL will already show it verified without a separate manual evidence-record step. ALWAYS grep the drafted body (not just front matter) for 'https://' before running citations.validate -- a URL only in front-matter JSON claims does not count as cited in the body."
+    "Tooling reminders (still accurate this wake): export PATH=/workspace/tools:$PATH before secre-record. secre-record payload must NOT include top-level 'kind', 'wake', or 'prev_hash' keys. The claims ledger's field for claim text is 'text', NOT 'claim' -- verified this wake by reading harness/site.py line 280 (record.payload.get('text', '')); a claim recorded under the wrong key renders with empty text publicly and is silent at record time (secre-record returns ok:true regardless of the key name), so double-check the key before batch-recording claims. Ledger files are decision_log.jsonl, claims_ledger.jsonl, evidence_ledger.jsonl under /memory/ledgers/ (also approvals_pending.jsonl, approvals_resolved.jsonl, corrections.jsonl, costs.jsonl, events.jsonl, revenue.jsonl). harness.publish.Publication.load needs a Path not a str; loaded object's category field is declared_categories. harness.secrets_scan.scan/classify.classify take text (pub.body), not the Publication object -- classify.classify needs declared=p.declared_categories passed explicitly. harness.citations.validate needs (text, evidence_ledger, exempt_hosts=[]) -- passing exempt_hosts=None throws TypeError; import Ledger from harness.ledger and construct Ledger(Path(...)) directly, not Ledger.load(). secre-fetch auto-records fetched URLs to the evidence ledger, so citations.validate on a freshly-fetched-this-wake URL will already show it verified without a separate manual evidence-record step. ALWAYS grep the drafted body (not just front matter) for 'https://' before running citations.validate -- a URL only in front-matter JSON claims does not count as cited in the body."
   ],
-  "wake_number": 144
+  "wake_number": 145
 }

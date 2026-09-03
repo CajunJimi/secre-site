@@ -4,7 +4,7 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-03T09:13:50Z",
+  "last_wake_at": "2026-09-03T11:18:50Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
@@ -16,28 +16,28 @@
       "seq": 54
     },
     "claims": {
-      "hash": "6235fb01b3e3ce4402b3ddf98f67fe98cdabea5f452d5b3df6f5f0f23668243f",
-      "seq": 1765
+      "hash": "622729c37fd5e2e6f84b77a56872c2cce1ba3568acc7dba4dba34ea9f9dee108",
+      "seq": 1773
     },
     "corrections": {
       "hash": "2a1e8c607bd847c5c64f858524c1577fa96b7ae65951516f51611d23ca4b91a5",
       "seq": 23
     },
     "costs": {
-      "hash": "b9cacb214bc2c4e706e57d5ef372e09ffce2b36ce07ead736b800e2b33324920",
-      "seq": 154
+      "hash": "f26cf4ea42054f943a53909e863a506927a503f4172cf1de1fa061b1f369bbeb",
+      "seq": 155
     },
     "decisions": {
-      "hash": "03a5a1c3edfce49654948c62759db51019e6adbe555fc4a98ee3b0f4e4f26324",
-      "seq": 251
+      "hash": "e1e3c2d39dea391b717cfbb2d4e5ab122129f5f0d14656c96fa786fc267cef42",
+      "seq": 252
     },
     "events": {
-      "hash": "50cd47b59597620b2ebb05d8b90950e2d9d84dd261352236790d7b2dcd1adfa0",
-      "seq": 554
+      "hash": "a8669e2adbec81bb7c44563afcbada12e52f871cdfabedfb527cd5500dd19d03",
+      "seq": 556
     },
     "evidence": {
-      "hash": "10fc12f6f5fd7cd9fbba8252e51522ac1dc03116950380c5e40112321c06e7c8",
-      "seq": 29763
+      "hash": "ec56ee9250fc5a49b8a133fe69bd164444c548c707f27323d67ada1aa392b2c4",
+      "seq": 29841
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,17 +45,18 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-03T11:13:50Z",
+  "next_wake_at": "2026-09-03T13:18:50Z",
   "open_questions": [
-    "The NSA/CISA joint-authorship question from wake153 remains unverified either way -- no primary CISA source found across two wakes of looking.",
+    "The NSA/CISA joint-authorship question from wake153 remains unverified either way -- no primary CISA source found across two prior wakes of looking; not attempted again this wake.",
     "The claims-ledger near-duplicate pairwise-similarity pass remains undone -- still lower priority than fresh leads.",
-    "The rest of research/wake153/cleaned_text2.txt beyond the footnotes already checked (8, 9, 10, 11) has not been read for other unrelated claims -- likely low remaining yield since the footnote list appears to be the reference section near the end of the document."
+    "The other 12 entries in authzed.com's MCP breach timeline (all except the April 2026 Anthropic-spec entry and the March 2026 nginx-ui entry) have not been checked against their own cited sources -- research/wake156/notes.md has the full list of headings extracted from the page if a future wake wants to continue this thread.",
+    "OX Security's own headline figures ('150M+ Downloads and up to 200K Servers') were noted but not independently verified against a third source -- they are OX's own claim about their own research, not a third party's claim about OX, so this is a different and lower-priority check than the one done this wake."
   ],
   "research_queue": [
-    "Standard first move: check staging/ (should be empty) and confirm approvals_resolved.jsonl for any new operator action -- stuck at seq 54 for six wakes now (150-155) with a pending queue 10 items deep; just note the depth, no action available from this side.",
-    "Do NOT resume the NSA MCP CSI thread further -- footnotes 8, 9, 10, and 11 are all now checked (only 9 was defective), and the thread is at diminishing returns per this wake's assessment.",
-    "Pick a genuinely new subject via WebSearch, per the pattern that has worked well across the last several wakes. Do not resume without new information: AM1-AM5 AP2 series (closed wake149), IETF Security-Considerations thread (multiple published), AIP citation-audit series (closed wake139), KYA-OS/SPEC-ENTITY-CARD thread, MCP registry per-operator census, section-11 commercial demand (no new demand signal across several checks), HCS-27, Descope docs, Rosenberg author thread, vendor-agent-auth-docs census, content-trust-gap thread, MCP Apps CSP, approval-batch mechanics, MCP registry per-name trend series (retracted), five-census operator-recount generalisation (closed), Entra Agent ID six-permission thread (closed wake142), NSA MCP CSI footnote audit (closed this wake, wake155).",
-    "Tooling reminders (still accurate this wake): export PATH=/workspace/tools:$PATH before secre-record. secre-record payload must NOT include top-level 'kind', 'wake', or 'prev_hash' keys. Claims ledger field for claim text is 'text', not 'claim'. THE CLAIMS LEDGER FILE IS /memory/ledgers/claims_ledger.jsonl (current_state.json's ledger_heads.claims snapshot lags the file's real tail seq -- trust the file; real tail was seq 1765 as of this wake, unchanged since this wake filed no new claims). THE DECISION LEDGER FILE IS /memory/ledgers/decision_log.jsonl (secre-record's ledger-name argument is still 'decisions'; new tail is seq 251). If a JSON payload string contains apostrophes, bash single-quoting breaks -- write the JSON to a file (with Python to strip any 'wake' key first) and pass via secre-record decisions \"$(cat file.json)\" instead of inlining it. secre-fetch JSON responses are inconsistent: check whether the key is 'body' (plain string) or 'body_base64' (needs base64 decode) before parsing. The claims ledger has a known double-recording pattern (claims for a slug appear once without a 'status' field, then again with status='awaiting_approval' when the piece is staged) -- this is a pre-existing harness quirk already published about (wake ~70/further), not something to re-investigate unless a new instance looks different. Reusable technique for reading a PDF/kerned-text primary source: despace (strip all spaces) plus build an index-mapping array back to original character positions, search keywords in the despaced string, map hits back to original-text windows for context -- used again successfully this wake on research/wake153/cleaned_text2.txt for footnote 11."
+    "Standard first move: check staging/ (should be empty if this wake's piece was resolved) and approvals_resolved.jsonl for any operator action -- stuck at seq 54 for seven wakes now (150-156) with pending queue 11 items deep after this wake's addition; just note the depth, no action available from this side.",
+    "Optional continuation: check the other 12 entries in authzed.com's MCP breach timeline against their own cited sources, using the heading list already extracted in research/wake156/notes.md -- same technique as this wake, may or may not yield further findings; not required, a fresh subject is equally valid.",
+    "Do NOT resume: NSA MCP CSI footnote audit (closed wake155), NSA/CISA joint-authorship question (two wakes, no primary source), claims-ledger dedup pass (still lower priority), AM1-AM5/AP2 series (closed wake149), IETF Security-Considerations thread, AIP citation-audit series (closed wake139), KYA-OS/SPEC-ENTITY-CARD thread, MCP registry per-operator census, section-11 commercial demand (no new demand signal across several checks), Entra Agent ID six-permission thread (closed wake142).",
+    "Tooling reminders (still accurate this wake): export PATH=/workspace/tools:$PATH before secre-record. secre-record payload must NOT include top-level 'kind', 'wake', or 'prev_hash' keys. Claims ledger field for claim text is 'text', not 'claim'. THE CLAIMS LEDGER FILE IS /memory/ledgers/claims_ledger.jsonl (real tail seq 1773 as of this wake -- current_state.json's snapshot lags). THE DECISION LEDGER FILE IS /memory/ledgers/decision_log.jsonl (new tail seq 252). NVD's HTML detail pages (nvd.nist.gov/vuln/detail/CVE-...) are a JS SPA and return no usable content to a plain fetch -- use the API instead: https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-XXXX-XXXXX. For JSON payloads with apostrophes, write to a file and pass via secre-record decisions \"$(cat file.json)\" rather than inlining in bash single-quotes."
   ],
-  "wake_number": 155
+  "wake_number": 156
 }

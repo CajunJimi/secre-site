@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-03T03:15:41Z",
+  "last_wake_at": "2026-09-03T05:23:35Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "076478f171c60bc2c01069c0968ce060de93bcad92302f36b1026bc303366037",
-      "seq": 79
+      "hash": "4c240bc26bcf620e074daab56a27a01f8abd6d5eb79ac0cba5cf91bff94969a6",
+      "seq": 80
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "d38cb400556f3c027934dfd5c7ba53334a07ef103026d5b02f7e994dd1660e41",
-      "seq": 1738
+      "hash": "f0e01ba2da9fc405bd1bc26f32415bac80edf46b816349ce6324b9123bcd3e73",
+      "seq": 1748
     },
     "corrections": {
       "hash": "2a1e8c607bd847c5c64f858524c1577fa96b7ae65951516f51611d23ca4b91a5",
       "seq": 23
     },
     "costs": {
-      "hash": "a37f38a2a7ffecd756d9d27e714242983a7948287751d4c4bcdcb28094971243",
-      "seq": 151
+      "hash": "2b21fe303f9fad1532a6e6fe5b744bfb9b88c55064792f1908dbc4d7f8a03730",
+      "seq": 152
     },
     "decisions": {
-      "hash": "a3a0e173e1e09d16a42b532ce816cad1a549e4cf68d34812cc6b6b6d84d327b8",
-      "seq": 248
+      "hash": "e17a9ad3f9dccb488de02a870a91fdd71a65213a5cda92fcf43b584b995fc38b",
+      "seq": 249
     },
     "events": {
-      "hash": "470c44aaf5d894bce5e7335b07f0a540eb9c679c3465c6518e0535c546096df5",
-      "seq": 545
+      "hash": "6d121ddd32f9c7769c8e39a67b7943002f35d626440ff688347bf0c3f79aafdc",
+      "seq": 548
     },
     "evidence": {
-      "hash": "cd09f4300234029e4f288da0ad0725d9d7d20549954dd2713ebb96768f99cb57",
-      "seq": 29513
+      "hash": "3ddd1762499e8223675c11a7ceadb57ea81a22bbeb8eb77916f5789aa2df433b",
+      "seq": 29631
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,20 +45,21 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-03T05:15:41Z",
+  "next_wake_at": "2026-09-03T07:23:35Z",
   "open_questions": [
-    "staging/wake152-vertex-ai-working-as-intended-direct-source.md has not yet been confirmed to land in approvals_pending -- check next wake at what seq; expect named_org_negative_claim, legal_allegation, and suspected_vulnerability flagged (declared categories already include named_org_negative_claim and exploit_detail, so gating is not in question, only exact signal wording).",
-    "XM Cyber's own blog post (the actual primary source, not press coverage of it) was never fetched -- it was found this wake only via a t.co-shortlinked tweet from XM Cyber's own account, and a direct URL to the blog post itself was not located. Worth a quick WebSearch in a future wake if this thread is revisited further, though the CSO Online source already closes the immediate gap.",
-    "draft-daniel-ai-agent-internet-architecture-00 (noticed in wake151, not yet fetched/read directly) remains unexamined -- its Security Considerations section looked substantive from a WebSearch snippet, which may mean it doesn't fit this project's recurring gap-finding angle, but this hasn't been confirmed by actually reading it.",
-    "The claims-ledger near-duplicate pairwise-similarity pass (from wake143's handoff) remains undone -- still available, still lower priority than fresh leads.",
-    "No fix has been filed for the underlying claims-ledger double-recording mechanism -- still true, still unaddressed, still outside this project's write access."
+    "staging/wake153-nsa-mcp-csi-refresh-token-mandate.md has not yet been confirmed to land in approvals_pending -- check next wake at what seq; expect named_org_negative_claim at minimum (declared categories already include it, so gating is not in question, only exact seq and any additionally detected signals).",
+    "Whether the CSI was genuinely joint with CISA (as several secondary sources claimed) remains unverified -- would need a primary CISA source to confirm or refute; not pursued this wake since the piece doesn't depend on it.",
+    "The rest of the NSA CSI (research/wake153/cleaned_text2.txt has ~68KB of readable extracted text, only a fraction was read closely this wake) likely contains other specific, checkable claims about MCP -- e.g. footnoted claims about 'known weaknesses in token passthrough' referencing MCP's separate Security Best Practices and Lifecycle Guidelines documents, which were not fetched or checked this wake. Worth a follow-up pass if this thread is revisited.",
+    "The claims-ledger near-duplicate pairwise-similarity pass (long-standing, available) remains undone -- still lower priority than fresh leads.",
+    "No fix has been filed for the underlying claims-ledger double-recording mechanism -- still outside this project's write access."
   ],
   "research_queue": [
-    "Standard first move: check staging/ (should be empty) and confirm staging/wake152-vertex-ai-working-as-intended-direct-source.md landed in approvals_pending at the expected next seq (80).",
-    "Also check approvals_resolved.jsonl for any new operator action -- it has been stuck at seq 54 for several wakes now with a growing pending queue (currently 5 items awaiting review: seq 75-79, plus this wake's seq 80 if it lands); worth simply noting the queue depth rather than assuming anything is wrong.",
-    "Pick a genuinely new subject via WebSearch rather than resuming an old thread, unless a fresh, cheap, well-scoped follow-up like this wake's surfaces naturally (e.g. checking whether newer coverage of the Vertex AI story has emerged, or finding XM Cyber's own primary blog post directly).",
-    "Do not resume without new information: the AM1-AM5 AP2 series (closed wake149), the IETF Security-Considerations thread (multiple instances published, most recently wake150), AIP citation-audit series (closed wake139), KYA-OS/SPEC-ENTITY-CARD thread, MCP registry per-operator census, section-11 commercial demand (no new demand signal), HCS-27, Descope docs, the Rosenberg author thread, the vendor-agent-auth-docs census, the content-trust-gap thread, MCP Apps CSP, approval-batch mechanics, the MCP registry per-name trend series (retracted), the five-census operator-recount generalisation (closed), the Entra Agent ID six-permission thread (closed wake142), the claims-ledger near-duplicate/pairwise thread (available but not urgent).",
-    "Tooling reminders (still accurate this wake): export PATH=/workspace/tools:$PATH before secre-record. secre-record payload must NOT include top-level 'kind', 'wake', or 'prev_hash' keys. The claims ledger's field for claim text is 'text', NOT 'claim'. THE CLAIMS LEDGER FILE IS /memory/ledgers/claims_ledger.jsonl (not claims.jsonl -- the current_state.json snapshot of ledger_heads.claims can lag the actual file's tail seq; trust the file, not the snapshot). THE EVIDENCE LEDGER FILE IS /memory/ledgers/evidence_ledger.jsonl. THE DECISION LEDGER FILE IS /memory/ledgers/decision_log.jsonl (secre-record's ledger-name argument is still 'decisions'). harness.citations.validate needs (text, evidence_ledger, exempt_hosts=[]) -- passing exempt_hosts=None throws TypeError; import Ledger from harness.ledger and construct Ledger(Path(...)) directly. harness.publish.Publication.load needs a Path not a str; loaded object's category field is declared_categories. Always add explicit inline <https://...> citations in the prose itself (front-matter JSON URLs alone are invisible to citations.validate, which only scans the body) -- confirmed again this wake: had to add one inline citation after an initial validate() call returned zero cited URLs despite the source being in front matter and prose (without angle brackets)."
+    "Standard first move: check staging/ (should be empty) and confirm staging/wake153-nsa-mcp-csi-refresh-token-mandate.md landed in approvals_pending at the expected next seq (81).",
+    "Also check approvals_resolved.jsonl for any new operator action -- it has been stuck at seq 54 for many wakes now with a growing pending queue (8 items as of this wake, potentially 9 next wake); worth simply noting the queue depth rather than assuming anything is wrong.",
+    "Optional cheap follow-up if picked up: read more of research/wake153/cleaned_text2.txt (the full extracted NSA CSI text) for other specific checkable claims, particularly the footnoted 'MCP Security Best Practices' and 'Lifecycle Guidelines' documents NSA cites -- fetching those directly could either corroborate or further complicate NSA's framing.",
+    "Otherwise, pick a genuinely new subject via WebSearch rather than resuming an old thread, per the pattern that's worked well the last several wakes.",
+    "Do not resume without new information: the AM1-AM5 AP2 series (closed wake149), the IETF Security-Considerations thread (multiple instances published), AIP citation-audit series (closed wake139), KYA-OS/SPEC-ENTITY-CARD thread, MCP registry per-operator census, section-11 commercial demand (no new demand signal), HCS-27, Descope docs, the Rosenberg author thread, the vendor-agent-auth-docs census, the content-trust-gap thread, MCP Apps CSP, approval-batch mechanics, the MCP registry per-name trend series (retracted), the five-census operator-recount generalisation (closed), the Entra Agent ID six-permission thread (closed wake142), the claims-ledger near-duplicate/pairwise thread (available but not urgent).",
+    "Tooling reminders (still accurate this wake): export PATH=/workspace/tools:$PATH before secre-record. secre-record payload must NOT include top-level 'kind', 'wake', or 'prev_hash' keys. Claims ledger field for claim text is 'text', not 'claim'. THE CLAIMS LEDGER FILE IS /memory/ledgers/claims_ledger.jsonl (not claims.jsonl -- current_state.json's ledger_heads.claims snapshot lags the file's real tail seq; trust the file). THE EVIDENCE LEDGER FILE IS /memory/ledgers/evidence_ledger.jsonl. THE DECISION LEDGER FILE IS /memory/ledgers/decision_log.jsonl (secre-record's ledger-name argument is still 'decisions'). harness.citations.validate needs (text, evidence_ledger, exempt_hosts=[]) -- passing exempt_hosts=None throws TypeError; construct Ledger(Path(...)) directly. harness.publish.Publication.load needs a Path not a str; loaded object's category field is declared_categories. Always add explicit inline <https://...> citations in the prose itself, not just front matter. NEW this wake: no PDF text-extraction library (PyPDF2/pypdf/fitz/pdfminer) or pdftotext binary is available offline -- to read a PDF primary source fetched via secre-fetch, base64-decode body_base64, then decompress FlateDecode streams (re.findall(rb'stream\\r?\\n(.*?)endstream') + zlib.decompress) and extract text from Tj/TJ string-show operators with a regex over parenthesized strings; per-glyph kerning arrays produce single-character spacing that needs a cleanup pass (collapse single spaces between single-letter tokens) -- see research/wake153/notes.md and the inline scripts used this wake for a reusable template."
   ],
-  "wake_number": 152
+  "wake_number": 153
 }

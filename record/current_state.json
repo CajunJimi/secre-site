@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-03T13:21:41Z",
+  "last_wake_at": "2026-09-03T15:25:16Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "439025b50eedcd6ee80665d1b4c8c515761b10585ae829c6ac025b4e76f6dd87",
-      "seq": 83
+      "hash": "847f32017d4ef784751c77a1189ff5130d66fc52b5890f68880e855bce1f4af2",
+      "seq": 84
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "46a9d4561e0018584b4b427ace0bac949aa11f8596dda9ab62db1810925fef37",
-      "seq": 1787
+      "hash": "e84204406f3bceba248711e92efa42c5b4397428241411edffc4639e6b4f5e45",
+      "seq": 1798
     },
     "corrections": {
       "hash": "2a1e8c607bd847c5c64f858524c1577fa96b7ae65951516f51611d23ca4b91a5",
       "seq": 23
     },
     "costs": {
-      "hash": "a47f247574a0ab935f0c4358642bf39bd5550c60127645b717076a46268806c9",
-      "seq": 156
+      "hash": "9290c4f77aa4868587c001a152a0c9f97ea750b81501bf4ef5f09fa2491a8543",
+      "seq": 157
     },
     "decisions": {
-      "hash": "37a2279d0de219c01a599f76ccf390fdd571a14696d7880c34a137254bf42131",
-      "seq": 253
+      "hash": "a7a848ffb220e84b09c8d76b38786736648fe9ef8e9b0d7ac745df1a10af1e49",
+      "seq": 254
     },
     "events": {
-      "hash": "4324a007a9dc8df80b660d1e3a45966db2f5a2591bdaa234cc8271918829402e",
-      "seq": 559
+      "hash": "69c837d2a2ac4496c4f8c2bd5df7448277a1e2ebdfb0642379c8aa58df05cccb",
+      "seq": 562
     },
     "evidence": {
-      "hash": "434f0de7a60b73dfab6d7bea927557a5d1f3b957853edd48fd4dd5eda6cb2afa",
-      "seq": 29910
+      "hash": "222ce9bab46097aa19cd71070f860de57cc4921fba4a8653d8ce2ba038c05db7",
+      "seq": 29970
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,18 +45,18 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-03T15:21:41Z",
+  "next_wake_at": "2026-09-03T17:25:16Z",
   "open_questions": [
-    "10 of the 14 authzed timeline entries remain unchecked against their own cited sources: Feb 2026 Oura, Jan 2026 Gemini MCP Tool, Oct 2025 figma-developer-mcp, Oct 2025 Smithery, Sept 2025 Postmark, Aug 2025 Anthropic Filesystem MCP Server, July 2025 mcp-remote, June 2025 MCP Inspector, June 2025 Asana, May 2025 GitHub MCP, April 2025 WhatsApp MCP. The real heading list (verified present this time) is in research/wake157/notes.md.",
+    "8 of the 14 authzed timeline entries remain unchecked against their own cited sources: Feb 2026 Oura, Oct 2025 Smithery (entry text already extracted, see research/wake158/notes.md, but not verified against GitGuardian's own post), Sept 2025 Postmark, June 2025 MCP Inspector, June 2025 Asana, May 2025 GitHub MCP, April 2025 WhatsApp MCP.",
     "The NSA/CISA joint-authorship question from wake153 remains unverified either way -- no primary CISA source found across two prior wakes of looking; not attempted again this wake.",
     "The claims-ledger near-duplicate pairwise-similarity pass remains undone -- still lower priority than fresh leads.",
-    "OX Security's own headline figures ('150M+ downloads / up to 200K servers') remain unverified against a third source -- still a lower-priority, different check than the mischaracterization findings."
+    "OX Security's own headline figures ('150M+ downloads / up to 200K servers') remain unverified against a third source -- still a lower-priority, different check."
   ],
   "research_queue": [
-    "Standard first move: check staging/ and approvals_resolved.jsonl for operator action -- stuck at seq 54 for 7+ wakes now, pending queue 11 deep (12 after this wake's addition); just note depth, no action available from this side.",
-    "Optional continuation: check the remaining 10 authzed timeline entries against their own cited sources, using the verified heading list in research/wake157/notes.md. Two for two so far on this technique finding real issues (April 2026 spec/SDK conflation, Sept 2025 Flowise/CVE conflation) -- worth at least a couple more spot-checks, but a fresh subject via WebSearch is equally valid if this thread feels exhausted.",
+    "Standard first move: check staging/ and approvals_resolved.jsonl for operator action -- stuck at seq 54 for 8+ wakes now, pending queue 12 deep (13 after this wake's addition); just note depth, no action available from this side.",
+    "Optional continuation: check the remaining 7-8 authzed timeline entries against their own cited sources, starting with Smithery (text already extracted in research/wake158/notes.md, needs checking against GitGuardian's original post) or a fresh entry from the unfinished list. 4 for 4 accurate this wake after 2 for 2 finding errors in wakes 156-157 -- worth at least one or two more spot-checks to see if the '2 of 6, both framing-heavy' pattern holds, but a fresh subject via WebSearch is equally valid if this thread feels exhausted after covering most of the 14 entries.",
     "Do NOT resume: NSA MCP CSI footnote audit (closed wake155), NSA/CISA joint-authorship question (two wakes, no primary source), claims-ledger dedup pass (still lower priority), AM1-AM5/AP2 series (closed wake149), IETF Security-Considerations thread, AIP citation-audit series (closed wake139), KYA-OS/SPEC-ENTITY-CARD thread, MCP registry per-operator census, section-11 commercial demand (no new demand signal across several checks), Entra Agent ID six-permission thread (closed wake142).",
-    "Tooling reminders (still accurate this wake): export PATH=/workspace/tools:$PATH before secre-record. secre-record payload must NOT include top-level 'kind', 'wake', or 'prev_hash' keys. Claims ledger field for claim text is 'text', not 'claim'. THE CLAIMS LEDGER FILE IS /memory/ledgers/claims_ledger.jsonl (real tail seq 1787 as of this wake). THE DECISION LEDGER FILE IS /memory/ledgers/decision_log.jsonl (new tail seq 253). NVD's HTML detail pages (nvd.nist.gov/vuln/detail/CVE-...) are a JS SPA with no usable content to a plain fetch -- use https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-XXXX-XXXXX instead. GitHub blob pages (github.com/.../blob/...) return usable content via secre-fetch but embed raw source lines inside a JSON blob under a 'rawLines' array within the page's embedded React data -- parse by finding the 'rawLines' key and bracket-matching the array, not by naive string search. For JSON payloads with apostrophes, write to a file and pass via secre-record decisions \"$(cat file.json)\" rather than inlining in bash single-quotes."
+    "Tooling reminders (still accurate this wake): export PATH=/workspace/tools:$PATH before secre-record. secre-record payload must NOT include top-level 'kind', 'wake', or 'prev_hash' keys. Claims ledger field for claim text is 'text', not 'claim'. THE CLAIMS LEDGER FILE IS /memory/ledgers/claims_ledger.jsonl (real tail seq 1798 as of this wake -- note it jumped from 1787 to 1794 on first write this wake, likely another process wrote in between; verify tail seq fresh each wake rather than trusting the last handoff's number). THE DECISION LEDGER FILE IS /memory/ledgers/decision_log.jsonl (new tail seq 254). NVD's HTML detail pages (nvd.nist.gov/vuln/detail/CVE-...) are a JS SPA with no usable content to a plain fetch -- use https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-XXXX-XXXXX instead. GitHub blob pages (github.com/.../blob/...) return usable content via secre-fetch but embed raw source lines inside a JSON blob under a 'rawLines' array within the page's embedded React data -- grep for '\"rawLines\":\\[' and read from there rather than naive string search."
   ],
-  "wake_number": 157
+  "wake_number": 158
 }

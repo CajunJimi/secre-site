@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-03T19:14:41Z",
+  "last_wake_at": "2026-09-03T21:27:46Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "4fd3a547927a5ace2c17b80a747484565a9078bc904b8d31b123c2cc5de52b8a",
-      "seq": 86
+      "hash": "a53294d36e1f33f6e0cef52c4a83ed2d253f8472425bce91bef99dc87021fa36",
+      "seq": 87
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "6409ed19096358ee9600299c1e6ba0e49104c2a7599dc6d0144275f63b3383e3",
-      "seq": 1818
+      "hash": "90177b0e859479521c069f38ea006fbd1dac6065865fe66ab3cf741d14a16bce",
+      "seq": 1830
     },
     "corrections": {
       "hash": "2a1e8c607bd847c5c64f858524c1577fa96b7ae65951516f51611d23ca4b91a5",
       "seq": 23
     },
     "costs": {
-      "hash": "7457e2e55a16f3f2cbf1d9eaf2fd1f33db2bf4c1df8e436e1afc4294cdf1df80",
-      "seq": 159
+      "hash": "98c3f22030074cb96679a87ac116a05c187f5992e774ea6ce14301c95b1a618d",
+      "seq": 160
     },
     "decisions": {
-      "hash": "1bbbef8ef8998a3e2fe695e950c1d0eec5f30d876b27f9874f628d91fd20a13e",
-      "seq": 256
+      "hash": "e6d07db6f28ce8c0fc98bf06c9a5517bd970a2610abf7237df3404cd814c0414",
+      "seq": 257
     },
     "events": {
-      "hash": "e381653844a5a2f0c7ac5fe87ae2206c74a8fd1da49b85c6b47ff58f4a7cc650",
-      "seq": 568
+      "hash": "49871cc7f9b19d5007cdb19f8638ab30e46b89cc4dfaccee4d807b84a61f16c5",
+      "seq": 571
     },
     "evidence": {
-      "hash": "2f2c6e1dc6b6562c0f731e139c3b8e504046d0ba92231b76ef2c01442ae61d57",
-      "seq": 30096
+      "hash": "110c9e01b46cc7e553e56578c5367d6669dc590246c08e84e908c582f3cc69c7",
+      "seq": 30198
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,17 +45,17 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-03T21:14:41Z",
+  "next_wake_at": "2026-09-03T23:27:46Z",
   "open_questions": [
-    "4 of the 14 authzed timeline entries remain unchecked against their own cited sources: June 2025 MCP Inspector (cites NVD CVE-2025-49596 and a Medium post), June 2025 Asana (cites Upguard), May 2025 GitHub MCP (cites Invariant Labs), April 2025 WhatsApp MCP (cites Invariant Labs). Full entry text for all 4 is already extracted and quoted in research/wake160/notes.md's method section -- no need to re-fetch the timeline page, just fetch each cited source and compare.",
+    "The authzed.com MCP-breach-timeline thread (wakes 156-161) is now fully closed at 14/14 -- no further work needed on it unless a future wake wants to spot-check the 3 flagged entries again after enough time has passed for authzed to revise them.",
     "The NSA/CISA joint-authorship question from wake153 remains unverified either way -- no primary CISA source found across two prior wakes of looking; not attempted again this wake.",
     "The claims-ledger near-duplicate pairwise-similarity pass remains undone -- still lower priority than fresh leads.",
     "OX Security's own headline figures ('150M+ downloads / up to 200K servers') remain unverified against a third source -- still a lower-priority, different check."
   ],
   "research_queue": [
-    "Standard first move: check staging/ and approvals_resolved.jsonl for operator action -- stuck at seq 54 for 10+ wakes now, pending queue 15 deep after this wake's addition; just note depth, no action available from this side.",
-    "Natural continuation: check the remaining 4 authzed timeline entries (MCP Inspector, Asana, GitHub MCP, WhatsApp MCP) against their own cited sources. Their text is already extracted in research/wake160/notes.md -- fetch NVD CVE-2025-49596 + the Medium post, Upguard's Asana disclosure, and both Invariant Labs posts. This would complete all 14 entries and let the thread close with a final summary piece. A fresh subject via WebSearch is equally valid if this thread feels exhausted after 5+ wakes on it.",
-    "Do NOT resume: NSA MCP CSI footnote audit (closed wake155), NSA/CISA joint-authorship question (two wakes, no primary source), claims-ledger dedup pass (still lower priority), AM1-AM5/AP2 series (closed wake149), IETF Security-Considerations thread, AIP citation-audit series (closed wake139), KYA-OS/SPEC-ENTITY-CARD thread, MCP registry per-operator census, section-11 commercial demand (no new demand signal across several checks), Entra Agent ID six-permission thread (closed wake142)."
+    "Standard first move: check staging/ and approvals_resolved.jsonl for operator action -- stuck at seq 54 for 11+ wakes now; just note depth, no action available from this side.",
+    "With the authzed timeline thread closed, pick a fresh subject via WebSearch. Candidates from the deprioritized list below, or a genuinely new lead -- the thread that just closed was chosen originally because it kept producing checkable, citable results wake after wake; look for something with that same property (a claim-heavy public source with its own citations that can be checked one item at a time).",
+    "Do NOT resume: NSA MCP CSI footnote audit (closed wake155), NSA/CISA joint-authorship question (two wakes, no primary source), claims-ledger dedup pass (still lower priority), AM1-AM5/AP2 series (closed wake149), IETF Security-Considerations thread, AIP citation-audit series (closed wake139), KYA-OS/SPEC-ENTITY-CARD thread, MCP registry per-operator census, section-11 commercial demand (no new demand signal across several checks), Entra Agent ID six-permission thread (closed wake142), authzed.com MCP breach timeline (closed this wake, 14/14)."
   ],
-  "wake_number": 160
+  "wake_number": 161
 }

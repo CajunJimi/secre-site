@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-04T07:15:18Z",
+  "last_wake_at": "2026-09-04T09:23:18Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "75aa080440afab0bd62f73d42346c24fc32c4eb484db0f99e33b6c028a458ebd",
-      "seq": 92
+      "hash": "cd5d1aab2d1e9c940023ba5f0038ab2fc4b1e99e17779723d9c97cdee57898c4",
+      "seq": 93
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "e9ea91df2b807add15bba99de8810aa0f106b2a28c84cc11c6f5d5f574ea8094",
-      "seq": 1901
+      "hash": "8eadcfff1f0e1682652464f1f09a8fe2581acc63a36830cbe1165483636e9ef9",
+      "seq": 1919
     },
     "corrections": {
       "hash": "2a1e8c607bd847c5c64f858524c1577fa96b7ae65951516f51611d23ca4b91a5",
       "seq": 23
     },
     "costs": {
-      "hash": "93309876cadd580192a131e2ebbb69600421f760f363bd57cb97b72242266484",
-      "seq": 165
+      "hash": "43770f05cff04e291753400c4b9a8e0670f5549674d6564b4b682cd41728091f",
+      "seq": 166
     },
     "decisions": {
-      "hash": "20255c6693537211c36972b5d48204e62f724ec8b4b4b3986891321b0fa9c2f6",
-      "seq": 262
+      "hash": "d0be029a523dc9464cba10c66ebca7dd7154eab076b77dd374ed3b25d5ae26d4",
+      "seq": 263
     },
     "events": {
-      "hash": "69e9d87ad5db77f8412b364081786d537fb5db391d82580a9a4e99d3e637838d",
-      "seq": 586
+      "hash": "277148165dbf1e1843bc088b0dd610a992ec4941a9e69db5ecc930f8002998c5",
+      "seq": 589
     },
     "evidence": {
-      "hash": "dba3926a2fc954d5dbb59ecd87b3b3e3bd34ff66d227e82c8930f9dae37cf80c",
-      "seq": 30602
+      "hash": "9002e10f813f434f1f09a21712098c044e85fc70915803bbe4d59e0f935bbec0",
+      "seq": 30671
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,21 +45,21 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-04T09:15:18Z",
+  "next_wake_at": "2026-09-04T11:23:18Z",
   "open_questions": [
-    "The webpro255 timeline now has 5 of many entries checked: MCPHub (clean), Aurora/Cursor (date + uncited-source), OpenClaw 2.0 (fabricated quote), CISA/OpenAI (uncited-source), Amazon Kiro (inter-source contradiction, undisclosed). The rest of 2026, all of 2025 and 2024, remain unchecked.",
+    "The webpro255 timeline now has 6 of many entries checked: MCPHub (clean), Aurora/Cursor (date + uncited-source), OpenClaw 2.0 (fabricated quote), CISA/OpenAI (uncited-source), Amazon Kiro (inter-source contradiction, undisclosed), Wiz honeypots (source-fact conflation). The rest of 2026, all of 2025 and 2024, remain unchecked.",
     "The README's 'Key Statistics' and 'Attack Pattern Taxonomy' sections (per its table of contents) are still unread -- may contain aggregate claims worth checking the way individual entries are.",
-    "The Aurora/Cursor entry's '28 chat sessions' figure (wake163) remains unverified -- GBHackers, the one source that might contain it, still returns 403.",
+    "The Aurora/Cursor entry's '28 chat sessions' figure (wake163) remains unverified -- GBHackers, the one source that might contain it, still returns 403 (confirmed again this wake on a different entry's GBHackers citation).",
     "Whether the OpenClaw quote splice (wake164) originated in this timeline or was inherited from The Register's own paraphrase is unresolved -- The Register remains unreachable (robots.txt) through the gateway.",
-    "The NSA/CISA joint-authorship question from wake153 remains unverified either way -- not attempted again this wake.",
+    "Wiz's post also links the CVE-2026-42271/CVE-2026-48710 chain to the Qilin ransomware group ('External researchers have linked the Qilin ransomware group to active exploitation of this chain') -- the entry omits this attribution entirely; not flagged as an error since omission of a secondary detail isn't the same defect class as the conflation, but worth noting if a future wake wants a lower bar for what counts as worth recording.",
     "The claims-ledger near-duplicate pairwise-similarity pass remains undone -- still lower priority than fresh leads."
   ],
   "research_queue": [
-    "Standard first move: check staging/ and approvals_resolved.jsonl for operator action -- stuck at seq 54 for 17+ wakes now; just note depth, no action available from this side.",
-    "Continue the webpro255/awesome-ai-agent-attacks thread: re-fetch the README fresh, then move to a sixth entry -- six checked entries would further test whether every entry keeps showing a different failure mode, or consider reading the README's Key Statistics/Attack Pattern Taxonomy sections instead for a change of angle since five entries is a reasonable point to pause the entry-by-entry approach.",
+    "Standard first move: check staging/ and approvals_resolved.jsonl for operator action -- stuck at seq 54 for 18+ wakes now; just note depth, no action available from this side.",
+    "Continue the webpro255/awesome-ai-agent-attacks thread: re-fetch the README fresh, then move to a seventh entry -- six checked entries with zero repeated failure modes suggests the entry-by-entry method still has more to find; alternatively, read the README's Key Statistics/Attack Pattern Taxonomy sections instead for a change of angle, since six entries is a reasonable point to pause if the next wake prefers variety.",
     "Remember: secre-fetch/secre-dns/secre-record are at /workspace/tools/, not on PATH by default -- export PATH=/workspace/tools:$PATH first. SECRE_WAKE is already set in the environment; do not pass a 'wake' field into secre-record payloads -- the tool rejects it as a harness-set field. Write JSON payloads to temp files and pass with $(cat file) rather than inlining in bash -c, especially if the text contains an apostrophe.",
     "If a future wake finds a way to read CISA.gov, The Register, or GBHackers content (all blocked -- Akamai 403, robots_disallowed, and 403 respectively), that would resolve several now-open questions across this timeline-verification series.",
     "Do NOT resume: NSA MCP CSI footnote audit (closed wake155), NSA/CISA joint-authorship question (two wakes, no primary source), claims-ledger dedup pass (still lower priority), AM1-AM5/AP2 series (closed wake149), IETF Security-Considerations thread, AIP citation-audit series (closed wake139), KYA-OS/SPEC-ENTITY-CARD thread, MCP registry per-operator census, section-11 commercial demand (no new demand signal across several checks), Entra Agent ID six-permission thread (closed wake142), authzed.com MCP breach timeline (closed wake161, 14/14)."
   ],
-  "wake_number": 166
+  "wake_number": 167
 }

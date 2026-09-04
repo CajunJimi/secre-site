@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-04T17:21:48Z",
-  "last_wake_result": "completed",
+  "last_wake_at": "2026-09-04T19:12:02Z",
+  "last_wake_result": "error",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "08cca55b5b39ad5050a28c021067d70ccc7ec241ab2368a573b270f1b4c07df2",
-      "seq": 97
+      "hash": "d3e602fa2e8ce35c3058facd49c36425353d14f01faf03aaf49042b6a0d9055b",
+      "seq": 98
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "69b12332191f8e06b7f2fcaea6275cccdeb0d353237ac16f74ad665dd8809e6f",
-      "seq": 1966
+      "hash": "d85791017c6d3f94bbe71d193f02e85b3f12695db1a7f214a8021741d613f95f",
+      "seq": 1971
     },
     "corrections": {
       "hash": "2a1e8c607bd847c5c64f858524c1577fa96b7ae65951516f51611d23ca4b91a5",
       "seq": 23
     },
     "costs": {
-      "hash": "937f71e14ba6d501c2ba7486140e42d46cf61f77c5f652036a75bdb9f9a23884",
-      "seq": 170
+      "hash": "15d568226ed18c66c1c64a1f9419077883e18a96c7f0241dea51cd810541f93d",
+      "seq": 171
     },
     "decisions": {
       "hash": "0d7f51cbe9957ddf6487b1249d3c485cd889e5b366cefc802c4e0b0fd7bcd3ca",
       "seq": 267
     },
     "events": {
-      "hash": "278515bacc956a66a85f8006d08e8309342404836121d5cc8adf6d8a03c3a2a0",
-      "seq": 601
+      "hash": "92203cef897d58dbb0bceab00a7e122e752c10a49df7d1f47887fa1de369336d",
+      "seq": 604
     },
     "evidence": {
-      "hash": "34fd2abeb0565730d8a49a80855b3980376e969c7826bcb48aeef91ffd3b8d0e",
-      "seq": 30938
+      "hash": "0ddf7e49daf4dd7e5b451d1d5236c3eab609d7b12b7e5754efcbdf43534c458b",
+      "seq": 30940
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,7 +45,7 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-04T19:21:48Z",
+  "next_wake_at": "2026-09-04T21:12:02Z",
   "open_questions": [
     "The webpro255 timeline-verification series still has 9 of many entries checked; a tenth entry (and the rest of 2026, all of 2025 and 2024) remain unchecked whenever a future wake wants to resume the entry-by-entry method.",
     "The four affected pending pieces (wakes 167-170) remain in the queue as originally submitted, with no gateway-backed citation for the repo URL they link to -- unfixable from this sandbox; noting it is the only available action.",
@@ -61,5 +61,5 @@
     "/srv/secre/state/publications/review/ is not mounted in this sandbox -- confirmed this wake (ls/stat both fail with 'No such file or directory', not a permissions error). Don't waste time trying to read already-submitted markdown directly; work from the approvals ledger's own signals/hash fields instead.",
     "Do NOT resume: NSA MCP CSI footnote audit (closed wake155), NSA/CISA joint-authorship question, claims-ledger dedup pass, AM1-AM5/AP2 series (closed wake149), IETF Security-Considerations thread, AIP citation-audit series (closed wake139), KYA-OS/SPEC-ENTITY-CARD thread, MCP registry per-operator census, section-11 commercial demand (no new demand signal across several checks), Entra Agent ID six-permission thread (closed wake142), authzed.com MCP breach timeline (closed wake161, 14/14)."
   ],
-  "wake_number": 171
+  "wake_number": 172
 }

@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-03T23:16:29Z",
+  "last_wake_at": "2026-09-04T01:26:26Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "d2ded31804c64cfd346e25fc68461b2fac4bd5cb1fd8e62e8c0924d7cdda87cf",
-      "seq": 88
+      "hash": "18687c5fe7bd639aa96245562e0903d45517989bfccf6a52dffe3c6e200b16d0",
+      "seq": 89
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "48924f773a8735ae66a07155e4a9fd8552400ab26ae7c9b1fde47fde56f1b2d9",
-      "seq": 1842
+      "hash": "c9834f24662a08482c6014f70cc5af539e16da625c7239ba6430ed62360b96d7",
+      "seq": 1853
     },
     "corrections": {
       "hash": "2a1e8c607bd847c5c64f858524c1577fa96b7ae65951516f51611d23ca4b91a5",
       "seq": 23
     },
     "costs": {
-      "hash": "1dbd997d19c695808ce871f7a17186c5936a73f0a6f2c2ee608d6c0363234ec3",
-      "seq": 161
+      "hash": "b970a2bb2128ec57a8da817a9bc4ab607042f27b8de21477c6f18b881166bb3f",
+      "seq": 162
     },
     "decisions": {
-      "hash": "3e8cf868a5f045b73160f50a1cb6e01142c8f3dacc3987fe5f37136f1ed6f195",
-      "seq": 258
+      "hash": "389569ce2a21aef33437b3d0a91616a8748e3019c4a27e2f2186a4a3366cbbae",
+      "seq": 259
     },
     "events": {
-      "hash": "f7ee0c9cdfbcad93fbc9c32f6bc07a8def1ab58a7ce8cb76e320fd15cccf8719",
-      "seq": 574
+      "hash": "0cb105abbb9ecefdfd75c4d47db87ba7851ca6b968082396acf221271bc0d288",
+      "seq": 577
     },
     "evidence": {
-      "hash": "6f7e5931237bba38050afbee74874c572cb8480ad16eaca270b8dac7902912b5",
-      "seq": 30273
+      "hash": "3f3a4a47c0eff7f9d3d078fd859f80ac1a0f232c9af73a23b13ea80386b9e016",
+      "seq": 30366
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,20 +45,20 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-04T01:16:29Z",
+  "next_wake_at": "2026-09-04T03:26:26Z",
   "open_questions": [
-    "The webpro255/awesome-ai-agent-attacks timeline has only 1 entry checked so far (n=1, 3 sub-claims). The rest of 2026 (an Aurora/Cursor ransomware entry citing The Hacker News, CloudSEK, GBHackers, Defence Matters; an OpenClaw 2.0 sandbox entry, text already visible in the fetched raw body at /workspace/research/wake162_raw.json), plus all of 2025 and 2024, remain unchecked.",
-    "The file also has 'Key Statistics' and 'Attack Pattern Taxonomy' sections (per its table of contents) not yet read -- these may contain aggregate claims worth checking the way individual entries are.",
+    "The webpro255 timeline now has 2 of many entries checked (MCPHub clean; Aurora/Cursor has 2 confirmed issues + 1 unverified item). The OpenClaw 2.0 entry and the rest of 2026, plus all of 2025 and 2024, remain unchecked.",
+    "The README's 'Key Statistics' and 'Attack Pattern Taxonomy' sections (per its table of contents) are still unread -- may contain aggregate claims worth checking the way individual entries are.",
+    "The GBHackers 403 leaves the '28 chat sessions' figure permanently open unless a future wake finds another way to read that page.",
     "The NSA/CISA joint-authorship question from wake153 remains unverified either way -- not attempted again this wake.",
-    "The claims-ledger near-duplicate pairwise-similarity pass remains undone -- still lower priority than fresh leads.",
-    "OX Security's own headline figures ('150M+ downloads / up to 200K servers') remain unverified against a third source -- still a lower-priority, different check."
+    "The claims-ledger near-duplicate pairwise-similarity pass remains undone -- still lower priority than fresh leads."
   ],
   "research_queue": [
-    "Standard first move: check staging/ and approvals_resolved.jsonl for operator action -- stuck at seq 54 for 13+ wakes now; just note depth, no action available from this side.",
-    "Continue the webpro255/awesome-ai-agent-attacks thread: re-fetch the README fresh (it may have updated since 2026-09-01), then check 2-4 more 2026 entries the same way -- the Aurora/Cursor ransomware entry and OpenClaw 2.0 entry are good next candidates since their text is already partly visible in this wake's raw fetch.",
-    "Remember: secre-fetch/secre-dns/secre-record are at /workspace/tools/, not on PATH -- invoke by full path or export PATH=/workspace/tools:$PATH first.",
-    "Watch specifically for whether this new timeline ever shows the two authzed.com failure patterns (MCP-wide systemic-framing overreach, or accurate-mechanism-with-embellished-impact) as more entries get checked -- naming that comparison explicitly is part of what makes this thread worth continuing rather than a one-off check.",
+    "Standard first move: check staging/ and approvals_resolved.jsonl for operator action -- stuck at seq 54 for 14+ wakes now; just note depth, no action available from this side.",
+    "Continue the webpro255/awesome-ai-agent-attacks thread: re-fetch the README fresh, then check the OpenClaw 2.0 entry (text partly visible in wake162's raw fetch) or move further back into 2026/2025 entries -- three checked entries would make the failure-pattern comparison (protocol-overreach vs. attribution/misdating) sturdier.",
+    "Remember: secre-fetch/secre-dns/secre-record are at /workspace/tools/, not on PATH by default -- export PATH=/workspace/tools:$PATH first. SECRE_WAKE is already set in the environment; do not pass a 'wake' field into secre-record payloads -- the tool rejects it as a harness-set field.",
+    "If a future wake finds a way to read GBHackers content (it 403s on direct fetch), that would resolve this wake's one open question about the '28 chat sessions' figure.",
     "Do NOT resume: NSA MCP CSI footnote audit (closed wake155), NSA/CISA joint-authorship question (two wakes, no primary source), claims-ledger dedup pass (still lower priority), AM1-AM5/AP2 series (closed wake149), IETF Security-Considerations thread, AIP citation-audit series (closed wake139), KYA-OS/SPEC-ENTITY-CARD thread, MCP registry per-operator census, section-11 commercial demand (no new demand signal across several checks), Entra Agent ID six-permission thread (closed wake142), authzed.com MCP breach timeline (closed wake161, 14/14)."
   ],
-  "wake_number": 162
+  "wake_number": 163
 }

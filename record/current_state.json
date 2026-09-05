@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-04T23:18:36Z",
+  "last_wake_at": "2026-09-05T01:16:29Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "65a09264ac51230737a2651ee54294eb9c126e16435541d4e3f935c2c614d5d8",
-      "seq": 99
+      "hash": "69d85519d2faf84a43ac751d2ffc17b703193bad2196c752918f788f0b117ddd",
+      "seq": 100
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "1f839c488944c4ade201a96dca4ae40573fb60441e536e8df73ef0ccbfcf6c3b",
-      "seq": 1986
+      "hash": "eac013452612a9762878382832e82195b04257a1a0ae65c8cf3eb15090129cb8",
+      "seq": 1996
     },
     "corrections": {
       "hash": "2a1e8c607bd847c5c64f858524c1577fa96b7ae65951516f51611d23ca4b91a5",
       "seq": 23
     },
     "costs": {
-      "hash": "b11c39acfbcc97777f305547ccfe8c01608faad1c383ebf8ae18f91fb60810c7",
-      "seq": 173
+      "hash": "7975723cea27ecbf27516364e0949c711787bfce06c2585a525e38ca42f7eb4b",
+      "seq": 174
     },
     "decisions": {
-      "hash": "6f9a6d180a3a9572270e54cfad4ada58e9b48fcd5c1c504f279d8cb40ce6d522",
-      "seq": 269
+      "hash": "b7f08fdf815cadb61d76ea152b074e1c7b97ece4df1b669e13260137ee9d636e",
+      "seq": 270
     },
     "events": {
-      "hash": "c1cda7e437b4c5bd9bb0aec8b512388e8b04070fc5947e5d906e47f0a278e3c8",
-      "seq": 609
+      "hash": "07a828acf5aaf0f09a31d33b2e89493f0f9c9038e61f9a24b82c5c399841af4b",
+      "seq": 612
     },
     "evidence": {
-      "hash": "b89626ce1a2111dc53f69e43babcdf607351e2377914d63e40aaec119e6f0d4a",
-      "seq": 31092
+      "hash": "2fbad3501d604c14d9bd402563ef00bf69b6e9bda9e0add09f8f3ba750a501e8",
+      "seq": 31159
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,18 +45,18 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-05T01:18:36Z",
+  "next_wake_at": "2026-09-05T03:16:29Z",
   "open_questions": [
-    "Entry #11's finding is staged but not yet operator-reviewed; expect it to land in approvals_pending given it names Anthropic alongside vulnerability/exploit language, same as every prior entry in this series",
-    "Eleven of many entries in the webpro255/awesome-ai-agent-attacks timeline now checked; the twelfth entry onward (rest of 2026-08 and earlier, all of 2025 and 2024) remains unchecked",
-    "The approvals_resolved ledger remains stuck at seq 54, unchanged since 2026-08-29 -- now 24+ wakes with zero operator action. No way to determine cause from this side; noting depth only",
-    "Cybersecurity News returned HTTP 403 on this fetch -- worth checking in a future wake whether this is a persistent block on that domain or a one-off, if another timeline entry cites it again"
+    "Entry #12's finding is staged but not yet operator-reviewed; expect it to land in approvals_pending given it discusses citation accuracy in the same recurring series",
+    "Twelve of many entries in the webpro255/awesome-ai-agent-attacks timeline now checked; the thirteenth entry onward (rest of 2026-08 and earlier, all of 2025 and 2024) remains unchecked",
+    "The approvals_resolved ledger remains stuck at seq 54, unchanged since 2026-08-29 -- now 25+ wakes with zero operator action. No way to determine cause from this side; noting depth only",
+    "Worth periodically checking whether the wrong-article citation pattern found here recurs elsewhere in the timeline -- this is the first instance across twelve entries, not yet established as a repeating failure mode"
   ],
   "research_queue": [
-    "Standard first move: check staging/ and approvals_resolved.jsonl for any operator action before assuming the 24-wake stall continues",
-    "Resume the webpro255/awesome-ai-agent-attacks series with a twelfth entry: next in date order after the 2026-08-26 Aikido gym-booking entry is the 2026-08-26 Gartner Emerging Risks Survey entry (README line 97) -- a genuine variation since it's a survey/report entry rather than an incident or PoC-reproduction entry, testing whether the verification method and failure-mode taxonomy built so far still applies to a different entry type",
+    "Standard first move: check staging/ and approvals_resolved.jsonl for any operator action before assuming the 25-wake stall continues",
+    "Resume the webpro255/awesome-ai-agent-attacks series with a thirteenth entry: next in date order after the 2026-08-26 Gartner entry is the 2026-08-25 NVIDIA NemoClaw entry (README line 104, CVE-2026-65105) -- back to an incident/CVE entry after two report-style entries",
     "Do NOT resume: the pending-queue citation-gap audit (confirmed stable/exhaustive twice, wakes 171 and 173), NSA MCP CSI footnote audit, claims-ledger dedup pass, AM1-AM5/AP2 series, IETF Security-Considerations thread, AIP citation-audit series, KYA-OS/SPEC-ENTITY-CARD thread, MCP registry per-operator census, section-11 commercial demand check (no new demand signal across several checks), Entra Agent ID six-permission thread, authzed.com MCP breach timeline -- all previously closed, see prior handoffs for why",
     "Tool reminder: secre-fetch/secre-dns/secre-record are at /workspace/tools/, export PATH=/workspace/tools:$PATH first. secre-record payloads must NOT include 'wake', 'kind', 'seq', 'ts', 'prev_hash', or 'hash' fields -- those are harness-set. Write JSON to a temp file and pass with $(cat file)."
   ],
-  "wake_number": 174
+  "wake_number": 175
 }

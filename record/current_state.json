@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-05T09:27:20Z",
+  "last_wake_at": "2026-09-05T11:14:36Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "7d2df51c0ec417e77f1b423996922634a5fa8d36e61535b824bb6ec47f495844",
-      "seq": 104
+      "hash": "28e0910a8ec25c9d424f84a8813e3da0313c621595860753f2cc86e9070963bd",
+      "seq": 105
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "bfbd6a240b7436f27b8465c3e3ed7393aada5aece47b4dcc44c31b1c6d66ef00",
-      "seq": 2029
+      "hash": "940780574ec6b84257f068d05f13852cd8977523460ffec28146e5d07e0774a2",
+      "seq": 2035
     },
     "corrections": {
       "hash": "2a1e8c607bd847c5c64f858524c1577fa96b7ae65951516f51611d23ca4b91a5",
       "seq": 23
     },
     "costs": {
-      "hash": "2b732b31c06d7b3e1a84bcb4891d409a0dc6cdcd4da223e829b4ee450c0d4015",
-      "seq": 178
+      "hash": "5a7a32eb814b8d4d7b5d4917b2a4b01f5869f2e29d3fc5808b48c5a856c21e27",
+      "seq": 179
     },
     "decisions": {
-      "hash": "b27ab90375b1f16cf2735e4e455c91d41eec47bcaf6108bee7eaa7d6ec4eb0ae",
-      "seq": 274
+      "hash": "38721afa5966c8524528e3c22c0b95c03e8b9d97f84fc2eb5e5e4858abb5e068",
+      "seq": 275
     },
     "events": {
-      "hash": "0683b4113fea4d41a5bc7ccc59277bfcfdbad20dd8b9488272d462407e477dac",
-      "seq": 624
+      "hash": "9c49edc52d61bb3979c2d9e99eaff8d0442cf4f8c389879e2a85c1fd32d27f0c",
+      "seq": 627
     },
     "evidence": {
-      "hash": "39ef627a32f046862a3879b2d1f8eaafeb99c0e5cfa12e0e2a86ed56ba82fcf4",
-      "seq": 31441
+      "hash": "6bd969225d5409b836c5975871f1d93c4bce19f82241f4855d18cff05ea320b0",
+      "seq": 31512
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,18 +45,17 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-05T11:27:20Z",
+  "next_wake_at": "2026-09-05T13:14:36Z",
   "open_questions": [
     "This wake's finding is staged but not yet operator-reviewed; expect it to land in approvals_pending",
-    "The approvals_resolved ledger remains stuck at seq 54, unchanged since 2026-08-29 -- now 28+ wakes with zero operator action, and approvals_pending has grown to 104 items with none resolved. No way to determine cause from this side; noting depth only",
-    "The next entry after this one in the README's date order (immediately preceding 2026-08-20 chronologically, i.e. the entry after 2026-08-19 in the file) has not yet been identified -- a future wake should locate it by re-fetching the README and finding the entry after the one checked this wake",
-    "Entry-index numbering across different wake write-ups in this series continues to drift slightly; treat any specific ordinal in a write-up as approximate rather than authoritative -- check the README directly for exact sequencing"
+    "The approvals_resolved ledger remains stuck at seq 54, unchanged since 2026-08-29 -- now 29+ wakes with zero operator action, and approvals_pending has grown to 105 items with none resolved. No way to determine cause from this side; noting depth only",
+    "The next entry after 2026-08-19 in the README's date order (going further backward) has not yet been identified -- a future wake should locate it by re-fetching the README fresh and scanning backward from the 'Five US Agencies Warn' heading, since exact ordinal position drifts across wakes"
   ],
   "research_queue": [
-    "Standard first move: check staging/ and approvals_resolved.jsonl for any operator action before assuming the 28+-wake stall continues",
-    "Resume the webpro255/awesome-ai-agent-attacks series with the next entry in date order after 2026-08-20 (the one checked this wake) -- re-fetch the README fresh and scan forward/backward from the 'Cryptographic Context Injection' heading to find it, since exact ordinal position has drifted across wakes",
+    "Standard first move: check staging/ and approvals_resolved.jsonl for any operator action before assuming the 29+-wake stall continues",
+    "Resume the webpro255/awesome-ai-agent-attacks series with the next entry in date order before 2026-08-19 -- re-fetch the README fresh and scan backward from the 'Five US Agencies Warn of AI-Generated Exploit Scripts' heading (line ~133 as of this wake, but check directly since line numbers drift as the file grows)",
     "Do NOT resume: the pending-queue citation-gap audit (confirmed stable/exhaustive twice, wakes 171 and 173), NSA MCP CSI footnote audit, claims-ledger dedup pass, AM1-AM5/AP2 series, IETF Security-Considerations thread, AIP citation-audit series, KYA-OS/SPEC-ENTITY-CARD thread, MCP registry per-operator census, section-11 commercial demand check (no new demand signal across several checks), Entra Agent ID six-permission thread, authzed.com MCP breach timeline -- all previously closed, see prior handoffs for why",
-    "Tool reminder: secre-fetch/secre-dns/secre-record are at /workspace/tools/, export PATH=/workspace/tools:$PATH first. secre-record payloads must NOT include 'wake', 'kind', 'seq', 'ts', 'prev_hash', or 'hash' fields -- those are harness-set. Write JSON to a temp file and pass with $(cat file). For sources that fail on direct fetch (403, robots_disallowed, or otherwise), try archive.org/wayback/available?url=<host+path> before giving up -- it has worked on 2 of the last 2 wakes where a direct fetch failed."
+    "Tool reminder: secre-fetch/secre-dns/secre-record are at /workspace/tools/, export PATH=/workspace/tools:$PATH first. secre-record payloads must NOT include 'wake', 'kind', 'seq', 'ts', 'prev_hash', or 'hash' fields -- those are harness-set. Write JSON to a temp file and pass with $(cat file). For sources that fail on direct fetch (403, robots_disallowed, or otherwise), try archive.org/wayback/available?url=<host+path> before giving up -- it has worked on 3 of the last 3 wakes where a direct fetch failed."
   ],
-  "wake_number": 179
+  "wake_number": 180
 }

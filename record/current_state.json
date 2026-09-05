@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-05T21:19:14Z",
+  "last_wake_at": "2026-09-05T23:25:15Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "e3980d0737577c92d4d5277602727cb11916294fa0efec59380378a84ad31816",
-      "seq": 110
+      "hash": "a8d11b302f879392366add0e14eff8b9ea78bfe1886dec8c1574a81178f937de",
+      "seq": 111
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "eaaa1ced16f0938cc9376cb420d7c8d690542174d0833e2cb1959f2b7a054326",
-      "seq": 2065
+      "hash": "f60112c7706c5ad05f6389f3972d2715ac0614a156681c843aa2c890055decca",
+      "seq": 2073
     },
     "corrections": {
       "hash": "2a1e8c607bd847c5c64f858524c1577fa96b7ae65951516f51611d23ca4b91a5",
       "seq": 23
     },
     "costs": {
-      "hash": "02e438ff5083fe795288e28bbb2010cebf88265e4427b4508df1c1b3f130e600",
-      "seq": 184
+      "hash": "18fe0e188414d8b63ad7c11339095bcafbd44c52c834eababc657b32853d8272",
+      "seq": 185
     },
     "decisions": {
-      "hash": "50b8700995f9599e0a5f03b0b9f9ca632fe9fbc4f02d03e6e7e899c39821c1fb",
-      "seq": 280
+      "hash": "bb84129a1933e0fada70bffdaa633f9276071366557e3071078899b9e72b83f1",
+      "seq": 281
     },
     "events": {
-      "hash": "7c7406615e17cd9047d48d50bf33481cf9095d3ff5344fb7fe50d9cb0717f4c0",
-      "seq": 642
+      "hash": "6a41bf21e3bd98ba551a8cb34116bac529cefc279e07819d4d5f960d0674aea4",
+      "seq": 645
     },
     "evidence": {
-      "hash": "8cb33e54cb7270a92c334b48eab99f64dc8add176998fb71a3a1ec3030130a2d",
-      "seq": 31894
+      "hash": "bec4755e699042008a3094de06caa3be3b6ecba8798d71fa52a0fa8caf6f5790",
+      "seq": 31970
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,18 +45,18 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-05T23:19:14Z",
+  "next_wake_at": "2026-09-06T01:25:15Z",
   "open_questions": [
     "This wake's finding is staged but not yet operator-reviewed; expect it to land in approvals_pending",
-    "The approvals_resolved ledger remains stuck at seq 54, unchanged since 2026-08-29 -- now 35+ wakes with zero operator action, and approvals_pending has grown to 110 items with none resolved",
-    "Could not fetch 3 of 5 cited sources for this entry (Forbes, Cybernews, Cybersecurity News, all 403) -- a future wake could retry in case the blocks are transient",
-    "The next entry after this one in date order in the README has not yet been identified -- a future wake should re-fetch the README fresh and scan forward from the Snowflake/Red Agent entry (2026-08-17) since line numbers and even entry ordering can drift between fetches"
+    "The approvals_resolved ledger remains stuck at seq 54, unchanged since 2026-08-29 (wake75) -- now 40+ wakes with zero operator action, and approvals_pending has grown to 111 items with none resolved",
+    "Could not fetch 1 of 5 cited sources for this entry (Cybersecurity News, 403) -- a future wake could retry in case the block is transient",
+    "The next entry after this one in date order in the README has not yet been identified -- a future wake should re-fetch the README fresh and scan forward from the encrypted-reasoning-trace entry (2026-08-13) since line numbers and even entry ordering can drift between fetches; the next entry by visible date order in this wake's fetch was 2026-08-12 'Near-Autonomous AI Agents Breach Taiwan's Government and Nuclear Safety Regulator in Four Days'"
   ],
   "research_queue": [
-    "Standard first move: check staging/ and approvals_resolved.jsonl for any operator action before assuming the 35+-wake stall continues",
-    "Resume the webpro255/awesome-ai-agent-attacks series with the next entry after 2026-08-17 Snowflake/Red Agent -- re-fetch the README fresh (raw.githubusercontent.com/webpro255/awesome-ai-agent-attacks/main/README.md) and search forward from 'An AI Agent Exploits a Copilot-Reviewed GitHub Actions Bug in Snowflake's Repository' to find whatever comes next",
+    "Standard first move: check staging/ and approvals_resolved.jsonl for any operator action before assuming the 40+-wake stall continues",
+    "Resume the webpro255/awesome-ai-agent-attacks series with the next entry after 2026-08-13 (encrypted reasoning-trace replay) -- re-fetch the README fresh (raw.githubusercontent.com/webpro255/awesome-ai-agent-attacks/main/README.md) and search forward from 'Encrypted Reasoning Traces Replay Across OpenAI, Anthropic, and Google APIs'; candidate next entry seen this wake was 2026-08-12 'Near-Autonomous AI Agents Breach Taiwan's Government and Nuclear Safety Regulator in Four Days' but confirm against a fresh fetch since ordering can drift",
     "Do NOT resume: the pending-queue citation-gap audit, NSA MCP CSI footnote audit, claims-ledger dedup pass, AM1-AM5/AP2 series, IETF Security-Considerations thread, AIP citation-audit series, KYA-OS/SPEC-ENTITY-CARD thread, MCP registry per-operator census, section-11 commercial demand check, Entra Agent ID six-permission thread, authzed.com MCP breach timeline -- all previously closed, see prior handoffs for why",
     "Tool reminder: secre-fetch/secre-dns/secre-record are at /workspace/tools/, export PATH=/workspace/tools:$PATH first. secre-record payloads must NOT include 'wake', 'kind', 'seq', 'ts', 'prev_hash', or 'hash' fields. When a JSON payload contains an apostrophe, write it to a file first and pass via $(cat file.json) rather than inlining in single-quoted bash"
   ],
-  "wake_number": 185
+  "wake_number": 186
 }

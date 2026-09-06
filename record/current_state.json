@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-06T21:39:04Z",
+  "last_wake_at": "2026-09-06T23:36:10Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "b42b52a017c0a32c0126ad85104930b939d4e0c0239996d3468c3bcfcaab9be8",
-      "seq": 123
+      "hash": "8a6c2431834770958b02f57c125c2f115a44c083f3a3bf9250b33e2635caa077",
+      "seq": 125
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "948b700dbd461909d9ebbe60473170cd0ef469c92e2c2fdad0b739295549e4ca",
-      "seq": 2313
+      "hash": "c491001d95dbecf230a8743db7d695a128c88a6dba602397c1437e51d5f4279f",
+      "seq": 2344
     },
     "corrections": {
       "hash": "7d2c71d1a3d36776853b684aecfcec6e7c473670f689fa965296475fd60fdcc8",
       "seq": 26
     },
     "costs": {
-      "hash": "d9105cbb86817d11a48bde7ceb14a4049c8e79f982af18bb85749751555a5c9d",
-      "seq": 195
+      "hash": "1bc684462ab506dcf83f269ab6ee809f9cb4087265a123acc5415045219dd7c1",
+      "seq": 196
     },
     "decisions": {
-      "hash": "ece55170d606bcea057407127ba1075529ba7cfef282fc37a37d66dbe3c62254",
-      "seq": 341
+      "hash": "1fab774ae65cd913ae7b928ac1afc198c0d060f04f0ef002090ce611eb11c142",
+      "seq": 344
     },
     "events": {
-      "hash": "9c5e381664d37114d3ad03bcbe591f605ec1d1b5e98bc07108f8dba8b8ba76a0",
-      "seq": 684
+      "hash": "ac0bc7c685b0815c97674d9d11765a2022d76b92fa5df64e4209dc9838238588",
+      "seq": 688
     },
     "evidence": {
-      "hash": "553d534d1368716f70c4f9f4fc41960566fb7aef7bcd9ba14131569f98c18252",
-      "seq": 33211
+      "hash": "fbb9458365192c02ed83ef88585349fb627d86bd9fe0c9c815030fbc4bea6414",
+      "seq": 33380
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,29 +45,29 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-06T23:39:04Z",
+  "next_wake_at": "2026-09-07T01:36:10Z",
   "open_questions": [
     "research/wake190/ra.txt, the 61,435-character Rapid7 technical post, is still only grepped and not read",
     "Secure Blink's 9.0 / CVSS 4.0 statement about the a.security Zoomsday post is still unresolved; do not resolve it by assuming an earlier extraction was complete",
     "The 'hackerone.com/edbr' credit on GHSA-5cwg-9f6j-9jvx versus Cymulate's three named researchers is unresolved and probably unresolvable from public evidence; do not guess",
-    "69 open approvals, nothing resolved in either direction since 29 August; the piece staged this wake will change that count again",
+    "71 open approvals, nothing resolved in either direction since 29 August; this wake's staged piece will move the count again",
     "Whether the two pre-ledger feed items should get retrospective publication records is the operator's call, not mine",
     "Commercial demand work untouched again; untested channels are listed in commercial/wake193-demand-signal-check.md",
     "The Mind Viruses paper's own artefacts, github.com/frotaur/mindvirus-viruschain and mindvirusdata.live, are still unlooked-at",
-    "The Kimi K3 entry's 'reported three days earlier' clause is unverified; nothing dated 2026-08-04 was fetched",
-    "Whether social drafts should use /writing/<slug> or /<slug>.html is now an open question for the operator - the brief prescribes the first and only the second resolves to a publication"
+    "Nothing in the skills.sh audit is independent of Zenity: the listings and repositories were removed within twelve hours, so the install counters, trending positions and commits are gone from where they were served",
+    "Two of the Meta/Irregular entry's four sources stay unchecked: The Register is robots_disallowed to this gateway and RT returns 403. Nothing in that audit is independent of Breitbart and Memeburn"
   ],
   "research_queue": [
-    "Take the next entry after RovoBlast: the 2026-08-06 Vercel skills.sh credential-stealing skills entry at README line 287, which cites Business Wire and Zenity. Business Wire is a press release, so the Zenity write-up is the primary to check first",
-    "Every absence claim must survive the alternative spellings before it is written down, and when the absence is the finding, read the paragraph rather than trusting the count. Three near-misses in three wakes: 'Bugcrowd' vs 'Bug Crowd', 'DEFCON 34' vs 'DEF CON 34', and a slug regex missing a capital letter",
-    "Add the response check to the scope and attribution checks: when an entry implicates a named organisation, grep its own cited sources for that organisation's reply before concluding the entry is complete. That is what produced this wake's main finding",
-    "Check the claims ledger for the finding you are about to write before writing it. That caught a duplicate piece this wake in about thirty seconds",
-    "Read the clock with date -u before scoping. The container clock runs slower than elapsed-token intuition; I twice believed I was fifteen minutes further along than I was, and both times in the direction of cutting work short",
-    "Anything reporting the approval backlog must subtract approvals_resolved.jsonl from approvals_pending.jsonl first. The pending file is append-only. The figure as of 2026-09-06T21:30Z is 69 open of 123 ever requested, before this wake's two pieces",
+    "Take the next entry after the Meta/Irregular one: the 2026-08-06 Black Hat GitHub-issue RCE entry at README line 301 (CVE-2026-54316), which follows the Meta entry in the file. The two entries audited this wake are at lines 287 and 294",
+    "Add the install-timeline check to the scope, attribution and response checks: when an entry explains why a trust signal failed, date the signal against the primary's own timeline. That is what produced this wake's finding, and it cost one grep",
+    "Never carry a number forward from a previous draft of the synthesis. Recount it. The 39-versus-48 error survived two rewrites because it was plausible, and my own claims ledger had the right figure the whole time",
+    "Do not reinstate the gate-prediction tally without recounting the decision log; as of this wake the record does not support it",
+    "Anything reporting the approval backlog must subtract approvals_resolved.jsonl from approvals_pending.jsonl first. The figure as of 2026-09-06T23:20Z is 71 open of 125 ever requested, before this wake's staged piece",
+    "Social drafts and any citation of a published piece should use https://secre-site.pages.dev/<slug> with no extension. Confirmed this wake: the .html form redirects there and /writing/<slug> serves the index",
+    "Do not use the feed's sha256 to detect whether anything published; it changes on every rebuild because of lastBuildDate. Count <item> elements instead",
     "The hash-chain formula: sha256 over the record with 'hash' removed and 'prev_hash' retained, json.dumps(sort_keys=True, separators=(',',':'), ensure_ascii=False), utf-8. Do not re-derive it with ensure_ascii defaulted",
-    "Do not retry wired.com (domain refused this wake), MSRC (settled wake189), /writing/<slug> (settled wake188, re-confirmed this wake), SecurityOnline (failed twice at wake190), NVD (settled wake191), theregister.com or cybersecuritynews.com",
-    "The audited repository is webpro255/awesome-ai-agent-attacks. Do not fetch GTRekter/",
+    "Do not retry wired.com (domain refused at wake196), MSRC (settled wake189), /writing/<slug> (settled wake188), SecurityOnline (failed twice at wake190), NVD (settled wake191), cybersecuritynews.com",
     "Tool reminder: export PATH=/workspace/tools:$PATH first; secre-record payloads omit wake, kind, seq, ts, prev_hash and hash; staged front-matter claims are auto-recorded at wake end, so do not hand-record them"
   ],
-  "wake_number": 196
+  "wake_number": 197
 }

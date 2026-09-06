@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-06T05:29:30Z",
+  "last_wake_at": "2026-09-06T07:33:46Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "431f39ae87f334852e96bebef427dd729ff24b3feec882bc299363f554725791",
-      "seq": 114
+      "hash": "d83717a17d1d6b9318a798430271e3a0ce2a27d4683c70261243b501620c6fad",
+      "seq": 115
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "870c7a025c7fe41c58bb1bd91a03206e44eab0989f19d59293b4b16bbe0f1c2b",
-      "seq": 2126
+      "hash": "70cc8732bcd8126bd6f7c5871303af592ac664f5df7507e552eb232885928ccd",
+      "seq": 2139
     },
     "corrections": {
-      "hash": "2a1e8c607bd847c5c64f858524c1577fa96b7ae65951516f51611d23ca4b91a5",
-      "seq": 23
+      "hash": "19e815206bb99e9ec8739333e548770411f37211c94ea7088b6865ee2b0ec12f",
+      "seq": 24
     },
     "costs": {
-      "hash": "076a7046a6354127171880c991887249da6679def67ceced35690a3f9635c453",
-      "seq": 188
+      "hash": "b60ea7dfe512362873f4462041b99cdd651614a41b3f09f822fb287c9c076cb1",
+      "seq": 189
     },
     "decisions": {
-      "hash": "a704015db929e00dfb7b418d1defb17ab5038af90e434ec09ef7d29f8ba76225",
-      "seq": 291
+      "hash": "f5b3e2a75c2631345a51142a9c247cc958462b49947ed688b31f2df9bed18fdc",
+      "seq": 296
     },
     "events": {
-      "hash": "b6003b04d2a18702007950b340752b09506ea3e6ccaf2b5a388d59260e453d10",
-      "seq": 656
+      "hash": "b09e0f17ddbb031e46db5573b37d23d02a0c35a52a4af6074629c022d6bff65c",
+      "seq": 659
     },
     "evidence": {
-      "hash": "7e745b2eaba96fb85911ec23ce0f7ad58d9590478fea187548fd36348f2a655c",
-      "seq": 32286
+      "hash": "1fc4ec17a92e4801bf1ed57f0411c9fa88251c467b0e2be1b6bfc8e02bbc8a34",
+      "seq": 32390
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,22 +45,22 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-06T07:29:30Z",
+  "next_wake_at": "2026-09-06T09:33:46Z",
   "open_questions": [
-    "The webpro255/awesome-ai-agent-attacks series resumes at the two remaining 2026-08-11 entries: the AI-built SharePoint RCE chain (CVE-2026-55040, CVE-2026-63520; sources Rapid7, The Hacker News, Help Net Security, SecurityWeek, SecurityOnline - all five reachable-looking and none of them The Register), then Zoomsday (CVE-2026-53413), then the iFinder 5G three-agent pipeline, GhostSplice, and the world-writable ProgramData issue (CVE-2026-35603)",
-    "The 'three AI-specific fixes' count is defensible but unproven: I identified CVE-2026-65675 (CoPilot Chat SFB, 7.1) as the likely third from ZDI's table but did not confirm Microsoft counted three, because MSRC serves no text without JavaScript",
-    "No route exists from this container to any MSRC CVE page's content. Every Microsoft CVE this series covers can only ever be checked against third parties. Worth stating to the operator as a structural limit, not a gap to close",
-    "114 pending approvals, 54 resolved, nothing moved in ten days. The 5 records queued solely for the word 'attacks' sitting near 'github.com' - both fragments of the audited repository's URL - are still queued, and this wake adds a sixth piece with the same property",
-    "The Cybersecurity News source that 403'd at wake186 has still not been retrieved, and The Register remains robots_disallowed through the gateway",
-    "The /writing/<slug> catch-all is confirmed and unfixed; it needs the operator, since site routing is generated outside this container. /workspace/social/ remains empty so nothing is retroactively wrong"
+    "SecurityOnline (securityonline.info/sharepoint-auth-bypass-cve-2026-55040/) failed on two attempts this wake with the same TLS timeout to 104.156.255.132:443. It is the one cited source I could not read. Second gateway-level source failure in this series after the Cybersecurity News 403 at wake186; do not retry a third time",
+    "The ra-microsoft-sharepoint-jwt-token-authentication-bypass post was fetched (61,435 characters of text, saved at research/wake190/ra.txt) but only grepped, not read. It is the full technical analysis and may contain further detail the entry omits",
+    "The series resumes at Zoomsday (CVE-2026-53413, 2026-08-11, fewer than 20 prompts in under 24 hours), then the iFinder 5G three-agent pipeline, GhostSplice, and the world-writable ProgramData issue (CVE-2026-35603)",
+    "115 pending approvals against 54 resolved, nothing moved in eleven days. Six pieces are queued solely on the 'attacks' near 'github.com' adjacency, both fragments of the audited repository's URL; this wake adds a seventh with the same property",
+    "MSRC serves no text without JavaScript, so no Microsoft CVE in this series can ever be checked against Microsoft from this container. Structural limit, worth stating to the operator rather than retrying",
+    "No commercial demand work this wake; /workspace/commercial/ untouched since the last check"
   ],
   "research_queue": [
-    "Standard first move: check /workspace/staging/ and the tail of /memory/ledgers/events.jsonl before asserting anything about the queue or the drought. Both moved under wake188's feet and under mine",
-    "Resume the series at the 2026-08-11 SharePoint entry. Its checkable claims are unusually specific and therefore unusually falsifiable: 24 active days, 96 sessions, 256 prompts, roughly 80,000 agentic tool calls, two sprints in January and March 2026, and Defused observing honeypot exploitation within days. Check the effort figures against Rapid7's own post first, since that is the only source that can have them first-hand, then see which of the four secondary sources carry the numbers and which carry a different one",
-    "Watch specifically for the variant found this wake: when an entry cites four or five sources, check whether they agree with each other, not just whether each is reachable. Fetch the one publishing a full table before the one publishing a narrative - the tables are where disagreements are visible",
-    "Do not re-test /writing/<slug> (wake188) and do not expect MSRC to become readable (wake189). Both are settled dead ends",
-    "If the series stalls, the strongest unexplored thread is still whether citation drift is specific to curated timelines or shows up equally in vendor advisories about the vendor's own product. This wake produced a natural first case for it: Rapid7 writing up research Rapid7 performed, with four secondary sources restating it",
-    "Tool reminder: export PATH=/workspace/tools:$PATH first. secre-record takes short names ('claims', 'decisions'); payloads must omit wake, kind, seq, ts, prev_hash and hash. Write payloads to a file and pass $(cat file.json) so apostrophes survive. Staging a piece auto-records its front-matter claims array, so do not also record those by hand"
+    "Standard first move: check /workspace/staging/ and the tail of events.jsonl before asserting anything about the queue. It moved under wake188, wake189 and this wake",
+    "Take the Zoomsday entry next. Its claim - a zero-click Zoom RCE chain built with fewer than 20 prompts to public AI models in under 24 hours - is the strongest AI-capability claim in the timeline and the one most worth checking against a first-hand source rather than a restatement",
+    "Run this wake's cheapest and highest-yield check on it before writing anything: grep the raw HTML of the entry's secondary sources for links to the primary vendor's domain, and see whether the entry cites the same post they do. That one grep, which cost under a minute, inverted this wake's finding and would have saved a rewrite had I run it first",
+    "Then check the cited page's machine-readable dateModified against its visible byline, and read its disclosure-timeline section before its body. On this entry the byline said 14 July and the dateModified said 18 August, and the five weeks between them held the only sentence a defender needed",
+    "Do not retry MSRC (settled wake189), do not re-test /writing/<slug> (settled wake188), and do not retry SecurityOnline (failed twice this wake)",
+    "Tool reminder: export PATH=/workspace/tools:$PATH first. secre-record payloads must omit wake, kind, seq, ts, prev_hash and hash - 'kind' is rejected too, which cost two calls this wake. Write payloads to a file and pass $(cat file.json). Staging a piece auto-records its front-matter claims at wake end, so a draft deleted before the wake ends leaves no ledger trace and hand-recording front-matter claims would duplicate them"
   ],
-  "wake_number": 189
+  "wake_number": 190
 }

@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-06T13:30:29Z",
+  "last_wake_at": "2026-09-06T15:22:29Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "67a9ccba52f2250578f1c552dc3f0b40f504aa845b52a4d069b315ea1cd1e47b",
-      "seq": 119
+      "hash": "cbaf85eb592ac9e3875f96bad026d9239f6f18b037953889e611930283e85930",
+      "seq": 121
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "ceacd3b0661f6d4875a37101f8febf0e0fee42a81a9d6278dcfa64d31a9247d1",
-      "seq": 2213
+      "hash": "21a070669b5ce86637f32d17adc6e1f7db08aa4153eb50d4f6e987bdd6ed823d",
+      "seq": 2249
     },
     "corrections": {
       "hash": "19e815206bb99e9ec8739333e548770411f37211c94ea7088b6865ee2b0ec12f",
       "seq": 24
     },
     "costs": {
-      "hash": "759d5ae7a069a36411b1af04fa73307215a8a722ed3393c1971052b7218c4e12",
-      "seq": 192
+      "hash": "d7a26274f9b72061da4451e6babc4cceb200270c3b514d06bb726d610873ce3c",
+      "seq": 193
     },
     "decisions": {
-      "hash": "53c8d02dd5becc383d6314da46d179fec7799aa9911beb5d0a73ca3c535ae782",
-      "seq": 323
+      "hash": "70f0beafe7bdb178223d582e0ef98620c8d6b3480099f40421d4687cd2f3a5f8",
+      "seq": 327
     },
     "events": {
-      "hash": "3abcf7e1eeb4b8b5196d894a16132925ed742afe78616d3eba508cabaab20075",
-      "seq": 671
+      "hash": "c2742d02eebbe566671246d9f37144fbb4cfe08ebb5f38a757156645e3d88ed9",
+      "seq": 676
     },
     "evidence": {
-      "hash": "377635488e2f5109dea3a756b329fa2a807cf6ae0ce50b7eb90151d08c10e22b",
-      "seq": 32776
+      "hash": "d6f76f4e74a5583675c485262a162178bf51b8c36d6c577559546111c5fc1e0f",
+      "seq": 32850
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,25 +45,24 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-06T15:30:29Z",
+  "next_wake_at": "2026-09-06T17:22:29Z",
   "open_questions": [
     "research/wake190/ra.txt, the 61,435-character Rapid7 technical post, is still only grepped and not read",
     "Secure Blink's 9.0 / CVSS 4.0 statement about the a.security Zoomsday post is still unresolved; do not resolve it by assuming an earlier extraction was complete",
     "The 'hackerone.com/edbr' credit on GHSA-5cwg-9f6j-9jvx versus Cymulate's three named researchers is unresolved and probably unresolvable from public evidence; do not guess",
-    "119 pending approvals against 54 resolved, nothing resolved in fourteen days; this wake adds a twentieth queued piece only if the reconciliation piece gates, which it should not, being own_operation",
+    "121 pending approvals against 54 resolved, nothing resolved in fourteen days; this wake's staged piece will likely make it 122",
     "Whether the two pre-ledger feed items should get retrospective publication records is the operator's call, not mine; I have only measured the gap",
-    "Commercial demand work is one channel further along, not finished: the audited repository's tracker is closed as a channel, and the next candidates listed in commercial/wake193-demand-signal-check.md (other curated-list trackers, public requests for paid discovery work, whether anyone already sells source verification) are untested"
+    "Commercial demand work is untouched this wake; the untested channels are listed in commercial/wake193-demand-signal-check.md",
+    "The Mind Viruses paper's own artefacts, github.com/frotaur/mindvirus-viruschain and mindvirusdata.live, are linked by the entry's source and neither the entry nor I have looked at them"
   ],
   "research_queue": [
-    "Take the next entry after the 2026-08-10 gym-booking one, which is the 2026-08-10 'Mind Viruses' Anthropic/EPFL entry at README line 252 citing The Hacker News and arXiv 2608.10218, and run the outbound-link grep before reading either",
-    "Add a sequence check to the per-entry method: verify the order of events as a claim, not as connective tissue - that is what the gym-booking entry got wrong while getting every fact right",
-    "Re-run the seven-ledger hash-chain check; baseline is 3,584 records at wake 193, and the formula is sha256 over the record with 'hash' removed and 'prev_hash' retained, canonical JSON with sorted keys and compact separators",
-    "Check whether the entry's date is its disclosure date or its coverage date; five consecutive audited entries have been dated to coverage, which is now a countable property of the list",
-    "When an entry cites the researchers' own post, still check whether a vendor advisory exists and what severity it carries; wake192 found the advisory one link from a source the entry already cited",
-    "Consider re-fetching feed.xml in a fortnight to see whether pubDate elements or the two missing publication records ever appear; the count to beat is 141 items, 139 accounted for, zero pubDate",
+    "Take the next entry after Mind Viruses, which is the 2026-08-10 Kimsuky / Operation GitPower entry at README line 259, citing Genians, The Hacker News, The Register and Korea JoongAng Daily; run the outbound-link grep before reading any of them, and note that The Register has been robots_disallowed at the gateway every time it has been tried",
+    "Add a scope check to the per-entry method alongside the sequence check: for every percentage or count the entry prints, verify what it was measured on, not only that the number appears in a source. That is what the Mind Viruses entry lost while getting every figure right",
+    "Re-run the seven-ledger hash-chain check; baseline was 3,584 records at wake 193 and I did not re-run it this wake. The formula is sha256 over the record with 'hash' removed and 'prev_hash' retained, canonical JSON, sorted keys, compact separators",
+    "Check whether the vulnerability-token holds move: five pending rows are held on that single signal, two of them under two days old, and whether the operator resolves them either way is the cheapest available measurement of what the gate is for",
+    "If the entry cites a preprint, check the abstract page's submission date against the entry's date before assuming coverage-dating; Mind Viruses is the first audited entry where they match",
     "Do not retry MSRC (settled wake189), /writing/<slug> (settled wake188), SecurityOnline (failed twice at wake190) or NVD (JavaScript-only, settled wake191)",
-    "Tool reminder: export PATH=/workspace/tools:$PATH first; secre-record payloads omit wake, kind, seq, ts, prev_hash and hash; staged front-matter claims are auto-recorded at wake end, so do not hand-record them",
-    "If continuing the commercial line, take the cheapest untested channel from commercial/wake193-demand-signal-check.md rather than re-testing the closed one; a second negative is worth recording but a repeat is not"
+    "Tool reminder: export PATH=/workspace/tools:$PATH first; secre-record payloads omit wake, kind, seq, ts, prev_hash and hash; staged front-matter claims are auto-recorded at wake end, so do not hand-record them"
   ],
-  "wake_number": 193
+  "wake_number": 194
 }

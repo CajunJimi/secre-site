@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-06T11:21:27Z",
+  "last_wake_at": "2026-09-06T13:30:29Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "d0ec6db031462aa86f6bc5438cfb222b3593f30bb64f2f6677c90eb5f1e475d3",
-      "seq": 118
+      "hash": "67a9ccba52f2250578f1c552dc3f0b40f504aa845b52a4d069b315ea1cd1e47b",
+      "seq": 119
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "3a16989e46a40165adda72f5ba4e4ac39ed05c99b55bcf4f76131471e901ce6f",
-      "seq": 2197
+      "hash": "ceacd3b0661f6d4875a37101f8febf0e0fee42a81a9d6278dcfa64d31a9247d1",
+      "seq": 2213
     },
     "corrections": {
       "hash": "19e815206bb99e9ec8739333e548770411f37211c94ea7088b6865ee2b0ec12f",
       "seq": 24
     },
     "costs": {
-      "hash": "e01f570f7a7b57cfb9748754908d7839ad526c2f6ac6781801bf50c7910c3c75",
-      "seq": 191
+      "hash": "759d5ae7a069a36411b1af04fa73307215a8a722ed3393c1971052b7218c4e12",
+      "seq": 192
     },
     "decisions": {
-      "hash": "fcbd96d9a1409b78efe644a7b9276fe3806aa2250284b0f8442105f76d9c48cf",
-      "seq": 312
+      "hash": "53c8d02dd5becc383d6314da46d179fec7799aa9911beb5d0a73ca3c535ae782",
+      "seq": 323
     },
     "events": {
-      "hash": "e4dfe40dda15bcefc2939c89809306908c39ab6243a4602b2e4b724973d471ea",
-      "seq": 668
+      "hash": "3abcf7e1eeb4b8b5196d894a16132925ed742afe78616d3eba508cabaab20075",
+      "seq": 671
     },
     "evidence": {
-      "hash": "4319039cd6d7576909cfaaf32c450687d026e90d73f01c7bf9d2de63fc117ece",
-      "seq": 32643
+      "hash": "377635488e2f5109dea3a756b329fa2a807cf6ae0ce50b7eb90151d08c10e22b",
+      "seq": 32776
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,23 +45,25 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-06T13:21:27Z",
+  "next_wake_at": "2026-09-06T15:30:29Z",
   "open_questions": [
     "research/wake190/ra.txt, the 61,435-character Rapid7 technical post, is still only grepped and not read",
-    "Secure Blink's 9.0 / CVSS 4.0 statement about the a.security Zoomsday post is still unresolved; do not resolve it by assuming my extraction was complete",
+    "Secure Blink's 9.0 / CVSS 4.0 statement about the a.security Zoomsday post is still unresolved; do not resolve it by assuming an earlier extraction was complete",
     "The 'hackerone.com/edbr' credit on GHSA-5cwg-9f6j-9jvx versus Cymulate's three named researchers is unresolved and probably unresolvable from public evidence; do not guess",
-    "118 pending approvals against 54 resolved, nothing resolved in thirteen days; this wake adds a nineteenth queued piece if the ProgramData audit gates",
-    "No commercial demand work since wake 33; /workspace/commercial/ still holds only wake33-demand-check.md",
-    "The synthesis's paragraph-two counts (twelve queued pieces carrying the named-org signal, five where it is the only one) date from an earlier wake and were not recounted this wake; approvals_pending now shows 40 pieces with named_org_negative_claim as the sole category, which is a different population from the one that sentence describes - check before repeating either figure"
+    "119 pending approvals against 54 resolved, nothing resolved in fourteen days; this wake adds a twentieth queued piece only if the reconciliation piece gates, which it should not, being own_operation",
+    "Whether the two pre-ledger feed items should get retrospective publication records is the operator's call, not mine; I have only measured the gap",
+    "Commercial demand work is one channel further along, not finished: the audited repository's tracker is closed as a channel, and the next candidates listed in commercial/wake193-demand-signal-check.md (other curated-list trackers, public requests for paid discovery work, whether anyone already sells source verification) are untested"
   ],
   "research_queue": [
-    "Re-run the seven-ledger hash-chain check; the baseline is now 3,559 records at wake 192 and the script must include prev_hash in the hashed record - excluding it reports 100% failure",
-    "Take the next entry in the 2026-08 block, which is the 2026-08-10 OpenClaw gym-booking-API entry at README line 244, and run the outbound-link grep on its cited sources before reading them",
-    "When an entry cites the researchers' own post, still check whether a vendor advisory exists and what severity it carries: this wake the entry cited the primary and still had no severity, and the advisory was linked by its other source",
-    "Check whether an entry's date is its disclosure date or its coverage date - four consecutive entries have been dated to coverage, which is now a countable property of the list rather than an anecdote",
-    "Consider recounting the paragraph-two gate figures in the synthesis properly, or dropping them, before that sentence is repeated in a future weekly",
+    "Take the next entry after the 2026-08-10 gym-booking one, which is the 2026-08-10 'Mind Viruses' Anthropic/EPFL entry at README line 252 citing The Hacker News and arXiv 2608.10218, and run the outbound-link grep before reading either",
+    "Add a sequence check to the per-entry method: verify the order of events as a claim, not as connective tissue - that is what the gym-booking entry got wrong while getting every fact right",
+    "Re-run the seven-ledger hash-chain check; baseline is 3,584 records at wake 193, and the formula is sha256 over the record with 'hash' removed and 'prev_hash' retained, canonical JSON with sorted keys and compact separators",
+    "Check whether the entry's date is its disclosure date or its coverage date; five consecutive audited entries have been dated to coverage, which is now a countable property of the list",
+    "When an entry cites the researchers' own post, still check whether a vendor advisory exists and what severity it carries; wake192 found the advisory one link from a source the entry already cited",
+    "Consider re-fetching feed.xml in a fortnight to see whether pubDate elements or the two missing publication records ever appear; the count to beat is 141 items, 139 accounted for, zero pubDate",
     "Do not retry MSRC (settled wake189), /writing/<slug> (settled wake188), SecurityOnline (failed twice at wake190) or NVD (JavaScript-only, settled wake191)",
-    "Tool reminder: export PATH=/workspace/tools:$PATH first; secre-record payloads omit wake, kind, seq, ts, prev_hash and hash; staged front-matter claims are auto-recorded at wake end, so do not hand-record them"
+    "Tool reminder: export PATH=/workspace/tools:$PATH first; secre-record payloads omit wake, kind, seq, ts, prev_hash and hash; staged front-matter claims are auto-recorded at wake end, so do not hand-record them",
+    "If continuing the commercial line, take the cheapest untested channel from commercial/wake193-demand-signal-check.md rather than re-testing the closed one; a second negative is worth recording but a repeat is not"
   ],
-  "wake_number": 192
+  "wake_number": 193
 }

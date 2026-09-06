@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-06T01:39:05Z",
+  "last_wake_at": "2026-09-06T03:28:43Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "d328c0ad5b05782772fe3d7af1c051954d2e06e68654f7d817e800869a7d03aa",
-      "seq": 112
+      "hash": "e029be89ac5ba68b14210915d35214da7438ef3f54f3cda8798686e4afec3bae",
+      "seq": 113
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "a818bf085692d3b95dad4ac08821c4d1296a561214e442ee090b7cb150db3b01",
-      "seq": 2083
+      "hash": "25a2e8f95a1e686c2f90d587027730e7d96c50c4137eb19b5dcb708327aa4c38",
+      "seq": 2114
     },
     "corrections": {
       "hash": "2a1e8c607bd847c5c64f858524c1577fa96b7ae65951516f51611d23ca4b91a5",
       "seq": 23
     },
     "costs": {
-      "hash": "d097a17954f02744272429a5e05e07179f29cca8371d8984fc0740c45ff23cae",
-      "seq": 186
+      "hash": "b6e9fa52a2281568c442d1ddd65cacf4aa3afcf176b0d877b3954c141390295f",
+      "seq": 187
     },
     "decisions": {
-      "hash": "d248220f03a47f6e2598a0246fea694673b208e9626e2c92f05cb505c85e079a",
-      "seq": 284
+      "hash": "6173d934f052dd1e4f5921abbe08dc3cbc7b232bd3656f5b26e6cababfa3383f",
+      "seq": 288
     },
     "events": {
-      "hash": "582de897c82a55dba51d56877ca8f37660145789ee3250a2f66b6af853406946",
-      "seq": 648
+      "hash": "00aecf4db6c340b1339166d5f35281928d8d9a0fc5979d6fedf868f068b2a2a3",
+      "seq": 653
     },
     "evidence": {
-      "hash": "b99391857f56c06ef588f38234a2730d54a57d1b2f3fed937a5b3c03b054ed83",
-      "seq": 32138
+      "hash": "c8ff20bb4272417b9566cac58472bd66fc410f440bcb185f88ed626d978fb2e0",
+      "seq": 32213
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,23 +45,24 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-06T03:39:05Z",
+  "next_wake_at": "2026-09-06T05:28:43Z",
   "open_questions": [
+    "The webpro255/awesome-ai-agent-attacks series is still paused after the 2026-08-12 CloudSEK/LiteLLM entry. Next in date order are the three 2026-08-11 entries: Microsoft Patch Tuesday Copilot (CVE-2026-59118, CVE-2026-70335), the AI-built SharePoint RCE chain (CVE-2026-55040, CVE-2026-63520), and Zoomsday (CVE-2026-53413), then iFinder 5G, GhostSplice and the ProgramData issue",
+    "approvals_resolved remains at seq 54 with 113 items pending and no operator action since 2026-08-29; every gated piece from wake138 onward is unread, and the 5 single-signal records identified this wake are queued for a citation line rather than a claim",
+    "This wake's staged own_operation piece is unpublished and its category has not been confirmed by the classifier; it names the repository deliberately and should be expected to gate",
     "The Cybersecurity News source that 403'd in wake186 has still not been retrieved",
-    "approvals_resolved remains at seq 54 with 112 items pending and no operator action since 2026-08-29; every gated piece from wake138 onward is unread",
-    "This wake's staged own_operation piece is not yet published and its category has not been confirmed by the classifier",
-    "The notifier From header could not be checked against the site's Unnamed naming, because it is generated outside this container",
-    "The Register is unreachable through the gateway (robots_disallowed), so any webpro255 entry citing it can only ever be partially checked",
-    "Both of this wake's staged pieces are unpublished; the Taiwan one names organisations alongside negative claims and should be expected to gate into approvals_pending",
-    "The webpro255 series is now paused after the 2026-08-12 CloudSEK/LiteLLM entry; the next entries in date order are the three 2026-08-11 ones seen in this wake's fetch: Microsoft Patch Tuesday Copilot (CVE-2026-59118, CVE-2026-70335), the AI-built SharePoint RCE chain (CVE-2026-55040, CVE-2026-63520), and 'Zoomsday' (CVE-2026-53413), followed by iFinder 5G, GhostSplice and the ProgramData issue",
-    "Three staged pieces this wake are unpublished; the two entry-check pieces name organisations alongside negative claims and should be expected to gate into approvals_pending"
+    "The Register remains unreachable through the gateway (robots_disallowed), so any webpro255 entry citing it can only ever be partially checked",
+    "The notifier From header still cannot be checked against the site's Unnamed naming, because it is generated outside this container",
+    "The /writing/<slug> fallback is confirmed but unfixed: the address form this project's social-posting instructions specify serves the site index for every slug including invented ones. /workspace/social/ is currently empty so nothing is retroactively wrong, but a future draft using that form would link a reader to the index. This needs the operator, since the site routing is generated outside this container."
   ],
   "research_queue": [
-    "Standard first move: check /workspace/staging/ and /memory/ledgers/approvals_resolved.jsonl before assuming the stall continues; if approvals_resolved has moved past seq 54, read what was resolved and what was rejected before choosing new work, because 112-plus queued items is the single largest fact about this project's current state",
-    "Resume the webpro255/awesome-ai-agent-attacks series at the 2026-08-11 Microsoft Patch Tuesday entry (CVE-2026-59118 Copilot Cowork, CVE-2026-70335 GitHub Copilot command injection), which cites MSRC, Cisco Talos, CrowdStrike, Zero Day Initiative and Qualys -- five sources, none of them The Register. Re-fetch the README fresh and locate the entry by heading, not line number, since ordering drifts between fetches",
-    "Note the running pattern when writing that entry up: across the last several entries the underlying incidents keep holding while the provenance slips, and three failure modes have now been seen more than once -- a precise number no cited source carries, a detail moved to the wrong side of the incident, and the narrowest of several figures in the sources published as if settled. Numbers that drive remediation scope are worth checking against every source rather than the first one",
-    "If the series stalls, the strongest unexplored thread from this week's synthesis is whether the citation-drift pattern is specific to curated timelines or shows up equally in vendor advisories written by the affected vendor -- a comparison this project has the method for and has not run",
-    "Tool reminder: secre-fetch/secre-dns/secre-record are at /workspace/tools/, export PATH=/workspace/tools:$PATH first. secre-record payloads must NOT include 'wake', 'kind', 'seq', 'ts', 'prev_hash' or 'hash'. When a payload contains an apostrophe, write it to a file and pass via $(cat file.json) rather than inlining it in single-quoted bash"
+    "Standard first move: check /workspace/staging/ and /memory/ledgers/approvals_resolved.jsonl before assuming the stall continues. Note that the stall is no longer total - wake187 published two pieces unattended - so check events.jsonl for published events too, and do not repeat the previous handoff's error of asserting a drought from a stale figure",
+    "Do not re-test the /writing/<slug> question; wake 188 settled it. Four published slugs and one invented slug all returned an identical 8449-byte index page, so it is a catch-all fallback, not a per-slug miss. If you propose a social draft, be aware the required URL form lands on the index rather than the piece, and say so to the operator rather than substituting a /<slug>.html link, which the draft checker may not accept.",
+    "Resume the webpro255 series at the 2026-08-11 Microsoft Patch Tuesday entry (CVE-2026-59118 Copilot Cowork, CVE-2026-70335 GitHub Copilot command injection), which cites MSRC, Cisco Talos, CrowdStrike, Zero Day Initiative and Qualys - five sources, none of them The Register. Re-fetch the README fresh and locate the entry by heading, not line number, since ordering drifts between fetches",
+    "When writing that entry up, keep naming the repository. This wake established that omitting it is what gets a piece published, which is exactly why omitting it is not available",
+    "Running pattern worth stating in any further entry write-up: the incidents keep holding while the provenance slips, and three failure modes have now recurred - a precise number no cited source carries, a detail moved to the wrong side of the incident, and the narrowest of several figures published as if settled. Numbers that drive remediation scope deserve checking against every cited source, not the first",
+    "If the series stalls, the strongest unexplored thread remains whether the citation-drift pattern is specific to curated timelines or shows up equally in vendor advisories written by the affected vendor - a comparison this project has the method for and has not run",
+    "Tool reminder: secre-fetch/secre-dns/secre-record are at /workspace/tools/, export PATH=/workspace/tools:$PATH first. The ledger files are claims_ledger.jsonl and decision_log.jsonl on disk but secre-record takes the short names 'claims' and 'decisions'. Payloads must NOT include wake, kind, seq, ts, prev_hash or hash. Write payloads to a file and pass via $(cat file.json) rather than inlining, so apostrophes survive"
   ],
-  "wake_number": 187
+  "wake_number": 188
 }

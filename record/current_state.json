@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-06T19:39:28Z",
+  "last_wake_at": "2026-09-06T21:39:04Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "cbaf85eb592ac9e3875f96bad026d9239f6f18b037953889e611930283e85930",
-      "seq": 121
+      "hash": "b42b52a017c0a32c0126ad85104930b939d4e0c0239996d3468c3bcfcaab9be8",
+      "seq": 123
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "9e7e0d7711de888c201c407f07caf19ceeb793133520dd5da6412d9ccecfea7a",
-      "seq": 2267
+      "hash": "948b700dbd461909d9ebbe60473170cd0ef469c92e2c2fdad0b739295549e4ca",
+      "seq": 2313
     },
     "corrections": {
       "hash": "7d2c71d1a3d36776853b684aecfcec6e7c473670f689fa965296475fd60fdcc8",
       "seq": 26
     },
     "costs": {
-      "hash": "311a43c134020daa4879d6e568f385170039988c4d10daf4cf80757ab005672a",
-      "seq": 194
+      "hash": "d9105cbb86817d11a48bde7ceb14a4049c8e79f982af18bb85749751555a5c9d",
+      "seq": 195
     },
     "decisions": {
-      "hash": "f5e12bc6d66e16ec8f7904f0fa626d03b0b147c533c82789a283eb608858be59",
-      "seq": 335
+      "hash": "ece55170d606bcea057407127ba1075529ba7cfef282fc37a37d66dbe3c62254",
+      "seq": 341
     },
     "events": {
-      "hash": "e1090bc43e20e76d3e7cdcc678a3fa93fab94a3ade528f4ac356abc6e95da714",
-      "seq": 679
+      "hash": "9c5e381664d37114d3ad03bcbe591f605ec1d1b5e98bc07108f8dba8b8ba76a0",
+      "seq": 684
     },
     "evidence": {
-      "hash": "9a6778f382cfcf26fe3c6888a0c78c2b416b7048eb36368662df7a993a430a5e",
-      "seq": 33034
+      "hash": "553d534d1368716f70c4f9f4fc41960566fb7aef7bcd9ba14131569f98c18252",
+      "seq": 33211
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,27 +45,29 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-06T21:39:28Z",
+  "next_wake_at": "2026-09-06T23:39:04Z",
   "open_questions": [
     "research/wake190/ra.txt, the 61,435-character Rapid7 technical post, is still only grepped and not read",
     "Secure Blink's 9.0 / CVSS 4.0 statement about the a.security Zoomsday post is still unresolved; do not resolve it by assuming an earlier extraction was complete",
     "The 'hackerone.com/edbr' credit on GHSA-5cwg-9f6j-9jvx versus Cymulate's three named researchers is unresolved and probably unresolvable from public evidence; do not guess",
-    "67 undecided approvals, nothing resolved in eight days; the two pieces staged this wake will change that count",
+    "69 open approvals, nothing resolved in either direction since 29 August; the piece staged this wake will change that count again",
     "Whether the two pre-ledger feed items should get retrospective publication records is the operator's call, not mine",
     "Commercial demand work untouched again; untested channels are listed in commercial/wake193-demand-signal-check.md",
     "The Mind Viruses paper's own artefacts, github.com/frotaur/mindvirus-viruschain and mindvirusdata.live, are still unlooked-at",
-    "Two of the Kimsuky entry's five sources were unreadable this wake (Cybersecurity News 403, The Register robots_disallowed), so its first-documented-case sentence is unverified rather than absent"
+    "The Kimi K3 entry's 'reported three days earlier' clause is unverified; nothing dated 2026-08-04 was fetched",
+    "Whether social drafts should use /writing/<slug> or /<slug>.html is now an open question for the operator - the brief prescribes the first and only the second resolves to a publication"
   ],
   "research_queue": [
-    "Read the clock with `date -u` before deciding what fits. I twice believed I was 20 minutes further along than I was, deferred an entry audit on that basis and then had time for two, and put a future timestamp into a correction record",
-    "Take the next entry after Ghostjacking, which is the 2026-08-07 Moonshot AI / Kimi K3 evaluation-sandbox entry at README line 273",
-    "Grep both spellings and both cases before claiming a string is absent from a source. 'DEFCON 34' versus 'DEF CON 34' nearly cost me a false finding this wake, and a slug regex missing a capital letter cost me a phantom feed gap last wake",
-    "Keep the scope check and add the attribution check: when an entry says 'X assesses that ...', grep the linked X for the assessment, not for the underlying facts",
-    "Anything reporting my own approval backlog must subtract approvals_resolved.jsonl from approvals_pending.jsonl first. The pending file is append-only. The current figure is 67 open of 121 ever requested",
-    "The hash-chain formula, corrected: sha256 over the record with 'hash' removed and 'prev_hash' retained, json.dumps(sort_keys=True, separators=(',',':'), ensure_ascii=False), utf-8. Verified clean this wake at 36,695 records; do not re-derive it with ensure_ascii defaulted",
-    "Do not retry MSRC (settled wake189), /writing/<slug> (settled wake188), SecurityOnline (failed twice at wake190), NVD (settled wake191), theregister.com (robots_disallowed again this wake) or cybersecuritynews.com (403 this wake)",
+    "Take the next entry after RovoBlast: the 2026-08-06 Vercel skills.sh credential-stealing skills entry at README line 287, which cites Business Wire and Zenity. Business Wire is a press release, so the Zenity write-up is the primary to check first",
+    "Every absence claim must survive the alternative spellings before it is written down, and when the absence is the finding, read the paragraph rather than trusting the count. Three near-misses in three wakes: 'Bugcrowd' vs 'Bug Crowd', 'DEFCON 34' vs 'DEF CON 34', and a slug regex missing a capital letter",
+    "Add the response check to the scope and attribution checks: when an entry implicates a named organisation, grep its own cited sources for that organisation's reply before concluding the entry is complete. That is what produced this wake's main finding",
+    "Check the claims ledger for the finding you are about to write before writing it. That caught a duplicate piece this wake in about thirty seconds",
+    "Read the clock with date -u before scoping. The container clock runs slower than elapsed-token intuition; I twice believed I was fifteen minutes further along than I was, and both times in the direction of cutting work short",
+    "Anything reporting the approval backlog must subtract approvals_resolved.jsonl from approvals_pending.jsonl first. The pending file is append-only. The figure as of 2026-09-06T21:30Z is 69 open of 123 ever requested, before this wake's two pieces",
+    "The hash-chain formula: sha256 over the record with 'hash' removed and 'prev_hash' retained, json.dumps(sort_keys=True, separators=(',',':'), ensure_ascii=False), utf-8. Do not re-derive it with ensure_ascii defaulted",
+    "Do not retry wired.com (domain refused this wake), MSRC (settled wake189), /writing/<slug> (settled wake188, re-confirmed this wake), SecurityOnline (failed twice at wake190), NVD (settled wake191), theregister.com or cybersecuritynews.com",
     "The audited repository is webpro255/awesome-ai-agent-attacks. Do not fetch GTRekter/",
     "Tool reminder: export PATH=/workspace/tools:$PATH first; secre-record payloads omit wake, kind, seq, ts, prev_hash and hash; staged front-matter claims are auto-recorded at wake end, so do not hand-record them"
   ],
-  "wake_number": 195
+  "wake_number": 196
 }

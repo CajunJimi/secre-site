@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-07T09:16:21Z",
-  "last_wake_result": "completed",
+  "last_wake_at": "2026-09-07T11:10:56Z",
+  "last_wake_result": "error",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "6db373b386a5fe6c6835809c9a82486f99c5afe1726de36d582c40159a2f7e23",
-      "seq": 130
+      "hash": "6f5e0bff50271d455e3f188093f013cbffaf6e61ef9465a13bdf4b24563cdf69",
+      "seq": 131
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "db5f0e1a7d0b15f25cd500077950ed943d3121fbcb4dcc0f5e224d0ef0e6d74b",
-      "seq": 2439
+      "hash": "8d34a2a863a12ba27bdb26bd8152e8cc70666946641dd9002548c4e374ab17ab",
+      "seq": 2445
     },
     "corrections": {
       "hash": "7d2c71d1a3d36776853b684aecfcec6e7c473670f689fa965296475fd60fdcc8",
       "seq": 26
     },
     "costs": {
-      "hash": "5a9620784c37350990e73c8f5d29b782965d132fceae4e688c99e955f18e78c0",
-      "seq": 201
+      "hash": "8a9cb9e4c3e33c4adbaaa482e6073372c4ea9cdf4cf430997cf8650ee3ab47b9",
+      "seq": 202
     },
     "decisions": {
       "hash": "ee4d10c0f9e814f0304ff6d99c3e6b9a7130785135b043060044edc6042c4d41",
       "seq": 348
     },
     "events": {
-      "hash": "afb7f80f352877cb3bc2bcf6b9fc5e33febc67db2b0ce07911c0043fd25cc36f",
-      "seq": 703
+      "hash": "c89ad6eb5c483f9d91f16c5be3ff4ed862f762decf368de55eea32d44453f5a1",
+      "seq": 706
     },
     "evidence": {
-      "hash": "6db45ec0edb16156e82f10cee95f7533b72cbbc585356659644a61307b49739d",
-      "seq": 33754
+      "hash": "4708222d22c8434e167e6dca68425ed6234cd3b26613de9c691412785f8b78b9",
+      "seq": 33775
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,7 +45,7 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-07T11:16:21Z",
+  "next_wake_at": "2026-09-07T13:10:56Z",
   "open_questions": [
     "Dark Reading and Business Wire remain unread for this entry; if either becomes reachable in a future wake, check whether they add anything beyond what the two uncited sources already confirmed.",
     "The staged piece is in /workspace/staging/ awaiting the harness's automatic signal-based gating; not yet known whether it will auto-publish or queue for operator review (it names Zenity/vendors and describes vulnerabilities, so queuing is likely per the established pattern)."
@@ -56,5 +56,5 @@
     "The large 'awaiting the operator' backlog in current_state.json continues to grow; this remains expected (human review is a queue, not a blocker) and needs no action beyond continuing to feed it accurately.",
     "Commercial demand-signal work remains untouched again this wake; still worth a dedicated wake at some point rather than a rushed pass squeezed into leftover time -- no new channel or evidence source was identified this wake worth the budget over continuing the higher-confidence timeline audit."
   ],
-  "wake_number": 202
+  "wake_number": 203
 }

@@ -4,40 +4,40 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-07T07:15:33Z",
+  "last_wake_at": "2026-09-07T09:16:21Z",
   "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
-      "hash": "14850f742188bfc4e9a8d1a2d444a68d38c818190ee7b8ffb479291a2c76c1e1",
-      "seq": 129
+      "hash": "6db373b386a5fe6c6835809c9a82486f99c5afe1726de36d582c40159a2f7e23",
+      "seq": 130
     },
     "approvals_resolved": {
       "hash": "edc96bf066fc5e7f51047d635b0a33949110e71515ae51e324895b91331135f1",
       "seq": 54
     },
     "claims": {
-      "hash": "91d6d5f916c8e02c825c6ebab941ea753dc31e6e8a1b7305dad8b0d204821bc4",
-      "seq": 2425
+      "hash": "db5f0e1a7d0b15f25cd500077950ed943d3121fbcb4dcc0f5e224d0ef0e6d74b",
+      "seq": 2439
     },
     "corrections": {
       "hash": "7d2c71d1a3d36776853b684aecfcec6e7c473670f689fa965296475fd60fdcc8",
       "seq": 26
     },
     "costs": {
-      "hash": "3b0585b0ee95916c53a4e945411adc4c8849ddc17a6b49516ae0ce9c3be7d2c5",
-      "seq": 200
+      "hash": "5a9620784c37350990e73c8f5d29b782965d132fceae4e688c99e955f18e78c0",
+      "seq": 201
     },
     "decisions": {
-      "hash": "71c78d73171e1a63e3846205f1bc55beec53f04dacb8603df7ce6c835a1fd581",
-      "seq": 347
+      "hash": "ee4d10c0f9e814f0304ff6d99c3e6b9a7130785135b043060044edc6042c4d41",
+      "seq": 348
     },
     "events": {
-      "hash": "6b4a8b1f2a6f49a90fe7cb3f669d530af08d5067496d856b60ff1af24d004616",
-      "seq": 700
+      "hash": "afb7f80f352877cb3bc2bcf6b9fc5e33febc67db2b0ce07911c0043fd25cc36f",
+      "seq": 703
     },
     "evidence": {
-      "hash": "0fbb7104f703812ad462f5e86cad4d5032c00130a800ae80512d9195b7b160ce",
-      "seq": 33683
+      "hash": "6db45ec0edb16156e82f10cee95f7533b72cbbc585356659644a61307b49739d",
+      "seq": 33754
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,16 +45,16 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-07T09:15:33Z",
+  "next_wake_at": "2026-09-07T11:16:21Z",
   "open_questions": [
-    "The Register citation for this entry remains unread; if it becomes reachable in a future wake, check whether it contains the Tal quote the entry attributes to it, and whether it (unlike Kodem) is actually about this Check Point disclosure.",
-    "The staged piece is in /workspace/staging/ awaiting the harness's automatic signal-based gating; not yet known whether it will auto-publish or queue for operator review (it names Check Point negatively and describes vulnerabilities/CVEs, so queuing is likely, per the pattern seen with wake196-200's entries)."
+    "Dark Reading and Business Wire remain unread for this entry; if either becomes reachable in a future wake, check whether they add anything beyond what the two uncited sources already confirmed.",
+    "The staged piece is in /workspace/staging/ awaiting the harness's automatic signal-based gating; not yet known whether it will auto-publish or queue for operator review (it names Zenity/vendors and describes vulnerabilities, so queuing is likely per the established pattern)."
   ],
   "research_queue": [
-    "Check whether wake201's staged piece published or entered review, then continue the timeline audit at the next entry after README line 321 (Check Point) -- README line 323, 'PleaseFix: Zero-Click Agent Hijacking Across Every Major Agentic Browser' (2026-08-05), citing Dark Reading, Zenity Labs, and Business Wire.",
-    "Remember to export PATH=/workspace/tools:$PATH before calling secre-fetch/secre-dns/secre-record in a fresh shell -- confirmed this wake that a bare shell doesn't have them on PATH.",
+    "Check whether wake202's staged piece published or entered review, then continue the timeline audit at the next entry after README line 328 (PleaseFix) -- README line 330, 'Paperclip AI Agent Control Plane Unauthenticated RCE (CVE-2026-41679)' (2026-08-05), citing Oasis Security, The Hacker News, SecurityWeek, Infosecurity Magazine, and CSO Online.",
+    "Remember to export PATH=/workspace/tools:$PATH before calling secre-fetch/secre-dns/secre-record in a fresh shell.",
     "The large 'awaiting the operator' backlog in current_state.json continues to grow; this remains expected (human review is a queue, not a blocker) and needs no action beyond continuing to feed it accurately.",
-    "Commercial demand-signal work (per the wake-201 prompt's standing invitation) remains untouched again this wake; no new channel or evidence source was identified this wake worth the 45-minute budget over continuing the higher-confidence timeline audit. Worth a dedicated wake at some point rather than a rushed pass squeezed into leftover time."
+    "Commercial demand-signal work remains untouched again this wake; still worth a dedicated wake at some point rather than a rushed pass squeezed into leftover time -- no new channel or evidence source was identified this wake worth the budget over continuing the higher-confidence timeline audit."
   ],
-  "wake_number": 201
+  "wake_number": 202
 }

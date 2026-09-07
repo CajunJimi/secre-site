@@ -1,0 +1,31 @@
+{
+  "claude": {
+    "detail": "exit code 1",
+    "duration_seconds": 229.8,
+    "exit_code": 1,
+    "model": "claude-sonnet-5",
+    "outcome": "error",
+    "reset_hint": null
+  },
+  "duration_seconds": 236.5,
+  "ended_at": "2026-09-07T15:18:32Z",
+  "handoff_author": "harness",
+  "incidents": [],
+  "ledger_counts": {
+    "approvals_pending": 132,
+    "approvals_resolved": 54,
+    "claims": 2461,
+    "corrections": 26,
+    "costs": 204,
+    "decisions": 350,
+    "events": 710,
+    "evidence": 33918,
+    "revenue": 0
+  },
+  "model": "claude-sonnet-5",
+  "next_wake_at": "2026-09-07T17:18:32Z",
+  "notes": [],
+  "outcome": "error",
+  "started_at": "2026-09-07T15:14:36Z",
+  "wake": 205
+}

@@ -4,8 +4,8 @@
     "chosen_at_wake": null,
     "name": null
   },
-  "last_wake_at": "2026-09-07T03:12:32Z",
-  "last_wake_result": "error",
+  "last_wake_at": "2026-09-07T05:22:45Z",
+  "last_wake_result": "completed",
   "ledger_heads": {
     "approvals_pending": {
       "hash": "1481430ad27cba4d29b0fa1643adf12e82cf1ef6c31b22345d5f6a6ad2fb256b",
@@ -16,28 +16,28 @@
       "seq": 54
     },
     "claims": {
-      "hash": "47147090866af524d62ffd84650c4821acee89d76553ae98235b61400eb96a9a",
-      "seq": 2397
+      "hash": "d5e2e9578305fa2458589a1dfa82bccd27c320378d8a6d1c39aa6eae9b2965bc",
+      "seq": 2406
     },
     "corrections": {
       "hash": "7d2c71d1a3d36776853b684aecfcec6e7c473670f689fa965296475fd60fdcc8",
       "seq": 26
     },
     "costs": {
-      "hash": "aac6d9346d10d79c57548e5676893a55aec393932aea1cb80eb05f8470cddb9c",
-      "seq": 198
+      "hash": "95d9f26984157031b56d8981f2d7e8d459a2a7a46177d8e76d2d2dd0e1a62183",
+      "seq": 199
     },
     "decisions": {
-      "hash": "5f666662cb89d0cbefbd1dafc17655baa66f5bdcbc6d783ca003afc5b3c0272a",
-      "seq": 345
+      "hash": "7cfdb0501191c1a7167156a15223fb77588d79621a4575d78b700c2ca8212ee1",
+      "seq": 346
     },
     "events": {
-      "hash": "b84e82d70a20ccc6c39d5cc13747ad719ce7383320a7a3ce014f21f2dca307e2",
-      "seq": 695
+      "hash": "873f27ff34da069c7f7b3ea04af222fb62fb542f616cef8edf056beba6188dd2",
+      "seq": 697
     },
     "evidence": {
-      "hash": "bd8a73f71873a982743ce3501eeefe9eaae095e26b47b9c50c57c565eada1228",
-      "seq": 33528
+      "hash": "e829f7f8bd7542fb0e7f9f6ed476fc40e2679aa9c6902354539bbe52e206439c",
+      "seq": 33603
     },
     "revenue": {
       "hash": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -45,23 +45,15 @@
     }
   },
   "mission": "Investigate how secure the emerging agent economy really is, using public evidence only, and publish what holds up.",
-  "next_wake_at": "2026-09-07T05:12:32Z",
+  "next_wake_at": "2026-09-07T07:22:45Z",
   "open_questions": [
-    "The Secure Blink 9.0 / CVSS 4.0 statement about the a.security Zoomsday post is still unresolved; do not resolve it by assuming an earlier extraction was complete",
-    "The 'hackerone.com/edbr' credit on GHSA-5cwg-9f6j-9jvx versus Cymulate's three named researchers is unresolved and probably unresolvable from public evidence; do not guess",
-    "cyberpress.org is now a second confirmed-403 domain alongside cybersecuritynews.com for this project - add it to the do-not-retry list if it 403s again next time",
-    "Commercial demand-signal work is untouched again this wake; untested channels are listed in commercial/wake193-demand-signal-check.md",
-    "The Mind Viruses paper's own artefacts, github.com/frotaur/mindvirus-viruschain and mindvirusdata.live, are still unlooked-at",
-    "71 open approvals as of wake197's count, nothing resolved since 2026-08-29; this wake's staged piece will move the count again",
-    "The staged piece names Novee, Anthropic, Google, OpenAI, Cybersecurity News and eSecurity Planet alongside a CVE-misattribution finding, so expect it to gate to human review (named_org_negative_claim / correction-shaped) rather than auto-publish, consistent with nearly every other entry in this same audit series"
+    "The Register and Forbes citations for this entry remain unread; if either becomes reachable in a future wake, re-check whether they resolve the Dalton/Wallace attribution conflict or corroborate the entry's unverified granular details (ExploitGym, May 7/June 26 dates, directory-name example, the two extra agent quotes).",
+    "The staged piece is in /workspace/staging/ awaiting the harness's automatic signal-based gating; not yet known whether it will auto-publish or queue for operator review."
   ],
   "research_queue": [
-    "Take the next unaudited entry after README line 301 (the Black Hat GitHub-issue RCE entry) in github.com/webpro255/awesome-ai-agent-attacks/README.md - check the running position against the archive's list of already-checked entries before picking one, since the series has been going for ~35+ entries now",
-    "When an entry names a CVE number, check it against the vendor's own advisory or an advisory-database mirror before trusting the entry's or its sources' framing of what that CVE covers - this wake's finding (CVE-2026-54316 misattributed to the wrong bug) came entirely from that one extra step, and it cost three fetches",
-    "Do not assume a citation labeled with a company name close to a domain (e.g. 'Novee Security' from novee.security) is accurate - check the site's own og:site_name or self-references directly",
-    "When a cited source is short and thin, check its own outbound links before treating it as independent of the timeline entry's other citations - it may just be a reprint",
-    "Do not retry cyberpress.org or cybersecuritynews.com; both return 403 to this gateway",
-    "Recount the approval backlog fresh (subtract approvals_resolved.jsonl from approvals_pending.jsonl) before citing it anywhere; do not carry forward the 71-open figure without recounting"
+    "Check whether wake200's staged piece published or entered review, then continue the timeline audit at the next entry after README line 316 ('Check Point Discloses 11 Vulnerabilities Across Six Enterprise AI Agent Frameworks') -- this is the next unaudited entry in sequence.",
+    "The large 'awaiting the operator' backlog in current_state.json continues to grow; this is expected (human review is a queue, not a blocker) and does not indicate wasted work -- no action needed on it beyond continuing to feed it accurately.",
+    "Re-read the ledgers at wake start before assuming prior state, per the standing lesson from wake199's crash -- confirmed cheap and worthwhile this wake."
   ],
-  "wake_number": 199
+  "wake_number": 200
 }
